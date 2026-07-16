@@ -2,37 +2,19 @@
 
 [English](README.md)
 
-一个以 Python 为主、完全离线运行的算法训练环境，包含 150 道面试高频题、
-本地测试用例、轻量判题器、调试支持和持久化进度记录。
+我做这个项目，是因为平时刷算法题要在网页、编辑器和在线判题之间来回切换，写完以后还得复制代码提交，调试起来也不太顺手。
 
-## 为什么做这个项目
-
-常见刷题流程需要在浏览器、编辑器和远程判题平台之间反复切换。本项目把核心
-反馈闭环放到本地：
+所以我把 150 道常见面试题整理到了本地，按数组、链表、树、图、动态规划等专题分类。每道题都有一个 `solution.py` 和本地测试用例，平时的刷题过程就是：
 
 ```text
-选题 -> 编辑 solution.py -> 运行测试 -> 查看失败 -> Debug
+选一道题 -> 写 solution.py -> 运行测试 -> 看失败用例 -> 修改
 ```
 
-它面向求职面试、刻意练习和算法 Debug，而不只是提交答案。
+刷题进度会记录在本地 SQLite 文件里，自己写的答案和进度文件都不会被提交到 GitHub。
 
-## 功能
+## 怎么开始
 
-- 18 个章节、150 道面试高频题。
-- 按专题组织的 Python 解题模板。
-- 完全离线的 JSON 测试用例。
-- 自动转换链表、树、图和随机指针结构。
-- 支持单用例运行、首错停止和跑完全部失败用例。
-- Debug 模式可以保留解答中的 `print()` 输出。
-- 使用本地 SQLite 记录尝试次数和 AC 状态。
-- 支持按分类和难度筛选。
-- 不需要账号、云服务或第三方 Python 包。
-
-## 环境要求
-
-- Python 3.12+
-
-## 快速开始
+需要 Python 3.12 或更高版本，不用安装第三方依赖。
 
 ```bash
 git clone https://github.com/pllsparrow/offline-algorithm-trainer.git
@@ -44,82 +26,37 @@ python train.py run two-sum
 python train.py status
 ```
 
-第一次运行会在本地创建 `data/progress.sqlite3`。该文件已被 Git 忽略，个人
-进度不会进入公开仓库。
+`show` 会显示题目说明和 `solution.py` 的位置。打开文件写答案，再用 `run` 执行本地用例。运行失败时会直接显示输入、预期结果和实际结果。
 
-## 常用命令
+如果只想反复调试某一个失败用例：
 
-| 命令 | 作用 |
-| --- | --- |
-| `python train.py list` | 查看题目、状态、尝试次数和分类 |
-| `python train.py show two-sum` | 查看元数据、提示、签名和文件路径 |
-| `python train.py run two-sum` | 运行一道题的全部本地用例 |
-| `python train.py run two-sum --case 1` | 单独复现一个用例 |
-| `python train.py run two-sum --case 1 --debug` | 保留单用例调试输出 |
-| `python train.py run two-sum --all` | 失败后继续运行其他用例 |
-| `python train.py status` | 查看 AC 和已尝试数量 |
-| `python train.py check` | 校验题库元数据和测试数据 |
+```bash
+python train.py run two-sum --case 1 --debug
+```
 
-筛选示例：
+也可以按专题或难度找题：
 
 ```bash
 python train.py list --category graph
 python train.py list --difficulty Hard
 ```
 
-## 训练流程
+## 常用命令
 
-每道题都有独立工作区：
+| 命令 | 用途 |
+| --- | --- |
+| `python train.py list` | 查看题目和本地进度 |
+| `python train.py show <slug>` | 查看题目详情和文件位置 |
+| `python train.py run <slug>` | 运行本地测试用例 |
+| `python train.py run <slug> --case 1` | 单独复现一个失败用例 |
+| `python train.py run <slug> --all` | 某个用例失败后继续往下运行 |
+| `python train.py status` | 查看已做和通过数量 |
+| `python train.py check` | 检查题库数据是否完整 |
 
-```text
-problems/
-  01-arrays-hashing/
-    003-two-sum/
-      README.md
-      solution.py
-```
+题目都在 `problems/` 目录，一共分为 18 个章节。`judge/` 是本地判题代码，`data/` 保存题目元数据、测试用例和本地进度。
 
-1. 打开题目的 `solution.py`。
-2. 先说明暴力方法和预计复杂度。
-3. 编写解答。
-4. 运行 `python train.py run <slug>`。
-5. 失败时对比 `args`、`expected` 和 `actual`。
-6. 使用 `--debug` 或 IDE 断点复现失败用例。
-7. 说明最终时间复杂度、空间复杂度和边界情况。
+## 关于题目内容
 
-## 目录结构
+题目名称和链接会指向 LeetCode 和 NeetCode。本仓库只保留我整理的题目摘要、提示、代码模板、测试工具和本地测试数据，不搬运商业平台的完整题面和官方答案。具体说明见 [NOTICE.md](NOTICE.md)。
 
-- `train.py`：命令行入口和进度管理。
-- `judge/python_judge.py`：隔离运行的本地 Python 判题器。
-- `support.py`：链表、树、图等本地数据结构。
-- `problems/`：章节和题目工作区。
-- `data/problems.json`：题目元数据和起始模板。
-- `data/tests.json`：离线测试用例。
-- `data/progress.sqlite3`：运行时创建的本地进度。
-- `scripts/build_roadmap.py`：校验并重建题目工作区。
-
-## 测试与校验
-
-```bash
-python train.py check
-python train.py run contains-duplicate
-```
-
-公开仓库不会包含用户已经完成的解答或个人进度数据库。
-
-## 内容说明
-
-题目名称和链接指向 LeetCode 与 NeetCode 上的练习。本仓库提供原创摘要、提示、
-模板、测试框架和本地测试数据，不重新发布商业平台完整题面或官方答案。详情见
-[NOTICE.md](NOTICE.md)。
-
-## 路线图
-
-- 增加命令行和判题器的回归测试。
-- 改进嵌套结构的失败差异展示。
-- 支持个人进度导入和导出。
-- 保持核心工作流离线、零第三方依赖。
-
-## 许可证
-
-仓库原创软件采用 MIT 许可证，见 [LICENSE](LICENSE) 和 [NOTICE.md](NOTICE.md)。
+项目原创代码使用 [MIT License](LICENSE)。
