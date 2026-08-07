@@ -47,6 +47,39 @@ python train.py list --category graph
 python train.py list --difficulty Hard
 ```
 
+## ACM stdin/stdout mode
+
+Function mode is useful for learning a pattern. ACM mode runs your file as a
+standalone Python process, feeds it stdin, and compares stdout like an online
+assessment:
+
+```bash
+python train.py scaffold --acm
+python train.py run two-sum --mode acm
+python train.py run two-sum --mode acm --all
+```
+
+ACM starters are named `solution_acm.py` and live beside the normal
+`solution.py`. All 150 problems have an ACM entry and run in an independent
+Python process. There are two input protocols:
+
+- `text`: curated whitespace/line formats for the first high-value assessment
+  problems, including arrays, sliding windows, trees, heaps, and basic DP.
+- `json`: a uniform stdin/stdout format for the remaining signatures, including
+  linked lists, trees, graphs, and stateful design problems. The adapter converts
+  JSON into the same data structures used by function mode.
+
+Inspect a problem's exact protocol before solving it:
+
+```bash
+python train.py show two-sum --mode acm
+python train.py check --acm
+```
+
+`scripts/build_acm.py` deterministically regenerates all 150 specs from the
+function-mode dataset while preserving the curated text formats in
+`data/acm_text_specs.json`.
+
 ## Commands I use most
 
 | Command | What it does |

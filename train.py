@@ -26,6 +26,10 @@ def tests_by_slug():
     return load_json(DATA / "tests.json")
 
 
+def acm_tests_by_slug():
+    return load_json(DATA / "acm_tests.json")
+
+
 def init_db():
     DATA.mkdir(exist_ok=True)
     with sqlite3.connect(DB) as conn:
@@ -96,6 +100,13 @@ def solution_path(slug):
     return PROBLEMS_DIR / slug / "solution.py"
 
 
+def acm_solution_path(slug):
+    problem = problems_by_slug().get(slug)
+    if problem and problem.get("path"):
+        return ROOT / problem["path"] / "solution_acm.py"
+    return PROBLEMS_DIR / slug / "solution_acm.py"
+
+
 def render_readme(problem, test_spec):
     examples = []
     for idx, case in enumerate(test_spec.get("cases", [])[:3], start=1):
@@ -157,6 +168,16 @@ def scaffold(args):
             path.write_text(problem["starter"], encoding="utf-8")
             created += 1
     print(f"Scaffold ready: {len(problems)} problems, {created} new solution files.")
+    if args.acm:
+        acm_specs = acm_tests_by_slug()
+        acm_created = 0
+        for slug, spec in acm_specs.items():
+            path = acm_solution_path(slug)
+            path.parent.mkdir(parents=True, exist_ok=True)
+            if not path.exists():
+                path.write_text(spec["starter"], encoding="utf-8")
+                acm_created += 1
+        print(f"ACM scaffold ready: {len(acm_specs)} specs, {acm_created} new solution files.")
     print(f"Open this folder in PyCharm: {ROOT}")
 
 
@@ -180,12 +201,25 @@ def check_project(args):
             extra_flat_dirs.append(child)
     for path in extra_flat_dirs:
         issues.append(f"{path.name}: unexpected flat scaffold directory {path}")
+    if args.acm:
+        acm_specs = acm_tests_by_slug()
+        for slug, problem in problems.items():
+            if slug not in acm_specs:
+                issues.append(f"{slug}: missing ACM test spec")
+            if not acm_solution_path(slug).exists():
+                issues.append(f"{slug}: missing {acm_solution_path(slug)}")
     if issues:
         print(f"Project check failed: {len(issues)} issue(s)")
         for issue in issues:
             print(f"- {issue}")
         return 1
-    print(f"Project check passed: {len(problems)} problems, {len(tests)} test specs")
+    if args.acm:
+        print(
+            f"Project check passed: {len(problems)} problems, "
+            f"{len(tests)} function specs, {len(acm_specs)} ACM specs"
+        )
+    else:
+        print(f"Project check passed: {len(problems)} problems, {len(tests)} test specs")
     return 0
 
 
@@ -232,6 +266,35 @@ def run_judge(slug, code, *, case=None, run_all=False, debug_stdout=False):
         return {"ok": False, "error": "Judge returned invalid JSON", "trace": proc.stdout}
 
 
+def run_acm_judge(slug, code, *, case=None, run_all=False):
+    specs = acm_tests_by_slug()
+    if slug not in specs:
+        return {"ok": False, "error": "No ACM test spec for this problem yet."}
+    proc = subprocess.run(
+        [sys.executable, str(ROOT / "judge" / "acm_judge.py")],
+        input=json.dumps(
+            {
+                "slug": slug,
+                "code": code,
+                "protocol": specs[slug].get("protocol", "text"),
+                "cases": specs[slug]["cases"],
+                "case": case,
+                "run_all": run_all,
+            },
+            ensure_ascii=False,
+        ),
+        text=True,
+        capture_output=True,
+        timeout=12,
+    )
+    if proc.returncode != 0:
+        return {"ok": False, "error": proc.stderr.strip() or proc.stdout.strip() or "ACM judge failed"}
+    try:
+        return json.loads(proc.stdout)
+    except json.JSONDecodeError:
+        return {"ok": False, "error": "ACM judge returned invalid JSON", "trace": proc.stdout}
+
+
 def short_repr(value, limit=220):
     text = repr(value)
     if len(text) <= limit:
@@ -242,6 +305,11 @@ def short_repr(value, limit=220):
 def print_case_detail(item):
     print(f"Case {item['case']}: fail")
     case_input = item.get("input", {})
+    if "stdin" in case_input:
+        print(f"  stdin:    {short_repr(case_input['stdin'])}")
+        print(f"  expected: {short_repr(item['expected'])}")
+        print(f"  actual:   {short_repr(item['actual'])}")
+        return
     if "ops" in case_input:
         print(f"  ops:      {short_repr(case_input['ops'])}")
         print(f"  args:     {short_repr(case_input['args'])}")
@@ -289,9 +357,15 @@ def print_result(result, *, show_passed=False, show_all_failures=False):
                         print(f"    {line}")
             continue
         print_case_detail(item)
-        if result.get("selected_case") is None:
+        if result.get("selected_case") is None and result.get("mode") != "acm":
             print()
             print(f"Debug this case only: python3 train.py run {result['slug']} --case {item['case']} --debug")
+        elif result.get("selected_case") is None:
+            print()
+            print(
+                f"Repeat this ACM case: python3 train.py run {result['slug']} "
+                f"--mode acm --case {item['case']}"
+            )
         if not show_all_failures:
             break
 
@@ -301,6 +375,29 @@ def run_problem(args):
     if args.slug not in problems:
         print(f"Unknown problem: {args.slug}", file=sys.stderr)
         return 2
+    if args.mode == "acm":
+        specs = acm_tests_by_slug()
+        if args.slug not in specs:
+            print(f"No ACM test spec for {args.slug} yet", file=sys.stderr)
+            return 2
+        if args.case is not None and not 1 <= args.case <= len(specs[args.slug]["cases"]):
+            print(f"--case must be between 1 and {len(specs[args.slug]['cases'])}", file=sys.stderr)
+            return 2
+        path = Path(args.file) if args.file else acm_solution_path(args.slug)
+        if not path.exists():
+            print(f"Missing ACM solution file: {path}", file=sys.stderr)
+            print(f"Run: python3 train.py scaffold --acm", file=sys.stderr)
+            return 2
+        result = run_acm_judge(
+            args.slug,
+            path.read_text(encoding="utf-8"),
+            case=args.case,
+            run_all=args.all,
+        )
+        result["mode"] = "acm"
+        update_progress(args.slug, path.read_text(encoding="utf-8"), result)
+        print_result(result, show_passed=args.all, show_all_failures=args.all)
+        return 0 if result.get("ok") else 1
     tests = tests_by_slug().get(args.slug)
     if args.case is not None:
         if args.case < 1:
@@ -336,6 +433,25 @@ def show_problem(args):
     if not problem:
         print(f"Unknown problem: {args.slug}", file=sys.stderr)
         return 2
+    if args.mode == "acm":
+        spec = acm_tests_by_slug().get(args.slug)
+        if not spec:
+            print(f"No ACM test spec for {args.slug}", file=sys.stderr)
+            return 2
+        print(f"{problem['title']} [{problem['difficulty']}] - ACM")
+        print(problem["category"])
+        print()
+        print(f"Protocol: {spec.get('protocol', 'text')}")
+        print(f"Format: {spec['format']}")
+        print()
+        for index, case in enumerate(spec["cases"][:3], start=1):
+            print(f"Case {index} stdin:")
+            print(case["stdin"], end="" if case["stdin"].endswith("\n") else "\n")
+            expected = case.get("stdout", case.get("expected"))
+            print(f"Expected: {expected!r}")
+            print()
+        print(f"File: {acm_solution_path(args.slug)}")
+        return 0
     print(f"{problem['title']} [{problem['difficulty']}]")
     print(problem["category"])
     print()
@@ -356,9 +472,11 @@ def main():
 
     p = sub.add_parser("scaffold", help="Create PyCharm-friendly problem folders")
     p.add_argument("--force", action="store_true", help="Rewrite README files")
+    p.add_argument("--acm", action="store_true", help="Also create standalone ACM solution files")
     p.set_defaults(func=scaffold)
 
     p = sub.add_parser("check", help="Check problem folders and local tests")
+    p.add_argument("--acm", action="store_true", help="Also check all ACM specs and starter files")
     p.set_defaults(func=check_project)
 
     p = sub.add_parser("list", help="List problems")
@@ -368,6 +486,7 @@ def main():
 
     p = sub.add_parser("run", help="Run local tests for one problem")
     p.add_argument("slug")
+    p.add_argument("--mode", choices=("function", "acm"), default="function")
     p.add_argument("--file", help="Use a custom solution file")
     p.add_argument("--case", type=int, help="Run only one 1-based test case")
     p.add_argument("--all", action="store_true", help="Keep running after failures")
@@ -376,6 +495,7 @@ def main():
 
     p = sub.add_parser("show", help="Show a problem summary")
     p.add_argument("slug")
+    p.add_argument("--mode", choices=("function", "acm"), default="function")
     p.set_defaults(func=show_problem)
 
     p = sub.add_parser("status", help="Show progress")

@@ -26,6 +26,34 @@ python train.py run two-sum
 python train.py status
 ```
 
+## ACM 输入输出模式
+
+函数模式适合学习题型；ACM 模式会把你的 `solution_acm.py` 当作独立进程，
+通过标准输入喂数据，再比较标准输出，模拟在线笔试：
+
+```bash
+python train.py scaffold --acm
+python train.py run two-sum --mode acm
+python train.py run two-sum --mode acm --all
+```
+
+ACM 文件与普通 `solution.py` 放在同一个题目目录，150 道题全部拥有 ACM
+入口，并在独立 Python 进程中运行。输入协议分为两类：
+
+- `text`：为数组、滑动窗口、树、堆和基础 DP 等高频笔试题维护的空格/换行格式。
+- `json`：覆盖其余复杂签名，包括链表、树、图和连续操作的设计题；公共适配层会
+  把 JSON 转换成函数模式使用的数据结构。
+
+开始编码前先查看该题的准确输入格式：
+
+```bash
+python train.py show two-sum --mode acm
+python train.py check --acm
+```
+
+`scripts/build_acm.py` 可以根据原有 150 道函数题数据确定性地重新生成 ACM
+规范，同时保留 `data/acm_text_specs.json` 中人工维护的真实笔试格式。
+
 `show` 会显示题目说明和 `solution.py` 的位置。打开文件写答案，再用 `run` 执行本地用例。运行失败时会直接显示输入、预期结果和实际结果。
 
 如果只想反复调试某一个失败用例：
