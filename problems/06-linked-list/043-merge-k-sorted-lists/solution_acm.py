@@ -1,21 +1,17 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def merge_k_lists(self, lists: list[ListNode[int] | None]) -> ListNode[int] | None:
-        pass
-
-    def _divide_conquer(self, lists: list[ListNode[int] | None], left: int, right: int) -> ListNode[int] | None:
-        pass
-
-    def _merge_two(self, l1: ListNode[int] | None, l2: ListNode[int] | None) -> ListNode[int] | None:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    k_v0 = int(data[p]); p += 1
+    v0 = []
+    for _ in range(k_v0):
+        n_v0 = int(data[p]); p += 1
+        v0.append(list(map(int, data[p:p + n_v0]))); p += n_v0
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'merge_k_lists', ['List[ListNode]'])
+    main()

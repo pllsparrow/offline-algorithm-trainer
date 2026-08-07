@@ -15,52 +15,58 @@ Invert a binary tree. Practice recursively processing left and right subtrees.
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[4, 2, 7, 1, 3, 6, 9]]
-expected = [4, 7, 2, 9, 6, 3, 1]
+**Input**
+
+```
+7
+4 2 7 1 3 6 9
+```
+
+**Output**
+
+```
+4 7 2 9 6 3 1
 ```
 
 ### Case 2
 
-```python
-args = [[2, 1, 3]]
-expected = [2, 3, 1]
+**Input**
+
+```
+3
+2 1 3
+```
+
+**Output**
+
+```
+2 3 1
 ```
 
 ### Case 3
 
-```python
-args = [[]]
-expected = []
+**Input**
+
+```
+0
+
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1]]
-expected = [1]
 ```
-
-### Case 5
-
-```python
-args = [[1, 2]]
-expected = [1, None, 2]
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run invert-binary-tree
+python3 train.py run invert-binary-tree
 ```

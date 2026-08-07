@@ -15,52 +15,65 @@ Classic interview problem for Clone Graph. Practice DFS/BFS and topological sort
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a graph: count n, then per node degree d and d neighbour ids. Output: count n then n neighbour lists (degree then ids).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[2, 4], [1, 3], [2, 4], [1, 3]]]
-expected = [[2, 4], [1, 3], [2, 4], [1, 3]]
+**Input**
+
+```
+4
+2 2 4
+2 1 3
+2 2 4
+2 1 3
+```
+
+**Output**
+
+```
+4
+2 2 4
+2 1 3
+2 2 4
+2 1 3
 ```
 
 ### Case 2
 
-```python
-args = [[[]]]
-expected = [[]]
+**Input**
+
+```
+1
+0
+```
+
+**Output**
+
+```
+1
+0
 ```
 
 ### Case 3
 
-```python
-args = [[]]
-expected = []
+**Input**
+
+```
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[2], [1]]]
-expected = [[2], [1]]
 ```
-
-### Case 5
-
-```python
-args = [[[2, 3], [1], [1]]]
-expected = [[2, 3], [1], [1]]
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run clone-graph
+python3 train.py run clone-graph
 ```

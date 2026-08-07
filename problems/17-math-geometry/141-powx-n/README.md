@@ -15,52 +15,59 @@ Classic interview problem for Pow(x, n). Practice in-place matrix operations and
 - Before coding, state the invariant or state definition: simulation.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a float; arg2: an integer. Output: the float.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [2.0, 10]
-expected = 1024.0
+**Input**
+
+```
+2.0
+10
+```
+
+**Output**
+
+```
+1024.0
 ```
 
 ### Case 2
 
-```python
-args = [2.1, 3]
-expected = 9.261
+**Input**
+
+```
+2.1
+3
+```
+
+**Output**
+
+```
+9.261
 ```
 
 ### Case 3
 
-```python
-args = [2.0, -2]
-expected = 0.25
+**Input**
+
+```
+2.0
+-2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [1.0, 0]
-expected = 1.0
 ```
-
-### Case 5
-
-```python
-args = [0.5, 2]
-expected = 0.25
+0.25
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run powx-n
+python3 train.py run powx-n
 ```

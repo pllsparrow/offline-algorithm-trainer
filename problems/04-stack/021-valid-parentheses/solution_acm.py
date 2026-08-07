@@ -1,15 +1,13 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def is_valid(self, s: str) -> bool:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: a string token. Output: 1 if true else 0.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    v0 = data[p].decode(); p += 1
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'is_valid', [''])
+    main()

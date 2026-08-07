@@ -15,52 +15,67 @@ Count islands in a grid. Practice DFS/BFS flood fill.
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[['1', '1', '1', '1', '0'], ['1', '1', '0', '1', '0'], ['1', '1', '0', '0', '0'], ['0', '0', '0', '0', '0']]]
-expected = 1
+**Input**
+
+```
+4 5
+1 1 1 1 0
+1 1 0 1 0
+1 1 0 0 0
+0 0 0 0 0
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[['1', '1', '0', '0', '0'], ['1', '1', '0', '0', '0'], ['0', '0', '1', '0', '0'], ['0', '0', '0', '1', '1']]]
-expected = 3
+**Input**
+
+```
+4 5
+1 1 0 0 0
+1 1 0 0 0
+0 0 1 0 0
+0 0 0 1 1
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 3
 
-```python
-args = [[['1', '0', '1', '1', '1'], ['1', '0', '1', '0', '1'], ['1', '1', '1', '0', '1']]]
-expected = 1
+**Input**
+
+```
+3 5
+1 0 1 1 1
+1 0 1 0 1
+1 1 1 0 1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[['0', '0', '0', '0', '0'], ['0', '0', '0', '0', '0'], ['0', '0', '0', '0', '0']]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[['1', '1', '1'], ['0', '1', '0'], ['1', '1', '1']]]
-expected = 1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run number-of-islands
+python3 train.py run number-of-islands
 ```

@@ -15,52 +15,61 @@ Classic interview problem for Remove Nth Node From End of List. Practice pointer
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a linked list: count n then n integers; arg2: an integer. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, 4, 5], 2]
-expected = [1, 2, 3, 5]
+**Input**
+
+```
+5
+1 2 3 4 5
+2
+```
+
+**Output**
+
+```
+1 2 3 5
 ```
 
 ### Case 2
 
-```python
-args = [[1], 1]
-expected = []
+**Input**
+
+```
+1
+1
+1
+```
+
+**Output**
+
+```
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2], 1]
-expected = [1]
+**Input**
+
+```
+2
+1 2
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 2], 2]
-expected = [2]
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3], 3]
-expected = [2, 3]
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run remove-nth-node-from-end-of-list
+python3 train.py run remove-nth-node-from-end-of-list
 ```

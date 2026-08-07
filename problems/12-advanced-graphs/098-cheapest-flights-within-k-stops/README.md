@@ -15,52 +15,79 @@ Classic interview problem for Cheapest Flights Within K Stops. Practice shortest
 - Before coding, state the invariant or state definition: minimum spanning trees.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer; arg2: edges3: count then values; arg3: an integer; arg4: an integer; arg5: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [4, [[0, 1, 100], [1, 2, 100], [2, 0, 100], [1, 3, 600], [2, 3, 200]], 0, 3, 1]
-expected = 700
+**Input**
+
+```
+4
+5
+0 1 100
+1 2 100
+2 0 100
+1 3 600
+2 3 200
+0
+3
+1
+```
+
+**Output**
+
+```
+700
 ```
 
 ### Case 2
 
-```python
-args = [3, [[0, 1, 100], [1, 2, 100], [0, 2, 500]], 0, 2, 1]
-expected = 200
+**Input**
+
+```
+3
+3
+0 1 100
+1 2 100
+0 2 500
+0
+2
+1
+```
+
+**Output**
+
+```
+200
 ```
 
 ### Case 3
 
-```python
-args = [3, [[0, 1, 100], [1, 2, 100], [0, 2, 500]], 0, 2, 0]
-expected = 500
+**Input**
+
+```
+3
+3
+0 1 100
+1 2 100
+0 2 500
+0
+2
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [5, [[0, 1, 100], [0, 2, 500], [1, 2, 100], [1, 3, 600], [2, 3, 200], [3, 4, 100]], 0, 4, 2]
-expected = 800
 ```
-
-### Case 5
-
-```python
-args = [4, [[0, 1, 1], [0, 2, 5], [1, 2, 1], [2, 3, 1]], 0, 3, 1]
-expected = 6
+500
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run cheapest-flights-within-k-stops
+python3 train.py run cheapest-flights-within-k-stops
 ```

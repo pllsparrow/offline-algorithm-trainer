@@ -1,21 +1,13 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def partition(self, s: str) -> list[list[str]]:
-        pass
-
-    def _backtrack(self, s: str, start: int, path: list[str], result: list[list[str]]) -> None:
-        pass
-
-    def _is_palindrome(self, s: str) -> bool:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: a string token. Output: each group on its own line (sorted; each group sorted).
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    v0 = data[p].decode(); p += 1
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'partition', [''])
+    main()

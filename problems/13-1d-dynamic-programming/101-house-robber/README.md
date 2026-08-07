@@ -15,52 +15,59 @@ Classic interview problem for House Robber. Practice state definition and transi
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, 1]]
-expected = 4
+**Input**
+
+```
+4
+1 2 3 1
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[2, 7, 9, 3, 1]]
-expected = 12
+**Input**
+
+```
+5
+2 7 9 3 1
+```
+
+**Output**
+
+```
+12
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = 1
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[2, 1]]
-expected = 2
 ```
-
-### Case 5
-
-```python
-args = [[5, 1, 3, 9]]
-expected = 14
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run house-robber
+python3 train.py run house-robber
 ```

@@ -15,52 +15,66 @@ Classic interview problem for Subsets II. Practice choice paths and pruning. Sta
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 2]]
-expected = [[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]
+**Input**
+
+```
+3
+1 2 2
+```
+
+**Output**
+
+```
+
+1
+1 2
+1 2 2
+2
+2 2
 ```
 
 ### Case 2
 
-```python
-args = [[0]]
-expected = [[], [0]]
+**Input**
+
+```
+1
+0
+```
+
+**Output**
+
+```
+
+0
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = [[], [1]]
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 2, 3]]
-expected = [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
 ```
 
-### Case 5
-
-```python
-args = [[2, 2]]
-expected = [[], [2], [2, 2]]
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run subsets-ii
+python3 train.py run subsets-ii
 ```

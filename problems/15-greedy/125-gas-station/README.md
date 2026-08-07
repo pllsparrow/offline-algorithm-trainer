@@ -15,52 +15,65 @@ Classic interview problem for Gas Station. Practice local optimality proofs and 
 - Before coding, state the invariant or state definition: interval/jump strategies.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, 4, 5], [3, 4, 5, 1, 2]]
-expected = 3
+**Input**
+
+```
+5
+1 2 3 4 5
+5
+3 4 5 1 2
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [[2, 3, 4], [3, 4, 3]]
-expected = -1
+**Input**
+
+```
+3
+2 3 4
+3
+3 4 3
+```
+
+**Output**
+
+```
+-1
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2], [2, 1]]
-expected = 1
+**Input**
+
+```
+2
+1 2
+2
+2 1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[5], [4]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[2], [2]]
-expected = 0
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run gas-station
+python3 train.py run gas-station
 ```

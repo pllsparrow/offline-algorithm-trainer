@@ -15,52 +15,62 @@ Classic interview problem for Coin Change II. Practice 2D state design and strin
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer; arg2: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [5, [1, 2, 5]]
-expected = 4
+**Input**
+
+```
+5
+3
+1 2 5
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [3, [2]]
-expected = 0
+**Input**
+
+```
+3
+1
+2
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [10, [10]]
-expected = 1
+**Input**
+
+```
+10
+1
+10
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [0, [1, 2, 5]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [4, [1, 2]]
-expected = 3
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run coin-change-ii
+python3 train.py run coin-change-ii
 ```

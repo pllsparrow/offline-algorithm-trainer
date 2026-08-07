@@ -15,57 +15,91 @@ Classic interview problem for Implement Trie Prefix Tree. Practice trie node des
 - Before coding, state the invariant or state definition: string search.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['Trie', 'insert', 'insert', 'search', 'search', 'search']
-args = [[], ['app'], ['apple'], ['app'], ['apple'], ['appl']]
-expected = [None, None, None, True, True, False]
+**Input**
+
+```
+6
+Trie
+insert app
+insert apple
+search app
+search apple
+search appl
+```
+
+**Output**
+
+```
+null
+null
+null
+1
+1
+0
 ```
 
 ### Case 2
 
-```python
-ops = ['Trie', 'insert', 'insert', 'insert', 'search', 'search', 'search']
-args = [[], ['cat'], ['car'], ['card'], ['cat'], ['car'], ['care']]
-expected = [None, None, None, None, True, True, False]
+**Input**
+
+```
+7
+Trie
+insert cat
+insert car
+insert card
+search cat
+search car
+search care
+```
+
+**Output**
+
+```
+null
+null
+null
+null
+1
+1
+0
 ```
 
 ### Case 3
 
-```python
-ops = ['Trie', 'insert', 'insert', 'starts_with', 'starts_with', 'starts_with']
-args = [[], ['test'], ['testing'], ['test'], ['testing'], ['te']]
-expected = [None, None, None, True, True, True]
+**Input**
+
+```
+6
+Trie
+insert test
+insert testing
+starts_with test
+starts_with testing
+starts_with te
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['Trie', 'insert', 'search', 'search', 'insert', 'search', 'search']
-args = [[], ['abc'], ['abc'], ['ab'], ['ab'], ['ab'], ['abc']]
-expected = [None, None, True, False, None, True, True]
 ```
-
-### Case 5
-
-```python
-ops = ['Trie', 'insert', 'search', 'starts_with']
-args = [[], ['a'], ['a'], ['a']]
-expected = [None, None, True, True]
+null
+null
+null
+1
+1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run implement-trie-prefix-tree
+python3 train.py run implement-trie-prefix-tree
 ```

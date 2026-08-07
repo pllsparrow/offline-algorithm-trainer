@@ -1,15 +1,14 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: edges2: count then values. Output: count m then m lines of pairs.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    m_v0 = int(data[p]); p += 1
+    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'merge', [''])
+    main()

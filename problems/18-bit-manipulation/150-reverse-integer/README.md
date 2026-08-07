@@ -15,52 +15,56 @@ Classic interview problem for Reverse Integer. Practice bit manipulation tricks 
 - Before coding, state the invariant or state definition: XOR properties.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [123]
-expected = 321
+**Input**
+
+```
+123
+```
+
+**Output**
+
+```
+321
 ```
 
 ### Case 2
 
-```python
-args = [-123]
-expected = -321
+**Input**
+
+```
+-123
+```
+
+**Output**
+
+```
+-321
 ```
 
 ### Case 3
 
-```python
-args = [120]
-expected = 21
+**Input**
+
+```
+120
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [0]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [1]
-expected = 1
+21
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run reverse-integer
+python3 train.py run reverse-integer
 ```

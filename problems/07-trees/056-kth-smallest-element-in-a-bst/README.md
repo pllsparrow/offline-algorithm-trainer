@@ -15,52 +15,62 @@ Classic interview problem for Kth Smallest Element In a Bst. Practice recursive 
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 1, 4, None, 2], 1]
-expected = 1
+**Input**
+
+```
+5
+3 1 4 null 2
+1
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[5, 3, 6, 2, 4, None, None, 1], 3]
-expected = 3
+**Input**
+
+```
+8
+5 3 6 2 4 null null 1
+3
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 3
 
-```python
-args = [[1], 1]
-expected = 1
+**Input**
+
+```
+1
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[2, 1, 3], 2]
-expected = 2
 ```
-
-### Case 5
-
-```python
-args = [[4, 2, 6, 1, 3, 5, 7], 4]
-expected = 4
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run kth-smallest-element-in-a-bst
+python3 train.py run kth-smallest-element-in-a-bst
 ```

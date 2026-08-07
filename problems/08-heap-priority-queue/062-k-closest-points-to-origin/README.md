@@ -15,52 +15,68 @@ Classic interview problem for K Closest Points to Origin. Practice Top K and two
 - Before coding, state the invariant or state definition: two heaps.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values; arg2: an integer. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 3], [-2, 2]], 1]
-expected = [[-2, 2]]
+**Input**
+
+```
+2
+1 3
+-2 2
+1
+```
+
+**Output**
+
+```
+-2 2
 ```
 
 ### Case 2
 
-```python
-args = [[[3, 3], [5, -1], [-2, 4]], 2]
-expected = [[3, 3], [-2, 4]]
+**Input**
+
+```
+3
+3 3
+5 -1
+-2 4
+2
+```
+
+**Output**
+
+```
+-2 4
+3 3
 ```
 
 ### Case 3
 
-```python
-args = [[[0, 1], [1, 0]], 2]
-expected = [[0, 1], [1, 0]]
+**Input**
+
+```
+2
+0 1
+1 0
+2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 1], [1, 1], [1, 1]], 2]
-expected = [[1, 1], [1, 1]]
 ```
-
-### Case 5
-
-```python
-args = [[[0, 0]], 1]
-expected = [[0, 0]]
+0 1
+0 1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run k-closest-points-to-origin
+python3 train.py run k-closest-points-to-origin
 ```

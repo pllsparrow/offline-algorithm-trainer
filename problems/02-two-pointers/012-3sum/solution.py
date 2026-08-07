@@ -1,8 +1,0 @@
-from __future__ import annotations
-
-from support import ListNode, Node, TreeNode
-
-
-class Solution:
-    def three_sum(self, nums: list[int]) -> list[list[int]]:
-        pass

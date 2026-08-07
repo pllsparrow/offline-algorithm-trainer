@@ -15,57 +15,101 @@ Classic interview problem for LRU Cache. Practice pointer rewiring and fast and 
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['LRUCache', 'put', 'put', 'get', 'put', 'get', 'put', 'get', 'get', 'get']
-args = [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]
-expected = [None, None, None, 1, None, -1, None, -1, 3, 4]
+**Input**
+
+```
+10
+LRUCache 2
+put 1 1
+put 2 2
+get 1
+put 3 3
+get 2
+put 4 4
+get 1
+get 3
+get 4
+```
+
+**Output**
+
+```
+null
+null
+null
+1
+null
+-1
+null
+-1
+3
+4
 ```
 
 ### Case 2
 
-```python
-ops = ['LRUCache', 'get', 'put', 'get', 'put', 'put', 'get', 'get']
-args = [[2], [2], [2, 6], [1], [1, 5], [1, 2], [1], [2]]
-expected = [None, -1, None, -1, None, None, 2, 6]
+**Input**
+
+```
+8
+LRUCache 2
+get 2
+put 2 6
+get 1
+put 1 5
+put 1 2
+get 1
+get 2
+```
+
+**Output**
+
+```
+null
+-1
+null
+-1
+null
+null
+2
+6
 ```
 
 ### Case 3
 
-```python
-ops = ['LRUCache', 'put', 'get', 'put', 'get', 'get']
-args = [[1], [2, 1], [2], [3, 2], [2], [3]]
-expected = [None, None, 1, None, -1, 2]
+**Input**
+
+```
+6
+LRUCache 1
+put 2 1
+get 2
+put 3 2
+get 2
+get 3
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['LRUCache', 'get']
-args = [[1], [1]]
-expected = [None, -1]
 ```
-
-### Case 5
-
-```python
-ops = ['LRUCache', 'put', 'get']
-args = [[1], [1, 100], [1]]
-expected = [None, None, 100]
+null
+null
+1
+null
+-1
+2
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run lru-cache
+python3 train.py run lru-cache
 ```

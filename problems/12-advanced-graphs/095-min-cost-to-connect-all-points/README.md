@@ -15,52 +15,65 @@ Classic interview problem for Min Cost to Connect All Points. Practice shortest 
 - Before coding, state the invariant or state definition: minimum spanning trees.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[0, 0], [2, 2], [3, 10], [5, 2], [7, 0]]]
-expected = 20
+**Input**
+
+```
+5
+0 0
+2 2
+3 10
+5 2
+7 0
+```
+
+**Output**
+
+```
+20
 ```
 
 ### Case 2
 
-```python
-args = [[[3, 12], [-2, 5], [-4, 1]]]
-expected = 18
+**Input**
+
+```
+3
+3 12
+-2 5
+-4 1
+```
+
+**Output**
+
+```
+18
 ```
 
 ### Case 3
 
-```python
-args = [[[0, 0]]]
-expected = 0
+**Input**
+
+```
+1
+0 0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[0, 0], [1, 1]]]
-expected = 2
 ```
-
-### Case 5
-
-```python
-args = [[[0, 0], [1, 1], [2, 2]]]
-expected = 4
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run min-cost-to-connect-all-points
+python3 train.py run min-cost-to-connect-all-points
 ```

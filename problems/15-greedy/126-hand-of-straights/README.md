@@ -15,52 +15,62 @@ Classic interview problem for Hand of Straights. Practice local optimality proof
 - Before coding, state the invariant or state definition: interval/jump strategies.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, 6, 2, 3, 4, 7, 8], 3]
-expected = True
+**Input**
+
+```
+9
+1 2 3 6 2 3 4 7 8
+3
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2, 3, 4, 5], 4]
-expected = False
+**Input**
+
+```
+5
+1 2 3 4 5
+4
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[1], 1]
-expected = True
+**Input**
+
+```
+1
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 2, 3], 1]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3, 4], 2]
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run hand-of-straights
+python3 train.py run hand-of-straights
 ```

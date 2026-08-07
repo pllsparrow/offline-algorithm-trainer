@@ -15,52 +15,59 @@ Classic interview problem for Min Cost Climbing Stairs. Practice state definitio
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[10, 15, 20]]
-expected = 15
+**Input**
+
+```
+3
+10 15 20
+```
+
+**Output**
+
+```
+15
 ```
 
 ### Case 2
 
-```python
-args = [[1, 100, 1, 1, 1, 100, 1, 1, 100, 1]]
-expected = 6
+**Input**
+
+```
+10
+1 100 1 1 1 100 1 1 100 1
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2]]
-expected = 1
+**Input**
+
+```
+2
+1 2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[0, 0]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[999, 999]]
-expected = 999
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run min-cost-climbing-stairs
+python3 train.py run min-cost-climbing-stairs
 ```

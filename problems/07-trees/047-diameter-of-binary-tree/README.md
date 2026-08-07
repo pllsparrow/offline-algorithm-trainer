@@ -15,52 +15,59 @@ Classic interview problem for Diameter of Binary Tree. Practice recursive return
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, 4, 5]]
-expected = 3
+**Input**
+
+```
+5
+1 2 3 4 5
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2]]
-expected = 1
+**Input**
+
+```
+2
+1 2
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[]]
-expected = 0
+**Input**
+
+```
+0
+
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3]]
-expected = 2
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run diameter-of-binary-tree
+python3 train.py run diameter-of-binary-tree
 ```

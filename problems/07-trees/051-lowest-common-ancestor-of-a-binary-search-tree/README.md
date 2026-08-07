@@ -15,52 +15,65 @@ Classic interview problem for Lowest Common Ancestor of a Binary Search Tree. Pr
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a tree node value (integer); arg3: a tree node value (integer). Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[6, 2, 8, 0, 4, 7, 9, None, None, 3, 5], 2, 8]
-expected = 6
+**Input**
+
+```
+11
+6 2 8 0 4 7 9 null null 3 5
+2
+8
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 2
 
-```python
-args = [[6, 2, 8, 0, 4, 7, 9, None, None, 3, 5], 2, 4]
-expected = 2
+**Input**
+
+```
+11
+6 2 8 0 4 7 9 null null 3 5
+2
+4
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 3
 
-```python
-args = [[2, 1], 2, 1]
-expected = 2
+**Input**
+
+```
+2
+2 1
+2
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[2, 1], 1, 2]
-expected = 2
 ```
-
-### Case 5
-
-```python
-args = [[6, 2, 8, 0, 4, 7, 9], 0, 4]
-expected = 2
+2
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run lowest-common-ancestor-of-a-binary-search-tree
+python3 train.py run lowest-common-ancestor-of-a-binary-search-tree
 ```

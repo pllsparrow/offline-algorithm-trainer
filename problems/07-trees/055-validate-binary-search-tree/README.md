@@ -15,52 +15,59 @@ Classic interview problem for Validate Binary Search Tree. Practice recursive re
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[2, 1, 3]]
-expected = True
+**Input**
+
+```
+3
+2 1 3
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[5, 1, 4, None, None, 3, 6]]
-expected = False
+**Input**
+
+```
+7
+5 1 4 null null 3 6
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = True
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 1]]
-expected = False
 ```
-
-### Case 5
-
-```python
-args = [[10, 5, 15, None, None, 6, 20]]
-expected = False
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run validate-binary-search-tree
+python3 train.py run validate-binary-search-tree
 ```

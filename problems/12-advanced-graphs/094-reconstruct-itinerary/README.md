@@ -15,52 +15,69 @@ Classic interview problem for Reconstruct Itinerary. Practice shortest paths and
 - Before coding, state the invariant or state definition: minimum spanning trees.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: string pairs: count m then m lines of two tokens. Output: the strings space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[['MUC', 'LHR'], ['JFK', 'MUC'], ['SFO', 'SJC'], ['LHR', 'SFO']]]
-expected = ['JFK', 'MUC', 'LHR', 'SFO', 'SJC']
+**Input**
+
+```
+4
+MUC LHR
+JFK MUC
+SFO SJC
+LHR SFO
+```
+
+**Output**
+
+```
+JFK MUC LHR SFO SJC
 ```
 
 ### Case 2
 
-```python
-args = [[['JFK', 'SFO'], ['JFK', 'ATL'], ['SFO', 'ATL'], ['ATL', 'JFK'], ['ATL', 'SFO']]]
-expected = ['JFK', 'ATL', 'JFK', 'SFO', 'ATL', 'SFO']
+**Input**
+
+```
+5
+JFK SFO
+JFK ATL
+SFO ATL
+ATL JFK
+ATL SFO
+```
+
+**Output**
+
+```
+JFK ATL JFK SFO ATL SFO
 ```
 
 ### Case 3
 
-```python
-args = [[['JFK', 'AAA'], ['AAA', 'JFK'], ['JFK', 'BBB'], ['BBB', 'JFK']]]
-expected = ['JFK', 'AAA', 'JFK', 'BBB', 'JFK']
+**Input**
+
+```
+4
+JFK AAA
+AAA JFK
+JFK BBB
+BBB JFK
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[['JFK', 'LAX']]]
-expected = ['JFK', 'LAX']
 ```
-
-### Case 5
-
-```python
-args = [[['JFK', 'KKK'], ['KKK', 'LLL']]]
-expected = ['JFK', 'KKK', 'LLL']
+JFK AAA JFK BBB JFK
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run reconstruct-itinerary
+python3 train.py run reconstruct-itinerary
 ```

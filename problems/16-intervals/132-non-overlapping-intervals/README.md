@@ -15,52 +15,65 @@ Classic interview problem for Non Overlapping Intervals. Practice sorting then m
 - Before coding, state the invariant or state definition: overlap checks.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 2], [2, 3], [3, 4], [1, 3]]]
-expected = 1
+**Input**
+
+```
+4
+1 2
+2 3
+3 4
+1 3
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[[1, 2], [1, 2], [1, 2]]]
-expected = 2
+**Input**
+
+```
+3
+1 2
+1 2
+1 2
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 3
 
-```python
-args = [[[1, 2], [2, 3]]]
-expected = 0
+**Input**
+
+```
+2
+1 2
+2 3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 2]]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[[1, 2], [1, 3], [2, 3], [3, 4]]]
-expected = 1
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run non-overlapping-intervals
+python3 train.py run non-overlapping-intervals
 ```

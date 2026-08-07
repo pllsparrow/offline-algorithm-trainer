@@ -15,52 +15,73 @@ Classic interview problem for Pacific Atlantic Water Flow. Practice DFS/BFS and 
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 2, 2, 3, 5], [3, 2, 3, 4, 4], [2, 4, 5, 3, 1], [6, 7, 1, 4, 5], [5, 1, 1, 2, 4]]]
-expected = [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
+**Input**
+
+```
+5 5
+1 2 2 3 5
+3 2 3 4 4
+2 4 5 3 1
+6 7 1 4 5
+5 1 1 2 4
+```
+
+**Output**
+
+```
+0 3
+0 4
+0 4
+1 3
+1 3
+1 4
+2 2
 ```
 
 ### Case 2
 
-```python
-args = [[[1]]]
-expected = [[0, 0]]
+**Input**
+
+```
+1 1
+1
+```
+
+**Output**
+
+```
+0 0
 ```
 
 ### Case 3
 
-```python
-args = [[[2, 1], [1, 2]]]
-expected = [[0, 0], [0, 1], [1, 0], [1, 1]]
+**Input**
+
+```
+2 2
+2 1
+1 2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 2, 3], [8, 9, 4], [7, 6, 5]]]
-expected = [[0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
 ```
-
-### Case 5
-
-```python
-args = [[[3, 3, 3], [3, 1, 3], [0, 2, 4]]]
-expected = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 2], [2, 0], [2, 1], [2, 2]]
+0 0
+0 1
+0 1
+1 1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run pacific-atlantic-water-flow
+python3 train.py run pacific-atlantic-water-flow
 ```

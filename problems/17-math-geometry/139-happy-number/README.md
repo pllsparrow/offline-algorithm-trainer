@@ -15,52 +15,56 @@ Classic interview problem for Happy Number. Practice in-place matrix operations 
 - Before coding, state the invariant or state definition: simulation.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [19]
-expected = True
+**Input**
+
+```
+19
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [2]
-expected = False
+**Input**
+
+```
+2
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [1]
-expected = True
+**Input**
+
+```
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [7]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [10]
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run happy-number
+python3 train.py run happy-number
 ```

@@ -15,52 +15,55 @@ Classic interview problem for Letter Combinations of a Phone Number. Practice ch
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token. Output: the values space-separated in ascending order.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['23']
-expected = ['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']
+**Input**
+
+```
+23
+```
+
+**Output**
+
+```
+ad ae af bd be bf cd ce cf
 ```
 
 ### Case 2
 
-```python
-args = ['']
-expected = []
+**Input**
+
+```
+
+```
+
+**Output**
+
+```
 ```
 
 ### Case 3
 
-```python
-args = ['2']
-expected = ['a', 'b', 'c']
+**Input**
+
+```
+2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['234']
-expected = ['adg', 'adh', 'adi', 'aeg', 'aeh', 'aei', 'afg', 'afh', 'afi', 'bdg', 'bdh', 'bdi', 'beg', 'beh', 'bei', 'bfg', 'bfh', 'bfi', 'cdg', 'cdh', 'cdi', 'ceg', 'ceh', 'cei', 'cfg', 'cfh', 'cfi']
 ```
-
-### Case 5
-
-```python
-args = ['7']
-expected = ['p', 'q', 'r', 's']
+a b c
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run letter-combinations-of-a-phone-number
+python3 train.py run letter-combinations-of-a-phone-number
 ```

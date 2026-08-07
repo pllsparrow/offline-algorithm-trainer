@@ -15,52 +15,62 @@ Find the indices of two numbers whose sum equals the target. Practice looking up
 - Before coding, state the invariant or state definition: frequency counting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[2, 7, 11, 15], 9]
-expected = [0, 1]
+**Input**
+
+```
+4
+2 7 11 15
+9
+```
+
+**Output**
+
+```
+0 1
 ```
 
 ### Case 2
 
-```python
-args = [[3, 2, 4], 6]
-expected = [1, 2]
+**Input**
+
+```
+3
+3 2 4
+6
+```
+
+**Output**
+
+```
+1 2
 ```
 
 ### Case 3
 
-```python
-args = [[3, 3], 6]
-expected = [0, 1]
+**Input**
+
+```
+2
+3 3
+6
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[2, 5, 5, 11], 10]
-expected = [1, 2]
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3, 4, 5], 8]
-expected = [2, 4]
+0 1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run two-sum
+python3 train.py run two-sum
 ```

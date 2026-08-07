@@ -15,52 +15,56 @@ Classic interview problem for Reverse Bits. Practice bit manipulation tricks and
 - Before coding, state the invariant or state definition: XOR properties.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [43261596]
-expected = 964176192
+**Input**
+
+```
+43261596
+```
+
+**Output**
+
+```
+964176192
 ```
 
 ### Case 2
 
-```python
-args = [2147483644]
-expected = 1073741822
+**Input**
+
+```
+2147483644
+```
+
+**Output**
+
+```
+1073741822
 ```
 
 ### Case 3
 
-```python
-args = [0]
-expected = 0
+**Input**
+
+```
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [1]
-expected = 2147483648
 ```
-
-### Case 5
-
-```python
-args = [2]
-expected = 1073741824
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run reverse-bits
+python3 train.py run reverse-bits
 ```

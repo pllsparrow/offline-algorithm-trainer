@@ -15,52 +15,57 @@ Classic interview problem for Palindrome Partitioning. Practice choice paths and
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['aab']
-expected = [['a', 'a', 'b'], ['aa', 'b']]
+**Input**
+
+```
+aab
+```
+
+**Output**
+
+```
+a a b
+aa b
 ```
 
 ### Case 2
 
-```python
-args = ['a']
-expected = [['a']]
+**Input**
+
+```
+a
+```
+
+**Output**
+
+```
+a
 ```
 
 ### Case 3
 
-```python
-args = ['ab']
-expected = [['a', 'b']]
+**Input**
+
+```
+ab
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['aa']
-expected = [['a', 'a'], ['aa']]
 ```
-
-### Case 5
-
-```python
-args = ['abc']
-expected = [['a', 'b', 'c']]
+a b
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run palindrome-partitioning
+python3 train.py run palindrome-partitioning
 ```

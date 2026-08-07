@@ -15,52 +15,77 @@ Classic interview problem for Task Scheduler. Practice Top K and two heaps. Star
 - Before coding, state the invariant or state definition: two heaps.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string list: count n then n tokens; arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [['A', 'A', 'A', 'B', 'B', 'B'], 2]
-expected = 8
+**Input**
+
+```
+6
+A
+A
+A
+B
+B
+B
+2
+```
+
+**Output**
+
+```
+8
 ```
 
 ### Case 2
 
-```python
-args = [['A', 'C', 'A', 'B', 'D', 'B'], 1]
-expected = 6
+**Input**
+
+```
+6
+A
+C
+A
+B
+D
+B
+1
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 3
 
-```python
-args = [['A', 'A', 'A', 'B', 'B', 'B'], 3]
-expected = 10
+**Input**
+
+```
+6
+A
+A
+A
+B
+B
+B
+3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [['A'], 0]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [['A', 'A'], 1]
-expected = 3
+10
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run task-scheduler
+python3 train.py run task-scheduler
 ```

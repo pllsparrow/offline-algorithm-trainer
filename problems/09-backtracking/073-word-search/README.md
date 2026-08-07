@@ -15,52 +15,68 @@ Classic interview problem for Word Search. Practice choice paths and pruning. St
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a char board: rows r, cols c, then r lines of c chars; arg2: a string token. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']], 'ABCCED']
-expected = True
+**Input**
+
+```
+3 4
+A B C E
+S F C S
+A D E E
+ABCCED
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']], 'SEE']
-expected = True
+**Input**
+
+```
+3 4
+A B C E
+S F C S
+A D E E
+SEE
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']], 'ABCB']
-expected = False
+**Input**
+
+```
+3 4
+A B C E
+S F C S
+A D E E
+ABCB
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[['A']], 'A']
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [[['A']], 'B']
-expected = False
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run word-search
+python3 train.py run word-search
 ```

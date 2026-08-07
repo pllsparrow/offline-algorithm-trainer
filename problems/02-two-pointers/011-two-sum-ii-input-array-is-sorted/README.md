@@ -15,52 +15,62 @@ Classic interview problem for Two Sum II Input Array Is Sorted. Practice left/ri
 - Before coding, state the invariant or state definition: sorted array scanning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[2, 7, 11, 15], 9]
-expected = [1, 2]
+**Input**
+
+```
+4
+2 7 11 15
+9
+```
+
+**Output**
+
+```
+1 2
 ```
 
 ### Case 2
 
-```python
-args = [[2, 3, 4], 6]
-expected = [1, 3]
+**Input**
+
+```
+3
+2 3 4
+6
+```
+
+**Output**
+
+```
+1 3
 ```
 
 ### Case 3
 
-```python
-args = [[-1, 0], -1]
-expected = [1, 2]
+**Input**
+
+```
+2
+-1 0
+-1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 2, 3, 4, 5], 9]
-expected = [4, 5]
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3, 4, 5], 3]
-expected = [1, 2]
+1 2
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run two-sum-ii-input-array-is-sorted
+python3 train.py run two-sum-ii-input-array-is-sorted
 ```

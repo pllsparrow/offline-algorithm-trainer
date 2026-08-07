@@ -1,21 +1,14 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Codec:
-    def __init__(self) -> None:
-        pass
-
-    def serialize(self, root: TreeNode[int] | None) -> str:
-        pass
-
-    def deserialize(self, data: str) -> TreeNode[int] | None:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    n_v0 = int(data[p]); p += 1
+    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'serialize', ['TreeNode'])
+    main()

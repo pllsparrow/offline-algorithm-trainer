@@ -15,52 +15,59 @@ Classic interview problem for Trapping Rain Water. Practice left/right pointers 
 - Before coding, state the invariant or state definition: sorted array scanning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]]
-expected = 6
+**Input**
+
+```
+12
+0 1 0 2 1 0 1 3 2 1 2 1
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 2
 
-```python
-args = [[4, 2, 0, 3, 2, 5]]
-expected = 9
+**Input**
+
+```
+6
+4 2 0 3 2 5
+```
+
+**Output**
+
+```
+9
 ```
 
 ### Case 3
 
-```python
-args = [[3, 0, 2, 0, 4]]
-expected = 7
+**Input**
+
+```
+5
+3 0 2 0 4
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[0]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[1]]
-expected = 0
+7
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run trapping-rain-water
+python3 train.py run trapping-rain-water
 ```

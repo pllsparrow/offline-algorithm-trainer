@@ -1,15 +1,14 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def character_replacement(self, s: str, k: int) -> int:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: a string token; arg2: an integer. Output: the integer.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    v0 = data[p].decode(); p += 1
+    v1 = int(data[p]); p += 1
+    # TODO: compute the answer from v0, v1 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'character_replacement', ['', ''])
+    main()

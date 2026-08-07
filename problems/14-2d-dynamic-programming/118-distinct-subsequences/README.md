@@ -15,52 +15,59 @@ Classic interview problem for Distinct Subsequences. Practice 2D state design an
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['rabbbit', 'rabbit']
-expected = 3
+**Input**
+
+```
+rabbbit
+rabbit
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = ['babgbag', 'bag']
-expected = 5
+**Input**
+
+```
+babgbag
+bag
+```
+
+**Output**
+
+```
+5
 ```
 
 ### Case 3
 
-```python
-args = ['a', 'a']
-expected = 1
+**Input**
+
+```
+a
+a
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['a', 'b']
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = ['aaa', 'a']
-expected = 3
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run distinct-subsequences
+python3 train.py run distinct-subsequences
 ```

@@ -15,52 +15,67 @@ Classic interview problem for Redundant Connection. Practice DFS/BFS and topolog
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 2], [1, 3], [2, 3]]]
-expected = [2, 3]
+**Input**
+
+```
+3
+1 2
+1 3
+2 3
+```
+
+**Output**
+
+```
+2 3
 ```
 
 ### Case 2
 
-```python
-args = [[[1, 2], [2, 3], [3, 4], [1, 4], [1, 5]]]
-expected = [1, 4]
+**Input**
+
+```
+5
+1 2
+2 3
+3 4
+1 4
+1 5
+```
+
+**Output**
+
+```
+1 4
 ```
 
 ### Case 3
 
-```python
-args = [[[1, 2], [2, 3], [1, 3]]]
-expected = [1, 3]
+**Input**
+
+```
+3
+1 2
+2 3
+1 3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 2], [2, 3], [3, 4], [2, 4], [1, 5]]]
-expected = [2, 4]
 ```
-
-### Case 5
-
-```python
-args = [[[1, 2], [2, 3], [3, 4], [4, 5], [1, 5]]]
-expected = [1, 5]
+1 3
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run redundant-connection
+python3 train.py run redundant-connection
 ```

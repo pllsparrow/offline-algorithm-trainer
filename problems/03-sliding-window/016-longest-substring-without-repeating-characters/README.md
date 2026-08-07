@@ -15,52 +15,56 @@ Classic interview problem for Longest Substring Without Repeating Characters. Pr
 - Before coding, state the invariant or state definition: left/right boundary movement.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a whole input line (may contain spaces). Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['abcabcbb']
-expected = 3
+**Input**
+
+```
+abcabcbb
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = ['bbbbb']
-expected = 1
+**Input**
+
+```
+bbbbb
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = ['pwwkew']
-expected = 3
+**Input**
+
+```
+pwwkew
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['']
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = ['a']
-expected = 1
+3
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-substring-without-repeating-characters
+python3 train.py run longest-substring-without-repeating-characters
 ```

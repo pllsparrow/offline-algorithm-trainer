@@ -15,52 +15,59 @@ Classic interview problem for Longest Repeating Character Replacement. Practice 
 - Before coding, state the invariant or state definition: left/right boundary movement.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['ABAB', 2]
-expected = 4
+**Input**
+
+```
+ABAB
+2
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = ['AABABBA', 1]
-expected = 4
+**Input**
+
+```
+AABABBA
+1
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 3
 
-```python
-args = ['AAAA', 0]
-expected = 4
+**Input**
+
+```
+AAAA
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['ABCDE', 0]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = ['ABCDE', 4]
-expected = 5
+4
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-repeating-character-replacement
+python3 train.py run longest-repeating-character-replacement
 ```

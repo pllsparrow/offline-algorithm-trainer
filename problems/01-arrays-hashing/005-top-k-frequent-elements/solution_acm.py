@@ -2,10 +2,13 @@ import sys
 
 
 def main() -> None:
-    data = list(map(int, sys.stdin.buffer.read().split()))
-    n, k = data[0], data[1]
-    nums = data[2:2 + n]
-    # TODO: count frequencies, select k values, and print them sorted
+    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated in ascending order.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    n_v0 = int(data[p]); p += 1
+    v0 = list(map(int, data[p:p + n_v0])); p += n_v0
+    v1 = int(data[p]); p += 1
+    # TODO: compute the answer from v0, v1 and print it
 
 
 if __name__ == "__main__":

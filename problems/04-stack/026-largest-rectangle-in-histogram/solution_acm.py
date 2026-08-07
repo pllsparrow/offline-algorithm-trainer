@@ -1,19 +1,14 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def largest_rectangle_area(self, heights: list[int]) -> int:
-        pass
-
-    @staticmethod
-    def calculate_area(heights: list[int], stack: list[int], right_bound: int) -> int:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    n_v0 = int(data[p]); p += 1
+    v0 = list(map(int, data[p:p + n_v0])); p += n_v0
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'largest_rectangle_area', [''])
+    main()

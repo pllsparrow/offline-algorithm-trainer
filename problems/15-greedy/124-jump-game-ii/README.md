@@ -15,52 +15,59 @@ Classic interview problem for Jump Game II. Practice local optimality proofs and
 - Before coding, state the invariant or state definition: interval/jump strategies.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[2, 3, 1, 1, 4]]
-expected = 2
+**Input**
+
+```
+5
+2 3 1 1 4
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 2
 
-```python
-args = [[2, 3, 0, 1, 4]]
-expected = 2
+**Input**
+
+```
+5
+2 3 0 1 4
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2]]
-expected = 1
+**Input**
+
+```
+2
+1 2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 1, 1, 1]]
-expected = 3
 ```
-
-### Case 5
-
-```python
-args = [[2, 1]]
-expected = 1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run jump-game-ii
+python3 train.py run jump-game-ii
 ```

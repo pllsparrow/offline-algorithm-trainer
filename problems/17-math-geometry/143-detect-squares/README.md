@@ -15,57 +15,85 @@ Classic interview problem for Detect Squares. Practice in-place matrix operation
 - Before coding, state the invariant or state definition: simulation.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['DetectSquares', 'add', 'add', 'add', 'count', 'count', 'add', 'count']
-args = [[], [[3, 10]], [[11, 2]], [[3, 2]], [[11, 10]], [[14, 8]], [[11, 2]], [[11, 10]]]
-expected = [None, None, None, None, 1, 0, None, 2]
+**Input**
+
+```
+8
+DetectSquares
+add 2 3 10
+add 2 11 2
+add 2 3 2
+count 2 11 10
+count 2 14 8
+add 2 11 2
+count 2 11 10
+```
+
+**Output**
+
+```
+null
+null
+null
+null
+1
+0
+null
+2
 ```
 
 ### Case 2
 
-```python
-ops = ['DetectSquares', 'add', 'count']
-args = [[], [[0, 0]], [[0, 0]]]
-expected = [None, None, 0]
+**Input**
+
+```
+3
+DetectSquares
+add 2 0 0
+count 2 0 0
+```
+
+**Output**
+
+```
+null
+null
+0
 ```
 
 ### Case 3
 
-```python
-ops = ['DetectSquares', 'add', 'add', 'add', 'count']
-args = [[], [[0, 0]], [[0, 2]], [[2, 0]], [[2, 2]]]
-expected = [None, None, None, None, 1]
+**Input**
+
+```
+5
+DetectSquares
+add 2 0 0
+add 2 0 2
+add 2 2 0
+count 2 2 2
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['DetectSquares', 'add', 'add', 'add', 'add', 'count']
-args = [[], [[0, 0]], [[0, 0]], [[0, 2]], [[2, 0]], [[2, 2]]]
-expected = [None, None, None, None, None, 2]
 ```
-
-### Case 5
-
-```python
-ops = ['DetectSquares', 'add', 'add', 'add', 'count']
-args = [[], [[1, 1]], [[1, 3]], [[3, 1]], [[3, 3]]]
-expected = [None, None, None, None, 1]
+null
+null
+null
+null
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run detect-squares
+python3 train.py run detect-squares
 ```

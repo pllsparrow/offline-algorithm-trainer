@@ -15,52 +15,56 @@ Classic interview problem for Palindromic Substrings. Practice state definition 
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['abc']
-expected = 3
+**Input**
+
+```
+abc
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = ['aaa']
-expected = 6
+**Input**
+
+```
+aaa
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 3
 
-```python
-args = ['a']
-expected = 1
+**Input**
+
+```
+a
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['aa']
-expected = 3
 ```
-
-### Case 5
-
-```python
-args = ['aba']
-expected = 4
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run palindromic-substrings
+python3 train.py run palindromic-substrings
 ```

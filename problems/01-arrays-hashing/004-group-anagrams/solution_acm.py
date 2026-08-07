@@ -1,15 +1,14 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def group_anagrams(self, strs: list[str]) -> list[list[str]]:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    n_v0 = int(data[p]); p += 1
+    v0 = [data[p + j].decode() for j in range(n_v0)]; p += n_v0
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'group_anagrams', [''])
+    main()

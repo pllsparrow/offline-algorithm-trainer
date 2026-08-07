@@ -15,52 +15,59 @@ Classic interview problem for Best Time to Buy And Sell Stock. Practice window i
 - Before coding, state the invariant or state definition: left/right boundary movement.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[7, 1, 5, 3, 6, 4]]
-expected = 5
+**Input**
+
+```
+6
+7 1 5 3 6 4
+```
+
+**Output**
+
+```
+5
 ```
 
 ### Case 2
 
-```python
-args = [[7, 6, 4, 3, 1]]
-expected = 0
+**Input**
+
+```
+5
+7 6 4 3 1
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2, 3, 4, 5]]
-expected = 4
+**Input**
+
+```
+5
+1 2 3 4 5
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[5, 4, 3, 2, 1]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[1]]
-expected = 0
+4
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run best-time-to-buy-and-sell-stock
+python3 train.py run best-time-to-buy-and-sell-stock
 ```

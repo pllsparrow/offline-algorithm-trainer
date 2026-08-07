@@ -15,52 +15,64 @@ Classic interview problem for Course Schedule II. Practice DFS/BFS and topologic
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer; arg2: edges2: count then values. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [2, [[1, 0]]]
-expected = [0, 1]
+**Input**
+
+```
+2
+1
+1 0
+```
+
+**Output**
+
+```
+0 1
 ```
 
 ### Case 2
 
-```python
-args = [4, [[1, 0], [2, 0], [3, 1], [3, 2]]]
-expected = [0, 2, 1, 3]
+**Input**
+
+```
+4
+4
+1 0
+2 0
+3 1
+3 2
+```
+
+**Output**
+
+```
+0 2 1 3
 ```
 
 ### Case 3
 
-```python
-args = [1, []]
-expected = [0]
+**Input**
+
+```
+1
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [3, [[1, 0], [2, 1]]]
-expected = [0, 1, 2]
 ```
-
-### Case 5
-
-```python
-args = [2, [[1, 0], [0, 1]]]
-expected = []
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run course-schedule-ii
+python3 train.py run course-schedule-ii
 ```

@@ -1,15 +1,16 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def insert(self, intervals: list[list[int]], new_interval: list[int]) -> list[list[int]]:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: count m then m lines of pairs.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    m_v0 = int(data[p]); p += 1
+    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0
+    n_v1 = int(data[p]); p += 1
+    v1 = list(map(int, data[p:p + n_v1])); p += n_v1
+    # TODO: compute the answer from v0, v1 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'insert', ['', ''])
+    main()

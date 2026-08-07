@@ -15,52 +15,59 @@ Find the maximum sum of a contiguous subarray. Practice Kadane's algorithm and l
 - Before coding, state the invariant or state definition: interval/jump strategies.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[-2, 1, -3, 4, -1, 2, 1, -5, 4]]
-expected = 6
+**Input**
+
+```
+9
+-2 1 -3 4 -1 2 1 -5 4
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 2
 
-```python
-args = [[1]]
-expected = 1
+**Input**
+
+```
+1
+1
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[5, 4, -1, 7, 8]]
-expected = 23
+**Input**
+
+```
+5
+5 4 -1 7 8
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[-1]]
-expected = -1
 ```
-
-### Case 5
-
-```python
-args = [[-2, -1]]
-expected = -1
+23
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run maximum-subarray
+python3 train.py run maximum-subarray
 ```

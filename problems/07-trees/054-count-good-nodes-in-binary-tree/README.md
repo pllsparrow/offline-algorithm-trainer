@@ -15,52 +15,59 @@ Classic interview problem for Count Good Nodes In Binary Tree. Practice recursiv
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 1, 4, 3, None, 1, 5]]
-expected = 4
+**Input**
+
+```
+7
+3 1 4 3 null 1 5
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[3, 3, None, 4, 2]]
-expected = 3
+**Input**
+
+```
+5
+3 3 null 4 2
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = 1
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[5]]
-expected = 1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run count-good-nodes-in-binary-tree
+python3 train.py run count-good-nodes-in-binary-tree
 ```

@@ -15,52 +15,65 @@ Classic interview problem for Median of Two Sorted Arrays. Practice search space
 - Before coding, state the invariant or state definition: boundary shrinking.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the float.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 3], [2]]
-expected = 2.0
+**Input**
+
+```
+2
+1 3
+1
+2
+```
+
+**Output**
+
+```
+2.0
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2], [3, 4]]
-expected = 2.5
+**Input**
+
+```
+2
+1 2
+2
+3 4
+```
+
+**Output**
+
+```
+2.5
 ```
 
 ### Case 3
 
-```python
-args = [[1], []]
-expected = 1.0
+**Input**
+
+```
+1
+1
+0
+
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[], [1]]
-expected = 1.0
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3], []]
-expected = 2.0
+1.0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run median-of-two-sorted-arrays
+python3 train.py run median-of-two-sorted-arrays
 ```

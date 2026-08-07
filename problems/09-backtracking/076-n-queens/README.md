@@ -15,52 +15,57 @@ Classic interview problem for N Queens. Practice choice paths and pruning. Start
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the solution count S, then S boards each as n lines of Q/..
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [1]
-expected = [['Q']]
+**Input**
+
+```
+1
+```
+
+**Output**
+
+```
+1
+Q
 ```
 
 ### Case 2
 
-```python
-args = [2]
-expected = []
+**Input**
+
+```
+2
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [3]
-expected = []
+**Input**
+
+```
+3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [4]
-expected = [['..Q.', 'Q...', '...Q', '.Q..'], ['.Q..', '...Q', 'Q...', '..Q.']]
 ```
-
-### Case 5
-
-```python
-args = [5]
-expected = [['....Q', '..Q..', 'Q....', '...Q.', '.Q...'], ['....Q', '.Q...', '...Q.', 'Q....', '..Q..'], ['...Q.', '.Q...', '....Q', '..Q..', 'Q....'], ['...Q.', 'Q....', '..Q..', '....Q', '.Q...'], ['..Q..', '....Q', '.Q...', '...Q.', 'Q....'], ['..Q..', 'Q....', '...Q.', '.Q...', '....Q'], ['.Q...', '....Q', '..Q..', 'Q....', '...Q.'], ['.Q...', '...Q.', 'Q....', '..Q..', '....Q'], ['Q....', '...Q.', '.Q...', '....Q', '..Q..'], ['Q....', '..Q..', '....Q', '.Q...', '...Q.']]
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run n-queens
+python3 train.py run n-queens
 ```

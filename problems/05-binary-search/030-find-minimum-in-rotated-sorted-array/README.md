@@ -15,52 +15,59 @@ Classic interview problem for Find Minimum In Rotated Sorted Array. Practice sea
 - Before coding, state the invariant or state definition: boundary shrinking.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 4, 5, 1, 2]]
-expected = 1
+**Input**
+
+```
+5
+3 4 5 1 2
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[4, 5, 6, 7, 0, 1, 2]]
-expected = 0
+**Input**
+
+```
+7
+4 5 6 7 0 1 2
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[11, 13, 15, 17]]
-expected = 11
+**Input**
+
+```
+4
+11 13 15 17
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [[2, 1]]
-expected = 1
+11
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run find-minimum-in-rotated-sorted-array
+python3 train.py run find-minimum-in-rotated-sorted-array
 ```

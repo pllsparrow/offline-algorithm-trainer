@@ -15,52 +15,59 @@ Classic interview problem for Balanced Binary Tree. Practice recursive return-va
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 9, 20, None, None, 15, 7]]
-expected = True
+**Input**
+
+```
+7
+3 9 20 null null 15 7
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2, 2, 3, 3, None, None, 4, 4]]
-expected = False
+**Input**
+
+```
+9
+1 2 2 3 3 null null 4 4
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[]]
-expected = True
+**Input**
+
+```
+0
+
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1]]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [[1, 2]]
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run balanced-binary-tree
+python3 train.py run balanced-binary-tree
 ```

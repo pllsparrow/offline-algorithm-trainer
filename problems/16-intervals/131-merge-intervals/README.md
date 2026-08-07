@@ -15,52 +15,69 @@ Classic interview problem for Merge Intervals. Practice sorting then merging and
 - Before coding, state the invariant or state definition: overlap checks.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values. Output: count m then m lines of pairs.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 3], [2, 6], [8, 10], [15, 18]]]
-expected = [[1, 6], [8, 10], [15, 18]]
+**Input**
+
+```
+4
+1 3
+2 6
+8 10
+15 18
+```
+
+**Output**
+
+```
+3
+1 6
+8 10
+15 18
 ```
 
 ### Case 2
 
-```python
-args = [[[1, 4], [4, 5]]]
-expected = [[1, 5]]
+**Input**
+
+```
+2
+1 4
+4 5
+```
+
+**Output**
+
+```
+1
+1 5
 ```
 
 ### Case 3
 
-```python
-args = [[[4, 7], [1, 4]]]
-expected = [[1, 7]]
+**Input**
+
+```
+2
+4 7
+1 4
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 3]]]
-expected = [[1, 3]]
 ```
-
-### Case 5
-
-```python
-args = [[[1, 4], [2, 3]]]
-expected = [[1, 4]]
+1
+1 7
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run merge-intervals
+python3 train.py run merge-intervals
 ```

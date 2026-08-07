@@ -15,52 +15,56 @@ Classic interview problem for Generate Parentheses. Practice choice paths and pr
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the values space-separated in ascending order.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [1]
-expected = ['()']
+**Input**
+
+```
+1
+```
+
+**Output**
+
+```
+()
 ```
 
 ### Case 2
 
-```python
-args = [2]
-expected = ['(())', '()()']
+**Input**
+
+```
+2
+```
+
+**Output**
+
+```
+(()) ()()
 ```
 
 ### Case 3
 
-```python
-args = [3]
-expected = ['((()))', '(()())', '(())()', '()(())', '()()()']
+**Input**
+
+```
+3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [4]
-expected = ['(((())))', '((()()))', '((())())', '((()))()', '(()(()))', '(()()())', '(()())()', '(())(())', '(())()()', '()((()))', '()(()())', '()(())()', '()()(())', '()()()()']
 ```
-
-### Case 5
-
-```python
-args = [0]
-expected = ['']
+((())) (()()) (())() ()(()) ()()()
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run generate-parentheses
+python3 train.py run generate-parentheses
 ```

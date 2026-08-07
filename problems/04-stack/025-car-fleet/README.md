@@ -15,52 +15,68 @@ Classic interview problem for Car Fleet. Practice monotonic stacks and parenthes
 - Before coding, state the invariant or state definition: parentheses matching.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer; arg2: an integer list: count n then n integers; arg3: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [12, [10, 8, 0, 5, 3], [2, 4, 1, 1, 3]]
-expected = 3
+**Input**
+
+```
+12
+5
+10 8 0 5 3
+5
+2 4 1 1 3
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [10, [3], [3]]
-expected = 1
+**Input**
+
+```
+10
+1
+3
+1
+3
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [100, [0, 2, 4], [4, 2, 1]]
-expected = 1
+**Input**
+
+```
+100
+3
+0 2 4
+3
+4 2 1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [10, [0], [1]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [20, [10, 15], [5, 1]]
-expected = 1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run car-fleet
+python3 train.py run car-fleet
 ```

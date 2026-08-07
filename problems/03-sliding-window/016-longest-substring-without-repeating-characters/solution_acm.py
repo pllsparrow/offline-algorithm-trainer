@@ -2,8 +2,9 @@ import sys
 
 
 def main() -> None:
-    s = sys.stdin.readline().strip()
-    # TODO: maintain a sliding window and print its length
+    # Format: Input: arg1: a whole input line (may contain spaces). Output: the integer.
+    s = sys.stdin.readline().rstrip("\n")
+    # TODO: compute the answer and print it
 
 
 if __name__ == "__main__":

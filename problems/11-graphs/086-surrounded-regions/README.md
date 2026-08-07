@@ -15,52 +15,68 @@ Classic interview problem for Surrounded Regions. Practice DFS/BFS and topologic
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: count m then m lines of pairs.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[['X', 'X', 'X', 'X'], ['X', 'O', 'O', 'X'], ['X', 'X', 'O', 'X'], ['X', 'O', 'X', 'X']]]
-expected = [['X', 'X', 'X', 'X'], ['X', 'X', 'X', 'X'], ['X', 'X', 'X', 'X'], ['X', 'O', 'X', 'X']]
+**Input**
+
+```
+4 4
+X X X X
+X O O X
+X X O X
+X O X X
+```
+
+**Output**
+
+```
+4 4
+X X X X
+X X X X
+X X X X
+X O X X
 ```
 
 ### Case 2
 
-```python
-args = [[['X']]]
-expected = [['X']]
+**Input**
+
+```
+1 1
+X
+```
+
+**Output**
+
+```
+1 1
+X
 ```
 
 ### Case 3
 
-```python
-args = [[['O']]]
-expected = [['O']]
+**Input**
+
+```
+1 1
+O
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[['O', 'O'], ['O', 'O']]]
-expected = [['O', 'O'], ['O', 'O']]
 ```
-
-### Case 5
-
-```python
-args = [[['X', 'X', 'X'], ['X', 'O', 'X'], ['X', 'X', 'X']]]
-expected = [['X', 'X', 'X'], ['X', 'X', 'X'], ['X', 'X', 'X']]
+1 1
+O
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run surrounded-regions
+python3 train.py run surrounded-regions
 ```

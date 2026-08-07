@@ -15,52 +15,65 @@ Classic interview problem for Add Two Numbers. Practice pointer rewiring and fas
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[2, 4, 3], [5, 6, 4]]
-expected = [7, 0, 8]
+**Input**
+
+```
+3
+2 4 3
+3
+5 6 4
+```
+
+**Output**
+
+```
+7 0 8
 ```
 
 ### Case 2
 
-```python
-args = [[0], [0]]
-expected = [0]
+**Input**
+
+```
+1
+0
+1
+0
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[9, 9, 9, 9, 9, 9, 9], [9, 9, 9, 9]]
-expected = [8, 9, 9, 9, 0, 0, 0, 1]
+**Input**
+
+```
+7
+9 9 9 9 9 9 9
+4
+9 9 9 9
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1], [2]]
-expected = [3]
 ```
-
-### Case 5
-
-```python
-args = [[5], [5]]
-expected = [0, 1]
+8 9 9 9 0 0 0 1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run add-two-numbers
+python3 train.py run add-two-numbers
 ```

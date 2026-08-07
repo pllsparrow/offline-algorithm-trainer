@@ -15,57 +15,89 @@ Classic interview problem for Design Twitter. Practice Top K and two heaps. Star
 - Before coding, state the invariant or state definition: two heaps.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['Twitter', 'postTweet', 'getNewsFeed', 'follow', 'postTweet', 'getNewsFeed', 'unfollow', 'getNewsFeed']
-args = [[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]
-expected = [None, None, [5], None, None, [6, 5], None, [5]]
+**Input**
+
+```
+8
+Twitter
+postTweet 1 5
+getNewsFeed 1
+follow 1 2
+postTweet 2 6
+getNewsFeed 1
+unfollow 1 2
+getNewsFeed 1
+```
+
+**Output**
+
+```
+null
+null
+5
+null
+null
+6 5
+null
+5
 ```
 
 ### Case 2
 
-```python
-ops = ['Twitter', 'postTweet', 'postTweet', 'postTweet', 'getNewsFeed']
-args = [[], [1, 1], [1, 2], [1, 3], [1]]
-expected = [None, None, None, None, [3, 2, 1]]
+**Input**
+
+```
+5
+Twitter
+postTweet 1 1
+postTweet 1 2
+postTweet 1 3
+getNewsFeed 1
+```
+
+**Output**
+
+```
+null
+null
+null
+null
+3 2 1
 ```
 
 ### Case 3
 
-```python
-ops = ['Twitter', 'postTweet', 'postTweet', 'follow', 'getNewsFeed']
-args = [[], [1, 10], [2, 20], [1, 2], [1]]
-expected = [None, None, None, None, [20, 10]]
+**Input**
+
+```
+5
+Twitter
+postTweet 1 10
+postTweet 2 20
+follow 1 2
+getNewsFeed 1
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['Twitter', 'follow', 'follow', 'postTweet', 'postTweet', 'getNewsFeed']
-args = [[], [1, 2], [1, 3], [2, 100], [3, 200], [1]]
-expected = [None, None, None, None, None, [200, 100]]
 ```
-
-### Case 5
-
-```python
-ops = ['Twitter', 'postTweet', 'follow', 'getNewsFeed', 'unfollow', 'getNewsFeed']
-args = [[], [2, 50], [1, 2], [1], [1, 2], [1]]
-expected = [None, None, None, [50], None, []]
+null
+null
+null
+null
+20 10
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run design-twitter
+python3 train.py run design-twitter
 ```

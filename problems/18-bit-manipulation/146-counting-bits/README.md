@@ -15,52 +15,56 @@ Classic interview problem for Counting Bits. Practice bit manipulation tricks an
 - Before coding, state the invariant or state definition: XOR properties.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [2]
-expected = [0, 1, 1]
+**Input**
+
+```
+2
+```
+
+**Output**
+
+```
+0 1 1
 ```
 
 ### Case 2
 
-```python
-args = [5]
-expected = [0, 1, 1, 2, 1, 2]
+**Input**
+
+```
+5
+```
+
+**Output**
+
+```
+0 1 1 2 1 2
 ```
 
 ### Case 3
 
-```python
-args = [0]
-expected = [0]
+**Input**
+
+```
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [1]
-expected = [0, 1]
 ```
-
-### Case 5
-
-```python
-args = [3]
-expected = [0, 1, 1, 2]
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run counting-bits
+python3 train.py run counting-bits
 ```

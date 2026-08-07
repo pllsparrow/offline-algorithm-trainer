@@ -15,52 +15,62 @@ Search for a target in a sorted array. Practice binary-search boundaries.
 - Before coding, state the invariant or state definition: boundary shrinking.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[-1, 0, 3, 5, 9, 12], 9]
-expected = 4
+**Input**
+
+```
+6
+-1 0 3 5 9 12
+9
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[-1, 0, 3, 5, 9, 12], 2]
-expected = -1
+**Input**
+
+```
+6
+-1 0 3 5 9 12
+2
+```
+
+**Output**
+
+```
+-1
 ```
 
 ### Case 3
 
-```python
-args = [[5], 5]
-expected = 0
+**Input**
+
+```
+1
+5
+5
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[5], -5]
-expected = -1
 ```
-
-### Case 5
-
-```python
-args = [[1, 3, 5, 7, 9], 1]
-expected = 0
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run binary-search
+python3 train.py run binary-search
 ```

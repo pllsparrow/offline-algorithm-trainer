@@ -15,57 +15,91 @@ Classic interview problem for Design Add And Search Words Data Structure. Practi
 - Before coding, state the invariant or state definition: string search.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['WordDictionary', 'addWord', 'addWord', 'addWord', 'search', 'search', 'search', 'search']
-args = [[], ['bad'], ['dad'], ['mad'], ['pad'], ['bad'], ['.ad'], ['b..']]
-expected = [None, None, None, None, False, True, True, True]
+**Input**
+
+```
+8
+WordDictionary
+addWord bad
+addWord dad
+addWord mad
+search pad
+search bad
+search .ad
+search b..
+```
+
+**Output**
+
+```
+null
+null
+null
+null
+0
+1
+1
+1
 ```
 
 ### Case 2
 
-```python
-ops = ['WordDictionary', 'addWord', 'search', 'search', 'search']
-args = [[], ['a'], ['a'], ['.'], ['aa']]
-expected = [None, None, True, True, False]
+**Input**
+
+```
+5
+WordDictionary
+addWord a
+search a
+search .
+search aa
+```
+
+**Output**
+
+```
+null
+null
+1
+1
+0
 ```
 
 ### Case 3
 
-```python
-ops = ['WordDictionary', 'addWord', 'addWord', 'search', 'search', 'search']
-args = [[], ['at'], ['and'], ['an'], ['.at'], ['an.']]
-expected = [None, None, None, False, False, True]
+**Input**
+
+```
+6
+WordDictionary
+addWord at
+addWord and
+search an
+search .at
+search an.
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['WordDictionary', 'addWord', 'addWord', 'search', 'search']
-args = [[], ['word'], ['world'], ['word'], ['wor.']]
-expected = [None, None, None, True, True]
 ```
-
-### Case 5
-
-```python
-ops = ['WordDictionary', 'addWord', 'search', 'search']
-args = [[], ['test'], ['test'], ['t..t']]
-expected = [None, None, True, True]
+null
+null
+null
+0
+0
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run design-add-and-search-words-data-structure
+python3 train.py run design-add-and-search-words-data-structure
 ```

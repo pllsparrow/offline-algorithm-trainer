@@ -15,52 +15,59 @@ Classic interview problem for Binary Tree Right Side View. Practice recursive re
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, None, 5, None, 4]]
-expected = [1, 3, 4]
+**Input**
+
+```
+7
+1 2 3 null 5 null 4
+```
+
+**Output**
+
+```
+1 3 4
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2, 3, 4, None, None, None, 5]]
-expected = [1, 3, 4, 5]
+**Input**
+
+```
+8
+1 2 3 4 null null null 5
+```
+
+**Output**
+
+```
+1 3 4 5
 ```
 
 ### Case 3
 
-```python
-args = [[1, None, 3]]
-expected = [1, 3]
+**Input**
+
+```
+3
+1 null 3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[]]
-expected = []
 ```
-
-### Case 5
-
-```python
-args = [[1]]
-expected = [1]
+1 3
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run binary-tree-right-side-view
+python3 train.py run binary-tree-right-side-view
 ```

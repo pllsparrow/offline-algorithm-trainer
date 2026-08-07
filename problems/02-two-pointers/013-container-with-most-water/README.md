@@ -15,52 +15,59 @@ Classic interview problem for Container With Most Water. Practice left/right poi
 - Before coding, state the invariant or state definition: sorted array scanning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 8, 6, 2, 5, 4, 8, 3, 7]]
-expected = 49
+**Input**
+
+```
+9
+1 8 6 2 5 4 8 3 7
+```
+
+**Output**
+
+```
+49
 ```
 
 ### Case 2
 
-```python
-args = [[1, 1]]
-expected = 1
+**Input**
+
+```
+2
+1 1
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2, 1]]
-expected = 2
+**Input**
+
+```
+3
+1 2 1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[2, 1]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 4, 3]]
-expected = 4
+2
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run container-with-most-water
+python3 train.py run container-with-most-water
 ```

@@ -15,52 +15,59 @@ Classic interview problem for Minimum Window Substring. Practice window invarian
 - Before coding, state the invariant or state definition: left/right boundary movement.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token. Output: the string.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['ADOBECODEBANC', 'ABC']
-expected = 'BANC'
+**Input**
+
+```
+ADOBECODEBANC
+ABC
+```
+
+**Output**
+
+```
+BANC
 ```
 
 ### Case 2
 
-```python
-args = ['a', 'a']
-expected = 'a'
+**Input**
+
+```
+a
+a
+```
+
+**Output**
+
+```
+a
 ```
 
 ### Case 3
 
-```python
-args = ['a', 'aa']
-expected = ''
+**Input**
+
+```
+a
+aa
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['ab', 'b']
-expected = 'b'
 ```
 
-### Case 5
-
-```python
-args = ['abc', 'cba']
-expected = 'abc'
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run minimum-window-substring
+python3 train.py run minimum-window-substring
 ```

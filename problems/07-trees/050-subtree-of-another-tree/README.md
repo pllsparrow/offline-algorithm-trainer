@@ -15,52 +15,65 @@ Classic interview problem for Subtree of Another Tree. Practice recursive return
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 4, 5, 1, 2], [4, 1, 2]]
-expected = True
+**Input**
+
+```
+5
+3 4 5 1 2
+3
+4 1 2
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[3, 4, 5, 1, 2, None, None, None, None, 0], [4, 1, 2]]
-expected = False
+**Input**
+
+```
+10
+3 4 5 1 2 null null null null 0
+3
+4 1 2
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[1], [1]]
-expected = True
+**Input**
+
+```
+1
+1
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1], [2]]
-expected = False
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3], [2]]
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run subtree-of-another-tree
+python3 train.py run subtree-of-another-tree
 ```

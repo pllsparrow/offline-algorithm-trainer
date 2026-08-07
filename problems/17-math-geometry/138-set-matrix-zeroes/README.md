@@ -15,52 +15,70 @@ Classic interview problem for Set Matrix Zeroes. Practice in-place matrix operat
 - Before coding, state the invariant or state definition: simulation.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 1, 1], [1, 0, 1], [1, 1, 1]]]
-expected = [[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+**Input**
+
+```
+3 3
+1 1 1
+1 0 1
+1 1 1
+```
+
+**Output**
+
+```
+3 3
+1 0 1
+0 0 0
+1 0 1
 ```
 
 ### Case 2
 
-```python
-args = [[[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]]
-expected = [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]
+**Input**
+
+```
+3 4
+0 1 2 0
+3 4 5 2
+1 3 1 5
+```
+
+**Output**
+
+```
+3 4
+0 0 0 0
+0 4 5 0
+0 3 1 0
 ```
 
 ### Case 3
 
-```python
-args = [[[1]]]
-expected = [[1]]
+**Input**
+
+```
+1 1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[0]]]
-expected = [[0]]
 ```
-
-### Case 5
-
-```python
-args = [[[1, 0]]]
-expected = [[0, 0]]
+1 1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run set-matrix-zeroes
+python3 train.py run set-matrix-zeroes
 ```

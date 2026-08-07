@@ -15,52 +15,59 @@ Classic interview problem for Sum of Two Integers. Practice bit manipulation tri
 - Before coding, state the invariant or state definition: XOR properties.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer; arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [1, 2]
-expected = 3
+**Input**
+
+```
+1
+2
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [2, 3]
-expected = 5
+**Input**
+
+```
+2
+3
+```
+
+**Output**
+
+```
+5
 ```
 
 ### Case 3
 
-```python
-args = [-1, 1]
-expected = 0
+**Input**
+
+```
+-1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [0, 0]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [100, 200]
-expected = 300
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run sum-of-two-integers
+python3 train.py run sum-of-two-integers
 ```

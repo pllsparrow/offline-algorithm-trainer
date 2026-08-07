@@ -15,52 +15,66 @@ Group strings that are anagrams of each other. Practice turning a complex object
 - Before coding, state the invariant or state definition: frequency counting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [['eat', 'tea', 'tan', 'ate', 'nat', 'bat']]
-expected = [['bat'], ['nat', 'tan'], ['ate', 'eat', 'tea']]
+**Input**
+
+```
+6
+eat
+tea
+tan
+ate
+nat
+bat
+```
+
+**Output**
+
+```
+ate eat tea
+bat
+nat tan
 ```
 
 ### Case 2
 
-```python
-args = [['']]
-expected = [['']]
+**Input**
+
+```
+1
+
+```
+
+**Output**
+
+```
+
 ```
 
 ### Case 3
 
-```python
-args = [['a']]
-expected = [['a']]
+**Input**
+
+```
+1
+a
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [['abc', 'bca', 'cab', 'xyz']]
-expected = [['abc', 'bca', 'cab'], ['xyz']]
 ```
-
-### Case 5
-
-```python
-args = [['ab', 'ba']]
-expected = [['ab', 'ba']]
+a
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run group-anagrams
+python3 train.py run group-anagrams
 ```

@@ -15,52 +15,59 @@ Classic interview problem for Longest Consecutive Sequence. Practice hash table 
 - Before coding, state the invariant or state definition: frequency counting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[100, 4, 200, 1, 3, 2]]
-expected = 4
+**Input**
+
+```
+6
+100 4 200 1 3 2
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[0, 3, 7, 2, 5, 8, 4, 6, 0, 1]]
-expected = 9
+**Input**
+
+```
+10
+0 3 7 2 5 8 4 6 0 1
+```
+
+**Output**
+
+```
+9
 ```
 
 ### Case 3
 
-```python
-args = [[1, 0, 1, 2]]
-expected = 3
+**Input**
+
+```
+4
+1 0 1 2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[1]]
-expected = 1
+3
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-consecutive-sequence
+python3 train.py run longest-consecutive-sequence
 ```

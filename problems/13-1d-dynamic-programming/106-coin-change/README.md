@@ -15,52 +15,62 @@ Find the minimum number of coins needed to make a target amount. Practice comple
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 5], 11]
-expected = 3
+**Input**
+
+```
+3
+1 2 5
+11
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [[2], 3]
-expected = -1
+**Input**
+
+```
+1
+2
+3
+```
+
+**Output**
+
+```
+-1
 ```
 
 ### Case 3
 
-```python
-args = [[1], 0]
-expected = 0
+**Input**
+
+```
+1
+1
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 3, 4], 6]
-expected = 2
 ```
-
-### Case 5
-
-```python
-args = [[2, 5, 10, 1], 27]
-expected = 4
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run coin-change
+python3 train.py run coin-change
 ```

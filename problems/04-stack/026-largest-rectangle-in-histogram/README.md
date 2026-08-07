@@ -15,52 +15,59 @@ Classic interview problem for Largest Rectangle In Histogram. Practice monotonic
 - Before coding, state the invariant or state definition: parentheses matching.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[2, 1, 5, 6, 2, 3]]
-expected = 10
+**Input**
+
+```
+6
+2 1 5 6 2 3
+```
+
+**Output**
+
+```
+10
 ```
 
 ### Case 2
 
-```python
-args = [[2, 4]]
-expected = 4
+**Input**
+
+```
+2
+2 4
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = 1
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[0]]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [[1, 1]]
-expected = 2
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run largest-rectangle-in-histogram
+python3 train.py run largest-rectangle-in-histogram
 ```

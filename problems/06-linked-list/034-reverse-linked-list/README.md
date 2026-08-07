@@ -15,52 +15,59 @@ Reverse a singly linked list. Practice fundamental pointer rewiring.
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a linked list: count n then n integers. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, 4, 5]]
-expected = [5, 4, 3, 2, 1]
+**Input**
+
+```
+5
+1 2 3 4 5
+```
+
+**Output**
+
+```
+5 4 3 2 1
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2]]
-expected = [2, 1]
+**Input**
+
+```
+2
+1 2
+```
+
+**Output**
+
+```
+2 1
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = [1]
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[]]
-expected = []
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, 3]]
-expected = [3, 2, 1]
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run reverse-linked-list
+python3 train.py run reverse-linked-list
 ```

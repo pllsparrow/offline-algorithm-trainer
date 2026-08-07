@@ -15,52 +15,75 @@ Classic interview problem for Insert Interval. Practice sorting then merging and
 - Before coding, state the invariant or state definition: overlap checks.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: count m then m lines of pairs.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 3], [6, 9]], [2, 5]]
-expected = [[1, 5], [6, 9]]
+**Input**
+
+```
+2
+1 3
+6 9
+2
+2 5
+```
+
+**Output**
+
+```
+2
+1 5
+6 9
 ```
 
 ### Case 2
 
-```python
-args = [[[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8]]
-expected = [[1, 2], [3, 10], [12, 16]]
+**Input**
+
+```
+5
+1 2
+3 5
+6 7
+8 10
+12 16
+2
+4 8
+```
+
+**Output**
+
+```
+3
+1 2
+3 10
+12 16
 ```
 
 ### Case 3
 
-```python
-args = [[], [5, 7]]
-expected = [[5, 7]]
+**Input**
+
+```
+0
+2
+5 7
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 5]], [2, 3]]
-expected = [[1, 5]]
 ```
-
-### Case 5
-
-```python
-args = [[[1, 5]], [6, 8]]
-expected = [[1, 5], [6, 8]]
+1
+5 7
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run insert-interval
+python3 train.py run insert-interval
 ```

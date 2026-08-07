@@ -15,52 +15,59 @@ Classic interview problem for 3Sum. Practice left/right pointers and sorted arra
 - Before coding, state the invariant or state definition: sorted array scanning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[-1, 0, 1, 2, -1, -4]]
-expected = [[-1, -1, 2], [-1, 0, 1]]
+**Input**
+
+```
+6
+-1 0 1 2 -1 -4
+```
+
+**Output**
+
+```
+-1 -1 2
+-1 0 1
 ```
 
 ### Case 2
 
-```python
-args = [[0, 1, 1]]
-expected = []
+**Input**
+
+```
+3
+0 1 1
+```
+
+**Output**
+
+```
 ```
 
 ### Case 3
 
-```python
-args = [[0, 0, 0]]
-expected = [[0, 0, 0]]
+**Input**
+
+```
+3
+0 0 0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[-1, 0, 1]]
-expected = [[-1, 0, 1]]
 ```
-
-### Case 5
-
-```python
-args = [[1, 2, -2, -1]]
-expected = []
+0 0 0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run 3sum
+python3 train.py run 3sum
 ```

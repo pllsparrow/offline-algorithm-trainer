@@ -15,52 +15,76 @@ Classic interview problem for Copy List With Random Pointer. Practice pointer re
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a random list: count n, then n lines of value and random-index (-1 for null). Output: count n then n lines of value and random-index (-1 for null).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[7, None], [13, 0], [11, 4], [10, 2], [1, 0]]]
-expected = [[7, None], [13, 0], [11, 4], [10, 2], [1, 0]]
+**Input**
+
+```
+5
+7 -1
+13 0
+11 4
+10 2
+1 0
+```
+
+**Output**
+
+```
+5
+7 -1
+13 0
+11 4
+10 2
+1 0
 ```
 
 ### Case 2
 
-```python
-args = [[[1, 1], [2, 1]]]
-expected = [[1, 1], [2, 1]]
+**Input**
+
+```
+2
+1 1
+2 1
+```
+
+**Output**
+
+```
+2
+1 1
+2 1
 ```
 
 ### Case 3
 
-```python
-args = [[[3, None], [3, 0], [3, None]]]
-expected = [[3, None], [3, 0], [3, None]]
+**Input**
+
+```
+3
+3 -1
+3 0
+3 -1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[]]
-expected = []
 ```
-
-### Case 5
-
-```python
-args = [[[1, None]]]
-expected = [[1, None]]
+3
+3 -1
+3 0
+3 -1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run copy-list-with-random-pointer
+python3 train.py run copy-list-with-random-pointer
 ```

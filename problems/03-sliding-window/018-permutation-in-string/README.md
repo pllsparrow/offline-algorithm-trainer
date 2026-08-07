@@ -15,52 +15,59 @@ Classic interview problem for Permutation In String. Practice window invariants 
 - Before coding, state the invariant or state definition: left/right boundary movement.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['ab', 'eidbaooo']
-expected = True
+**Input**
+
+```
+ab
+eidbaooo
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = ['ab', 'eidboaoo']
-expected = False
+**Input**
+
+```
+ab
+eidboaoo
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = ['a', 'a']
-expected = True
+**Input**
+
+```
+a
+a
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['ab', 'ab']
-expected = True
 ```
-
-### Case 5
-
-```python
-args = ['abc', 'bbbca']
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run permutation-in-string
+python3 train.py run permutation-in-string
 ```

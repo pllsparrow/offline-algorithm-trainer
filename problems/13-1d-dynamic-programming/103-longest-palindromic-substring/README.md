@@ -15,52 +15,56 @@ Classic interview problem for Longest Palindromic Substring. Practice state defi
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token. Output: the strings space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['babad']
-expected = ['aba', 'bab']
+**Input**
+
+```
+babad
+```
+
+**Output**
+
+```
+aba bab
 ```
 
 ### Case 2
 
-```python
-args = ['cbbd']
-expected = ['bb']
+**Input**
+
+```
+cbbd
+```
+
+**Output**
+
+```
+bb
 ```
 
 ### Case 3
 
-```python
-args = ['a']
-expected = ['a']
+**Input**
+
+```
+a
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['ac']
-expected = ['a', 'c']
 ```
-
-### Case 5
-
-```python
-args = ['racecar']
-expected = ['racecar']
+a
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-palindromic-substring
+python3 train.py run longest-palindromic-substring
 ```

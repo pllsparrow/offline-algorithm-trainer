@@ -15,52 +15,58 @@ Classic interview problem for Serialize And Deserialize Binary Tree. Practice re
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3, None, None, 4, 5]]
-expected = [1, 2, 3, None, None, 4, 5]
+**Input**
+
+```
+7
+1 2 3 null null 4 5
+```
+
+**Output**
+
+```
+1 2 3 null null 4 5
 ```
 
 ### Case 2
 
-```python
-args = [[]]
-expected = []
+**Input**
+
+```
+0
+
+```
+
+**Output**
+
+```
 ```
 
 ### Case 3
 
-```python
-args = [[1]]
-expected = [1]
+**Input**
+
+```
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 2]]
-expected = [1, 2]
 ```
-
-### Case 5
-
-```python
-args = [[1, None, 2]]
-expected = [1, None, 2]
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run serialize-and-deserialize-binary-tree
+python3 train.py run serialize-and-deserialize-binary-tree
 ```

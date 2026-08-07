@@ -15,52 +15,59 @@ Classic interview problem for Missing Number. Practice bit manipulation tricks a
 - Before coding, state the invariant or state definition: XOR properties.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 0, 1]]
-expected = 2
+**Input**
+
+```
+3
+3 0 1
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 2
 
-```python
-args = [[0, 1]]
-expected = 2
+**Input**
+
+```
+2
+0 1
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 3
 
-```python
-args = [[9, 6, 4, 2, 3, 5, 7, 0, 1]]
-expected = 8
+**Input**
+
+```
+9
+9 6 4 2 3 5 7 0 1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[0]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [[1]]
-expected = 0
+8
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run missing-number
+python3 train.py run missing-number
 ```

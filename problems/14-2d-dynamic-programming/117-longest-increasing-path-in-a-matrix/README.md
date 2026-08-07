@@ -15,52 +15,63 @@ Classic interview problem for Longest Increasing Path In a Matrix. Practice 2D s
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[9, 9, 4], [6, 6, 8], [2, 1, 1]]]
-expected = 4
+**Input**
+
+```
+3 3
+9 9 4
+6 6 8
+2 1 1
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[[3, 4, 5], [3, 2, 6], [2, 2, 1]]]
-expected = 4
+**Input**
+
+```
+3 3
+3 4 5
+3 2 6
+2 2 1
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 3
 
-```python
-args = [[[1]]]
-expected = 1
+**Input**
+
+```
+1 1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 2]]]
-expected = 2
 ```
-
-### Case 5
-
-```python
-args = [[[2, 1]]]
-expected = 2
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-increasing-path-in-a-matrix
+python3 train.py run longest-increasing-path-in-a-matrix
 ```

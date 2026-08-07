@@ -15,52 +15,56 @@ Classic interview problem for Valid Parentheses. Practice monotonic stacks and p
 - Before coding, state the invariant or state definition: parentheses matching.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['()']
-expected = True
+**Input**
+
+```
+()
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = ['()[]{}']
-expected = True
+**Input**
+
+```
+()[]{}
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = ['(]']
-expected = False
+**Input**
+
+```
+(]
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['([])']
-expected = True
 ```
-
-### Case 5
-
-```python
-args = ['([)]']
-expected = False
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run valid-parentheses
+python3 train.py run valid-parentheses
 ```

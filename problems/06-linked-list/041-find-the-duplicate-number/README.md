@@ -15,52 +15,59 @@ Classic interview problem for Find The Duplicate Number. Practice pointer rewiri
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 3, 4, 2, 2]]
-expected = 2
+**Input**
+
+```
+5
+1 3 4 2 2
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 2
 
-```python
-args = [[3, 1, 3, 4, 2]]
-expected = 3
+**Input**
+
+```
+5
+3 1 3 4 2
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 3
 
-```python
-args = [[3, 3, 3, 3, 3]]
-expected = 3
+**Input**
+
+```
+5
+3 3 3 3 3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 1]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [[2, 2, 2]]
-expected = 2
+3
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run find-the-duplicate-number
+python3 train.py run find-the-duplicate-number
 ```

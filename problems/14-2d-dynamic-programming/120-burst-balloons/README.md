@@ -15,52 +15,59 @@ Classic interview problem for Burst Balloons. Practice 2D state design and strin
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 1, 5, 8]]
-expected = 167
+**Input**
+
+```
+4
+3 1 5 8
+```
+
+**Output**
+
+```
+167
 ```
 
 ### Case 2
 
-```python
-args = [[1, 5]]
-expected = 10
+**Input**
+
+```
+2
+1 5
+```
+
+**Output**
+
+```
+10
 ```
 
 ### Case 3
 
-```python
-args = [[5]]
-expected = 5
+**Input**
+
+```
+1
+5
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1]]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [[0]]
-expected = 0
+5
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run burst-balloons
+python3 train.py run burst-balloons
 ```

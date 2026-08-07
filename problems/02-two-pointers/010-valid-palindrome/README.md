@@ -15,52 +15,56 @@ Check whether a string is a palindrome after ignoring case and non-alphanumeric 
 - Before coding, state the invariant or state definition: sorted array scanning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a whole input line (may contain spaces). Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['A man, a plan, a canal: Panama']
-expected = True
+**Input**
+
+```
+A man, a plan, a canal: Panama
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = ['race a car']
-expected = False
+**Input**
+
+```
+race a car
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [' ']
-expected = True
+**Input**
+
+```
+ 
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['']
-expected = True
 ```
-
-### Case 5
-
-```python
-args = ['a']
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run valid-palindrome
+python3 train.py run valid-palindrome
 ```

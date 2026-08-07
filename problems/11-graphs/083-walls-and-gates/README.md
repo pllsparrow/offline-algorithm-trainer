@@ -15,52 +15,70 @@ Classic interview problem for Walls And Gates. Practice DFS/BFS and topological 
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[2147483647, -1, 0, 2147483647], [2147483647, 2147483647, 2147483647, -1], [2147483647, -1, 2147483647, -1], [0, -1, 2147483647, 2147483647]]]
-expected = [[3, -1, 0, 1], [2, 2, 1, -1], [1, -1, 2, -1], [0, -1, 3, 4]]
+**Input**
+
+```
+4 4
+2147483647 -1 0 2147483647
+2147483647 2147483647 2147483647 -1
+2147483647 -1 2147483647 -1
+0 -1 2147483647 2147483647
+```
+
+**Output**
+
+```
+4 4
+3 -1 0 1
+2 2 1 -1
+1 -1 2 -1
+0 -1 3 4
 ```
 
 ### Case 2
 
-```python
-args = [[[0, -1], [2147483647, 2147483647]]]
-expected = [[0, -1], [1, 2]]
+**Input**
+
+```
+2 2
+0 -1
+2147483647 2147483647
+```
+
+**Output**
+
+```
+2 2
+0 -1
+1 2
 ```
 
 ### Case 3
 
-```python
-args = [[[0]]]
-expected = [[0]]
+**Input**
+
+```
+1 1
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[-1]]]
-expected = [[-1]]
 ```
-
-### Case 5
-
-```python
-args = [[[2147483647]]]
-expected = [[2147483647]]
+1 1
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run walls-and-gates
+python3 train.py run walls-and-gates
 ```

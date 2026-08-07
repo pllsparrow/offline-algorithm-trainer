@@ -15,52 +15,64 @@ Classic interview problem for Merge Two Sorted Lists. Practice pointer rewiring 
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 4], [1, 3, 4]]
-expected = [1, 1, 2, 3, 4, 4]
+**Input**
+
+```
+3
+1 2 4
+3
+1 3 4
+```
+
+**Output**
+
+```
+1 1 2 3 4 4
 ```
 
 ### Case 2
 
-```python
-args = [[], []]
-expected = []
+**Input**
+
+```
+0
+
+0
+
+```
+
+**Output**
+
+```
 ```
 
 ### Case 3
 
-```python
-args = [[], [0]]
-expected = [0]
+**Input**
+
+```
+0
+
+1
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1], [2]]
-expected = [1, 2]
 ```
-
-### Case 5
-
-```python
-args = [[2], [1]]
-expected = [1, 2]
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run merge-two-sorted-lists
+python3 train.py run merge-two-sorted-lists
 ```

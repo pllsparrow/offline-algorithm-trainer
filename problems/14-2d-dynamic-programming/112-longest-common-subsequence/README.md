@@ -15,52 +15,59 @@ Classic interview problem for Longest Common Subsequence. Practice 2D state desi
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['abcde', 'ace']
-expected = 3
+**Input**
+
+```
+abcde
+ace
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = ['abc', 'abc']
-expected = 3
+**Input**
+
+```
+abc
+abc
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 3
 
-```python
-args = ['abc', 'def']
-expected = 0
+**Input**
+
+```
+abc
+def
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['', '']
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = ['a', 'a']
-expected = 1
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-common-subsequence
+python3 train.py run longest-common-subsequence
 ```

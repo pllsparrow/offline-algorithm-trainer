@@ -15,52 +15,64 @@ Classic interview problem for Swim In Rising Water. Practice shortest paths and 
 - Before coding, state the invariant or state definition: minimum spanning trees.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[0, 2], [1, 3]]]
-expected = 3
+**Input**
+
+```
+2 2
+0 2
+1 3
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [[[0, 1, 2, 3, 4], [24, 23, 22, 21, 5], [12, 13, 14, 15, 16], [11, 17, 18, 19, 20], [10, 9, 8, 7, 6]]]
-expected = 16
+**Input**
+
+```
+5 5
+0 1 2 3 4
+24 23 22 21 5
+12 13 14 15 16
+11 17 18 19 20
+10 9 8 7 6
+```
+
+**Output**
+
+```
+16
 ```
 
 ### Case 3
 
-```python
-args = [[[0]]]
-expected = 0
+**Input**
+
+```
+1 1
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[5]]]
-expected = 5
 ```
-
-### Case 5
-
-```python
-args = [[[0, 1], [2, 3]]]
-expected = 3
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run swim-in-rising-water
+python3 train.py run swim-in-rising-water
 ```

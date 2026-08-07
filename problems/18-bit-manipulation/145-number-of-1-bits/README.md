@@ -15,52 +15,56 @@ Classic interview problem for Number of 1 Bits. Practice bit manipulation tricks
 - Before coding, state the invariant or state definition: XOR properties.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [11]
-expected = 3
+**Input**
+
+```
+11
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = [128]
-expected = 1
+**Input**
+
+```
+128
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [2147483645]
-expected = 30
+**Input**
+
+```
+2147483645
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [0]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = [1]
-expected = 1
+30
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run number-of-1-bits
+python3 train.py run number-of-1-bits
 ```

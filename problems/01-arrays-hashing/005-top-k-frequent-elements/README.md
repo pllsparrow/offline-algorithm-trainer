@@ -15,52 +15,62 @@ Return the k most frequent elements. Practice frequency counting, heaps, and buc
 - Before coding, state the invariant or state definition: frequency counting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated in ascending order.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 1, 1, 2, 2, 3], 2]
-expected = [1, 2]
+**Input**
+
+```
+6
+1 1 1 2 2 3
+2
+```
+
+**Output**
+
+```
+1 2
 ```
 
 ### Case 2
 
-```python
-args = [[1], 1]
-expected = [1]
+**Input**
+
+```
+1
+1
+1
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2, 1, 2, 1, 2, 3, 1, 3, 2], 2]
-expected = [1, 2]
+**Input**
+
+```
+10
+1 2 1 2 1 2 3 1 3 2
+2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 2, 3, 4, 5], 1]
-expected = [1]
 ```
-
-### Case 5
-
-```python
-args = [[1, 1, 2, 2, 3, 3], 3]
-expected = [1, 2, 3]
+1 2
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run top-k-frequent-elements
+python3 train.py run top-k-frequent-elements
 ```

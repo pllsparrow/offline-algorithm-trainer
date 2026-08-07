@@ -15,52 +15,68 @@ Classic interview problem for Word Break. Practice state definition and transiti
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string list: count n then n tokens. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['leetcode', ['leet', 'code']]
-expected = True
+**Input**
+
+```
+leetcode
+2
+leet
+code
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = ['applepenapple', ['apple', 'pen']]
-expected = True
+**Input**
+
+```
+applepenapple
+2
+apple
+pen
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = ['catsandog', ['cats', 'dog', 'sand', 'and', 'cat']]
-expected = False
+**Input**
+
+```
+catsandog
+5
+cats
+dog
+sand
+and
+cat
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['', []]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = ['a', ['a']]
-expected = True
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run word-break
+python3 train.py run word-break
 ```

@@ -15,52 +15,66 @@ Classic interview problem for Max Area of Island. Practice DFS/BFS and topologic
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0], [0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0]]]
-expected = 6
+**Input**
+
+```
+8 13
+0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 1 1 0 1 0 0 0 0 0 0 0 0
+0 1 0 0 1 1 0 0 1 0 1 0 0
+0 1 0 0 1 1 0 0 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0 0 0 1 1 1 0 0 0
+0 0 0 0 0 0 0 1 1 0 0 0 0
+```
+
+**Output**
+
+```
+6
 ```
 
 ### Case 2
 
-```python
-args = [[[0, 0, 0, 0, 0, 0, 0, 0]]]
-expected = 0
+**Input**
+
+```
+1 8
+0 0 0 0 0 0 0 0
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[[1]]]
-expected = 1
+**Input**
+
+```
+1 1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 1], [1, 1]]]
-expected = 4
 ```
-
-### Case 5
-
-```python
-args = [[[1, 0], [0, 1]]]
-expected = 1
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run max-area-of-island
+python3 train.py run max-area-of-island
 ```

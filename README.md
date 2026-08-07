@@ -5,12 +5,14 @@
 I built this because I wanted a simple way to practise algorithms without
 keeping a browser, an editor, and an online judge open at the same time.
 
-The repository contains 150 interview problems grouped by topic. Each problem
-has a Python starter file and local test cases, so the usual loop stays on your
+The repository contains 150 interview problems grouped by topic. Every problem
+is an ACM-style program: your `solution_acm.py` reads from stdin, writes to
+stdout, and the judge compares the output exactly (whitespace-normalised). This
+mirrors a real online assessment environment, so the usual loop stays on your
 machine:
 
 ```text
-pick a problem -> write solution.py -> run it -> inspect the failing case
+pick a problem -> write solution_acm.py -> run it -> inspect the failing case
 ```
 
 It also keeps a small SQLite progress file locally. Your attempts and completed
@@ -24,73 +26,75 @@ Python 3.12 or newer is required. There are no third-party Python dependencies.
 git clone https://github.com/pllsparrow/offline-algorithm-trainer.git
 cd offline-algorithm-trainer
 
-python train.py list
-python train.py show two-sum
-python train.py run two-sum
-python train.py status
+python3 train.py list
+python3 train.py show two-sum
+python3 train.py run two-sum
+python3 train.py status
 ```
 
-Open the `solution.py` path printed by `show`, write your solution, and run the
-same problem again. A failed case prints its input, expected result, and actual
-result.
+Open the `solution_acm.py` path printed by `show`, write your solution, and run
+the same problem again. A failed case prints its stdin, expected stdout, and
+actual stdout.
 
-For a stubborn failure, rerun only that case and keep your debug output:
+For a stubborn failure, rerun only that case:
 
 ```bash
-python train.py run two-sum --case 1 --debug
+python3 train.py run two-sum --case 1
 ```
 
 You can also filter the list:
 
 ```bash
-python train.py list --category graph
-python train.py list --difficulty Hard
+python3 train.py list --category graph
+python3 train.py list --difficulty Hard
 ```
 
-## ACM stdin/stdout mode
+## ACM text protocol
 
-Function mode is useful for learning a pattern. ACM mode runs your file as a
-standalone Python process, feeds it stdin, and compares stdout like an online
-assessment:
+All 150 problems use a pure text protocol. Each test case has a stdin payload
+and an expected stdout payload. The judge runs your file as an independent
+Python process, feeds it the stdin, captures stdout, and compares it
+(whitespace-normalised) against the expected output.
+
+Common input formats:
+
+- **Integer list**: count `n` on one line, then `n` integers on the next.
+- **Single integer / float / string token**: one line.
+- **Whole line string** (may contain spaces): one line, read with `readline`.
+- **Integer matrix**: `r c` on the first line, then `r` lines of `c` integers.
+- **Character board**: `r c` on the first line, then `r` lines of `c` chars.
+- **Binary tree**: count `n`, then `n` level-order values (`null` for missing).
+- **Graph adjacency**: count `n`, then per node degree `d` and `d` neighbour ids.
+- **Linked list**: count `n`, then `n` integers.
+- **Operations (design problems)**: first line `q` (operation count), then `q`
+  lines of `op args...`. Output one result per operation (`null` for void).
+
+For problems with multiple valid answers (e.g. `group-anagrams`, `3sum`,
+`subsets`), the expected output is canonicalised (sorted), so you must print in
+the same sorted order to pass.
+
+Inspect a problem's exact format before solving it:
 
 ```bash
-python train.py scaffold --acm
-python train.py run two-sum --mode acm
-python train.py run two-sum --mode acm --all
+python3 train.py show two-sum
+python3 train.py check
 ```
 
-ACM starters are named `solution_acm.py` and live beside the normal
-`solution.py`. All 150 problems have an ACM entry and run in an independent
-Python process. There are two input protocols:
-
-- `text`: curated whitespace/line formats for the first high-value assessment
-  problems, including arrays, sliding windows, trees, heaps, and basic DP.
-- `json`: a uniform stdin/stdout format for the remaining signatures, including
-  linked lists, trees, graphs, and stateful design problems. The adapter converts
-  JSON into the same data structures used by function mode.
-
-Inspect a problem's exact protocol before solving it:
-
-```bash
-python train.py show two-sum --mode acm
-python train.py check --acm
-```
-
-`scripts/build_acm.py` deterministically regenerates all 150 specs from the
-function-mode dataset while preserving the curated text formats in
-`data/acm_text_specs.json`.
+`scripts/build_acm.py` deterministically regenerates all 150 specs from
+`data/problems.json` and `data/tests.json`.
 
 ## Commands I use most
 
 | Command | What it does |
 | --- | --- |
-| `python train.py list` | Lists problems and local progress |
-| `python train.py show <slug>` | Shows the problem details and file path |
-| `python train.py run <slug>` | Runs the local test cases |
-| `python train.py run <slug> --case 1` | Repeats one failing case |
-| `python train.py run <slug> --all` | Runs the remaining cases after a failure |
-| `python train.py status` | Shows attempted and accepted totals |
-| `python train.py check` | Checks the repository data |
+| `python3 train.py list` | Lists problems and local progress |
+| `python3 train.py show <slug>` | Shows the problem details, ACM format, and file path |
+| `python3 train.py run <slug>` | Runs the local ACM test cases |
+| `python3 train.py run <slug> --case 1` | Repeats one failing case |
+| `python3 train.py run <slug> --all` | Runs the remaining cases after a failure |
+| `python3 train.py status` | Shows attempted and accepted totals |
+| `python3 train.py check` | Checks the repository data |
+| `python3 train.py scaffold --force` | Regenerates all READMEs and starter templates |
 
 The problems are arranged under `problems/` in 18 chapters, from arrays and
 linked lists to graphs and dynamic programming. The judge is in `judge/`, while

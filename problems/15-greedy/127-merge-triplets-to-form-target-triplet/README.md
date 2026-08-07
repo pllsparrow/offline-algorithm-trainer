@@ -15,52 +15,71 @@ Classic interview problem for Merge Triplets to Form Target Triplet. Practice lo
 - Before coding, state the invariant or state definition: interval/jump strategies.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges3: count then values; arg2: an integer list: count n then n integers. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[2, 5, 3], [1, 8, 4], [1, 7, 5]], [2, 7, 5]]
-expected = True
+**Input**
+
+```
+3
+2 5 3
+1 8 4
+1 7 5
+3
+2 7 5
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[[3, 4, 5], [4, 5, 6]], [3, 2, 5]]
-expected = False
+**Input**
+
+```
+2
+3 4 5
+4 5 6
+3
+3 2 5
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[[2, 5, 3], [2, 3, 4], [1, 2, 5], [5, 2, 3]], [5, 5, 5]]
-expected = True
+**Input**
+
+```
+4
+2 5 3
+2 3 4
+1 2 5
+5 2 3
+3
+5 5 5
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 1, 1]], [1, 1, 1]]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [[[1, 1, 1]], [2, 2, 2]]
-expected = False
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run merge-triplets-to-form-target-triplet
+python3 train.py run merge-triplets-to-form-target-triplet
 ```

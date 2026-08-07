@@ -15,52 +15,59 @@ Classic interview problem for Regular Expression Matching. Practice 2D state des
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['aa', 'a']
-expected = False
+**Input**
+
+```
+aa
+a
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 2
 
-```python
-args = ['aa', 'a*']
-expected = True
+**Input**
+
+```
+aa
+a*
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = ['ab', '.*']
-expected = True
+**Input**
+
+```
+ab
+.*
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['aab', 'c*a*b']
-expected = True
 ```
-
-### Case 5
-
-```python
-args = ['mississippi', 'mis*is*p*.']
-expected = False
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run regular-expression-matching
+python3 train.py run regular-expression-matching
 ```

@@ -15,52 +15,59 @@ Classic interview problem for Longest Increasing Subsequence. Practice state def
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[10, 9, 2, 5, 3, 7, 101, 18]]
-expected = 4
+**Input**
+
+```
+8
+10 9 2 5 3 7 101 18
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[0, 1, 0, 3, 2, 3]]
-expected = 4
+**Input**
+
+```
+6
+0 1 0 3 2 3
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 3
 
-```python
-args = [[7, 7, 7, 7, 7, 7, 7]]
-expected = 1
+**Input**
+
+```
+7
+7 7 7 7 7 7 7
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1, 3, 6, 7, 9, 4, 10, 5, 6]]
-expected = 6
 ```
-
-### Case 5
-
-```python
-args = [[10, 22, 9, 33, 21, 50, 41, 60]]
-expected = 5
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run longest-increasing-subsequence
+python3 train.py run longest-increasing-subsequence
 ```

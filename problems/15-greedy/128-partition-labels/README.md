@@ -15,52 +15,56 @@ Classic interview problem for Partition Labels. Practice local optimality proofs
 - Before coding, state the invariant or state definition: interval/jump strategies.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token. Output: the values space-separated in ascending order.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['ababcbacadefegdehijhklij']
-expected = [9, 7, 8]
+**Input**
+
+```
+ababcbacadefegdehijhklij
+```
+
+**Output**
+
+```
+7 8 9
 ```
 
 ### Case 2
 
-```python
-args = ['eccbbbbdec']
-expected = [10]
+**Input**
+
+```
+eccbbbbdec
+```
+
+**Output**
+
+```
+10
 ```
 
 ### Case 3
 
-```python
-args = ['a']
-expected = [1]
+**Input**
+
+```
+a
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['ab']
-expected = [1, 1]
 ```
-
-### Case 5
-
-```python
-args = ['aaa']
-expected = [3]
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run partition-labels
+python3 train.py run partition-labels
 ```

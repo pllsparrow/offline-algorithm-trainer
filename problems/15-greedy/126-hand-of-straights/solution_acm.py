@@ -1,15 +1,15 @@
-from __future__ import annotations
-
-from support import GraphNode, ListNode, Node, RandomNode, TreeNode
+import sys
 
 
-class Solution:
-    def is_n_straight_hand(self, hand: list[int], group_size: int) -> bool:
-        pass
-
-
-from acm_support import run_solution
+def main() -> None:
+    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    n_v0 = int(data[p]); p += 1
+    v0 = list(map(int, data[p:p + n_v0])); p += n_v0
+    v1 = int(data[p]); p += 1
+    # TODO: compute the answer from v0, v1 and print it
 
 
 if __name__ == "__main__":
-    run_solution(Solution, 'is_n_straight_hand', ['', ''])
+    main()

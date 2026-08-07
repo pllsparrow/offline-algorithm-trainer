@@ -15,57 +15,77 @@ Classic interview problem for Time Based Key Value Store. Practice search space 
 - Before coding, state the invariant or state definition: boundary shrinking.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['TimeMap', 'set', 'get', 'get', 'set', 'get', 'get']
-args = [[], ['foo', 'bar', 1], ['foo', 1], ['foo', 3], ['foo', 'bar2', 4], ['foo', 4], ['foo', 5]]
-expected = [None, None, 'bar', 'bar', None, 'bar2', 'bar2']
+**Input**
+
+```
+7
+TimeMap
+set foo bar 1
+get foo 1
+get foo 3
+set foo bar2 4
+get foo 4
+get foo 5
+```
+
+**Output**
+
+```
+null
+null
+bar
+bar
+null
+bar2
+bar2
 ```
 
 ### Case 2
 
-```python
-ops = ['TimeMap', 'get']
-args = [[], ['key', 1]]
-expected = [None, '']
+**Input**
+
+```
+2
+TimeMap
+get key 1
+```
+
+**Output**
+
+```
+null
+
 ```
 
 ### Case 3
 
-```python
-ops = ['TimeMap', 'set', 'get']
-args = [[], ['a', 'val', 1], ['a', 1]]
-expected = [None, None, 'val']
+**Input**
+
+```
+3
+TimeMap
+set a val 1
+get a 1
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['TimeMap', 'set', 'get', 'get']
-args = [[], ['key', 'value', 5], ['key', 3], ['key', 7]]
-expected = [None, None, '', 'value']
 ```
-
-### Case 5
-
-```python
-ops = ['TimeMap', 'set', 'set', 'get', 'get', 'get']
-args = [[], ['x', 'v1', 1], ['x', 'v2', 2], ['x', 1], ['x', 2], ['x', 3]]
-expected = [None, None, None, 'v1', 'v2', 'v2']
+null
+null
+val
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run time-based-key-value-store
+python3 train.py run time-based-key-value-store
 ```

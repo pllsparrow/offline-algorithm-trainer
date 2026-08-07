@@ -15,52 +15,59 @@ Classic interview problem for Edit Distance. Practice 2D state design and string
 - Before coding, state the invariant or state definition: string DP.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['horse', 'ros']
-expected = 3
+**Input**
+
+```
+horse
+ros
+```
+
+**Output**
+
+```
+3
 ```
 
 ### Case 2
 
-```python
-args = ['intention', 'execution']
-expected = 5
+**Input**
+
+```
+intention
+execution
+```
+
+**Output**
+
+```
+5
 ```
 
 ### Case 3
 
-```python
-args = ['', '']
-expected = 0
+**Input**
+
 ```
 
-### Case 4
 
-```python
-args = ['', 'a']
-expected = 1
 ```
 
-### Case 5
+**Output**
 
-```python
-args = ['a', '']
-expected = 1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
+0
+```
 
 ## Run
 
 ```bash
-python train.py run edit-distance
+python3 train.py run edit-distance
 ```

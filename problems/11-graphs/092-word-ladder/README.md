@@ -15,52 +15,76 @@ Classic interview problem for Word Ladder. Practice DFS/BFS and topological sort
 - Before coding, state the invariant or state definition: topological sorting.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a string token; arg2: a string token; arg3: a string list: count n then n tokens. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = ['hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log', 'cog']]
-expected = 5
+**Input**
+
+```
+hit
+cog
+6
+hot
+dot
+dog
+lot
+log
+cog
+```
+
+**Output**
+
+```
+5
 ```
 
 ### Case 2
 
-```python
-args = ['hit', 'cog', ['hot', 'dot', 'dog', 'lot', 'log']]
-expected = 0
+**Input**
+
+```
+hit
+cog
+5
+hot
+dot
+dog
+lot
+log
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = ['a', 'c', ['a', 'b', 'c']]
-expected = 2
+**Input**
+
+```
+a
+c
+3
+a
+b
+c
 ```
 
-### Case 4
+**Output**
 
-```python
-args = ['hot', 'dog', ['hot', 'dog']]
-expected = 0
 ```
-
-### Case 5
-
-```python
-args = ['hot', 'dog', ['hot', 'hog', 'dog']]
-expected = 3
+2
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run word-ladder
+python3 train.py run word-ladder
 ```

@@ -1,12 +1,13 @@
 import sys
-from collections import deque
 
 
 def main() -> None:
-    tokens = sys.stdin.buffer.read().split()
-    n = int(tokens[0])
-    values = [None if token == b"null" else int(token) for token in tokens[1:1 + n]]
-    # TODO: compute the depth from the level-order representation
+    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.
+    data = sys.stdin.buffer.read().split()
+    p = 0
+    n_v0 = int(data[p]); p += 1
+    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0
+    # TODO: compute the answer from v0 and print it
 
 
 if __name__ == "__main__":

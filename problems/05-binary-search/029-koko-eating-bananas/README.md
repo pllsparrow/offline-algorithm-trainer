@@ -15,52 +15,62 @@ Classic interview problem for Koko Eating Bananas. Practice search space definit
 - Before coding, state the invariant or state definition: boundary shrinking.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[3, 6, 7, 11], 8]
-expected = 4
+**Input**
+
+```
+4
+3 6 7 11
+8
+```
+
+**Output**
+
+```
+4
 ```
 
 ### Case 2
 
-```python
-args = [[30, 11, 23, 4, 20], 5]
-expected = 30
+**Input**
+
+```
+5
+30 11 23 4 20
+5
+```
+
+**Output**
+
+```
+30
 ```
 
 ### Case 3
 
-```python
-args = [[30, 11, 23, 4, 20], 6]
-expected = 23
+**Input**
+
+```
+5
+30 11 23 4 20
+6
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1], 1]
-expected = 1
 ```
-
-### Case 5
-
-```python
-args = [[5], 5]
-expected = 1
+23
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run koko-eating-bananas
+python3 train.py run koko-eating-bananas
 ```

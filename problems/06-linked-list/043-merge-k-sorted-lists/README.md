@@ -15,52 +15,62 @@ Classic interview problem for Merge K Sorted Lists. Practice pointer rewiring an
 - Before coding, state the invariant or state definition: fast and slow pointers.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[1, 4, 5], [1, 3, 4], [2, 6]]]
-expected = [1, 1, 2, 3, 4, 4, 5, 6]
+**Input**
+
+```
+3
+3
+1 4 5
+3
+1 3 4
+2
+2 6
+```
+
+**Output**
+
+```
+1 1 2 3 4 4 5 6
 ```
 
 ### Case 2
 
-```python
-args = [[]]
-expected = []
+**Input**
+
+```
+0
+```
+
+**Output**
+
+```
 ```
 
 ### Case 3
 
-```python
-args = [[[]]]
-expected = []
+**Input**
+
+```
+1
+0
+
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1]]]
-expected = [1]
 ```
-
-### Case 5
-
-```python
-args = [[[1, 2], [3, 4]]]
-expected = [1, 2, 3, 4]
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run merge-k-sorted-lists
+python3 train.py run merge-k-sorted-lists
 ```

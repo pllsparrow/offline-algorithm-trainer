@@ -15,52 +15,56 @@ Count the ways to reach the nth stair when you can climb 1 or 2 steps at a time.
 - Before coding, state the invariant or state definition: transition equations.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer. Output: the integer.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [1]
-expected = 1
+**Input**
+
+```
+1
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [2]
-expected = 2
+**Input**
+
+```
+2
+```
+
+**Output**
+
+```
+2
 ```
 
 ### Case 3
 
-```python
-args = [3]
-expected = 3
+**Input**
+
+```
+3
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [4]
-expected = 5
 ```
-
-### Case 5
-
-```python
-args = [5]
-expected = 8
+3
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run climbing-stairs
+python3 train.py run climbing-stairs
 ```

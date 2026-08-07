@@ -15,52 +15,66 @@ Classic interview problem for Combination Sum II. Practice choice paths and prun
 - Before coding, state the invariant or state definition: pruning.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: each group on its own line (sorted; each group sorted).
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[10, 1, 2, 7, 6, 1, 5], 8]
-expected = [[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]
+**Input**
+
+```
+7
+10 1 2 7 6 1 5
+8
+```
+
+**Output**
+
+```
+1 1 6
+1 2 5
+1 7
+2 6
 ```
 
 ### Case 2
 
-```python
-args = [[2, 5, 2, 1, 2], 5]
-expected = [[1, 2, 2], [5]]
+**Input**
+
+```
+5
+2 5 2 1 2
+5
+```
+
+**Output**
+
+```
+1 2 2
+5
 ```
 
 ### Case 3
 
-```python
-args = [[1], 1]
-expected = [[1]]
+**Input**
+
+```
+1
+1
+1
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[1], 2]
-expected = []
 ```
-
-### Case 5
-
-```python
-args = [[2], 1]
-expected = []
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run combination-sum-ii
+python3 train.py run combination-sum-ii
 ```

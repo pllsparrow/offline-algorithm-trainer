@@ -15,52 +15,61 @@ Classic interview problem for Meeting Rooms. Practice sorting then merging and o
 - Before coding, state the invariant or state definition: overlap checks.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: edges2: count then values. Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[[0, 30], [5, 10], [15, 20]]]
-expected = False
+**Input**
+
+```
+3
+0 30
+5 10
+15 20
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 2
 
-```python
-args = [[[7, 10], [2, 4]]]
-expected = True
+**Input**
+
+```
+2
+7 10
+2 4
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[]]
-expected = True
+**Input**
+
+```
+0
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[[1, 5]]]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [[[1, 5], [8, 9]]]
-expected = True
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run meeting-rooms
+python3 train.py run meeting-rooms
 ```

@@ -15,52 +15,65 @@ Classic interview problem for Same Tree. Practice recursive return-value design 
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[1, 2, 3], [1, 2, 3]]
-expected = True
+**Input**
+
+```
+3
+1 2 3
+3
+1 2 3
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 2
 
-```python
-args = [[1, 2], [1, None, 2]]
-expected = False
+**Input**
+
+```
+2
+1 2
+3
+1 null 2
+```
+
+**Output**
+
+```
+0
 ```
 
 ### Case 3
 
-```python
-args = [[1, 2, 1], [1, 1, 2]]
-expected = False
+**Input**
+
+```
+3
+1 2 1
+3
+1 1 2
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[], []]
-expected = True
 ```
-
-### Case 5
-
-```python
-args = [[1], [1]]
-expected = True
+0
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run same-tree
+python3 train.py run same-tree
 ```

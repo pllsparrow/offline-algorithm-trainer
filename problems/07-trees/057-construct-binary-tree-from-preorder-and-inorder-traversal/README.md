@@ -15,52 +15,64 @@ Classic interview problem for Construct Binary Tree From Preorder And Inorder Tr
 - Before coding, state the invariant or state definition: DFS/BFS.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: print nothing.
+
 ## Local Examples
 
 ### Case 1
 
-```python
-args = [[], []]
-expected = []
+**Input**
+
+```
+0
+
+0
+
+```
+
+**Output**
+
+```
 ```
 
 ### Case 2
 
-```python
-args = [[1], [1]]
-expected = [1]
+**Input**
+
+```
+1
+1
+1
+1
+```
+
+**Output**
+
+```
+1
 ```
 
 ### Case 3
 
-```python
-args = [[3, 9, 20, 15, 7], [9, 3, 15, 20, 7]]
-expected = [3, 9, 20, None, None, 15, 7]
+**Input**
+
+```
+5
+3 9 20 15 7
+5
+9 3 15 20 7
 ```
 
-### Case 4
+**Output**
 
-```python
-args = [[-1], [-1]]
-expected = [-1]
 ```
-
-### Case 5
-
-```python
-args = [[1, 2], [2, 1]]
-expected = [1, 2]
+3 9 20 null null 15 7
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run construct-binary-tree-from-preorder-and-inorder-traversal
+python3 train.py run construct-binary-tree-from-preorder-and-inorder-traversal
 ```

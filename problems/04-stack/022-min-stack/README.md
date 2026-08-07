@@ -15,57 +15,97 @@ Design a stack that can return the minimum value in O(1). Practice maintaining a
 - Before coding, state the invariant or state definition: parentheses matching.
 - After it passes, explain the time complexity, space complexity, and one edge case.
 
+## ACM Format
+
+first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)
+
 ## Local Examples
 
 ### Case 1
 
-```python
-ops = ['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'top', 'getMin']
-args = [[], [-2], [0], [-3], [], [], [], []]
-expected = [None, None, None, None, -3, None, 0, -2]
+**Input**
+
+```
+8
+MinStack
+push -2
+push 0
+push -3
+getMin
+pop
+top
+getMin
+```
+
+**Output**
+
+```
+null
+null
+null
+null
+-3
+null
+0
+-2
 ```
 
 ### Case 2
 
-```python
-ops = ['MinStack', 'push', 'top', 'getMin', 'pop']
-args = [[], [5], [], [], []]
-expected = [None, None, 5, 5, None]
+**Input**
+
+```
+5
+MinStack
+push 5
+top
+getMin
+pop
+```
+
+**Output**
+
+```
+null
+null
+5
+5
+null
 ```
 
 ### Case 3
 
-```python
-ops = ['MinStack', 'push', 'push', 'push', 'getMin', 'pop', 'getMin', 'pop', 'getMin']
-args = [[], [1], [1], [2], [], [], [], [], []]
-expected = [None, None, None, None, 1, None, 1, None, 1]
+**Input**
+
+```
+9
+MinStack
+push 1
+push 1
+push 2
+getMin
+pop
+getMin
+pop
+getMin
 ```
 
-### Case 4
+**Output**
 
-```python
-ops = ['MinStack', 'push', 'getMin', 'top']
-args = [[], [0], [], []]
-expected = [None, None, 0, 0]
 ```
-
-### Case 5
-
-```python
-ops = ['MinStack', 'push', 'push', 'getMin', 'push', 'getMin', 'pop', 'getMin']
-args = [[], [2], [1], [], [0], [], [], []]
-expected = [None, None, None, 1, None, 0, None, 1]
+null
+null
+null
+null
+1
+null
+1
+null
+1
 ```
-
-## Notes
-
-- Brute-force approach:
-- Optimized approach:
-- Complexity:
-- Edge cases and pitfalls:
 
 ## Run
 
 ```bash
-python train.py run min-stack
+python3 train.py run min-stack
 ```
