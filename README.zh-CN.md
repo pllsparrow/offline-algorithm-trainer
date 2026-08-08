@@ -12,6 +12,10 @@
 
 刷题进度会记录在本地 SQLite 文件里，自己写的答案和进度文件都不会被提交到 GitHub。
 
+如果你是在第一次学习题型，而不只是复习，请先阅读
+[`docs/learning_protocol.md`](docs/learning_protocol.md)。其中定义了函数模式到
+ACM 模式的迁移、提示阶梯、每日训练流程和掌握标准。
+
 ## 怎么开始
 
 需要 Python 3.12 或更高版本，不用安装第三方依赖。

@@ -18,6 +18,10 @@ pick a problem -> write solution_acm.py -> run it -> inspect the failing case
 It also keeps a small SQLite progress file locally. Your attempts and completed
 solutions are ignored by Git and are not part of this public repository.
 
+If you are learning a pattern for the first time rather than reviewing it,
+start with the [learning protocol](docs/learning_protocol.md). It defines the
+function-to-ACM transfer, hint ladder, daily session, and mastery criteria.
+
 ## Getting started
 
 Python 3.12 or newer is required. There are no third-party Python dependencies.
