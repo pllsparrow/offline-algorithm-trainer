@@ -56,6 +56,10 @@ python3 train.py list --difficulty Hard
 stdout。判题器把你的文件作为独立 Python 进程运行，喂入 stdin，捕获
 stdout，然后与期望输出做空白归一化后的精确比对。
 
+其中 148 道题各有 50 个去重用例，覆盖边界、重复值、极值、不同规模和结构
+形态。`generate-parentheses` 和 `n-queens` 分别使用 9 个和 10 个穷尽/边界
+输入；这两题的合法输入域很小，不用重复输入凑数量。
+
 常见输入格式：
 
 - **整数列表**：第一行个数 `n`，第二行 `n` 个整数。

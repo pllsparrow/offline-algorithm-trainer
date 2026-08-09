@@ -1,5 +1,7 @@
 import json
 import unittest
+import xml.etree.ElementTree as ET
+from pathlib import Path
 
 import train
 
@@ -32,6 +34,37 @@ class AcmModeTests(unittest.TestCase):
             self.assertTrue(path.is_file(), slug)
             self.assertEqual("", specs[slug]["starter"], slug)
 
+    def test_every_problem_has_runnable_acm_cases(self) -> None:
+        exhaustive_domains = {
+            "generate-parentheses": 9,
+            "n-queens": 10,
+        }
+        for slug, spec in train.specs_by_slug().items():
+            self.assertEqual("text", spec.get("protocol"), slug)
+            self.assertTrue(spec.get("cases"), slug)
+            if slug in exhaustive_domains:
+                self.assertEqual(exhaustive_domains[slug], len(spec["cases"]), slug)
+            else:
+                self.assertGreaterEqual(len(spec["cases"]), 46, slug)
+                self.assertLessEqual(len(spec["cases"]), 55, slug)
+            inputs = [case["stdin"] for case in spec["cases"]]
+            self.assertEqual(len(inputs), len(set(inputs)), slug)
+            for case in spec["cases"]:
+                self.assertIn("stdin", case, slug)
+                self.assertIn("stdout", case, slug)
+
+    def test_shared_run_configuration_judges_the_current_file(self) -> None:
+        config_path = Path(".run/Judge Current Solution.run.xml")
+        configuration = ET.parse(config_path).getroot().find("configuration")
+        self.assertIsNotNone(configuration)
+
+        options = {
+            option.get("name"): option.get("value")
+            for option in configuration.findall("option")
+        }
+        self.assertEqual("$PROJECT_DIR$/train.py", options.get("SCRIPT_NAME"))
+        self.assertEqual('run --file "$FilePath$"', options.get("PARAMETERS"))
+
     def test_every_solution_compiles(self) -> None:
         for slug in train.problems_by_slug():
             path = train.solution_path(slug)
@@ -55,7 +88,7 @@ if __name__ == "__main__":
         result = train.run_acm_judge("valid-anagram", code, run_all=True)
 
         self.assertTrue(result["ok"], json.dumps(result, ensure_ascii=False))
-        self.assertEqual(18, len(result["results"]))
+        self.assertEqual(50, len(result["results"]))
 
     def test_length_prefixed_strings_use_utf8_byte_lengths(self) -> None:
         code = """

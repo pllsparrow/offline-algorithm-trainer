@@ -64,6 +64,11 @@ and an expected stdout payload. The judge runs your file as an independent
 Python process, feeds it the stdin, captures stdout, and compares it
 (whitespace-normalised) against the expected output.
 
+Each of 148 problems has 50 distinct cases covering boundaries, duplicates,
+extreme values, sizes, and structural shapes. `generate-parentheses` and
+`n-queens` use 9 and 10 exhaustive/boundary inputs instead; their valid input
+domains are too small to justify padding the corpus with duplicates.
+
 Common input formats:
 
 - **Integer list**: count `n` on one line, then `n` integers on the next.

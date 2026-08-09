@@ -152,9 +152,34 @@ def check_project(args):
     problems = problems_by_slug()
     specs = specs_by_slug()
     issues = []
+    exhaustive_case_counts = {
+        "generate-parentheses": 9,
+        "n-queens": 10,
+    }
+    extra_specs = sorted(set(specs) - set(problems))
+    for slug in extra_specs:
+        issues.append(f"{slug}: ACM spec has no matching problem")
     for slug, problem in problems.items():
         if slug not in specs:
             issues.append(f"{slug}: missing ACM spec in data/acm_tests.json")
+        else:
+            spec = specs[slug]
+            if spec.get("protocol") != "text":
+                issues.append(f"{slug}: ACM protocol must be text")
+            cases = spec.get("cases")
+            if not cases:
+                issues.append(f"{slug}: ACM spec has no test cases")
+            elif any("stdin" not in case or "stdout" not in case for case in cases):
+                issues.append(f"{slug}: every ACM case must define stdin and stdout")
+            else:
+                expected_count = exhaustive_case_counts.get(slug)
+                if expected_count is not None and len(cases) != expected_count:
+                    issues.append(f"{slug}: expected {expected_count} exhaustive ACM cases")
+                elif expected_count is None and not 46 <= len(cases) <= 55:
+                    issues.append(f"{slug}: expected 46 to 55 ACM cases")
+                inputs = [case["stdin"] for case in cases]
+                if len(inputs) != len(set(inputs)):
+                    issues.append(f"{slug}: ACM cases contain duplicate stdin")
         path = solution_path(slug)
         if not path.is_file():
             issues.append(f"{slug}: missing question file {path}")
