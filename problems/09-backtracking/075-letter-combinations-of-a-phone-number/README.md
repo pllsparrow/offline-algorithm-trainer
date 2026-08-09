@@ -17,7 +17,7 @@ Classic interview problem for Letter Combinations of a Phone Number. Practice ch
 
 ## ACM Format
 
-Input: arg1: a string token. Output: the values space-separated in ascending order.
+Input: digits: a string token. Output: the values space-separated in ascending order.
 
 ## Local Examples
 

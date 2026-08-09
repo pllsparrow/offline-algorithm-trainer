@@ -17,7 +17,7 @@ Classic interview problem for Longest Increasing Path In a Matrix. Practice 2D s
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
+Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
 
 ## Local Examples
 

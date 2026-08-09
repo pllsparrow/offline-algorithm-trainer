@@ -17,7 +17,7 @@ Determine whether an array contains any duplicate value. This is a starter probl
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.
+Input: nums: an integer list: count n then n integers. Output: 1 if true else 0.
 
 ## Local Examples
 

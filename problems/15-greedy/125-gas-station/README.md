@@ -17,7 +17,7 @@ Classic interview problem for Gas Station. Practice local optimality proofs and 
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the integer.
+Input: gas: an integer list: count n then n integers; cost: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

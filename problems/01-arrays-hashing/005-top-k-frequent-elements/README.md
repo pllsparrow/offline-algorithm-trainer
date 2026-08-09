@@ -17,7 +17,7 @@ Return the k most frequent elements. Practice frequency counting, heaps, and buc
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated in ascending order.
+Input: nums: an integer list: count n then n integers; k: an integer. Output: the values space-separated in ascending order.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Spiral Matrix. Practice in-place matrix operations
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the values space-separated.
+Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the values space-separated.
 
 ## Local Examples
 

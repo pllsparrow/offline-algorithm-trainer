@@ -17,7 +17,7 @@ Classic interview problem for Valid Parentheses. Practice monotonic stacks and p
 
 ## ACM Format
 
-Input: arg1: a string token. Output: 1 if true else 0.
+Input: s: a string token. Output: 1 if true else 0.
 
 ## Local Examples
 

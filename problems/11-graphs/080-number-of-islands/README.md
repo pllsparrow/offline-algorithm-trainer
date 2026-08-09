@@ -17,7 +17,7 @@ Count islands in a grid. Practice DFS/BFS flood fill.
 
 ## ACM Format
 
-Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: the integer.
+Input: grid: a char board: rows r, cols c, then r lines of c chars. Output: the integer.
 
 ## Local Examples
 

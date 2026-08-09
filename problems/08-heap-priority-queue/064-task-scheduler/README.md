@@ -17,7 +17,7 @@ Classic interview problem for Task Scheduler. Practice Top K and two heaps. Star
 
 ## ACM Format
 
-Input: arg1: a string list: count n then n tokens; arg2: an integer. Output: the integer.
+Input: tasks: a string list: count n then n tokens; n: an integer. Output: the integer.
 
 ## Local Examples
 

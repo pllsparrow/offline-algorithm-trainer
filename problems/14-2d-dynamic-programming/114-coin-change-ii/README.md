@@ -17,7 +17,7 @@ Classic interview problem for Coin Change II. Practice 2D state design and strin
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: an integer list: count n then n integers. Output: the integer.
+Input: amount: an integer; coins: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

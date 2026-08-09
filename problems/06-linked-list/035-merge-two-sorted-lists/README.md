@@ -17,7 +17,7 @@ Classic interview problem for Merge Two Sorted Lists. Practice pointer rewiring 
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.
+Input: list1: an integer list: count n then n integers; list2: an integer list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

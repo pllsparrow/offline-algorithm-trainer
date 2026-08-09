@@ -17,7 +17,7 @@ Search for a target in a sorted array. Practice binary-search boundaries.
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+Input: nums: an integer list: count n then n integers; target: an integer. Output: the integer.
 
 ## Local Examples
 

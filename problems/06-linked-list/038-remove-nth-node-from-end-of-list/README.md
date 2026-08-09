@@ -17,7 +17,7 @@ Classic interview problem for Remove Nth Node From End of List. Practice pointer
 
 ## ACM Format
 
-Input: arg1: a linked list: count n then n integers; arg2: an integer. Output: the values space-separated.
+Input: head: a linked list: count n then n integers; n: an integer. Output: the values space-separated.
 
 ## Local Examples
 

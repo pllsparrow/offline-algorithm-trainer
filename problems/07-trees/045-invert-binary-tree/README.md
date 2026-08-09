@@ -17,7 +17,7 @@ Invert a binary tree. Practice recursively processing left and right subtrees.
 
 ## ACM Format
 
-Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.
+Input: root: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.
 
 ## Local Examples
 

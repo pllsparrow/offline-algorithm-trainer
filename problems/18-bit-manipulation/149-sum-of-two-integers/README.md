@@ -17,7 +17,7 @@ Classic interview problem for Sum of Two Integers. Practice bit manipulation tri
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: an integer. Output: the integer.
+Input: a: an integer; b: an integer. Output: the integer.
 
 ## Local Examples
 

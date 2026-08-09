@@ -17,7 +17,7 @@ Classic interview problem for Longest Common Subsequence. Practice 2D state desi
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: the integer.
+Input: text1: a string token; text2: a string token. Output: the integer.
 
 ## Local Examples
 

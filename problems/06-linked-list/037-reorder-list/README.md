@@ -17,7 +17,7 @@ Classic interview problem for Reorder List. Practice pointer rewiring and fast a
 
 ## ACM Format
 
-Input: arg1: a linked list: count n then n integers. Output: the values space-separated.
+Input: head: a linked list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

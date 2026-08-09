@@ -17,7 +17,7 @@ Classic interview problem for Serialize And Deserialize Binary Tree. Practice re
 
 ## ACM Format
 
-Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).
+Input: root: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).
 
 ## Local Examples
 

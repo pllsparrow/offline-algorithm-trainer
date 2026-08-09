@@ -17,7 +17,7 @@ Determine whether two strings contain the same characters with the same counts. 
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.
+Input: s: a string token; t: a string token. Output: 1 if true else 0.
 
 ## Local Examples
 

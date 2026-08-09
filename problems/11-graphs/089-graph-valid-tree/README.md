@@ -17,7 +17,7 @@ Classic interview problem for Graph Valid Tree. Practice DFS/BFS and topological
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: edges2: count then values. Output: 1 if true else 0.
+Input: n: an integer; edges: edges2: count then values. Output: 1 if true else 0.
 
 ## Local Examples
 

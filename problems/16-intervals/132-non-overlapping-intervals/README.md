@@ -17,7 +17,7 @@ Classic interview problem for Non Overlapping Intervals. Practice sorting then m
 
 ## ACM Format
 
-Input: arg1: edges2: count then values. Output: the integer.
+Input: intervals: edges2: count then values. Output: the integer.
 
 ## Local Examples
 

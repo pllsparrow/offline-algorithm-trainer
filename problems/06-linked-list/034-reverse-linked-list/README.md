@@ -17,7 +17,7 @@ Reverse a singly linked list. Practice fundamental pointer rewiring.
 
 ## ACM Format
 
-Input: arg1: a linked list: count n then n integers. Output: the values space-separated.
+Input: head: a linked list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Generate Parentheses. Practice choice paths and pr
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the values space-separated in ascending order.
+Input: n: an integer. Output: the values space-separated in ascending order.
 
 ## Local Examples
 

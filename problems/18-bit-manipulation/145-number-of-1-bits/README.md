@@ -17,7 +17,7 @@ Classic interview problem for Number of 1 Bits. Practice bit manipulation tricks
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the integer.
+Input: n: an integer. Output: the integer.
 
 ## Local Examples
 

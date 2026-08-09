@@ -17,7 +17,7 @@ Classic interview problem for Longest Palindromic Substring. Practice state defi
 
 ## ACM Format
 
-Input: arg1: a string token. Output: the strings space-separated.
+Input: s: a string token. Output: the strings space-separated.
 
 ## Local Examples
 

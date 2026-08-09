@@ -11,12 +11,15 @@ LeetCode-style practice and ACM-style practice are not competing systems.
 | Mode | What it trains | How to use it |
 | --- | --- | --- |
 | Function mode | Pattern recognition, data structure, return value | Learn the idea and get a local test to pass |
-| ACM mode | Input parsing, output formatting, complete program structure, time pressure | Submit the same idea as a standalone `solution_acm.py` |
+| ACM mode | Input parsing, output formatting, complete program structure, time pressure | Submit the same idea as a standalone `solution.py` |
 
 For a new topic, start in function mode. Once the idea is understood, rewrite
 the same problem in ACM mode. Do not abandon LeetCode: it is the shortest path
 to learning the pattern. ACM is the transfer step required by many online
 assessments.
+
+Each `solution.py` in this trainer starts completely empty. The learner must
+write the imports, input parsing, algorithm, output, and program entry point.
 
 ## Beginner Session (90-120 Minutes)
 
@@ -29,7 +32,7 @@ assessments.
 4. **Independent problem, 25 minutes**: close the explanation and solve a
    nearby problem. If stuck, use the hint ladder below.
 5. **ACM transfer, 15-25 minutes**: open the problem with
-   `python3 train.py show <slug>`, write its `solution_acm.py`, and run it with
+   `python3 train.py show <slug>`, write its `solution.py`, and run it with
    `python3 train.py run <slug>`.
 6. **Explain, 5 minutes**: say the input, invariant, output, complexity, and
    one failure case aloud.

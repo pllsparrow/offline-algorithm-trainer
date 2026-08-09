@@ -17,7 +17,7 @@ Classic interview problem for Lowest Common Ancestor of a Binary Search Tree. Pr
 
 ## ACM Format
 
-Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a tree node value (integer); arg3: a tree node value (integer). Output: the integer.
+Input: root: a binary tree: count n then n level-order values (null for missing); p: a tree node value (integer); q: a tree node value (integer). Output: the integer.
 
 ## Local Examples
 

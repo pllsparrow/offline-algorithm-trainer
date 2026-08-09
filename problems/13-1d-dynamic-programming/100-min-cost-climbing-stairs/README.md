@@ -17,7 +17,7 @@ Classic interview problem for Min Cost Climbing Stairs. Practice state definitio
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the integer.
+Input: cost: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

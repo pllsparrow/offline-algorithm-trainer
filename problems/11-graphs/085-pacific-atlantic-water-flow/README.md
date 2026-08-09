@@ -17,7 +17,7 @@ Classic interview problem for Pacific Atlantic Water Flow. Practice DFS/BFS and 
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: each group on its own line (sorted; each group sorted).
+Input: heights: an integer matrix: rows r, cols c, then r lines of c integers. Output: each group on its own line (sorted; each group sorted).
 
 ## Local Examples
 

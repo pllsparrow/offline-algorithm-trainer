@@ -17,7 +17,7 @@ Classic interview problem for Number of Connected Components In An Undirected Gr
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: edges2: count then values. Output: the integer.
+Input: n: an integer; edges: edges2: count then values. Output: the integer.
 
 ## Local Examples
 

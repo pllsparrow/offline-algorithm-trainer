@@ -17,7 +17,7 @@ Classic interview problem for Reverse Nodes In K Group. Practice pointer rewirin
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.
+Input: head: an integer list: count n then n integers; k: an integer. Output: the values space-separated.
 
 ## Local Examples
 

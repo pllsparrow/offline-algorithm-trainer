@@ -17,7 +17,7 @@ Classic interview problem for Two Sum II Input Array Is Sorted. Practice left/ri
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.
+Input: numbers: an integer list: count n then n integers; target: an integer. Output: the values space-separated.
 
 ## Local Examples
 

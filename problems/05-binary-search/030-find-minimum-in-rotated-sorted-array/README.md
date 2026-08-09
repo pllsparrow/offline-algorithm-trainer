@@ -17,7 +17,7 @@ Classic interview problem for Find Minimum In Rotated Sorted Array. Practice sea
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the integer.
+Input: nums: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

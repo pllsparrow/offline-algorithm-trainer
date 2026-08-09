@@ -17,7 +17,7 @@ Classic interview problem for Rotting Oranges. Practice DFS/BFS and topological 
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
+Input: grid: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Word Ladder. Practice DFS/BFS and topological sort
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token; arg3: a string list: count n then n tokens. Output: the integer.
+Input: begin_word: a string token; end_word: a string token; word_list: a string list: count n then n tokens. Output: the integer.
 
 ## Local Examples
 

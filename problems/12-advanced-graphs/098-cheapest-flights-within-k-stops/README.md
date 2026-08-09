@@ -17,7 +17,7 @@ Classic interview problem for Cheapest Flights Within K Stops. Practice shortest
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: edges3: count then values; arg3: an integer; arg4: an integer; arg5: an integer. Output: the integer.
+Input: n: an integer; flights: edges3: count then values; src: an integer; dst: an integer; k: an integer. Output: the integer.
 
 ## Local Examples
 

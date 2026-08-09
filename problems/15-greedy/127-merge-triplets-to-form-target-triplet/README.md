@@ -17,7 +17,7 @@ Classic interview problem for Merge Triplets to Form Target Triplet. Practice lo
 
 ## ACM Format
 
-Input: arg1: edges3: count then values; arg2: an integer list: count n then n integers. Output: 1 if true else 0.
+Input: triplets: edges3: count then values; target: an integer list: count n then n integers. Output: 1 if true else 0.
 
 ## Local Examples
 

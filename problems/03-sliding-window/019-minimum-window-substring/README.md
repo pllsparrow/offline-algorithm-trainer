@@ -17,7 +17,7 @@ Classic interview problem for Minimum Window Substring. Practice window invarian
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: the string.
+Input: s: a string token; t: a string token. Output: the string.
 
 ## Local Examples
 

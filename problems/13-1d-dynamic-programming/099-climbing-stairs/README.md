@@ -17,7 +17,7 @@ Count the ways to reach the nth stair when you can climb 1 or 2 steps at a time.
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the integer.
+Input: n: an integer. Output: the integer.
 
 ## Local Examples
 

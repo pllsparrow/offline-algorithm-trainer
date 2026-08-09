@@ -17,7 +17,7 @@ Classic interview problem for Partition Equal Subset Sum. Practice state definit
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.
+Input: nums: an integer list: count n then n integers. Output: 1 if true else 0.
 
 ## Local Examples
 

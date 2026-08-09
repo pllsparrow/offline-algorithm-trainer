@@ -17,7 +17,7 @@ Classic interview problem for Product of Array Except Self. Practice hash table 
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the values space-separated.
+Input: nums: an integer list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

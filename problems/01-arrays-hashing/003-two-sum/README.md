@@ -17,7 +17,7 @@ Find the indices of two numbers whose sum equals the target. Practice looking up
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.
+Input: nums: an integer list: count n then n integers; target: an integer. Output: the values space-separated.
 
 ## Local Examples
 

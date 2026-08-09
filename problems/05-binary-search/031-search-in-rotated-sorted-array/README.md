@@ -17,7 +17,7 @@ Classic interview problem for Search In Rotated Sorted Array. Practice search sp
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+Input: nums: an integer list: count n then n integers; target: an integer. Output: the integer.
 
 ## Local Examples
 

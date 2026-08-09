@@ -1,8 +1,8 @@
 {
   "contains-duplicate": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 2 3 1\n",
@@ -56,8 +56,8 @@
   },
   "valid-anagram": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token; t: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "anagram\nnagaram\n",
@@ -135,8 +135,8 @@
   },
   "two-sum": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; target: an integer. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n2 7 11 15\n9\n",
@@ -214,8 +214,8 @@
   },
   "group-anagrams": {
     "protocol": "text",
-    "format": "Input: arg1: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [data[p + j].decode() for j in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: strs: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\neat\ntea\ntan\nate\nnat\nbat\n",
@@ -281,8 +281,8 @@
   },
   "top-k-frequent-elements": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated in ascending order.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated in ascending order.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; k: an integer. Output: the values space-separated in ascending order.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n1 1 1 2 2 3\n2\n",
@@ -340,8 +340,8 @@
   },
   "encode-and-decode-strings": {
     "protocol": "text",
-    "format": "Input: arg1: strings with length prefix: count n, then per string a length line and the raw bytes. Output: count n, then per string a length line and the raw bytes (round-trip of the input).",
-    "starter": "import sys\n\n\ndef encode(strs: list[str]) -> str:\n    # TODO: return a single encoded string\n    pass\n\n\ndef decode(s: str) -> list[str]:\n    # TODO: return the original list of strings\n    pass\n\n\ndef main() -> None:\n    # Format: count n, then per string a length line and the raw bytes\n    buf = sys.stdin.buffer\n    n = int(buf.readline())\n    strs = []\n    for _ in range(n):\n        length = int(buf.readline())\n        s = buf.read(length).decode()\n        buf.read(1)  # newline separator\n        strs.append(s)\n    decoded = decode(encode(strs))\n    out = [str(len(decoded))]\n    for s in decoded:\n        out.append(str(len(s)))\n        out.append(s)\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: strs: strings with length prefix: count n, then per string a length line and the raw bytes. Output: count n, then per string a length line and the raw bytes (round-trip of the input).",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n5\nHello\n5\nWorld\n",
@@ -392,8 +392,8 @@
         "stdout": "3\n11\nwith spaces\n9\nand tabs\t\n13\nand newlines\n\n"
       },
       {
-        "stdin": "2\n9\nunicode测试\n6\nemoji😀\n",
-        "stdout": "2\n9\nunicode测试\n6\nemoji😀\n"
+        "stdin": "2\n13\nunicode测试\n9\nemoji😀\n",
+        "stdout": "2\n13\nunicode测试\n9\nemoji😀\n"
       },
       {
         "stdin": "1\n170\nvery long string very long string very long string very long string very long string very long string very long string very long string very long string very long string \n",
@@ -427,8 +427,8 @@
   },
   "product-of-array-except-self": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 2 3 4\n",
@@ -494,8 +494,8 @@
   },
   "valid-sudoku": {
     "protocol": "text",
-    "format": "Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [[data[p + i * c_v0 + j].decode() for j in range(c_v0)] for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: board: a char board: rows r, cols c, then r lines of c chars. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "9 9\n5 3 . . 7 . . . .\n6 . . 1 9 5 . . .\n. 9 8 . . . . 6 .\n8 . . . 6 . . . 3\n4 . . 8 . 3 . . 1\n7 . . . 2 . . . 6\n. 6 . . . . 2 8 .\n. . . 4 1 9 . . 5\n. . . . 8 . . 7 9\n",
@@ -565,8 +565,8 @@
   },
   "longest-consecutive-sequence": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n100 4 200 1 3 2\n",
@@ -632,8 +632,8 @@
   },
   "valid-palindrome": {
     "protocol": "text",
-    "format": "Input: arg1: a whole input line (may contain spaces). Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a whole input line (may contain spaces). Output: 1 if true else 0.\n    s = sys.stdin.readline().rstrip(\"\\n\")\n    # TODO: compute the answer and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a whole input line (may contain spaces). Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "A man, a plan, a canal: Panama\n",
@@ -703,8 +703,8 @@
   },
   "two-sum-ii-input-array-is-sorted": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: numbers: an integer list: count n then n integers; target: an integer. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n2 7 11 15\n9\n",
@@ -766,8 +766,8 @@
   },
   "3sum": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n-1 0 1 2 -1 -4\n",
@@ -821,8 +821,8 @@
   },
   "container-with-most-water": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: height: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "9\n1 8 6 2 5 4 8 3 7\n",
@@ -876,8 +876,8 @@
   },
   "trapping-rain-water": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: height: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "12\n0 1 0 2 1 0 1 3 2 1 2 1\n",
@@ -943,8 +943,8 @@
   },
   "best-time-to-buy-and-sell-stock": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: prices: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n7 1 5 3 6 4\n",
@@ -1010,8 +1010,8 @@
   },
   "longest-substring-without-repeating-characters": {
     "protocol": "text",
-    "format": "Input: arg1: a whole input line (may contain spaces). Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a whole input line (may contain spaces). Output: the integer.\n    s = sys.stdin.readline().rstrip(\"\\n\")\n    # TODO: compute the answer and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a whole input line (may contain spaces). Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "abcabcbb\n",
@@ -1069,8 +1069,8 @@
   },
   "longest-repeating-character-replacement": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token; k: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "ABAB\n2\n",
@@ -1136,8 +1136,8 @@
   },
   "permutation-in-string": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s1: a string token; s2: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "ab\neidbaooo\n",
@@ -1203,8 +1203,8 @@
   },
   "minimum-window-substring": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: the string.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: the string.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token; t: a string token. Output: the string.",
+    "starter": "",
     "cases": [
       {
         "stdin": "ADOBECODEBANC\nABC\n",
@@ -1254,8 +1254,8 @@
   },
   "sliding-window-maximum": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; k: an integer. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\n1 3 -1 -3 5 3 6 7\n3\n",
@@ -1321,8 +1321,8 @@
   },
   "valid-parentheses": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "()\n",
@@ -1409,7 +1409,7 @@
   "min-stack": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass MinStack:\n    def __init__(self) -> None:\n        pass\n\n    def push(self, val: int) -> None:\n        pass\n\n    def pop(self) -> None:\n        pass\n\n    def top(self) -> int:\n        pass\n\n    def get_min(self) -> int:\n        pass\n\nOPS = {\n        'MinStack': ([], None),\n        'push': (['int'], None),\n        'pop': ([], None),\n        'top': ([], 'int'),\n        'getMin': ([], 'int'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'MinStack':\n            obj = MinStack(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\nMinStack\npush -2\npush 0\npush -3\ngetMin\npop\ntop\ngetMin\n",
@@ -1463,8 +1463,8 @@
   },
   "evaluate-reverse-polish-notation": {
     "protocol": "text",
-    "format": "Input: arg1: a string list: count n then n tokens. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string list: count n then n tokens. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [data[p + j].decode() for j in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: tokens: a string list: count n then n tokens. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n2\n1\n+\n3\n*\n",
@@ -1522,8 +1522,8 @@
   },
   "daily-temperatures": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: temperatures: an integer list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\n73 74 75 71 69 72 76 73\n",
@@ -1669,8 +1669,8 @@
   },
   "car-fleet": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: an integer list: count n then n integers; arg3: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: an integer list: count n then n integers; arg3: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    n_v2 = int(data[p]); p += 1\n    v2 = list(map(int, data[p:p + n_v2])); p += n_v2\n    # TODO: compute the answer from v0, v1, v2 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: target: an integer; position: an integer list: count n then n integers; speed: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "12\n5\n10 8 0 5 3\n5\n2 4 1 1 3\n",
@@ -1728,8 +1728,8 @@
   },
   "largest-rectangle-in-histogram": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: heights: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n2 1 5 6 2 3\n",
@@ -1799,8 +1799,8 @@
   },
   "binary-search": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; target: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n-1 0 3 5 9 12\n9\n",
@@ -1858,8 +1858,8 @@
   },
   "search-a-2d-matrix": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers; arg2: an integer. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers; arg2: an integer. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers; target: an integer. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 4\n1 3 5 7\n10 11 16 20\n23 30 34 60\n3\n",
@@ -1929,8 +1929,8 @@
   },
   "koko-eating-bananas": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: piles: an integer list: count n then n integers; h: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n3 6 7 11\n8\n",
@@ -1988,8 +1988,8 @@
   },
   "find-minimum-in-rotated-sorted-array": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n3 4 5 1 2\n",
@@ -2055,8 +2055,8 @@
   },
   "search-in-rotated-sorted-array": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; target: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n4 5 6 7 0 1 2\n0\n",
@@ -2123,7 +2123,7 @@
   "time-based-key-value-store": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass TimeMap:\n    def __init__(self) -> None:\n        pass\n\n    def set(self, key: str, value: str, timestamp: int) -> None:\n        pass\n\n    def get(self, key: str, timestamp: int) -> str:\n        pass\n\nOPS = {\n        'TimeMap': ([], None),\n        'set': (['str', 'str', 'int'], None),\n        'get': (['str', 'int'], 'str'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'TimeMap':\n            obj = TimeMap(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\nTimeMap\nset foo bar 1\nget foo 1\nget foo 3\nset foo bar2 4\nget foo 4\nget foo 5\n",
@@ -2177,8 +2177,8 @@
   },
   "median-of-two-sorted-arrays": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the float.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the float.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums1: an integer list: count n then n integers; nums2: an integer list: count n then n integers. Output: the float.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n1 3\n1\n2\n",
@@ -2256,8 +2256,8 @@
   },
   "reverse-linked-list": {
     "protocol": "text",
-    "format": "Input: arg1: a linked list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a linked list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: head: a linked list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 2 3 4 5\n",
@@ -2323,8 +2323,8 @@
   },
   "merge-two-sorted-lists": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: list1: an integer list: count n then n integers; list2: an integer list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 4\n3\n1 3 4\n",
@@ -2386,8 +2386,8 @@
   },
   "linked-list-cycle": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: head: an integer list: count n then n integers; pos: an integer. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n3 2 0 -4\n1\n",
@@ -2453,8 +2453,8 @@
   },
   "reorder-list": {
     "protocol": "text",
-    "format": "Input: arg1: a linked list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a linked list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: head: a linked list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 2 3 4\n",
@@ -2520,8 +2520,8 @@
   },
   "remove-nth-node-from-end-of-list": {
     "protocol": "text",
-    "format": "Input: arg1: a linked list: count n then n integers; arg2: an integer. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a linked list: count n then n integers; arg2: an integer. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: head: a linked list: count n then n integers; n: an integer. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 2 3 4 5\n2\n",
@@ -2599,8 +2599,8 @@
   },
   "copy-list-with-random-pointer": {
     "protocol": "text",
-    "format": "Input: arg1: a random list: count n, then n lines of value and random-index (-1 for null). Output: count n then n lines of value and random-index (-1 for null).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a random list: count n, then n lines of value and random-index (-1 for null). Output: count n then n lines of value and random-index (-1 for null).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = []\n    for _ in range(n_v0):\n        val = int(data[p]); idx = int(data[p + 1]); p += 2\n        v0.append([val, None if idx == -1 else idx])\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: head: a random list: count n, then n lines of value and random-index (-1 for null). Output: count n then n lines of value and random-index (-1 for null).",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n7 -1\n13 0\n11 4\n10 2\n1 0\n",
@@ -2658,8 +2658,8 @@
   },
   "add-two-numbers": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: l1: an integer list: count n then n integers; l2: an integer list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n2 4 3\n3\n5 6 4\n",
@@ -2733,8 +2733,8 @@
   },
   "find-the-duplicate-number": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 3 4 2 2\n",
@@ -2813,7 +2813,7 @@
   "lru-cache": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass LRUCache:\n    def __init__(self, capacity: int) -> None:\n        pass\n\n    def get(self, key: int) -> int:\n        pass\n\n    def put(self, key: int, value: int) -> None:\n        pass\n\nOPS = {\n        'LRUCache': (['int'], None),\n        'put': (['int', 'int'], None),\n        'get': (['int'], 'int'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'LRUCache':\n            obj = LRUCache(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "10\nLRUCache 2\nput 1 1\nput 2 2\nget 1\nput 3 3\nget 2\nput 4 4\nget 1\nget 3\nget 4\n",
@@ -2867,8 +2867,8 @@
   },
   "merge-k-sorted-lists": {
     "protocol": "text",
-    "format": "Input: arg1: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    k_v0 = int(data[p]); p += 1\n    v0 = []\n    for _ in range(k_v0):\n        n_v0 = int(data[p]); p += 1\n        v0.append(list(map(int, data[p:p + n_v0]))); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: lists: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n3\n1 4 5\n3\n1 3 4\n2\n2 6\n",
@@ -2934,8 +2934,8 @@
   },
   "reverse-nodes-in-k-group": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: head: an integer list: count n then n integers; k: an integer. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 2 3 4 5\n2\n",
@@ -3021,8 +3021,8 @@
   },
   "invert-binary-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n4 2 7 1 3 6 9\n",
@@ -3088,8 +3088,8 @@
   },
   "maximum-depth-of-binary-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n3 9 20 null null 15 7\n",
@@ -3155,8 +3155,8 @@
   },
   "diameter-of-binary-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 2 3 4 5\n",
@@ -3210,8 +3210,8 @@
   },
   "balanced-binary-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n3 9 20 null null 15 7\n",
@@ -3277,8 +3277,8 @@
   },
   "same-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v1)]; p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: p: a binary tree: count n then n level-order values (null for missing); q: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 3\n3\n1 2 3\n",
@@ -3328,8 +3328,8 @@
   },
   "subtree-of-another-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v1)]; p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing); sub_root: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n3 4 5 1 2\n3\n4 1 2\n",
@@ -3391,8 +3391,8 @@
   },
   "lowest-common-ancestor-of-a-binary-search-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a tree node value (integer); arg3: a tree node value (integer). Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: a tree node value (integer); arg3: a tree node value (integer). Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    v1 = data[p].decode(); p += 1\n    v2 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1, v2 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing); p: a tree node value (integer); q: a tree node value (integer). Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "11\n6 2 8 0 4 7 9 null null 3 5\n2\n8\n",
@@ -3446,8 +3446,8 @@
   },
   "binary-tree-level-order-traversal": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: count m then m lines of pairs.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: count m then m lines of pairs.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: count m then m lines of pairs.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n3 9 20 null null 15 7\n",
@@ -3505,8 +3505,8 @@
   },
   "binary-tree-right-side-view": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n1 2 3 null 5 null 4\n",
@@ -3568,8 +3568,8 @@
   },
   "count-good-nodes-in-binary-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n3 1 4 3 null 1 5\n",
@@ -3643,8 +3643,8 @@
   },
   "validate-binary-search-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n2 1 3\n",
@@ -3698,8 +3698,8 @@
   },
   "kth-smallest-element-in-a-bst": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing); k: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n3 1 4 null 2\n1\n",
@@ -3753,8 +3753,8 @@
   },
   "construct-binary-tree-from-preorder-and-inorder-traversal": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: print nothing.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: print nothing.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: preorder: an integer list: count n then n integers; inorder: an integer list: count n then n integers. Output: print nothing.",
+    "starter": "",
     "cases": [
       {
         "stdin": "0\n\n0\n\n",
@@ -3824,8 +3824,8 @@
   },
   "binary-tree-maximum-path-sum": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 3\n",
@@ -3891,8 +3891,8 @@
   },
   "serialize-and-deserialize-binary-tree": {
     "protocol": "text",
-    "format": "Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: root: a binary tree: count n then n level-order values (null for missing). Output: level-order values space-separated (null for missing).",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n1 2 3 null null 4 5\n",
@@ -3959,7 +3959,7 @@
   "kth-largest-element-in-a-stream": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass KthLargest:\n    def __init__(self, k: int, nums: list[int]) -> None:\n        pass\n\n    def add(self, val: int) -> int:\n        pass\n\nOPS = {\n        'KthLargest': (['int', 'list[int]'], None),\n        'add': (['int'], 'int'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'KthLargest':\n            obj = KthLargest(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\nKthLargest 3 4 4 5 8 2\nadd 3\nadd 5\nadd 10\nadd 9\nadd 4\n",
@@ -4017,8 +4017,8 @@
   },
   "last-stone-weight": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: stones: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n2 7 4 1 8 1\n",
@@ -4092,8 +4092,8 @@
   },
   "k-closest-points-to-origin": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values; arg2: an integer. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values; arg2: an integer. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: points: edges2: count then values; k: an integer. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n1 3\n-2 2\n1\n",
@@ -4147,8 +4147,8 @@
   },
   "kth-largest-element-in-an-array": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; k: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\n3 2 1 5 6 4\n2\n",
@@ -4210,8 +4210,8 @@
   },
   "task-scheduler": {
     "protocol": "text",
-    "format": "Input: arg1: a string list: count n then n tokens; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string list: count n then n tokens; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [data[p + j].decode() for j in range(n_v0)]; p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: tasks: a string list: count n then n tokens; n: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\nA\nA\nA\nB\nB\nB\n2\n",
@@ -4266,7 +4266,7 @@
   "design-twitter": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass Twitter:\n    def __init__(self) -> None:\n        pass\n\n    def post_tweet(self, user_id: int, tweet_id: int) -> None:\n        pass\n\n    def get_news_feed(self, user_id: int) -> list[int]:\n        pass\n\n    def follow(self, follower_id: int, followee_id: int) -> None:\n        pass\n\n    def unfollow(self, follower_id: int, followee_id: int) -> None:\n        pass\n\nOPS = {\n        'Twitter': ([], None),\n        'postTweet': (['int', 'int'], None),\n        'getNewsFeed': (['int'], 'list[int]'),\n        'follow': (['int', 'int'], None),\n        'unfollow': (['int', 'int'], None),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'Twitter':\n            obj = Twitter(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\nTwitter\npostTweet 1 5\ngetNewsFeed 1\nfollow 1 2\npostTweet 2 6\ngetNewsFeed 1\nunfollow 1 2\ngetNewsFeed 1\n",
@@ -4325,7 +4325,7 @@
   "find-median-from-data-stream": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass MedianFinder:\n    def __init__(self) -> None:\n        pass\n\n    def add_num(self, num: int) -> None:\n        pass\n\n    def find_median(self) -> float:\n        pass\n\nOPS = {\n        'MedianFinder': ([], None),\n        'addNum': (['int'], None),\n        'findMedian': ([], 'float'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'MedianFinder':\n            obj = MedianFinder(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\nMedianFinder\naddNum 1\naddNum 2\nfindMedian\naddNum 3\nfindMedian\n",
@@ -4379,8 +4379,8 @@
   },
   "subsets": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 3\n",
@@ -4434,8 +4434,8 @@
   },
   "combination-sum": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: candidates: an integer list: count n then n integers; target: an integer. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n2 3 6 7\n7\n",
@@ -4489,8 +4489,8 @@
   },
   "combination-sum-ii": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: candidates: an integer list: count n then n integers; target: an integer. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "7\n10 1 2 7 6 1 5\n8\n",
@@ -4552,8 +4552,8 @@
   },
   "permutations": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 3\n",
@@ -4607,8 +4607,8 @@
   },
   "subsets-ii": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 2\n",
@@ -4666,8 +4666,8 @@
   },
   "generate-parentheses": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the values space-separated in ascending order.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the values space-separated in ascending order.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: the values space-separated in ascending order.",
+    "starter": "",
     "cases": [
       {
         "stdin": "1\n",
@@ -4717,8 +4717,8 @@
   },
   "word-search": {
     "protocol": "text",
-    "format": "Input: arg1: a char board: rows r, cols c, then r lines of c chars; arg2: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a char board: rows r, cols c, then r lines of c chars; arg2: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [[data[p + i * c_v0 + j].decode() for j in range(c_v0)] for i in range(r_v0)]; p += r_v0 * c_v0\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: board: a char board: rows r, cols c, then r lines of c chars; word: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 4\nA B C E\nS F C S\nA D E E\nABCCED\n",
@@ -4772,8 +4772,8 @@
   },
   "palindrome-partitioning": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "aab\n",
@@ -4827,8 +4827,8 @@
   },
   "letter-combinations-of-a-phone-number": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: the values space-separated in ascending order.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: the values space-separated in ascending order.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: digits: a string token. Output: the values space-separated in ascending order.",
+    "starter": "",
     "cases": [
       {
         "stdin": "23\n",
@@ -4882,8 +4882,8 @@
   },
   "n-queens": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the solution count S, then S boards each as n lines of Q/..",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the solution count S, then S boards each as n lines of Q/..\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: the solution count S, then S boards each as n lines of Q/..",
+    "starter": "",
     "cases": [
       {
         "stdin": "1\n",
@@ -4930,7 +4930,7 @@
   "implement-trie-prefix-tree": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass Trie:\n    def __init__(self) -> None:\n        pass\n\n    def insert(self, word: str) -> None:\n        pass\n\n    def search(self, word: str) -> bool:\n        pass\n\n    def starts_with(self, prefix: str) -> bool:\n        pass\n\nOPS = {\n        'Trie': ([], None),\n        'insert': (['str'], None),\n        'search': (['str'], 'bool'),\n        'startsWith': (['str'], 'bool'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'Trie':\n            obj = Trie(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "6\nTrie\ninsert app\ninsert apple\nsearch app\nsearch apple\nsearch appl\n",
@@ -4985,7 +4985,7 @@
   "design-add-and-search-words-data-structure": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass WordDictionary:\n    def __init__(self) -> None:\n        pass\n\n    def add_word(self, word: str) -> None:\n        pass\n\n    def search(self, word: str) -> bool:\n        pass\n\nOPS = {\n        'WordDictionary': ([], None),\n        'addWord': (['str'], None),\n        'search': (['str'], 'bool'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'WordDictionary':\n            obj = WordDictionary(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\nWordDictionary\naddWord bad\naddWord dad\naddWord mad\nsearch pad\nsearch bad\nsearch .ad\nsearch b..\n",
@@ -5043,8 +5043,8 @@
   },
   "word-search-ii": {
     "protocol": "text",
-    "format": "Input: arg1: a char board: rows r, cols c, then r lines of c chars; arg2: a string list: count n then n tokens. Output: the values space-separated in ascending order.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a char board: rows r, cols c, then r lines of c chars; arg2: a string list: count n then n tokens. Output: the values space-separated in ascending order.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [[data[p + i * c_v0 + j].decode() for j in range(c_v0)] for i in range(r_v0)]; p += r_v0 * c_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = [data[p + j].decode() for j in range(n_v1)]; p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: board: a char board: rows r, cols c, then r lines of c chars; words: a string list: count n then n tokens. Output: the values space-separated in ascending order.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4 4\no a a n\ne t a e\ni h k r\ni f l v\n4\noath\npea\neat\nrain\n",
@@ -5098,8 +5098,8 @@
   },
   "number-of-islands": {
     "protocol": "text",
-    "format": "Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [[data[p + i * c_v0 + j].decode() for j in range(c_v0)] for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: grid: a char board: rows r, cols c, then r lines of c chars. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4 5\n1 1 1 1 0\n1 1 0 1 0\n1 1 0 0 0\n0 0 0 0 0\n",
@@ -5161,8 +5161,8 @@
   },
   "max-area-of-island": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: grid: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "8 13\n0 0 1 0 0 0 0 1 0 0 0 0 0\n0 0 0 0 0 0 0 1 1 1 0 0 0\n0 1 1 0 1 0 0 0 0 0 0 0 0\n0 1 0 0 1 1 0 0 1 0 1 0 0\n0 1 0 0 1 1 0 0 1 1 1 0 0\n0 0 0 0 0 0 0 0 0 0 1 0 0\n0 0 0 0 0 0 0 1 1 1 0 0 0\n0 0 0 0 0 0 0 1 1 0 0 0 0\n",
@@ -5220,8 +5220,8 @@
   },
   "clone-graph": {
     "protocol": "text",
-    "format": "Input: arg1: a graph: count n, then per node degree d and d neighbour ids. Output: count n then n neighbour lists (degree then ids).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a graph: count n, then per node degree d and d neighbour ids. Output: count n then n neighbour lists (degree then ids).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = []\n    for _ in range(n_v0):\n        d_v0 = int(data[p]); p += 1\n        v0.append(list(map(int, data[p:p + d_v0]))); p += d_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: node: a graph: count n, then per node degree d and d neighbour ids. Output: count n then n neighbour lists (degree then ids).",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n2 2 4\n2 1 3\n2 2 4\n2 1 3\n",
@@ -5275,8 +5275,8 @@
   },
   "walls-and-gates": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: rooms: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4 4\n2147483647 -1 0 2147483647\n2147483647 2147483647 2147483647 -1\n2147483647 -1 2147483647 -1\n0 -1 2147483647 2147483647\n",
@@ -5350,8 +5350,8 @@
   },
   "rotting-oranges": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: grid: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 3\n2 1 1\n1 1 0\n0 1 1\n",
@@ -5401,8 +5401,8 @@
   },
   "pacific-atlantic-water-flow": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: each group on its own line (sorted; each group sorted).",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: each group on its own line (sorted; each group sorted).\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: heights: an integer matrix: rows r, cols c, then r lines of c integers. Output: each group on its own line (sorted; each group sorted).",
+    "starter": "",
     "cases": [
       {
         "stdin": "5 5\n1 2 2 3 5\n3 2 3 4 4\n2 4 5 3 1\n6 7 1 4 5\n5 1 1 2 4\n",
@@ -5456,8 +5456,8 @@
   },
   "surrounded-regions": {
     "protocol": "text",
-    "format": "Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: count m then m lines of pairs.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: count m then m lines of pairs.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [[data[p + i * c_v0 + j].decode() for j in range(c_v0)] for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: board: a char board: rows r, cols c, then r lines of c chars. Output: count m then m lines of pairs.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4 4\nX X X X\nX O O X\nX X O X\nX O X X\n",
@@ -5519,8 +5519,8 @@
   },
   "course-schedule": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: edges2: count then values. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: edges2: count then values. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    m_v1 = int(data[p]); p += 1\n    v1 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v1)]; p += 2 * m_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: num_courses: an integer; prerequisites: edges2: count then values. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n1\n1 0\n",
@@ -5574,8 +5574,8 @@
   },
   "course-schedule-ii": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: edges2: count then values. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: edges2: count then values. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    m_v1 = int(data[p]); p += 1\n    v1 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v1)]; p += 2 * m_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: num_courses: an integer; prerequisites: edges2: count then values. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n1\n1 0\n",
@@ -5653,8 +5653,8 @@
   },
   "graph-valid-tree": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: edges2: count then values. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: edges2: count then values. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    m_v1 = int(data[p]); p += 1\n    v1 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v1)]; p += 2 * m_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer; edges: edges2: count then values. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n4\n0 1\n0 2\n0 3\n1 4\n",
@@ -5732,8 +5732,8 @@
   },
   "number-of-connected-components-in-an-undirected-graph": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: edges2: count then values. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: edges2: count then values. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    m_v1 = int(data[p]); p += 1\n    v1 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v1)]; p += 2 * m_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer; edges: edges2: count then values. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n3\n0 1\n1 2\n3 4\n",
@@ -5811,8 +5811,8 @@
   },
   "redundant-connection": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: edges: edges2: count then values. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2\n1 3\n2 3\n",
@@ -5866,8 +5866,8 @@
   },
   "word-ladder": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token; arg3: a string list: count n then n tokens. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token; arg3: a string list: count n then n tokens. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    n_v2 = int(data[p]); p += 1\n    v2 = [data[p + j].decode() for j in range(n_v2)]; p += n_v2\n    # TODO: compute the answer from v0, v1, v2 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: begin_word: a string token; end_word: a string token; word_list: a string list: count n then n tokens. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "hit\ncog\n6\nhot\ndot\ndog\nlot\nlog\ncog\n",
@@ -5933,8 +5933,8 @@
   },
   "network-delay-time": {
     "protocol": "text",
-    "format": "Input: arg1: edges3: count then values; arg2: an integer; arg3: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges3: count then values; arg2: an integer; arg3: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(3)] for i in range(m_v0)]; p += 3 * m_v0\n    v1 = int(data[p]); p += 1\n    v2 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1, v2 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: times: edges3: count then values; n: an integer; k: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n2 1 1\n2 3 1\n3 4 1\n4\n2\n",
@@ -5992,8 +5992,8 @@
   },
   "reconstruct-itinerary": {
     "protocol": "text",
-    "format": "Input: arg1: string pairs: count m then m lines of two tokens. Output: the strings space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: string pairs: count m then m lines of two tokens. Output: the strings space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[data[p + 2 * i].decode(), data[p + 2 * i + 1].decode()] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: tickets: string pairs: count m then m lines of two tokens. Output: the strings space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\nMUC LHR\nJFK MUC\nSFO SJC\nLHR SFO\n",
@@ -6055,8 +6055,8 @@
   },
   "min-cost-to-connect-all-points": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: points: edges2: count then values. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n0 0\n2 2\n3 10\n5 2\n7 0\n",
@@ -6114,8 +6114,8 @@
   },
   "swim-in-rising-water": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: grid: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2 2\n0 2\n1 3\n",
@@ -6173,8 +6173,8 @@
   },
   "alien-dictionary": {
     "protocol": "text",
-    "format": "Input: arg1: a string list: count n then n tokens. Output: the string.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string list: count n then n tokens. Output: the string.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = [data[p + j].decode() for j in range(n_v0)]; p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: words: a string list: count n then n tokens. Output: the string.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\nwrt\nwrf\ner\nett\nrftt\n",
@@ -6252,8 +6252,8 @@
   },
   "cheapest-flights-within-k-stops": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: edges3: count then values; arg3: an integer; arg4: an integer; arg5: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: edges3: count then values; arg3: an integer; arg4: an integer; arg5: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    m_v1 = int(data[p]); p += 1\n    v1 = [[int(data[p + w * i + j]) for j in range(3)] for i in range(m_v1)]; p += 3 * m_v1\n    v2 = int(data[p]); p += 1\n    v3 = int(data[p]); p += 1\n    v4 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1, v2, v3, v4 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer; flights: edges3: count then values; src: an integer; dst: an integer; k: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n5\n0 1 100\n1 2 100\n2 0 100\n1 3 600\n2 3 200\n0\n3\n1\n",
@@ -6311,8 +6311,8 @@
   },
   "climbing-stairs": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "1\n",
@@ -6386,8 +6386,8 @@
   },
   "min-cost-climbing-stairs": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: cost: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n10 15 20\n",
@@ -6445,8 +6445,8 @@
   },
   "house-robber": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 2 3 1\n",
@@ -6512,8 +6512,8 @@
   },
   "house-robber-ii": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n2 3 2\n",
@@ -6599,8 +6599,8 @@
   },
   "longest-palindromic-substring": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: the strings space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: the strings space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: the strings space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "babad\n",
@@ -6654,8 +6654,8 @@
   },
   "palindromic-substrings": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "abc\n",
@@ -6721,8 +6721,8 @@
   },
   "decode-ways": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "12\n",
@@ -6780,8 +6780,8 @@
   },
   "coin-change": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: coins: an integer list: count n then n integers; amount: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 5\n11\n",
@@ -6847,8 +6847,8 @@
   },
   "maximum-product-subarray": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n2 3 -2 4\n",
@@ -6914,8 +6914,8 @@
   },
   "word-break": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string list: count n then n tokens. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string list: count n then n tokens. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    n_v1 = int(data[p]); p += 1\n    v1 = [data[p + j].decode() for j in range(n_v1)]; p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token; word_dict: a string list: count n then n tokens. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "leetcode\n2\nleet\ncode\n",
@@ -6981,8 +6981,8 @@
   },
   "longest-increasing-subsequence": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\n10 9 2 5 3 7 101 18\n",
@@ -7048,8 +7048,8 @@
   },
   "partition-equal-subset-sum": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 5 11 5\n",
@@ -7115,8 +7115,8 @@
   },
   "unique-paths": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: m: an integer; n: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n7\n",
@@ -7182,8 +7182,8 @@
   },
   "longest-common-subsequence": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: text1: a string token; text2: a string token. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "abcde\nace\n",
@@ -7261,8 +7261,8 @@
   },
   "best-time-to-buy-and-sell-stock-with-cooldown": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: prices: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 2 3 0 2\n",
@@ -7324,8 +7324,8 @@
   },
   "coin-change-ii": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: amount: an integer; coins: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n3\n1 2 5\n",
@@ -7387,8 +7387,8 @@
   },
   "target-sum": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers; target: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 1 1 1 1\n3\n",
@@ -7450,8 +7450,8 @@
   },
   "interleaving-string": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token; arg3: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token; arg3: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    v2 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1, v2 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s1: a string token; s2: a string token; s3: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "aabcc\ndbbca\naadbbcbcac\n",
@@ -7529,8 +7529,8 @@
   },
   "longest-increasing-path-in-a-matrix": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 3\n9 9 4\n6 6 8\n2 1 1\n",
@@ -7592,8 +7592,8 @@
   },
   "distinct-subsequences": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token; t: a string token. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "rabbbit\nrabbit\n",
@@ -7659,8 +7659,8 @@
   },
   "edit-distance": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: word1: a string token; word2: a string token. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "horse\nros\n",
@@ -7722,8 +7722,8 @@
   },
   "burst-balloons": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n3 1 5 8\n",
@@ -7785,8 +7785,8 @@
   },
   "regular-expression-matching": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token; p: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "aa\na\n",
@@ -7860,8 +7860,8 @@
   },
   "maximum-subarray": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "9\n-2 1 -3 4 -1 2 1 -5 4\n",
@@ -7927,8 +7927,8 @@
   },
   "jump-game": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n2 3 1 1 4\n",
@@ -7994,8 +7994,8 @@
   },
   "jump-game-ii": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n2 3 1 1 4\n",
@@ -8081,8 +8081,8 @@
   },
   "gas-station": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: gas: an integer list: count n then n integers; cost: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "5\n1 2 3 4 5\n5\n3 4 5 1 2\n",
@@ -8136,8 +8136,8 @@
   },
   "hand-of-straights": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: hand: an integer list: count n then n integers; group_size: an integer. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "9\n1 2 3 6 2 3 4 7 8\n3\n",
@@ -8195,8 +8195,8 @@
   },
   "merge-triplets-to-form-target-triplet": {
     "protocol": "text",
-    "format": "Input: arg1: edges3: count then values; arg2: an integer list: count n then n integers. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges3: count then values; arg2: an integer list: count n then n integers. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(3)] for i in range(m_v0)]; p += 3 * m_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: triplets: edges3: count then values; target: an integer list: count n then n integers. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n2 5 3\n1 8 4\n1 7 5\n3\n2 7 5\n",
@@ -8262,8 +8262,8 @@
   },
   "partition-labels": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: the values space-separated in ascending order.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: the values space-separated in ascending order.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: the values space-separated in ascending order.",
+    "starter": "",
     "cases": [
       {
         "stdin": "ababcbacadefegdehijhklij\n",
@@ -8321,8 +8321,8 @@
   },
   "valid-parenthesis-string": {
     "protocol": "text",
-    "format": "Input: arg1: a string token. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: s: a string token. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "()\n",
@@ -8384,8 +8384,8 @@
   },
   "insert-interval": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: count m then m lines of pairs.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: count m then m lines of pairs.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: intervals: edges2: count then values; new_interval: an integer list: count n then n integers. Output: count m then m lines of pairs.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n1 3\n6 9\n2\n2 5\n",
@@ -8447,8 +8447,8 @@
   },
   "merge-intervals": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values. Output: count m then m lines of pairs.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values. Output: count m then m lines of pairs.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: intervals: edges2: count then values. Output: count m then m lines of pairs.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 3\n2 6\n8 10\n15 18\n",
@@ -8502,8 +8502,8 @@
   },
   "non-overlapping-intervals": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: intervals: edges2: count then values. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 2\n2 3\n3 4\n1 3\n",
@@ -8569,8 +8569,8 @@
   },
   "meeting-rooms": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: intervals: edges2: count then values. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n0 30\n5 10\n15 20\n",
@@ -8648,8 +8648,8 @@
   },
   "meeting-rooms-ii": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: intervals: edges2: count then values. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n0 30\n5 10\n15 20\n",
@@ -8735,8 +8735,8 @@
   },
   "minimum-interval-to-include-each-query": {
     "protocol": "text",
-    "format": "Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    m_v0 = int(data[p]); p += 1\n    v0 = [[int(data[p + w * i + j]) for j in range(2)] for i in range(m_v0)]; p += 2 * m_v0\n    n_v1 = int(data[p]); p += 1\n    v1 = list(map(int, data[p:p + n_v1])); p += n_v1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: intervals: edges2: count then values; queries: an integer list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "4\n1 4\n2 4\n3 6\n4 4\n4\n2 3 4 5\n",
@@ -8798,8 +8798,8 @@
   },
   "rotate-image": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 3\n1 2 3\n4 5 6\n7 8 9\n",
@@ -8853,8 +8853,8 @@
   },
   "spiral-matrix": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 3\n1 2 3\n4 5 6\n7 8 9\n",
@@ -8916,8 +8916,8 @@
   },
   "set-matrix-zeroes": {
     "protocol": "text",
-    "format": "Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    r_v0 = int(data[p]); c_v0 = int(data[p + 1]); p += 2\n    v0 = [list(map(int, data[p + i * c_v0:p + (i + 1) * c_v0])) for i in range(r_v0)]; p += r_v0 * c_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3 3\n1 1 1\n1 0 1\n1 1 1\n",
@@ -8983,8 +8983,8 @@
   },
   "happy-number": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: 1 if true else 0.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: 1 if true else 0.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: 1 if true else 0.",
+    "starter": "",
     "cases": [
       {
         "stdin": "19\n",
@@ -9046,8 +9046,8 @@
   },
   "plus-one": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: digits: an integer list: count n then n integers. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n1 2 3\n",
@@ -9109,8 +9109,8 @@
   },
   "powx-n": {
     "protocol": "text",
-    "format": "Input: arg1: a float; arg2: an integer. Output: the float.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a float; arg2: an integer. Output: the float.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = float(data[p]); p += 1\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: x: a float; n: an integer. Output: the float.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2.0\n10\n",
@@ -9180,8 +9180,8 @@
   },
   "multiply-strings": {
     "protocol": "text",
-    "format": "Input: arg1: a string token; arg2: a string token. Output: the string.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: a string token; arg2: a string token. Output: the string.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = data[p].decode(); p += 1\n    v1 = data[p].decode(); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: num1: a string token; num2: a string token. Output: the string.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n3\n",
@@ -9252,7 +9252,7 @@
   "detect-squares": {
     "protocol": "text",
     "format": "first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)",
-    "starter": "import sys\n\n\nclass DetectSquares:\n    def __init__(self) -> None:\n        pass\n\n    def add(self, point: list[int]) -> None:\n        pass\n\n    def count(self, point: list[int]) -> int:\n        pass\n\nOPS = {\n        'DetectSquares': ([], None),\n        'add': (['list[int]'], None),\n        'count': (['list[int]'], 'int'),\n    }\n\n\ndef main() -> None:\n    # Format: first line q (operations), then q lines of 'op args...'. Output: one result per operation (null for void; space-separated values for lists)\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    q = int(data[p]); p += 1\n    obj = None\n    out = []\n    for _ in range(q):\n        op = data[p].decode(); p += 1\n        arg_types = OPS[op][0]\n        args = []\n        for t in arg_types:\n            if t == 'int':\n                args.append(int(data[p])); p += 1\n            elif t == 'float':\n                args.append(float(data[p])); p += 1\n            elif t == 'str':\n                args.append(data[p].decode()); p += 1\n            elif t == 'list[int]':\n                m = int(data[p]); p += 1\n                args.append(list(map(int, data[p:p + m]))); p += m\n        if op == 'DetectSquares':\n            obj = DetectSquares(*args)\n            out.append('null')\n        else:\n            res = getattr(obj, op)(*args)\n            if res is None:\n                out.append('null')\n            elif isinstance(res, bool):\n                out.append('1' if res else '0')\n            elif isinstance(res, list):\n                out.append(' '.join(map(str, res)))\n            else:\n                out.append(str(res))\n    sys.stdout.write(\"\\n\".join(out) + \"\\n\")\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "starter": "",
     "cases": [
       {
         "stdin": "8\nDetectSquares\nadd 2 3 10\nadd 2 11 2\nadd 2 3 2\ncount 2 11 10\ncount 2 14 8\nadd 2 11 2\ncount 2 11 10\n",
@@ -9314,8 +9314,8 @@
   },
   "single-number": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n2 2 1\n",
@@ -9373,8 +9373,8 @@
   },
   "number-of-1-bits": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "11\n",
@@ -9444,8 +9444,8 @@
   },
   "counting-bits": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the values space-separated.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the values space-separated.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: the values space-separated.",
+    "starter": "",
     "cases": [
       {
         "stdin": "2\n",
@@ -9503,8 +9503,8 @@
   },
   "reverse-bits": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: n: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "43261596\n",
@@ -9574,8 +9574,8 @@
   },
   "missing-number": {
     "protocol": "text",
-    "format": "Input: arg1: an integer list: count n then n integers. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer list: count n then n integers. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    n_v0 = int(data[p]); p += 1\n    v0 = list(map(int, data[p:p + n_v0])); p += n_v0\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: nums: an integer list: count n then n integers. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "3\n3 0 1\n",
@@ -9633,8 +9633,8 @@
   },
   "sum-of-two-integers": {
     "protocol": "text",
-    "format": "Input: arg1: an integer; arg2: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer; arg2: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    v1 = int(data[p]); p += 1\n    # TODO: compute the answer from v0, v1 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: a: an integer; b: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "1\n2\n",
@@ -9700,8 +9700,8 @@
   },
   "reverse-integer": {
     "protocol": "text",
-    "format": "Input: arg1: an integer. Output: the integer.",
-    "starter": "import sys\n\n\ndef main() -> None:\n    # Format: Input: arg1: an integer. Output: the integer.\n    data = sys.stdin.buffer.read().split()\n    p = 0\n    v0 = int(data[p]); p += 1\n    # TODO: compute the answer from v0 and print it\n\n\nif __name__ == \"__main__\":\n    main()\n",
+    "format": "Input: x: an integer. Output: the integer.",
+    "starter": "",
     "cases": [
       {
         "stdin": "123\n",

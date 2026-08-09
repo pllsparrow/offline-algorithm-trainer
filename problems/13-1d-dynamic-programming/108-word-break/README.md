@@ -17,7 +17,7 @@ Classic interview problem for Word Break. Practice state definition and transiti
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string list: count n then n tokens. Output: 1 if true else 0.
+Input: s: a string token; word_dict: a string list: count n then n tokens. Output: 1 if true else 0.
 
 ## Local Examples
 

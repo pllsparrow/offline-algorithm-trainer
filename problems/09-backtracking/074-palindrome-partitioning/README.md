@@ -17,7 +17,7 @@ Classic interview problem for Palindrome Partitioning. Practice choice paths and
 
 ## ACM Format
 
-Input: arg1: a string token. Output: each group on its own line (sorted; each group sorted).
+Input: s: a string token. Output: each group on its own line (sorted; each group sorted).
 
 ## Local Examples
 

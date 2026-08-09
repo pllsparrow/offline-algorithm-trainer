@@ -17,7 +17,7 @@ Classic interview problem for Valid Sudoku. Practice hash table modeling and fre
 
 ## ACM Format
 
-Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: 1 if true else 0.
+Input: board: a char board: rows r, cols c, then r lines of c chars. Output: 1 if true else 0.
 
 ## Local Examples
 

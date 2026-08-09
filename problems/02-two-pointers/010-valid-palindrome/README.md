@@ -17,7 +17,7 @@ Check whether a string is a palindrome after ignoring case and non-alphanumeric 
 
 ## ACM Format
 
-Input: arg1: a whole input line (may contain spaces). Output: 1 if true else 0.
+Input: s: a whole input line (may contain spaces). Output: 1 if true else 0.
 
 ## Local Examples
 

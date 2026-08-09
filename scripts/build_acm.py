@@ -9,6 +9,7 @@ class adapter left. Output for problems with multiple valid answers is canonical
 from __future__ import annotations
 
 import argparse
+import ast
 import json
 from pathlib import Path
 
@@ -157,6 +158,12 @@ OPS_SPEC = {
     },
 }
 
+PARAMETER_NAME_OVERRIDES = {
+    "copy-list-with-random-pointer": ["head"],
+    "linked-list-cycle": ["head", "pos"],
+    "word-search-ii": ["board", "words"],
+}
+
 
 # ---------------------------------------------------------------------------
 # Input schema inference
@@ -222,7 +229,7 @@ def ser_input(schema: str, value) -> str:
     if schema == "strs_lenpref":
         parts = [str(len(value))]
         for s in value:
-            parts.append(str(len(s)))
+            parts.append(str(len(s.encode("utf-8"))))
             parts.append(s)
         return "\n".join(parts) + "\n"
     if schema.startswith("edges"):
@@ -265,7 +272,7 @@ def ser_output(slug: str, value) -> str:
     if slug == "encode-and-decode-strings":
         parts = [str(len(value))]
         for s in value:
-            parts.append(str(len(s)))
+            parts.append(str(len(s.encode("utf-8"))))
             parts.append(s)
         return "\n".join(parts) + "\n"
     if slug == "n-queens":
@@ -432,13 +439,43 @@ def describe_output(slug: str, expected) -> str:
 # Starter generation
 # ---------------------------------------------------------------------------
 
-def token_starter(format_desc: str, schemas: list[str]) -> str:
-    parse_lines = ["    data = sys.stdin.buffer.read().split()", "    p = 0"]
-    names = []
-    for i, schema in enumerate(schemas):
-        name = f"v{i}"
-        names.append(name)
-        parse_lines.append(ops_parse_line(schema, name))
+def parameter_names(problem: dict, count: int) -> list[str]:
+    override = PARAMETER_NAME_OVERRIDES.get(problem["slug"])
+    if override is not None:
+        return override
+    tree = ast.parse(problem["starter"])
+    preferred_method = problem.get("method")
+    methods = [
+        node
+        for class_node in tree.body
+        if isinstance(class_node, ast.ClassDef)
+        for node in class_node.body
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef))
+        and node.name != "__init__"
+    ]
+    def names_for(node) -> list[str]:
+        return [arg.arg for arg in node.args.args if arg.arg not in {"self", "cls"}]
+
+    method = next(
+        (node for node in methods if node.name == preferred_method and len(names_for(node)) == count),
+        None,
+    )
+    if method is None:
+        method = next((node for node in methods if len(names_for(node)) == count), None)
+    if method is None:
+        method = next((node for node in methods if node.name == preferred_method), None)
+    if method is None and methods:
+        method = methods[0]
+    if method is None:
+        return [f"arg{i + 1}" for i in range(count)]
+    names = names_for(method)
+    return names[:count] + [f"arg{i + 1}" for i in range(len(names), count)]
+
+
+def token_starter(format_desc: str, schemas: list[str], names: list[str]) -> str:
+    parse_lines = ["    input_stream = sys.stdin.buffer"]
+    for schema, name in zip(schemas, names):
+        parse_lines.extend(input_parse_lines(schema, name))
     body = "\n".join(parse_lines)
     refs = ", ".join(names)
     return (
@@ -452,83 +489,85 @@ def token_starter(format_desc: str, schemas: list[str]) -> str:
     )
 
 
-def ops_parse_line(schema: str, name: str) -> str:
+def input_parse_lines(schema: str, name: str) -> list[str]:
     if schema == "int":
-        return f"    {name} = int(data[p]); p += 1"
+        return [f"    {name} = int(input_stream.readline())"]
     if schema == "float":
-        return f"    {name} = float(data[p]); p += 1"
+        return [f"    {name} = float(input_stream.readline())"]
     if schema in ("str", "treeval"):
-        return f"    {name} = data[p].decode(); p += 1"
+        return [f"    {name} = input_stream.readline().decode().strip()"]
     if schema in ("ints", "listnode"):
-        return (
-            f"    n_{name} = int(data[p]); p += 1\n"
-            f"    {name} = list(map(int, data[p:p + n_{name}])); p += n_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = list(map(int, input_stream.readline().split()))",
+        ]
     if schema == "strs":
-        return (
-            f"    n_{name} = int(data[p]); p += 1\n"
-            f"    {name} = [data[p + j].decode() for j in range(n_{name})]; p += n_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = [input_stream.readline().decode().strip() for _ in range({name}_count)]",
+        ]
     if schema.startswith("edges"):
-        w = int(schema[5:])
-        return (
-            f"    m_{name} = int(data[p]); p += 1\n"
-            f"    {name} = [[int(data[p + w * i + j]) for j in range({w})] for i in range(m_{name})]; p += {w} * m_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = [list(map(int, input_stream.readline().split())) for _ in range({name}_count)]",
+        ]
     if schema == "strpairs":
-        return (
-            f"    m_{name} = int(data[p]); p += 1\n"
-            f"    {name} = [[data[p + 2 * i].decode(), data[p + 2 * i + 1].decode()] for i in range(m_{name})]; p += 2 * m_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = [input_stream.readline().decode().split() for _ in range({name}_count)]",
+        ]
     if schema == "matrix_int":
-        return (
-            f"    r_{name} = int(data[p]); c_{name} = int(data[p + 1]); p += 2\n"
-            f"    {name} = [list(map(int, data[p + i * c_{name}:p + (i + 1) * c_{name}])) for i in range(r_{name})]; p += r_{name} * c_{name}"
-        )
+        return [
+            f"    {name}_rows, {name}_cols = map(int, input_stream.readline().split())",
+            f"    {name} = [list(map(int, input_stream.readline().split())) for _ in range({name}_rows)]",
+        ]
     if schema == "board_str":
-        return (
-            f"    r_{name} = int(data[p]); c_{name} = int(data[p + 1]); p += 2\n"
-            f"    {name} = [[data[p + i * c_{name} + j].decode() for j in range(c_{name})] for i in range(r_{name})]; p += r_{name} * c_{name}"
-        )
+        return [
+            f"    {name}_rows, {name}_cols = map(int, input_stream.readline().split())",
+            f"    {name} = [input_stream.readline().decode().split() for _ in range({name}_rows)]",
+        ]
     if schema == "tree":
-        return (
-            f"    n_{name} = int(data[p]); p += 1\n"
-            f"    {name} = [None if data[p + i] == b'null' else int(data[p + i]) for i in range(n_{name})]; p += n_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name}_tokens = input_stream.readline().split()",
+            f"    {name} = [None if token == b'null' else int(token) for token in {name}_tokens]",
+        ]
     if schema == "listlistnode":
-        return (
-            f"    k_{name} = int(data[p]); p += 1\n"
-            f"    {name} = []\n"
-            f"    for _ in range(k_{name}):\n"
-            f"        n_{name} = int(data[p]); p += 1\n"
-            f"        {name}.append(list(map(int, data[p:p + n_{name}]))); p += n_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = []",
+            f"    for _ in range({name}_count):",
+            f"        list_length = int(input_stream.readline())",
+            f"        values = list(map(int, input_stream.readline().split()))",
+            f"        {name}.append(values[:list_length])",
+        ]
     if schema == "graphadj":
-        return (
-            f"    n_{name} = int(data[p]); p += 1\n"
-            f"    {name} = []\n"
-            f"    for _ in range(n_{name}):\n"
-            f"        d_{name} = int(data[p]); p += 1\n"
-            f"        {name}.append(list(map(int, data[p:p + d_{name}]))); p += d_{name}"
-        )
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = []",
+            f"    for _ in range({name}_count):",
+            f"        row = list(map(int, input_stream.readline().split()))",
+            f"        neighbor_count = row[0]",
+            f"        {name}.append(row[1:1 + neighbor_count])",
+        ]
     if schema == "randomnode":
-        return (
-            f"    n_{name} = int(data[p]); p += 1\n"
-            f"    {name} = []\n"
-            f"    for _ in range(n_{name}):\n"
-            f"        val = int(data[p]); idx = int(data[p + 1]); p += 2\n"
-            f"        {name}.append([val, None if idx == -1 else idx])"
-        )
-    return f"    {name} = data[p]; p += 1  # TODO parse {schema}"
+        return [
+            f"    {name}_count = int(input_stream.readline())",
+            f"    {name} = []",
+            f"    for _ in range({name}_count):",
+            f"        value, random_index = map(int, input_stream.readline().split())",
+            f"        {name}.append([value, None if random_index == -1 else random_index])",
+        ]
+    return [f"    {name} = input_stream.readline()  # TODO: parse {schema}"]
 
 
-def str_line_starter(format_desc: str) -> str:
+def str_line_starter(format_desc: str, name: str) -> str:
     return (
         "import sys\n\n\n"
         "def main() -> None:\n"
         f"    # Format: {format_desc}\n"
-        '    s = sys.stdin.readline().rstrip("\\n")\n'
-        "    # TODO: compute the answer and print it\n\n\n"
+        f'    {name} = sys.stdin.readline().rstrip("\\n")\n'
+        f"    # TODO: compute the answer from {name} and print it\n\n\n"
         'if __name__ == "__main__":\n'
         "    main()\n"
     )
@@ -556,7 +595,7 @@ def encode_starter() -> str:
         "    decoded = decode(encode(strs))\n"
         "    out = [str(len(decoded))]\n"
         "    for s in decoded:\n"
-        "        out.append(str(len(s)))\n"
+        "        out.append(str(len(s.encode('utf-8'))))\n"
         "        out.append(s)\n"
         '    sys.stdout.write("\\n".join(out) + "\\n")\n\n\n'
         'if __name__ == "__main__":\n'
@@ -573,40 +612,46 @@ def ops_starter(slug: str, format_desc: str) -> str:
         "import sys\n\n\n"
         f"{class_block}\n"
         f"OPS = {ops_repr}\n\n\n"
+        "def camel_to_snake(name: str) -> str:\n"
+        "    return ''.join(f'_{char.lower()}' if char.isupper() else char for char in name).lstrip('_')\n\n\n"
         "def main() -> None:\n"
         f"    # Format: {format_desc}\n"
-        "    data = sys.stdin.buffer.read().split()\n"
-        "    p = 0\n"
-        "    q = int(data[p]); p += 1\n"
+        "    input_stream = sys.stdin.buffer\n"
+        "    operation_count = int(input_stream.readline())\n"
         f"    obj = None\n"
         "    out = []\n"
-        "    for _ in range(q):\n"
-        "        op = data[p].decode(); p += 1\n"
-        "        arg_types = OPS[op][0]\n"
+        "    for _ in range(operation_count):\n"
+        "        line = input_stream.readline().split()\n"
+        "        operation = line[0].decode()\n"
+        "        operation_key = operation if operation in OPS else next(\n"
+        "            key for key in OPS if camel_to_snake(key) == operation\n"
+        "        )\n"
+        "        raw_arguments = iter(line[1:])\n"
+        "        argument_types = OPS[operation_key][0]\n"
         "        args = []\n"
-        "        for t in arg_types:\n"
-        "            if t == 'int':\n"
-        "                args.append(int(data[p])); p += 1\n"
-        "            elif t == 'float':\n"
-        "                args.append(float(data[p])); p += 1\n"
-        "            elif t == 'str':\n"
-        "                args.append(data[p].decode()); p += 1\n"
-        "            elif t == 'list[int]':\n"
-        "                m = int(data[p]); p += 1\n"
-        "                args.append(list(map(int, data[p:p + m]))); p += m\n"
-        f"        if op == '{cls}':\n"
+        "        for argument_type in argument_types:\n"
+        "            if argument_type == 'int':\n"
+        "                args.append(int(next(raw_arguments)))\n"
+        "            elif argument_type == 'float':\n"
+        "                args.append(float(next(raw_arguments)))\n"
+        "            elif argument_type == 'str':\n"
+        "                args.append(next(raw_arguments).decode())\n"
+        "            elif argument_type == 'list[int]':\n"
+        "                list_length = int(next(raw_arguments))\n"
+        "                args.append([int(next(raw_arguments)) for _ in range(list_length)])\n"
+        f"        if operation_key == '{cls}':\n"
         f"            obj = {cls}(*args)\n"
         "            out.append('null')\n"
         "        else:\n"
-        "            res = getattr(obj, op)(*args)\n"
-        "            if res is None:\n"
+        "            result = getattr(obj, camel_to_snake(operation_key))(*args)\n"
+        "            if result is None:\n"
         "                out.append('null')\n"
-        "            elif isinstance(res, bool):\n"
-        "                out.append('1' if res else '0')\n"
-        "            elif isinstance(res, list):\n"
-        "                out.append(' '.join(map(str, res)))\n"
+        "            elif isinstance(result, bool):\n"
+        "                out.append('1' if result else '0')\n"
+        "            elif isinstance(result, list):\n"
+        "                out.append(' '.join(map(str, result)))\n"
         "            else:\n"
-        "                out.append(str(res))\n"
+        "                out.append(str(result))\n"
         '    sys.stdout.write("\\n".join(out) + "\\n")\n\n\n'
         'if __name__ == "__main__":\n'
         "    main()\n"
@@ -636,14 +681,16 @@ def render_ops_spec(ops: dict) -> str:
     return "{\n" + ",\n".join(items) + ",\n    }"
 
 
-def make_starter(slug: str, schemas: list[str], format_desc: str) -> str:
+def make_starter(problem: dict, schemas: list[str], format_desc: str) -> str:
+    slug = problem["slug"]
     if slug in OPS_SPEC:
         return ops_starter(slug, format_desc)
     if slug == "encode-and-decode-strings":
         return encode_starter()
+    names = parameter_names(problem, len(schemas))
     if schemas == ["str_line"]:
-        return str_line_starter(format_desc)
-    return token_starter(format_desc, schemas)
+        return str_line_starter(format_desc, names[0])
+    return token_starter(format_desc, schemas, names)
 
 
 # ---------------------------------------------------------------------------
@@ -661,7 +708,7 @@ def build_spec(problem: dict, test_spec: dict) -> dict:
         return {
             "protocol": "text",
             "format": format_desc,
-            "starter": ops_starter(slug, format_desc),
+            "starter": "",
             "cases": cases,
         }
 
@@ -670,6 +717,7 @@ def build_spec(problem: dict, test_spec: dict) -> dict:
     args = first_case.get("args", [])
     schemas = [infer_schema(slug, param_types[i] if i < len(param_types) else "", value)
                for i, value in enumerate(args)]
+    names = parameter_names(problem, len(schemas))
 
     cases = []
     for case in test_spec["cases"]:
@@ -679,13 +727,13 @@ def build_spec(problem: dict, test_spec: dict) -> dict:
         stdout = ser_output(slug, case["expected"])
         cases.append({"stdin": stdin, "stdout": stdout})
 
-    in_desc = "; ".join(f"arg{i+1}: {describe_input(s)}" for i, s in enumerate(schemas))
+    in_desc = "; ".join(f"{name}: {describe_input(schema)}" for name, schema in zip(names, schemas))
     out_desc = describe_output(slug, first_case["expected"])
     format_desc = f"Input: {in_desc}. Output: {out_desc}."
     return {
         "protocol": "text",
         "format": format_desc,
-        "starter": make_starter(slug, schemas, format_desc),
+        "starter": "",
         "cases": cases,
     }
 
@@ -699,14 +747,14 @@ def build_specs(problems: list[dict], tests: dict) -> dict:
 
 
 def solution_path(problem: dict) -> Path:
-    return ROOT / problem["path"] / "solution_acm.py"
+    return ROOT / problem["path"] / "solution.py"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build ACM text specs for all problems")
     parser.add_argument("--check", action="store_true", help="Fail when generated specs differ from acm_tests.json")
-    parser.add_argument("--write-solutions", action="store_true", help="Create missing solution_acm.py starters")
-    parser.add_argument("--force", action="store_true", help="With --write-solutions, overwrite all starters")
+    parser.add_argument("--write-solutions", action="store_true", help="Create missing empty solution.py files")
+    parser.add_argument("--force", action="store_true", help="With --write-solutions, empty all solution files")
     parser.add_argument("--debug-schemas", action="store_true", help="Print inferred input schemas per slug")
     args = parser.parse_args()
 

@@ -17,7 +17,7 @@ Classic interview problem for Car Fleet. Practice monotonic stacks and parenthes
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: an integer list: count n then n integers; arg3: an integer list: count n then n integers. Output: the integer.
+Input: target: an integer; position: an integer list: count n then n integers; speed: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

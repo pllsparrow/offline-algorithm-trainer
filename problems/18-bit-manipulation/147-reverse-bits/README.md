@@ -17,7 +17,7 @@ Classic interview problem for Reverse Bits. Practice bit manipulation tricks and
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the integer.
+Input: n: an integer. Output: the integer.
 
 ## Local Examples
 

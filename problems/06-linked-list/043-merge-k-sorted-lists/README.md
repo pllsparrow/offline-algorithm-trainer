@@ -17,7 +17,7 @@ Classic interview problem for Merge K Sorted Lists. Practice pointer rewiring an
 
 ## ACM Format
 
-Input: arg1: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.
+Input: lists: k linked lists: count k, then per list count n and n integers. Output: the values space-separated.
 
 ## Local Examples
 

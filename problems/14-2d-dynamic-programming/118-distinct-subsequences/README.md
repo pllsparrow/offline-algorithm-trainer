@@ -17,7 +17,7 @@ Classic interview problem for Distinct Subsequences. Practice 2D state design an
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: the integer.
+Input: s: a string token; t: a string token. Output: the integer.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Set Matrix Zeroes. Practice in-place matrix operat
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
+Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
 
 ## Local Examples
 

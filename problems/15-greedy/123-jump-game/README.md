@@ -17,7 +17,7 @@ Classic interview problem for Jump Game. Practice local optimality proofs and in
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: 1 if true else 0.
+Input: nums: an integer list: count n then n integers. Output: 1 if true else 0.
 
 ## Local Examples
 

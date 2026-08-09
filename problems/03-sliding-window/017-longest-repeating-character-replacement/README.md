@@ -17,7 +17,7 @@ Classic interview problem for Longest Repeating Character Replacement. Practice 
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: an integer. Output: the integer.
+Input: s: a string token; k: an integer. Output: the integer.
 
 ## Local Examples
 

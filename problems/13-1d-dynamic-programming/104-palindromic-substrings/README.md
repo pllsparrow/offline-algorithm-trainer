@@ -17,7 +17,7 @@ Classic interview problem for Palindromic Substrings. Practice state definition 
 
 ## ACM Format
 
-Input: arg1: a string token. Output: the integer.
+Input: s: a string token. Output: the integer.
 
 ## Local Examples
 

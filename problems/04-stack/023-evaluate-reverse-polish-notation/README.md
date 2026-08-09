@@ -17,7 +17,7 @@ Classic interview problem for Evaluate Reverse Polish Notation. Practice monoton
 
 ## ACM Format
 
-Input: arg1: a string list: count n then n tokens. Output: the integer.
+Input: tokens: a string list: count n then n tokens. Output: the integer.
 
 ## Local Examples
 

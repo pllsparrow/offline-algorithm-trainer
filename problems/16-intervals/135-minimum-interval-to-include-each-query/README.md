@@ -17,7 +17,7 @@ Classic interview problem for Minimum Interval to Include Each Query. Practice s
 
 ## ACM Format
 
-Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: the values space-separated.
+Input: intervals: edges2: count then values; queries: an integer list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

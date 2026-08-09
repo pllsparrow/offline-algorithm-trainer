@@ -17,7 +17,7 @@ Classic interview problem for Edit Distance. Practice 2D state design and string
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: the integer.
+Input: word1: a string token; word2: a string token. Output: the integer.
 
 ## Local Examples
 

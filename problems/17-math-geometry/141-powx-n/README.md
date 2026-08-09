@@ -17,7 +17,7 @@ Classic interview problem for Pow(x, n). Practice in-place matrix operations and
 
 ## ACM Format
 
-Input: arg1: a float; arg2: an integer. Output: the float.
+Input: x: a float; n: an integer. Output: the float.
 
 ## Local Examples
 

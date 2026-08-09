@@ -17,7 +17,7 @@ Classic interview problem for Encode and Decode Strings. Practice hash table mod
 
 ## ACM Format
 
-Input: arg1: strings with length prefix: count n, then per string a length line and the raw bytes. Output: count n, then per string a length line and the raw bytes (round-trip of the input).
+Input: strs: strings with length prefix: count n, then per string a length line and the raw bytes. Output: count n, then per string a length line and the raw bytes (round-trip of the input).
 
 ## Local Examples
 

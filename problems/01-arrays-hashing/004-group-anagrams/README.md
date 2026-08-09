@@ -17,7 +17,7 @@ Group strings that are anagrams of each other. Practice turning a complex object
 
 ## ACM Format
 
-Input: arg1: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).
+Input: strs: a string list: count n then n tokens. Output: each group on its own line (sorted; each group sorted).
 
 ## Local Examples
 

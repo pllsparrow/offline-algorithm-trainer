@@ -6,13 +6,13 @@ I built this because I wanted a simple way to practise algorithms without
 keeping a browser, an editor, and an online judge open at the same time.
 
 The repository contains 150 interview problems grouped by topic. Every problem
-is an ACM-style program: your `solution_acm.py` reads from stdin, writes to
+is an ACM-style program: your `solution.py` reads from stdin, writes to
 stdout, and the judge compares the output exactly (whitespace-normalised). This
 mirrors a real online assessment environment, so the usual loop stays on your
 machine:
 
 ```text
-pick a problem -> write solution_acm.py -> run it -> inspect the failing case
+pick a problem -> write solution.py -> run it -> inspect the failing case
 ```
 
 It also keeps a small SQLite progress file locally. Your attempts and completed
@@ -33,12 +33,14 @@ cd offline-algorithm-trainer
 python3 train.py list
 python3 train.py show two-sum
 python3 train.py run two-sum
+python3 train.py run 003
 python3 train.py status
 ```
 
-Open the `solution_acm.py` path printed by `show`, write your solution, and run
-the same problem again. A failed case prints its stdin, expected stdout, and
-actual stdout.
+Open the `solution.py` path printed by `show`. The file starts completely
+empty, so write the input parsing, algorithm, output, and program entry point
+yourself. Then run the same problem again. A failed case prints its stdin,
+expected stdout, and actual stdout.
 
 For a stubborn failure, rerun only that case:
 
@@ -94,11 +96,14 @@ python3 train.py check
 | `python3 train.py list` | Lists problems and local progress |
 | `python3 train.py show <slug>` | Shows the problem details, ACM format, and file path |
 | `python3 train.py run <slug>` | Runs the local ACM test cases |
+| `python3 train.py run <number>` | Runs by problem number, for example `run 001` |
 | `python3 train.py run <slug> --case 1` | Repeats one failing case |
 | `python3 train.py run <slug> --all` | Runs the remaining cases after a failure |
 | `python3 train.py status` | Shows attempted and accepted totals |
 | `python3 train.py check` | Checks the repository data |
-| `python3 train.py scaffold --force` | Regenerates all READMEs and starter templates |
+| `python3 train.py scaffold --force` | Regenerates all READMEs and empties every `solution.py` |
+
+PyCharm users can select the shared `Judge Current Solution` run configuration once. After that, open any problem's `solution.py` and use the green Run button to judge the current file.
 
 The problems are arranged under `problems/` in 18 chapters, from arrays and
 linked lists to graphs and dynamic programming. The judge is in `judge/`, while

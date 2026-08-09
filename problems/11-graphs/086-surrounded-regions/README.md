@@ -17,7 +17,7 @@ Classic interview problem for Surrounded Regions. Practice DFS/BFS and topologic
 
 ## ACM Format
 
-Input: arg1: a char board: rows r, cols c, then r lines of c chars. Output: count m then m lines of pairs.
+Input: board: a char board: rows r, cols c, then r lines of c chars. Output: count m then m lines of pairs.
 
 ## Local Examples
 

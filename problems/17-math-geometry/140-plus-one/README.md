@@ -17,7 +17,7 @@ Classic interview problem for Plus One. Practice in-place matrix operations and 
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the values space-separated.
+Input: digits: an integer list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

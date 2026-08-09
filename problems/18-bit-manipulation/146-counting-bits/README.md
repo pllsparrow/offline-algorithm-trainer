@@ -17,7 +17,7 @@ Classic interview problem for Counting Bits. Practice bit manipulation tricks an
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the values space-separated.
+Input: n: an integer. Output: the values space-separated.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Redundant Connection. Practice DFS/BFS and topolog
 
 ## ACM Format
 
-Input: arg1: edges2: count then values. Output: the values space-separated.
+Input: edges: edges2: count then values. Output: the values space-separated.
 
 ## Local Examples
 

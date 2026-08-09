@@ -17,7 +17,7 @@ Classic interview problem for Koko Eating Bananas. Practice search space definit
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+Input: piles: an integer list: count n then n integers; h: an integer. Output: the integer.
 
 ## Local Examples
 

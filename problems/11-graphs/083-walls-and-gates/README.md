@@ -17,7 +17,7 @@ Classic interview problem for Walls And Gates. Practice DFS/BFS and topological 
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
+Input: rooms: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
 
 ## Local Examples
 

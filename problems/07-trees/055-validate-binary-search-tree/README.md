@@ -17,7 +17,7 @@ Classic interview problem for Validate Binary Search Tree. Practice recursive re
 
 ## ACM Format
 
-Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.
+Input: root: a binary tree: count n then n level-order values (null for missing). Output: 1 if true else 0.
 
 ## Local Examples
 

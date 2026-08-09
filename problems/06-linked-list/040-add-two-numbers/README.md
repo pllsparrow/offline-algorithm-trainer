@@ -17,7 +17,7 @@ Classic interview problem for Add Two Numbers. Practice pointer rewiring and fas
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the values space-separated.
+Input: l1: an integer list: count n then n integers; l2: an integer list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

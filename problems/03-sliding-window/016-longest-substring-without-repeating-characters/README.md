@@ -17,7 +17,7 @@ Classic interview problem for Longest Substring Without Repeating Characters. Pr
 
 ## ACM Format
 
-Input: arg1: a whole input line (may contain spaces). Output: the integer.
+Input: s: a whole input line (may contain spaces). Output: the integer.
 
 ## Local Examples
 

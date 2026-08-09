@@ -99,8 +99,28 @@ def update_progress(slug, code, result):
 def solution_path(slug):
     problem = problems_by_slug().get(slug)
     if problem and problem.get("path"):
-        return ROOT / problem["path"] / "solution_acm.py"
-    return PROBLEMS_DIR / slug / "solution_acm.py"
+        return ROOT / problem["path"] / "solution.py"
+    return PROBLEMS_DIR / slug / "solution.py"
+
+
+def resolve_slug(reference=None, file_path=None):
+    problems = problems_by_slug()
+    if reference:
+        if reference in problems:
+            return reference
+        number = reference.split("-", 1)[0]
+        if number.isdigit():
+            index = int(number)
+            for slug, problem in problems.items():
+                if problem["index"] == index:
+                    return slug
+        return None
+    if file_path:
+        candidate = Path(file_path).resolve()
+        for slug in problems:
+            if solution_path(slug).resolve() == candidate:
+                return slug
+    return None
 
 
 def render_readme(problem, spec):
@@ -162,7 +182,7 @@ def scaffold(args):
         if args.force or not readme_path.exists():
             readme_path.write_text(render_readme(problem, spec), encoding="utf-8")
             readme_created += 1
-        path = problem_dir / "solution_acm.py"
+        path = problem_dir / "solution.py"
         if not path.exists() or args.force:
             path.write_text(spec["starter"], encoding="utf-8")
             sol_created += 1
@@ -181,7 +201,7 @@ def check_project(args):
         if not problem_dir.exists():
             issues.append(f"{slug}: missing problem directory {problem_dir}")
             continue
-        for filename in ("README.md", "solution_acm.py"):
+        for filename in ("README.md", "solution.py"):
             if not (problem_dir / filename).exists():
                 issues.append(f"{slug}: missing {problem_dir / filename}")
     if issues:
@@ -297,28 +317,30 @@ def print_result(result, *, show_passed=False, show_all_failures=False):
 
 def run_problem(args):
     problems = problems_by_slug()
-    if args.slug not in problems:
-        print(f"Unknown problem: {args.slug}", file=sys.stderr)
+    slug = resolve_slug(args.slug, args.file)
+    if slug is None:
+        reference = args.slug or args.file or "<missing>"
+        print(f"Unknown problem: {reference}", file=sys.stderr)
         return 2
     specs = specs_by_slug()
-    if args.slug not in specs:
-        print(f"No ACM test spec for {args.slug} yet", file=sys.stderr)
+    if slug not in specs:
+        print(f"No ACM test spec for {slug} yet", file=sys.stderr)
         return 2
-    if args.case is not None and not 1 <= args.case <= len(specs[args.slug]["cases"]):
-        print(f"--case must be between 1 and {len(specs[args.slug]['cases'])}", file=sys.stderr)
+    if args.case is not None and not 1 <= args.case <= len(specs[slug]["cases"]):
+        print(f"--case must be between 1 and {len(specs[slug]['cases'])}", file=sys.stderr)
         return 2
-    path = Path(args.file) if args.file else solution_path(args.slug)
+    path = Path(args.file) if args.file else solution_path(slug)
     if not path.exists():
         print(f"Missing solution file: {path}", file=sys.stderr)
         print(f"Run: python3 train.py scaffold", file=sys.stderr)
         return 2
     result = run_acm_judge(
-        args.slug,
+        slug,
         path.read_text(encoding="utf-8"),
         case=args.case,
         run_all=args.all,
     )
-    update_progress(args.slug, path.read_text(encoding="utf-8"), result)
+    update_progress(slug, path.read_text(encoding="utf-8"), result)
     print_result(result, show_passed=args.all, show_all_failures=args.all)
     return 0 if result.get("ok") else 1
 
@@ -334,13 +356,14 @@ def show_status(args):
 
 def show_problem(args):
     problems = problems_by_slug()
-    problem = problems.get(args.slug)
+    slug = resolve_slug(args.slug)
+    problem = problems.get(slug)
     if not problem:
         print(f"Unknown problem: {args.slug}", file=sys.stderr)
         return 2
-    spec = specs_by_slug().get(args.slug)
+    spec = specs_by_slug().get(slug)
     if not spec:
-        print(f"No ACM test spec for {args.slug}", file=sys.stderr)
+        print(f"No ACM test spec for {slug}", file=sys.stderr)
         return 2
     print(f"{problem['title']} [{problem['difficulty']}] - ACM")
     print(problem["category"])
@@ -352,7 +375,7 @@ def show_problem(args):
         print(case["stdin"], end="" if case["stdin"].endswith("\n") else "\n")
         print(f"Expected: {case['stdout']!r}")
         print()
-    print(f"File: {solution_path(args.slug)}")
+    print(f"File: {solution_path(slug)}")
     return 0
 
 
@@ -360,8 +383,8 @@ def main():
     parser = argparse.ArgumentParser(description="Offline algorithm training CLI (ACM mode)")
     sub = parser.add_subparsers(dest="command", required=True)
 
-    p = sub.add_parser("scaffold", help="Create problem folders, READMEs, and ACM starters")
-    p.add_argument("--force", action="store_true", help="Overwrite existing READMEs and starters")
+    p = sub.add_parser("scaffold", help="Create problem folders, READMEs, and empty solution files")
+    p.add_argument("--force", action="store_true", help="Overwrite READMEs and empty all solution files")
     p.set_defaults(func=scaffold)
 
     p = sub.add_parser("check", help="Check problem folders and ACM specs")
@@ -373,14 +396,14 @@ def main():
     p.set_defaults(func=list_problems)
 
     p = sub.add_parser("run", help="Run local ACM tests for one problem")
-    p.add_argument("slug")
+    p.add_argument("slug", nargs="?", help="Problem slug or number; omit when using --file")
     p.add_argument("--file", help="Use a custom solution file")
     p.add_argument("--case", type=int, help="Run only one 1-based test case")
     p.add_argument("--all", action="store_true", help="Keep running after failures")
     p.set_defaults(func=run_problem)
 
     p = sub.add_parser("show", help="Show a problem summary and ACM format")
-    p.add_argument("slug")
+    p.add_argument("slug", help="Problem slug or number")
     p.set_defaults(func=show_problem)
 
     p = sub.add_parser("status", help="Show progress")

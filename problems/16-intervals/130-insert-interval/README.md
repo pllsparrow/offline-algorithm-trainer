@@ -17,7 +17,7 @@ Classic interview problem for Insert Interval. Practice sorting then merging and
 
 ## ACM Format
 
-Input: arg1: edges2: count then values; arg2: an integer list: count n then n integers. Output: count m then m lines of pairs.
+Input: intervals: edges2: count then values; new_interval: an integer list: count n then n integers. Output: count m then m lines of pairs.
 
 ## Local Examples
 

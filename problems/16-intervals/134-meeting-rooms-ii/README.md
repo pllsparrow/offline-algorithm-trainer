@@ -17,7 +17,7 @@ Classic interview problem for Meeting Rooms II. Practice sorting then merging an
 
 ## ACM Format
 
-Input: arg1: edges2: count then values. Output: the integer.
+Input: intervals: edges2: count then values. Output: the integer.
 
 ## Local Examples
 

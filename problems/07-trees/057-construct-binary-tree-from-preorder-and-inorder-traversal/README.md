@@ -17,7 +17,7 @@ Classic interview problem for Construct Binary Tree From Preorder And Inorder Tr
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: print nothing.
+Input: preorder: an integer list: count n then n integers; inorder: an integer list: count n then n integers. Output: print nothing.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Trapping Rain Water. Practice left/right pointers 
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the integer.
+Input: height: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

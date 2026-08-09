@@ -17,7 +17,7 @@ Classic interview problem for Reconstruct Itinerary. Practice shortest paths and
 
 ## ACM Format
 
-Input: arg1: string pairs: count m then m lines of two tokens. Output: the strings space-separated.
+Input: tickets: string pairs: count m then m lines of two tokens. Output: the strings space-separated.
 
 ## Local Examples
 

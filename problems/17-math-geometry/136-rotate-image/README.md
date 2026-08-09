@@ -17,7 +17,7 @@ Classic interview problem for Rotate Image. Practice in-place matrix operations 
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
+Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers. Output: the matrix: rows r, cols c, then r lines of c integers.
 
 ## Local Examples
 

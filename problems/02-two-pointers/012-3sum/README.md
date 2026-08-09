@@ -17,7 +17,7 @@ Classic interview problem for 3Sum. Practice left/right pointers and sorted arra
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).
+Input: nums: an integer list: count n then n integers. Output: each group on its own line (sorted; each group sorted).
 
 ## Local Examples
 

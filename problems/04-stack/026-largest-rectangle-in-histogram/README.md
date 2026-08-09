@@ -17,7 +17,7 @@ Classic interview problem for Largest Rectangle In Histogram. Practice monotonic
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the integer.
+Input: heights: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Regular Expression Matching. Practice 2D state des
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.
+Input: s: a string token; p: a string token. Output: 1 if true else 0.
 
 ## Local Examples
 

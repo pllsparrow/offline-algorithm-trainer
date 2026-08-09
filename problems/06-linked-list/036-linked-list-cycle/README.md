@@ -17,7 +17,7 @@ Classic interview problem for Linked List Cycle. Practice pointer rewiring and f
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.
+Input: head: an integer list: count n then n integers; pos: an integer. Output: 1 if true else 0.
 
 ## Local Examples
 

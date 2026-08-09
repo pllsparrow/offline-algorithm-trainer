@@ -17,7 +17,7 @@ Classic interview problem for Count Good Nodes In Binary Tree. Practice recursiv
 
 ## ACM Format
 
-Input: arg1: a binary tree: count n then n level-order values (null for missing). Output: the integer.
+Input: root: a binary tree: count n then n level-order values (null for missing). Output: the integer.
 
 ## Local Examples
 

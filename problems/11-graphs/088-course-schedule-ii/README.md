@@ -17,7 +17,7 @@ Classic interview problem for Course Schedule II. Practice DFS/BFS and topologic
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: edges2: count then values. Output: the values space-separated.
+Input: num_courses: an integer; prerequisites: edges2: count then values. Output: the values space-separated.
 
 ## Local Examples
 

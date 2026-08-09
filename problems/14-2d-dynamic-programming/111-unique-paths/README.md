@@ -17,7 +17,7 @@ Classic interview problem for Unique Paths. Practice 2D state design and string 
 
 ## ACM Format
 
-Input: arg1: an integer; arg2: an integer. Output: the integer.
+Input: m: an integer; n: an integer. Output: the integer.
 
 ## Local Examples
 

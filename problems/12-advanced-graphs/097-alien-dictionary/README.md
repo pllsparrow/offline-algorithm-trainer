@@ -17,7 +17,7 @@ Classic interview problem for Alien Dictionary. Practice shortest paths and mini
 
 ## ACM Format
 
-Input: arg1: a string list: count n then n tokens. Output: the string.
+Input: words: a string list: count n then n tokens. Output: the string.
 
 ## Local Examples
 

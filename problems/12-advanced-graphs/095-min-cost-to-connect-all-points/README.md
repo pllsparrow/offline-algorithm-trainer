@@ -17,7 +17,7 @@ Classic interview problem for Min Cost to Connect All Points. Practice shortest 
 
 ## ACM Format
 
-Input: arg1: edges2: count then values. Output: the integer.
+Input: points: edges2: count then values. Output: the integer.
 
 ## Local Examples
 

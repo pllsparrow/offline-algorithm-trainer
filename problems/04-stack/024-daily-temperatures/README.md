@@ -17,7 +17,7 @@ Classic interview problem for Daily Temperatures. Practice monotonic stacks and 
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the values space-separated.
+Input: temperatures: an integer list: count n then n integers. Output: the values space-separated.
 
 ## Local Examples
 

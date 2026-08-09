@@ -17,7 +17,7 @@ Classic interview problem for Kth Largest Element In An Array. Practice Top K an
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+Input: nums: an integer list: count n then n integers; k: an integer. Output: the integer.
 
 ## Local Examples
 

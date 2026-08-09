@@ -17,7 +17,7 @@ Classic interview problem for Multiply Strings. Practice in-place matrix operati
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: the string.
+Input: num1: a string token; num2: a string token. Output: the string.
 
 ## Local Examples
 

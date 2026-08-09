@@ -17,7 +17,7 @@ Classic interview problem for Merge Intervals. Practice sorting then merging and
 
 ## ACM Format
 
-Input: arg1: edges2: count then values. Output: count m then m lines of pairs.
+Input: intervals: edges2: count then values. Output: count m then m lines of pairs.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Best Time to Buy And Sell Stock With Cooldown. Pra
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the integer.
+Input: prices: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

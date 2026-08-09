@@ -17,7 +17,7 @@ Classic interview problem for Burst Balloons. Practice 2D state design and strin
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers. Output: the integer.
+Input: nums: an integer list: count n then n integers. Output: the integer.
 
 ## Local Examples
 

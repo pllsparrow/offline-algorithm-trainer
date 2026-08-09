@@ -17,7 +17,7 @@ Classic interview problem for Partition Labels. Practice local optimality proofs
 
 ## ACM Format
 
-Input: arg1: a string token. Output: the values space-separated in ascending order.
+Input: s: a string token. Output: the values space-separated in ascending order.
 
 ## Local Examples
 

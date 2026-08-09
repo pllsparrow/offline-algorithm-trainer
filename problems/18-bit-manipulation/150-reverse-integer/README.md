@@ -17,7 +17,7 @@ Classic interview problem for Reverse Integer. Practice bit manipulation tricks 
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the integer.
+Input: x: an integer. Output: the integer.
 
 ## Local Examples
 

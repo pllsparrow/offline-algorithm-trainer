@@ -17,7 +17,7 @@ Classic interview problem for Median of Two Sorted Arrays. Practice search space
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer list: count n then n integers. Output: the float.
+Input: nums1: an integer list: count n then n integers; nums2: an integer list: count n then n integers. Output: the float.
 
 ## Local Examples
 

@@ -17,7 +17,7 @@ Classic interview problem for Network Delay Time. Practice shortest paths and mi
 
 ## ACM Format
 
-Input: arg1: edges3: count then values; arg2: an integer; arg3: an integer. Output: the integer.
+Input: times: edges3: count then values; n: an integer; k: an integer. Output: the integer.
 
 ## Local Examples
 

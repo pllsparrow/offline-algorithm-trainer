@@ -17,7 +17,7 @@ Classic interview problem for Word Search II. Practice trie node design and stri
 
 ## ACM Format
 
-Input: arg1: a char board: rows r, cols c, then r lines of c chars; arg2: a string list: count n then n tokens. Output: the values space-separated in ascending order.
+Input: board: a char board: rows r, cols c, then r lines of c chars; words: a string list: count n then n tokens. Output: the values space-separated in ascending order.
 
 ## Local Examples
 

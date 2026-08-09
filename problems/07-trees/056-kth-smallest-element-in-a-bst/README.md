@@ -17,7 +17,7 @@ Classic interview problem for Kth Smallest Element In a Bst. Practice recursive 
 
 ## ACM Format
 
-Input: arg1: a binary tree: count n then n level-order values (null for missing); arg2: an integer. Output: the integer.
+Input: root: a binary tree: count n then n level-order values (null for missing); k: an integer. Output: the integer.
 
 ## Local Examples
 

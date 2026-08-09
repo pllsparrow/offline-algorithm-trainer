@@ -17,7 +17,7 @@ Classic interview problem for Search a 2D Matrix. Practice search space definiti
 
 ## ACM Format
 
-Input: arg1: an integer matrix: rows r, cols c, then r lines of c integers; arg2: an integer. Output: 1 if true else 0.
+Input: matrix: an integer matrix: rows r, cols c, then r lines of c integers; target: an integer. Output: 1 if true else 0.
 
 ## Local Examples
 

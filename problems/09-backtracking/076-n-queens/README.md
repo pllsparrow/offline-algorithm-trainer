@@ -17,7 +17,7 @@ Classic interview problem for N Queens. Practice choice paths and pruning. Start
 
 ## ACM Format
 
-Input: arg1: an integer. Output: the solution count S, then S boards each as n lines of Q/..
+Input: n: an integer. Output: the solution count S, then S boards each as n lines of Q/..
 
 ## Local Examples
 

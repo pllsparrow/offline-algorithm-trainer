@@ -17,7 +17,7 @@ Find the minimum number of coins needed to make a target amount. Practice comple
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: the integer.
+Input: coins: an integer list: count n then n integers; amount: an integer. Output: the integer.
 
 ## Local Examples
 

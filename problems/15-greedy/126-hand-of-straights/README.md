@@ -17,7 +17,7 @@ Classic interview problem for Hand of Straights. Practice local optimality proof
 
 ## ACM Format
 
-Input: arg1: an integer list: count n then n integers; arg2: an integer. Output: 1 if true else 0.
+Input: hand: an integer list: count n then n integers; group_size: an integer. Output: 1 if true else 0.
 
 ## Local Examples
 

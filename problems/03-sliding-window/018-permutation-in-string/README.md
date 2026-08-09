@@ -17,7 +17,7 @@ Classic interview problem for Permutation In String. Practice window invariants 
 
 ## ACM Format
 
-Input: arg1: a string token; arg2: a string token. Output: 1 if true else 0.
+Input: s1: a string token; s2: a string token. Output: 1 if true else 0.
 
 ## Local Examples
 

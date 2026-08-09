@@ -17,7 +17,7 @@ Classic interview problem for Meeting Rooms. Practice sorting then merging and o
 
 ## ACM Format
 
-Input: arg1: edges2: count then values. Output: 1 if true else 0.
+Input: intervals: edges2: count then values. Output: 1 if true else 0.
 
 ## Local Examples
 
