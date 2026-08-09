@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-PROBLEMS = ROOT / "problems"
+QUESTIONS = ROOT / "questions"
 REFERENCE = Path("/tmp/leetcode-py/leetcode")
 ROADMAP_URL = "https://raw.githubusercontent.com/krmanik/Anki-NeetCode/main/neetcode-150-list.json"
 
@@ -286,9 +286,9 @@ def main() -> None:
     if not REFERENCE.exists():
         raise SystemExit("Missing /tmp/leetcode-py. Clone wislertt/leetcode-py there first.")
     DATA.mkdir(exist_ok=True)
-    if PROBLEMS.exists():
-        shutil.rmtree(PROBLEMS)
-    PROBLEMS.mkdir()
+    if QUESTIONS.exists():
+        shutil.rmtree(QUESTIONS)
+    QUESTIONS.mkdir()
 
     roadmap = get_roadmap()
     problems = []
@@ -296,12 +296,6 @@ def main() -> None:
     index = 0
 
     for chapter, (category, items) in enumerate(roadmap.items(), start=1):
-        chapter_dir = PROBLEMS / f"{chapter:02d}-{CHAPTER_SLUGS[category]}"
-        chapter_dir.mkdir()
-        chapter_lines = [f"# {chapter:02d}. {category}", "", "## Focus", ""]
-        chapter_lines.extend(f"- {item}" for item in FOCUS[category])
-        chapter_lines.extend(["", "## Problems", ""])
-
         for title, meta in items.items():
             index += 1
             slug = title_slug(meta.get("url", ""), title)
@@ -311,8 +305,7 @@ def main() -> None:
             test_spec = build_tests(slug, ref_dir, class_name, methods)
             if test_spec:
                 tests[slug] = test_spec
-            folder = chapter_dir / f"{index:03d}-{slug}"
-            folder.mkdir()
+            question_path = QUESTIONS / f"q{index:03d}_{slug.replace('-', '_')}.py"
             starter = make_stub(solution_file, class_name, methods) if solution_file.exists() else "class Solution:\n    def solve(self):\n        pass\n"
             focus = FOCUS[category]
             problem = {
@@ -333,18 +326,14 @@ def main() -> None:
                 ],
                 "source_url": meta.get("url", ""),
                 "practice_url": meta.get("nurl", ""),
-                "path": str(folder.relative_to(ROOT)),
+                "path": str(question_path.relative_to(ROOT)),
             }
             problems.append(problem)
-            (folder / "README.md").write_text(render_problem_readme(problem, test_spec), encoding="utf-8")
-            (folder / "solution.py").write_text(starter, encoding="utf-8")
-            chapter_lines.append(f"- [{index:03d}. {title}]({index:03d}-{slug}/README.md) `{meta['difficulty']}`")
-
-        (chapter_dir / "README.md").write_text("\n".join(chapter_lines) + "\n", encoding="utf-8")
+            question_path.write_text(starter, encoding="utf-8")
 
     (DATA / "problems.json").write_text(json.dumps(problems, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (DATA / "tests.json").write_text(json.dumps(tests, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Generated {len(problems)} problems in {len(roadmap)} chapters.")
+    print(f"Generated {len(problems)} question files.")
     print(f"Generated local tests for {len(tests)} problems.")
 
 

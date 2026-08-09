@@ -17,7 +17,7 @@
     ],
     "source_url": "https://leetcode.com/problems/contains-duplicate/",
     "practice_url": "https://neetcode.io/problems/duplicate-integer?list=neetcode150",
-    "path": "problems/01-arrays-hashing/001-contains-duplicate"
+    "path": "questions/q001_contains_duplicate.py"
   },
   {
     "index": 2,
@@ -37,7 +37,7 @@
     ],
     "source_url": "https://leetcode.com/problems/valid-anagram/",
     "practice_url": "https://neetcode.io/problems/is-anagram?list=neetcode150",
-    "path": "problems/01-arrays-hashing/002-valid-anagram"
+    "path": "questions/q002_valid_anagram.py"
   },
   {
     "index": 3,
@@ -57,7 +57,7 @@
     ],
     "source_url": "https://leetcode.com/problems/two-sum/",
     "practice_url": "https://neetcode.io/problems/two-integer-sum?list=neetcode150",
-    "path": "problems/01-arrays-hashing/003-two-sum"
+    "path": "questions/q003_two_sum.py"
   },
   {
     "index": 4,
@@ -77,7 +77,7 @@
     ],
     "source_url": "https://leetcode.com/problems/group-anagrams/",
     "practice_url": "https://neetcode.io/problems/anagram-groups?list=neetcode150",
-    "path": "problems/01-arrays-hashing/004-group-anagrams"
+    "path": "questions/q004_group_anagrams.py"
   },
   {
     "index": 5,
@@ -97,7 +97,7 @@
     ],
     "source_url": "https://leetcode.com/problems/top-k-frequent-elements/",
     "practice_url": "https://neetcode.io/problems/top-k-elements-in-list?list=neetcode150",
-    "path": "problems/01-arrays-hashing/005-top-k-frequent-elements"
+    "path": "questions/q005_top_k_frequent_elements.py"
   },
   {
     "index": 6,
@@ -117,7 +117,7 @@
     ],
     "source_url": "https://leetcode.com/problems/encode-and-decode-strings/",
     "practice_url": "https://neetcode.io/problems/string-encode-and-decode?list=neetcode150",
-    "path": "problems/01-arrays-hashing/006-encode-and-decode-strings"
+    "path": "questions/q006_encode_and_decode_strings.py"
   },
   {
     "index": 7,
@@ -137,7 +137,7 @@
     ],
     "source_url": "https://leetcode.com/problems/product-of-array-except-self/",
     "practice_url": "https://neetcode.io/problems/products-of-array-discluding-self?list=neetcode150",
-    "path": "problems/01-arrays-hashing/007-product-of-array-except-self"
+    "path": "questions/q007_product_of_array_except_self.py"
   },
   {
     "index": 8,
@@ -157,7 +157,7 @@
     ],
     "source_url": "https://leetcode.com/problems/valid-sudoku/",
     "practice_url": "https://neetcode.io/problems/valid-sudoku?list=neetcode150",
-    "path": "problems/01-arrays-hashing/008-valid-sudoku"
+    "path": "questions/q008_valid_sudoku.py"
   },
   {
     "index": 9,
@@ -177,7 +177,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-consecutive-sequence/",
     "practice_url": "https://neetcode.io/problems/longest-consecutive-sequence?list=neetcode150",
-    "path": "problems/01-arrays-hashing/009-longest-consecutive-sequence"
+    "path": "questions/q009_longest_consecutive_sequence.py"
   },
   {
     "index": 10,
@@ -197,7 +197,7 @@
     ],
     "source_url": "https://leetcode.com/problems/valid-palindrome/",
     "practice_url": "https://neetcode.io/problems/is-palindrome?list=neetcode150",
-    "path": "problems/02-two-pointers/010-valid-palindrome"
+    "path": "questions/q010_valid_palindrome.py"
   },
   {
     "index": 11,
@@ -217,7 +217,7 @@
     ],
     "source_url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
     "practice_url": "https://neetcode.io/problems/two-integer-sum-ii?list=neetcode150",
-    "path": "problems/02-two-pointers/011-two-sum-ii-input-array-is-sorted"
+    "path": "questions/q011_two_sum_ii_input_array_is_sorted.py"
   },
   {
     "index": 12,
@@ -237,7 +237,7 @@
     ],
     "source_url": "https://leetcode.com/problems/3sum/",
     "practice_url": "https://neetcode.io/problems/three-integer-sum?list=neetcode150",
-    "path": "problems/02-two-pointers/012-3sum"
+    "path": "questions/q012_3sum.py"
   },
   {
     "index": 13,
@@ -257,7 +257,7 @@
     ],
     "source_url": "https://leetcode.com/problems/container-with-most-water/",
     "practice_url": "https://neetcode.io/problems/max-water-container?list=neetcode150",
-    "path": "problems/02-two-pointers/013-container-with-most-water"
+    "path": "questions/q013_container_with_most_water.py"
   },
   {
     "index": 14,
@@ -277,7 +277,7 @@
     ],
     "source_url": "https://leetcode.com/problems/trapping-rain-water/",
     "practice_url": "https://neetcode.io/problems/trapping-rain-water?list=neetcode150",
-    "path": "problems/02-two-pointers/014-trapping-rain-water"
+    "path": "questions/q014_trapping_rain_water.py"
   },
   {
     "index": 15,
@@ -297,7 +297,7 @@
     ],
     "source_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
     "practice_url": "https://neetcode.io/problems/buy-and-sell-crypto?list=neetcode150",
-    "path": "problems/03-sliding-window/015-best-time-to-buy-and-sell-stock"
+    "path": "questions/q015_best_time_to_buy_and_sell_stock.py"
   },
   {
     "index": 16,
@@ -317,7 +317,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
     "practice_url": "https://neetcode.io/problems/longest-substring-without-duplicates?list=neetcode150",
-    "path": "problems/03-sliding-window/016-longest-substring-without-repeating-characters"
+    "path": "questions/q016_longest_substring_without_repeating_characters.py"
   },
   {
     "index": 17,
@@ -337,7 +337,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
     "practice_url": "https://neetcode.io/problems/longest-repeating-substring-with-replacement?list=neetcode150",
-    "path": "problems/03-sliding-window/017-longest-repeating-character-replacement"
+    "path": "questions/q017_longest_repeating_character_replacement.py"
   },
   {
     "index": 18,
@@ -357,7 +357,7 @@
     ],
     "source_url": "https://leetcode.com/problems/permutation-in-string/",
     "practice_url": "https://neetcode.io/problems/permutation-string?list=neetcode150",
-    "path": "problems/03-sliding-window/018-permutation-in-string"
+    "path": "questions/q018_permutation_in_string.py"
   },
   {
     "index": 19,
@@ -377,7 +377,7 @@
     ],
     "source_url": "https://leetcode.com/problems/minimum-window-substring/",
     "practice_url": "https://neetcode.io/problems/minimum-window-with-characters?list=neetcode150",
-    "path": "problems/03-sliding-window/019-minimum-window-substring"
+    "path": "questions/q019_minimum_window_substring.py"
   },
   {
     "index": 20,
@@ -397,7 +397,7 @@
     ],
     "source_url": "https://leetcode.com/problems/sliding-window-maximum/",
     "practice_url": "https://neetcode.io/problems/sliding-window-maximum?list=neetcode150",
-    "path": "problems/03-sliding-window/020-sliding-window-maximum"
+    "path": "questions/q020_sliding_window_maximum.py"
   },
   {
     "index": 21,
@@ -417,7 +417,7 @@
     ],
     "source_url": "https://leetcode.com/problems/valid-parentheses/",
     "practice_url": "https://neetcode.io/problems/validate-parentheses?list=neetcode150",
-    "path": "problems/04-stack/021-valid-parentheses"
+    "path": "questions/q021_valid_parentheses.py"
   },
   {
     "index": 22,
@@ -437,7 +437,7 @@
     ],
     "source_url": "https://leetcode.com/problems/min-stack/",
     "practice_url": "https://neetcode.io/problems/minimum-stack?list=neetcode150",
-    "path": "problems/04-stack/022-min-stack"
+    "path": "questions/q022_min_stack.py"
   },
   {
     "index": 23,
@@ -457,7 +457,7 @@
     ],
     "source_url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
     "practice_url": "https://neetcode.io/problems/evaluate-reverse-polish-notation?list=neetcode150",
-    "path": "problems/04-stack/023-evaluate-reverse-polish-notation"
+    "path": "questions/q023_evaluate_reverse_polish_notation.py"
   },
   {
     "index": 24,
@@ -477,7 +477,7 @@
     ],
     "source_url": "https://leetcode.com/problems/daily-temperatures/",
     "practice_url": "https://neetcode.io/problems/daily-temperatures?list=neetcode150",
-    "path": "problems/04-stack/024-daily-temperatures"
+    "path": "questions/q024_daily_temperatures.py"
   },
   {
     "index": 25,
@@ -497,7 +497,7 @@
     ],
     "source_url": "https://leetcode.com/problems/car-fleet/",
     "practice_url": "https://neetcode.io/problems/car-fleet?list=neetcode150",
-    "path": "problems/04-stack/025-car-fleet"
+    "path": "questions/q025_car_fleet.py"
   },
   {
     "index": 26,
@@ -517,7 +517,7 @@
     ],
     "source_url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
     "practice_url": "https://neetcode.io/problems/largest-rectangle-in-histogram?list=neetcode150",
-    "path": "problems/04-stack/026-largest-rectangle-in-histogram"
+    "path": "questions/q026_largest_rectangle_in_histogram.py"
   },
   {
     "index": 27,
@@ -537,7 +537,7 @@
     ],
     "source_url": "https://leetcode.com/problems/binary-search/",
     "practice_url": "https://neetcode.io/problems/binary-search?list=neetcode150",
-    "path": "problems/05-binary-search/027-binary-search"
+    "path": "questions/q027_binary_search.py"
   },
   {
     "index": 28,
@@ -557,7 +557,7 @@
     ],
     "source_url": "https://leetcode.com/problems/search-a-2d-matrix/",
     "practice_url": "https://neetcode.io/problems/search-2d-matrix?list=neetcode150",
-    "path": "problems/05-binary-search/028-search-a-2d-matrix"
+    "path": "questions/q028_search_a_2d_matrix.py"
   },
   {
     "index": 29,
@@ -577,7 +577,7 @@
     ],
     "source_url": "https://leetcode.com/problems/koko-eating-bananas/",
     "practice_url": "https://neetcode.io/problems/eating-bananas?list=neetcode150",
-    "path": "problems/05-binary-search/029-koko-eating-bananas"
+    "path": "questions/q029_koko_eating_bananas.py"
   },
   {
     "index": 30,
@@ -597,7 +597,7 @@
     ],
     "source_url": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
     "practice_url": "https://neetcode.io/problems/find-minimum-in-rotated-sorted-array?list=neetcode150",
-    "path": "problems/05-binary-search/030-find-minimum-in-rotated-sorted-array"
+    "path": "questions/q030_find_minimum_in_rotated_sorted_array.py"
   },
   {
     "index": 31,
@@ -617,7 +617,7 @@
     ],
     "source_url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
     "practice_url": "https://neetcode.io/problems/find-target-in-rotated-sorted-array?list=neetcode150",
-    "path": "problems/05-binary-search/031-search-in-rotated-sorted-array"
+    "path": "questions/q031_search_in_rotated_sorted_array.py"
   },
   {
     "index": 32,
@@ -637,7 +637,7 @@
     ],
     "source_url": "https://leetcode.com/problems/time-based-key-value-store/",
     "practice_url": "https://neetcode.io/problems/time-based-key-value-store?list=neetcode150",
-    "path": "problems/05-binary-search/032-time-based-key-value-store"
+    "path": "questions/q032_time_based_key_value_store.py"
   },
   {
     "index": 33,
@@ -657,7 +657,7 @@
     ],
     "source_url": "https://leetcode.com/problems/median-of-two-sorted-arrays/",
     "practice_url": "https://neetcode.io/problems/median-of-two-sorted-arrays?list=neetcode150",
-    "path": "problems/05-binary-search/033-median-of-two-sorted-arrays"
+    "path": "questions/q033_median_of_two_sorted_arrays.py"
   },
   {
     "index": 34,
@@ -677,7 +677,7 @@
     ],
     "source_url": "https://leetcode.com/problems/reverse-linked-list/",
     "practice_url": "https://neetcode.io/problems/reverse-a-linked-list?list=neetcode150",
-    "path": "problems/06-linked-list/034-reverse-linked-list"
+    "path": "questions/q034_reverse_linked_list.py"
   },
   {
     "index": 35,
@@ -697,7 +697,7 @@
     ],
     "source_url": "https://leetcode.com/problems/merge-two-sorted-lists/",
     "practice_url": "https://neetcode.io/problems/merge-two-sorted-linked-lists?list=neetcode150",
-    "path": "problems/06-linked-list/035-merge-two-sorted-lists"
+    "path": "questions/q035_merge_two_sorted_lists.py"
   },
   {
     "index": 36,
@@ -717,7 +717,7 @@
     ],
     "source_url": "https://leetcode.com/problems/linked-list-cycle/",
     "practice_url": "https://neetcode.io/problems/linked-list-cycle-detection?list=neetcode150",
-    "path": "problems/06-linked-list/036-linked-list-cycle"
+    "path": "questions/q036_linked_list_cycle.py"
   },
   {
     "index": 37,
@@ -737,7 +737,7 @@
     ],
     "source_url": "https://leetcode.com/problems/reorder-list/",
     "practice_url": "https://neetcode.io/problems/reorder-linked-list?list=neetcode150",
-    "path": "problems/06-linked-list/037-reorder-list"
+    "path": "questions/q037_reorder_list.py"
   },
   {
     "index": 38,
@@ -757,7 +757,7 @@
     ],
     "source_url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
     "practice_url": "https://neetcode.io/problems/remove-node-from-end-of-linked-list?list=neetcode150",
-    "path": "problems/06-linked-list/038-remove-nth-node-from-end-of-list"
+    "path": "questions/q038_remove_nth_node_from_end_of_list.py"
   },
   {
     "index": 39,
@@ -777,7 +777,7 @@
     ],
     "source_url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
     "practice_url": "https://neetcode.io/problems/copy-linked-list-with-random-pointer?list=neetcode150",
-    "path": "problems/06-linked-list/039-copy-list-with-random-pointer"
+    "path": "questions/q039_copy_list_with_random_pointer.py"
   },
   {
     "index": 40,
@@ -797,7 +797,7 @@
     ],
     "source_url": "https://leetcode.com/problems/add-two-numbers/",
     "practice_url": "https://neetcode.io/problems/add-two-numbers?list=neetcode150",
-    "path": "problems/06-linked-list/040-add-two-numbers"
+    "path": "questions/q040_add_two_numbers.py"
   },
   {
     "index": 41,
@@ -817,7 +817,7 @@
     ],
     "source_url": "https://leetcode.com/problems/find-the-duplicate-number/",
     "practice_url": "https://neetcode.io/problems/find-duplicate-integer?list=neetcode150",
-    "path": "problems/06-linked-list/041-find-the-duplicate-number"
+    "path": "questions/q041_find_the_duplicate_number.py"
   },
   {
     "index": 42,
@@ -837,7 +837,7 @@
     ],
     "source_url": "https://leetcode.com/problems/lru-cache/",
     "practice_url": "https://neetcode.io/problems/lru-cache?list=neetcode150",
-    "path": "problems/06-linked-list/042-lru-cache"
+    "path": "questions/q042_lru_cache.py"
   },
   {
     "index": 43,
@@ -857,7 +857,7 @@
     ],
     "source_url": "https://leetcode.com/problems/merge-k-sorted-lists/",
     "practice_url": "https://neetcode.io/problems/merge-k-sorted-linked-lists?list=neetcode150",
-    "path": "problems/06-linked-list/043-merge-k-sorted-lists"
+    "path": "questions/q043_merge_k_sorted_lists.py"
   },
   {
     "index": 44,
@@ -877,7 +877,7 @@
     ],
     "source_url": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
     "practice_url": "https://neetcode.io/problems/reverse-nodes-in-k-group?list=neetcode150",
-    "path": "problems/06-linked-list/044-reverse-nodes-in-k-group"
+    "path": "questions/q044_reverse_nodes_in_k_group.py"
   },
   {
     "index": 45,
@@ -897,7 +897,7 @@
     ],
     "source_url": "https://leetcode.com/problems/invert-binary-tree/",
     "practice_url": "https://neetcode.io/problems/invert-a-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/045-invert-binary-tree"
+    "path": "questions/q045_invert_binary_tree.py"
   },
   {
     "index": 46,
@@ -917,7 +917,7 @@
     ],
     "source_url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
     "practice_url": "https://neetcode.io/problems/depth-of-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/046-maximum-depth-of-binary-tree"
+    "path": "questions/q046_maximum_depth_of_binary_tree.py"
   },
   {
     "index": 47,
@@ -937,7 +937,7 @@
     ],
     "source_url": "https://leetcode.com/problems/diameter-of-binary-tree/",
     "practice_url": "https://neetcode.io/problems/binary-tree-diameter?list=neetcode150",
-    "path": "problems/07-trees/047-diameter-of-binary-tree"
+    "path": "questions/q047_diameter_of_binary_tree.py"
   },
   {
     "index": 48,
@@ -957,7 +957,7 @@
     ],
     "source_url": "https://leetcode.com/problems/balanced-binary-tree/",
     "practice_url": "https://neetcode.io/problems/balanced-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/048-balanced-binary-tree"
+    "path": "questions/q048_balanced_binary_tree.py"
   },
   {
     "index": 49,
@@ -977,7 +977,7 @@
     ],
     "source_url": "https://leetcode.com/problems/same-tree/",
     "practice_url": "https://neetcode.io/problems/same-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/049-same-tree"
+    "path": "questions/q049_same_tree.py"
   },
   {
     "index": 50,
@@ -997,7 +997,7 @@
     ],
     "source_url": "https://leetcode.com/problems/subtree-of-another-tree/",
     "practice_url": "https://neetcode.io/problems/subtree-of-a-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/050-subtree-of-another-tree"
+    "path": "questions/q050_subtree_of_another_tree.py"
   },
   {
     "index": 51,
@@ -1017,7 +1017,7 @@
     ],
     "source_url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
     "practice_url": "https://neetcode.io/problems/lowest-common-ancestor-in-binary-search-tree?list=neetcode150",
-    "path": "problems/07-trees/051-lowest-common-ancestor-of-a-binary-search-tree"
+    "path": "questions/q051_lowest_common_ancestor_of_a_binary_search_tree.py"
   },
   {
     "index": 52,
@@ -1037,7 +1037,7 @@
     ],
     "source_url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
     "practice_url": "https://neetcode.io/problems/level-order-traversal-of-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/052-binary-tree-level-order-traversal"
+    "path": "questions/q052_binary_tree_level_order_traversal.py"
   },
   {
     "index": 53,
@@ -1057,7 +1057,7 @@
     ],
     "source_url": "https://leetcode.com/problems/binary-tree-right-side-view/",
     "practice_url": "https://neetcode.io/problems/binary-tree-right-side-view?list=neetcode150",
-    "path": "problems/07-trees/053-binary-tree-right-side-view"
+    "path": "questions/q053_binary_tree_right_side_view.py"
   },
   {
     "index": 54,
@@ -1077,7 +1077,7 @@
     ],
     "source_url": "https://leetcode.com/problems/count-good-nodes-in-binary-tree/",
     "practice_url": "https://neetcode.io/problems/count-good-nodes-in-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/054-count-good-nodes-in-binary-tree"
+    "path": "questions/q054_count_good_nodes_in_binary_tree.py"
   },
   {
     "index": 55,
@@ -1097,7 +1097,7 @@
     ],
     "source_url": "https://leetcode.com/problems/validate-binary-search-tree/",
     "practice_url": "https://neetcode.io/problems/valid-binary-search-tree?list=neetcode150",
-    "path": "problems/07-trees/055-validate-binary-search-tree"
+    "path": "questions/q055_validate_binary_search_tree.py"
   },
   {
     "index": 56,
@@ -1117,7 +1117,7 @@
     ],
     "source_url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
     "practice_url": "https://neetcode.io/problems/kth-smallest-integer-in-bst?list=neetcode150",
-    "path": "problems/07-trees/056-kth-smallest-element-in-a-bst"
+    "path": "questions/q056_kth_smallest_element_in_a_bst.py"
   },
   {
     "index": 57,
@@ -1137,7 +1137,7 @@
     ],
     "source_url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
     "practice_url": "https://neetcode.io/problems/binary-tree-from-preorder-and-inorder-traversal?list=neetcode150",
-    "path": "problems/07-trees/057-construct-binary-tree-from-preorder-and-inorder-traversal"
+    "path": "questions/q057_construct_binary_tree_from_preorder_and_inorder_traversal.py"
   },
   {
     "index": 58,
@@ -1157,7 +1157,7 @@
     ],
     "source_url": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
     "practice_url": "https://neetcode.io/problems/binary-tree-maximum-path-sum?list=neetcode150",
-    "path": "problems/07-trees/058-binary-tree-maximum-path-sum"
+    "path": "questions/q058_binary_tree_maximum_path_sum.py"
   },
   {
     "index": 59,
@@ -1177,7 +1177,7 @@
     ],
     "source_url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
     "practice_url": "https://neetcode.io/problems/serialize-and-deserialize-binary-tree?list=neetcode150",
-    "path": "problems/07-trees/059-serialize-and-deserialize-binary-tree"
+    "path": "questions/q059_serialize_and_deserialize_binary_tree.py"
   },
   {
     "index": 60,
@@ -1197,7 +1197,7 @@
     ],
     "source_url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
     "practice_url": "https://neetcode.io/problems/kth-largest-integer-in-a-stream?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/060-kth-largest-element-in-a-stream"
+    "path": "questions/q060_kth_largest_element_in_a_stream.py"
   },
   {
     "index": 61,
@@ -1217,7 +1217,7 @@
     ],
     "source_url": "https://leetcode.com/problems/last-stone-weight/",
     "practice_url": "https://neetcode.io/problems/last-stone-weight?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/061-last-stone-weight"
+    "path": "questions/q061_last_stone_weight.py"
   },
   {
     "index": 62,
@@ -1237,7 +1237,7 @@
     ],
     "source_url": "https://leetcode.com/problems/k-closest-points-to-origin/",
     "practice_url": "https://neetcode.io/problems/k-closest-points-to-origin?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/062-k-closest-points-to-origin"
+    "path": "questions/q062_k_closest_points_to_origin.py"
   },
   {
     "index": 63,
@@ -1257,7 +1257,7 @@
     ],
     "source_url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
     "practice_url": "https://neetcode.io/problems/kth-largest-element-in-an-array?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/063-kth-largest-element-in-an-array"
+    "path": "questions/q063_kth_largest_element_in_an_array.py"
   },
   {
     "index": 64,
@@ -1277,7 +1277,7 @@
     ],
     "source_url": "https://leetcode.com/problems/task-scheduler/",
     "practice_url": "https://neetcode.io/problems/task-scheduling?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/064-task-scheduler"
+    "path": "questions/q064_task_scheduler.py"
   },
   {
     "index": 65,
@@ -1297,7 +1297,7 @@
     ],
     "source_url": "https://leetcode.com/problems/design-twitter/",
     "practice_url": "https://neetcode.io/problems/design-twitter-feed?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/065-design-twitter"
+    "path": "questions/q065_design_twitter.py"
   },
   {
     "index": 66,
@@ -1317,7 +1317,7 @@
     ],
     "source_url": "https://leetcode.com/problems/find-median-from-data-stream/",
     "practice_url": "https://neetcode.io/problems/find-median-in-a-data-stream?list=neetcode150",
-    "path": "problems/08-heap-priority-queue/066-find-median-from-data-stream"
+    "path": "questions/q066_find_median_from_data_stream.py"
   },
   {
     "index": 67,
@@ -1337,7 +1337,7 @@
     ],
     "source_url": "https://leetcode.com/problems/subsets/",
     "practice_url": "https://neetcode.io/problems/subsets?list=neetcode150",
-    "path": "problems/09-backtracking/067-subsets"
+    "path": "questions/q067_subsets.py"
   },
   {
     "index": 68,
@@ -1357,7 +1357,7 @@
     ],
     "source_url": "https://leetcode.com/problems/combination-sum/",
     "practice_url": "https://neetcode.io/problems/combination-target-sum?list=neetcode150",
-    "path": "problems/09-backtracking/068-combination-sum"
+    "path": "questions/q068_combination_sum.py"
   },
   {
     "index": 69,
@@ -1377,7 +1377,7 @@
     ],
     "source_url": "https://leetcode.com/problems/combination-sum-ii/",
     "practice_url": "https://neetcode.io/problems/combination-target-sum-ii?list=neetcode150",
-    "path": "problems/09-backtracking/069-combination-sum-ii"
+    "path": "questions/q069_combination_sum_ii.py"
   },
   {
     "index": 70,
@@ -1397,7 +1397,7 @@
     ],
     "source_url": "https://leetcode.com/problems/permutations/",
     "practice_url": "https://neetcode.io/problems/permutations?list=neetcode150",
-    "path": "problems/09-backtracking/070-permutations"
+    "path": "questions/q070_permutations.py"
   },
   {
     "index": 71,
@@ -1417,7 +1417,7 @@
     ],
     "source_url": "https://leetcode.com/problems/subsets-ii/",
     "practice_url": "https://neetcode.io/problems/subsets-ii?list=neetcode150",
-    "path": "problems/09-backtracking/071-subsets-ii"
+    "path": "questions/q071_subsets_ii.py"
   },
   {
     "index": 72,
@@ -1437,7 +1437,7 @@
     ],
     "source_url": "https://leetcode.com/problems/generate-parentheses/",
     "practice_url": "https://neetcode.io/problems/generate-parentheses?list=neetcode150",
-    "path": "problems/09-backtracking/072-generate-parentheses"
+    "path": "questions/q072_generate_parentheses.py"
   },
   {
     "index": 73,
@@ -1457,7 +1457,7 @@
     ],
     "source_url": "https://leetcode.com/problems/word-search/",
     "practice_url": "https://neetcode.io/problems/search-for-word?list=neetcode150",
-    "path": "problems/09-backtracking/073-word-search"
+    "path": "questions/q073_word_search.py"
   },
   {
     "index": 74,
@@ -1477,7 +1477,7 @@
     ],
     "source_url": "https://leetcode.com/problems/palindrome-partitioning/",
     "practice_url": "https://neetcode.io/problems/palindrome-partitioning?list=neetcode150",
-    "path": "problems/09-backtracking/074-palindrome-partitioning"
+    "path": "questions/q074_palindrome_partitioning.py"
   },
   {
     "index": 75,
@@ -1497,7 +1497,7 @@
     ],
     "source_url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
     "practice_url": "https://neetcode.io/problems/combinations-of-a-phone-number?list=neetcode150",
-    "path": "problems/09-backtracking/075-letter-combinations-of-a-phone-number"
+    "path": "questions/q075_letter_combinations_of_a_phone_number.py"
   },
   {
     "index": 76,
@@ -1517,7 +1517,7 @@
     ],
     "source_url": "https://leetcode.com/problems/n-queens/",
     "practice_url": "https://neetcode.io/problems/n-queens?list=neetcode150",
-    "path": "problems/09-backtracking/076-n-queens"
+    "path": "questions/q076_n_queens.py"
   },
   {
     "index": 77,
@@ -1537,7 +1537,7 @@
     ],
     "source_url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
     "practice_url": "https://neetcode.io/problems/implement-prefix-tree?list=neetcode150",
-    "path": "problems/10-tries/077-implement-trie-prefix-tree"
+    "path": "questions/q077_implement_trie_prefix_tree.py"
   },
   {
     "index": 78,
@@ -1557,7 +1557,7 @@
     ],
     "source_url": "https://leetcode.com/problems/design-add-and-search-words-data-structure/",
     "practice_url": "https://neetcode.io/problems/design-word-search-data-structure?list=neetcode150",
-    "path": "problems/10-tries/078-design-add-and-search-words-data-structure"
+    "path": "questions/q078_design_add_and_search_words_data_structure.py"
   },
   {
     "index": 79,
@@ -1577,7 +1577,7 @@
     ],
     "source_url": "https://leetcode.com/problems/word-search-ii/",
     "practice_url": "https://neetcode.io/problems/search-for-word-ii?list=neetcode150",
-    "path": "problems/10-tries/079-word-search-ii"
+    "path": "questions/q079_word_search_ii.py"
   },
   {
     "index": 80,
@@ -1597,7 +1597,7 @@
     ],
     "source_url": "https://leetcode.com/problems/number-of-islands/",
     "practice_url": "https://neetcode.io/problems/count-number-of-islands?list=neetcode150",
-    "path": "problems/11-graphs/080-number-of-islands"
+    "path": "questions/q080_number_of_islands.py"
   },
   {
     "index": 81,
@@ -1617,7 +1617,7 @@
     ],
     "source_url": "https://leetcode.com/problems/max-area-of-island/",
     "practice_url": "https://neetcode.io/problems/max-area-of-island?list=neetcode150",
-    "path": "problems/11-graphs/081-max-area-of-island"
+    "path": "questions/q081_max_area_of_island.py"
   },
   {
     "index": 82,
@@ -1637,7 +1637,7 @@
     ],
     "source_url": "https://leetcode.com/problems/clone-graph/",
     "practice_url": "https://neetcode.io/problems/clone-graph?list=neetcode150",
-    "path": "problems/11-graphs/082-clone-graph"
+    "path": "questions/q082_clone_graph.py"
   },
   {
     "index": 83,
@@ -1657,7 +1657,7 @@
     ],
     "source_url": "https://leetcode.com/problems/walls-and-gates/",
     "practice_url": "https://neetcode.io/problems/islands-and-treasure?list=neetcode150",
-    "path": "problems/11-graphs/083-walls-and-gates"
+    "path": "questions/q083_walls_and_gates.py"
   },
   {
     "index": 84,
@@ -1677,7 +1677,7 @@
     ],
     "source_url": "https://leetcode.com/problems/rotting-oranges/",
     "practice_url": "https://neetcode.io/problems/rotting-fruit?list=neetcode150",
-    "path": "problems/11-graphs/084-rotting-oranges"
+    "path": "questions/q084_rotting_oranges.py"
   },
   {
     "index": 85,
@@ -1697,7 +1697,7 @@
     ],
     "source_url": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
     "practice_url": "https://neetcode.io/problems/pacific-atlantic-water-flow?list=neetcode150",
-    "path": "problems/11-graphs/085-pacific-atlantic-water-flow"
+    "path": "questions/q085_pacific_atlantic_water_flow.py"
   },
   {
     "index": 86,
@@ -1717,7 +1717,7 @@
     ],
     "source_url": "https://leetcode.com/problems/surrounded-regions/",
     "practice_url": "https://neetcode.io/problems/surrounded-regions?list=neetcode150",
-    "path": "problems/11-graphs/086-surrounded-regions"
+    "path": "questions/q086_surrounded_regions.py"
   },
   {
     "index": 87,
@@ -1737,7 +1737,7 @@
     ],
     "source_url": "https://leetcode.com/problems/course-schedule/",
     "practice_url": "https://neetcode.io/problems/course-schedule?list=neetcode150",
-    "path": "problems/11-graphs/087-course-schedule"
+    "path": "questions/q087_course_schedule.py"
   },
   {
     "index": 88,
@@ -1757,7 +1757,7 @@
     ],
     "source_url": "https://leetcode.com/problems/course-schedule-ii/",
     "practice_url": "https://neetcode.io/problems/course-schedule-ii?list=neetcode150",
-    "path": "problems/11-graphs/088-course-schedule-ii"
+    "path": "questions/q088_course_schedule_ii.py"
   },
   {
     "index": 89,
@@ -1777,7 +1777,7 @@
     ],
     "source_url": "https://leetcode.com/problems/graph-valid-tree/",
     "practice_url": "https://neetcode.io/problems/valid-tree?list=neetcode150",
-    "path": "problems/11-graphs/089-graph-valid-tree"
+    "path": "questions/q089_graph_valid_tree.py"
   },
   {
     "index": 90,
@@ -1797,7 +1797,7 @@
     ],
     "source_url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
     "practice_url": "https://neetcode.io/problems/count-connected-components?list=neetcode150",
-    "path": "problems/11-graphs/090-number-of-connected-components-in-an-undirected-graph"
+    "path": "questions/q090_number_of_connected_components_in_an_undirected_graph.py"
   },
   {
     "index": 91,
@@ -1817,7 +1817,7 @@
     ],
     "source_url": "https://leetcode.com/problems/redundant-connection/",
     "practice_url": "https://neetcode.io/problems/redundant-connection?list=neetcode150",
-    "path": "problems/11-graphs/091-redundant-connection"
+    "path": "questions/q091_redundant_connection.py"
   },
   {
     "index": 92,
@@ -1837,7 +1837,7 @@
     ],
     "source_url": "https://leetcode.com/problems/word-ladder/",
     "practice_url": "https://neetcode.io/problems/word-ladder?list=neetcode150",
-    "path": "problems/11-graphs/092-word-ladder"
+    "path": "questions/q092_word_ladder.py"
   },
   {
     "index": 93,
@@ -1857,7 +1857,7 @@
     ],
     "source_url": "https://leetcode.com/problems/network-delay-time/",
     "practice_url": "https://neetcode.io/problems/network-delay-time?list=neetcode150",
-    "path": "problems/12-advanced-graphs/093-network-delay-time"
+    "path": "questions/q093_network_delay_time.py"
   },
   {
     "index": 94,
@@ -1877,7 +1877,7 @@
     ],
     "source_url": "https://leetcode.com/problems/reconstruct-itinerary/",
     "practice_url": "https://neetcode.io/problems/reconstruct-flight-path?list=neetcode150",
-    "path": "problems/12-advanced-graphs/094-reconstruct-itinerary"
+    "path": "questions/q094_reconstruct_itinerary.py"
   },
   {
     "index": 95,
@@ -1897,7 +1897,7 @@
     ],
     "source_url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
     "practice_url": "https://neetcode.io/problems/min-cost-to-connect-points?list=neetcode150",
-    "path": "problems/12-advanced-graphs/095-min-cost-to-connect-all-points"
+    "path": "questions/q095_min_cost_to_connect_all_points.py"
   },
   {
     "index": 96,
@@ -1917,7 +1917,7 @@
     ],
     "source_url": "https://leetcode.com/problems/swim-in-rising-water/",
     "practice_url": "https://neetcode.io/problems/swim-in-rising-water?list=neetcode150",
-    "path": "problems/12-advanced-graphs/096-swim-in-rising-water"
+    "path": "questions/q096_swim_in_rising_water.py"
   },
   {
     "index": 97,
@@ -1937,7 +1937,7 @@
     ],
     "source_url": "https://leetcode.com/problems/alien-dictionary/",
     "practice_url": "https://neetcode.io/problems/foreign-dictionary?list=neetcode150",
-    "path": "problems/12-advanced-graphs/097-alien-dictionary"
+    "path": "questions/q097_alien_dictionary.py"
   },
   {
     "index": 98,
@@ -1957,7 +1957,7 @@
     ],
     "source_url": "https://leetcode.com/problems/cheapest-flights-within-k-stops/",
     "practice_url": "https://neetcode.io/problems/cheapest-flight-path?list=neetcode150",
-    "path": "problems/12-advanced-graphs/098-cheapest-flights-within-k-stops"
+    "path": "questions/q098_cheapest_flights_within_k_stops.py"
   },
   {
     "index": 99,
@@ -1977,7 +1977,7 @@
     ],
     "source_url": "https://leetcode.com/problems/climbing-stairs/",
     "practice_url": "https://neetcode.io/problems/climbing-stairs?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/099-climbing-stairs"
+    "path": "questions/q099_climbing_stairs.py"
   },
   {
     "index": 100,
@@ -1997,7 +1997,7 @@
     ],
     "source_url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
     "practice_url": "https://neetcode.io/problems/min-cost-climbing-stairs?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/100-min-cost-climbing-stairs"
+    "path": "questions/q100_min_cost_climbing_stairs.py"
   },
   {
     "index": 101,
@@ -2017,7 +2017,7 @@
     ],
     "source_url": "https://leetcode.com/problems/house-robber/",
     "practice_url": "https://neetcode.io/problems/house-robber?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/101-house-robber"
+    "path": "questions/q101_house_robber.py"
   },
   {
     "index": 102,
@@ -2037,7 +2037,7 @@
     ],
     "source_url": "https://leetcode.com/problems/house-robber-ii/",
     "practice_url": "https://neetcode.io/problems/house-robber-ii?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/102-house-robber-ii"
+    "path": "questions/q102_house_robber_ii.py"
   },
   {
     "index": 103,
@@ -2057,7 +2057,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-palindromic-substring/",
     "practice_url": "https://neetcode.io/problems/longest-palindromic-substring?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/103-longest-palindromic-substring"
+    "path": "questions/q103_longest_palindromic_substring.py"
   },
   {
     "index": 104,
@@ -2077,7 +2077,7 @@
     ],
     "source_url": "https://leetcode.com/problems/palindromic-substrings/",
     "practice_url": "https://neetcode.io/problems/palindromic-substrings?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/104-palindromic-substrings"
+    "path": "questions/q104_palindromic_substrings.py"
   },
   {
     "index": 105,
@@ -2097,7 +2097,7 @@
     ],
     "source_url": "https://leetcode.com/problems/decode-ways/",
     "practice_url": "https://neetcode.io/problems/decode-ways?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/105-decode-ways"
+    "path": "questions/q105_decode_ways.py"
   },
   {
     "index": 106,
@@ -2117,7 +2117,7 @@
     ],
     "source_url": "https://leetcode.com/problems/coin-change/",
     "practice_url": "https://neetcode.io/problems/coin-change?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/106-coin-change"
+    "path": "questions/q106_coin_change.py"
   },
   {
     "index": 107,
@@ -2137,7 +2137,7 @@
     ],
     "source_url": "https://leetcode.com/problems/maximum-product-subarray/",
     "practice_url": "https://neetcode.io/problems/maximum-product-subarray?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/107-maximum-product-subarray"
+    "path": "questions/q107_maximum_product_subarray.py"
   },
   {
     "index": 108,
@@ -2157,7 +2157,7 @@
     ],
     "source_url": "https://leetcode.com/problems/word-break/",
     "practice_url": "https://neetcode.io/problems/word-break?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/108-word-break"
+    "path": "questions/q108_word_break.py"
   },
   {
     "index": 109,
@@ -2177,7 +2177,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-increasing-subsequence/",
     "practice_url": "https://neetcode.io/problems/longest-increasing-subsequence?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/109-longest-increasing-subsequence"
+    "path": "questions/q109_longest_increasing_subsequence.py"
   },
   {
     "index": 110,
@@ -2197,7 +2197,7 @@
     ],
     "source_url": "https://leetcode.com/problems/partition-equal-subset-sum/",
     "practice_url": "https://neetcode.io/problems/partition-equal-subset-sum?list=neetcode150",
-    "path": "problems/13-1d-dynamic-programming/110-partition-equal-subset-sum"
+    "path": "questions/q110_partition_equal_subset_sum.py"
   },
   {
     "index": 111,
@@ -2217,7 +2217,7 @@
     ],
     "source_url": "https://leetcode.com/problems/unique-paths/",
     "practice_url": "https://neetcode.io/problems/count-paths?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/111-unique-paths"
+    "path": "questions/q111_unique_paths.py"
   },
   {
     "index": 112,
@@ -2237,7 +2237,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-common-subsequence/",
     "practice_url": "https://neetcode.io/problems/longest-common-subsequence?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/112-longest-common-subsequence"
+    "path": "questions/q112_longest_common_subsequence.py"
   },
   {
     "index": 113,
@@ -2257,7 +2257,7 @@
     ],
     "source_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
     "practice_url": "https://neetcode.io/problems/buy-and-sell-crypto-with-cooldown?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/113-best-time-to-buy-and-sell-stock-with-cooldown"
+    "path": "questions/q113_best_time_to_buy_and_sell_stock_with_cooldown.py"
   },
   {
     "index": 114,
@@ -2277,7 +2277,7 @@
     ],
     "source_url": "https://leetcode.com/problems/coin-change-ii/",
     "practice_url": "https://neetcode.io/problems/coin-change-ii?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/114-coin-change-ii"
+    "path": "questions/q114_coin_change_ii.py"
   },
   {
     "index": 115,
@@ -2297,7 +2297,7 @@
     ],
     "source_url": "https://leetcode.com/problems/target-sum/",
     "practice_url": "https://neetcode.io/problems/target-sum?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/115-target-sum"
+    "path": "questions/q115_target_sum.py"
   },
   {
     "index": 116,
@@ -2317,7 +2317,7 @@
     ],
     "source_url": "https://leetcode.com/problems/interleaving-string/",
     "practice_url": "https://neetcode.io/problems/interleaving-string?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/116-interleaving-string"
+    "path": "questions/q116_interleaving_string.py"
   },
   {
     "index": 117,
@@ -2337,7 +2337,7 @@
     ],
     "source_url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
     "practice_url": "https://neetcode.io/problems/longest-increasing-path-in-matrix?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/117-longest-increasing-path-in-a-matrix"
+    "path": "questions/q117_longest_increasing_path_in_a_matrix.py"
   },
   {
     "index": 118,
@@ -2357,7 +2357,7 @@
     ],
     "source_url": "https://leetcode.com/problems/distinct-subsequences/",
     "practice_url": "https://neetcode.io/problems/count-subsequences?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/118-distinct-subsequences"
+    "path": "questions/q118_distinct_subsequences.py"
   },
   {
     "index": 119,
@@ -2377,7 +2377,7 @@
     ],
     "source_url": "https://leetcode.com/problems/edit-distance/",
     "practice_url": "https://neetcode.io/problems/edit-distance?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/119-edit-distance"
+    "path": "questions/q119_edit_distance.py"
   },
   {
     "index": 120,
@@ -2397,7 +2397,7 @@
     ],
     "source_url": "https://leetcode.com/problems/burst-balloons/",
     "practice_url": "https://neetcode.io/problems/burst-balloons?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/120-burst-balloons"
+    "path": "questions/q120_burst_balloons.py"
   },
   {
     "index": 121,
@@ -2417,7 +2417,7 @@
     ],
     "source_url": "https://leetcode.com/problems/regular-expression-matching/",
     "practice_url": "https://neetcode.io/problems/regular-expression-matching?list=neetcode150",
-    "path": "problems/14-2d-dynamic-programming/121-regular-expression-matching"
+    "path": "questions/q121_regular_expression_matching.py"
   },
   {
     "index": 122,
@@ -2437,7 +2437,7 @@
     ],
     "source_url": "https://leetcode.com/problems/maximum-subarray/",
     "practice_url": "https://neetcode.io/problems/maximum-subarray?list=neetcode150",
-    "path": "problems/15-greedy/122-maximum-subarray"
+    "path": "questions/q122_maximum_subarray.py"
   },
   {
     "index": 123,
@@ -2457,7 +2457,7 @@
     ],
     "source_url": "https://leetcode.com/problems/jump-game/",
     "practice_url": "https://neetcode.io/problems/jump-game?list=neetcode150",
-    "path": "problems/15-greedy/123-jump-game"
+    "path": "questions/q123_jump_game.py"
   },
   {
     "index": 124,
@@ -2477,7 +2477,7 @@
     ],
     "source_url": "https://leetcode.com/problems/jump-game-ii/",
     "practice_url": "https://neetcode.io/problems/jump-game-ii?list=neetcode150",
-    "path": "problems/15-greedy/124-jump-game-ii"
+    "path": "questions/q124_jump_game_ii.py"
   },
   {
     "index": 125,
@@ -2497,7 +2497,7 @@
     ],
     "source_url": "https://leetcode.com/problems/gas-station/",
     "practice_url": "https://neetcode.io/problems/gas-station?list=neetcode150",
-    "path": "problems/15-greedy/125-gas-station"
+    "path": "questions/q125_gas_station.py"
   },
   {
     "index": 126,
@@ -2517,7 +2517,7 @@
     ],
     "source_url": "https://leetcode.com/problems/hand-of-straights/",
     "practice_url": "https://neetcode.io/problems/hand-of-straights?list=neetcode150",
-    "path": "problems/15-greedy/126-hand-of-straights"
+    "path": "questions/q126_hand_of_straights.py"
   },
   {
     "index": 127,
@@ -2537,7 +2537,7 @@
     ],
     "source_url": "https://leetcode.com/problems/merge-triplets-to-form-target-triplet/",
     "practice_url": "https://neetcode.io/problems/merge-triplets-to-form-target?list=neetcode150",
-    "path": "problems/15-greedy/127-merge-triplets-to-form-target-triplet"
+    "path": "questions/q127_merge_triplets_to_form_target_triplet.py"
   },
   {
     "index": 128,
@@ -2557,7 +2557,7 @@
     ],
     "source_url": "https://leetcode.com/problems/partition-labels/",
     "practice_url": "https://neetcode.io/problems/partition-labels?list=neetcode150",
-    "path": "problems/15-greedy/128-partition-labels"
+    "path": "questions/q128_partition_labels.py"
   },
   {
     "index": 129,
@@ -2577,7 +2577,7 @@
     ],
     "source_url": "https://leetcode.com/problems/valid-parenthesis-string/",
     "practice_url": "https://neetcode.io/problems/valid-parenthesis-string?list=neetcode150",
-    "path": "problems/15-greedy/129-valid-parenthesis-string"
+    "path": "questions/q129_valid_parenthesis_string.py"
   },
   {
     "index": 130,
@@ -2597,7 +2597,7 @@
     ],
     "source_url": "https://leetcode.com/problems/insert-interval/",
     "practice_url": "https://neetcode.io/problems/insert-new-interval?list=neetcode150",
-    "path": "problems/16-intervals/130-insert-interval"
+    "path": "questions/q130_insert_interval.py"
   },
   {
     "index": 131,
@@ -2617,7 +2617,7 @@
     ],
     "source_url": "https://leetcode.com/problems/merge-intervals/",
     "practice_url": "https://neetcode.io/problems/merge-intervals?list=neetcode150",
-    "path": "problems/16-intervals/131-merge-intervals"
+    "path": "questions/q131_merge_intervals.py"
   },
   {
     "index": 132,
@@ -2637,7 +2637,7 @@
     ],
     "source_url": "https://leetcode.com/problems/non-overlapping-intervals/",
     "practice_url": "https://neetcode.io/problems/non-overlapping-intervals?list=neetcode150",
-    "path": "problems/16-intervals/132-non-overlapping-intervals"
+    "path": "questions/q132_non_overlapping_intervals.py"
   },
   {
     "index": 133,
@@ -2657,7 +2657,7 @@
     ],
     "source_url": "https://leetcode.com/problems/meeting-rooms/",
     "practice_url": "https://neetcode.io/problems/meeting-schedule?list=neetcode150",
-    "path": "problems/16-intervals/133-meeting-rooms"
+    "path": "questions/q133_meeting_rooms.py"
   },
   {
     "index": 134,
@@ -2677,7 +2677,7 @@
     ],
     "source_url": "https://leetcode.com/problems/meeting-rooms-ii/",
     "practice_url": "https://neetcode.io/problems/meeting-schedule-ii?list=neetcode150",
-    "path": "problems/16-intervals/134-meeting-rooms-ii"
+    "path": "questions/q134_meeting_rooms_ii.py"
   },
   {
     "index": 135,
@@ -2697,7 +2697,7 @@
     ],
     "source_url": "https://leetcode.com/problems/minimum-interval-to-include-each-query/",
     "practice_url": "https://neetcode.io/problems/minimum-interval-including-query?list=neetcode150",
-    "path": "problems/16-intervals/135-minimum-interval-to-include-each-query"
+    "path": "questions/q135_minimum_interval_to_include_each_query.py"
   },
   {
     "index": 136,
@@ -2717,7 +2717,7 @@
     ],
     "source_url": "https://leetcode.com/problems/rotate-image/",
     "practice_url": "https://neetcode.io/problems/rotate-matrix?list=neetcode150",
-    "path": "problems/17-math-geometry/136-rotate-image"
+    "path": "questions/q136_rotate_image.py"
   },
   {
     "index": 137,
@@ -2737,7 +2737,7 @@
     ],
     "source_url": "https://leetcode.com/problems/spiral-matrix/",
     "practice_url": "https://neetcode.io/problems/spiral-matrix?list=neetcode150",
-    "path": "problems/17-math-geometry/137-spiral-matrix"
+    "path": "questions/q137_spiral_matrix.py"
   },
   {
     "index": 138,
@@ -2757,7 +2757,7 @@
     ],
     "source_url": "https://leetcode.com/problems/set-matrix-zeroes/",
     "practice_url": "https://neetcode.io/problems/set-zeroes-in-matrix?list=neetcode150",
-    "path": "problems/17-math-geometry/138-set-matrix-zeroes"
+    "path": "questions/q138_set_matrix_zeroes.py"
   },
   {
     "index": 139,
@@ -2777,7 +2777,7 @@
     ],
     "source_url": "https://leetcode.com/problems/happy-number/",
     "practice_url": "https://neetcode.io/problems/non-cyclical-number?list=neetcode150",
-    "path": "problems/17-math-geometry/139-happy-number"
+    "path": "questions/q139_happy_number.py"
   },
   {
     "index": 140,
@@ -2797,7 +2797,7 @@
     ],
     "source_url": "https://leetcode.com/problems/plus-one/",
     "practice_url": "https://neetcode.io/problems/plus-one?list=neetcode150",
-    "path": "problems/17-math-geometry/140-plus-one"
+    "path": "questions/q140_plus_one.py"
   },
   {
     "index": 141,
@@ -2817,7 +2817,7 @@
     ],
     "source_url": "https://leetcode.com/problems/powx-n/",
     "practice_url": "https://neetcode.io/problems/pow-x-n?list=neetcode150",
-    "path": "problems/17-math-geometry/141-powx-n"
+    "path": "questions/q141_powx_n.py"
   },
   {
     "index": 142,
@@ -2837,7 +2837,7 @@
     ],
     "source_url": "https://leetcode.com/problems/multiply-strings/",
     "practice_url": "https://neetcode.io/problems/multiply-strings?list=neetcode150",
-    "path": "problems/17-math-geometry/142-multiply-strings"
+    "path": "questions/q142_multiply_strings.py"
   },
   {
     "index": 143,
@@ -2857,7 +2857,7 @@
     ],
     "source_url": "https://leetcode.com/problems/detect-squares/",
     "practice_url": "https://neetcode.io/problems/count-squares?list=neetcode150",
-    "path": "problems/17-math-geometry/143-detect-squares"
+    "path": "questions/q143_detect_squares.py"
   },
   {
     "index": 144,
@@ -2877,7 +2877,7 @@
     ],
     "source_url": "https://leetcode.com/problems/single-number/",
     "practice_url": "https://neetcode.io/problems/single-number?list=neetcode150",
-    "path": "problems/18-bit-manipulation/144-single-number"
+    "path": "questions/q144_single_number.py"
   },
   {
     "index": 145,
@@ -2897,7 +2897,7 @@
     ],
     "source_url": "https://leetcode.com/problems/number-of-1-bits/",
     "practice_url": "https://neetcode.io/problems/number-of-one-bits?list=neetcode150",
-    "path": "problems/18-bit-manipulation/145-number-of-1-bits"
+    "path": "questions/q145_number_of_1_bits.py"
   },
   {
     "index": 146,
@@ -2917,7 +2917,7 @@
     ],
     "source_url": "https://leetcode.com/problems/counting-bits/",
     "practice_url": "https://neetcode.io/problems/counting-bits?list=neetcode150",
-    "path": "problems/18-bit-manipulation/146-counting-bits"
+    "path": "questions/q146_counting_bits.py"
   },
   {
     "index": 147,
@@ -2937,7 +2937,7 @@
     ],
     "source_url": "https://leetcode.com/problems/reverse-bits/",
     "practice_url": "https://neetcode.io/problems/reverse-bits?list=neetcode150",
-    "path": "problems/18-bit-manipulation/147-reverse-bits"
+    "path": "questions/q147_reverse_bits.py"
   },
   {
     "index": 148,
@@ -2957,7 +2957,7 @@
     ],
     "source_url": "https://leetcode.com/problems/missing-number/",
     "practice_url": "https://neetcode.io/problems/missing-number?list=neetcode150",
-    "path": "problems/18-bit-manipulation/148-missing-number"
+    "path": "questions/q148_missing_number.py"
   },
   {
     "index": 149,
@@ -2977,7 +2977,7 @@
     ],
     "source_url": "https://leetcode.com/problems/sum-of-two-integers/",
     "practice_url": "https://neetcode.io/problems/sum-of-two-integers?list=neetcode150",
-    "path": "problems/18-bit-manipulation/149-sum-of-two-integers"
+    "path": "questions/q149_sum_of_two_integers.py"
   },
   {
     "index": 150,
@@ -2997,6 +2997,6 @@
     ],
     "source_url": "https://leetcode.com/problems/reverse-integer/",
     "practice_url": "https://neetcode.io/problems/reverse-integer?list=neetcode150",
-    "path": "problems/18-bit-manipulation/150-reverse-integer"
+    "path": "questions/q150_reverse_integer.py"
   }
 ]

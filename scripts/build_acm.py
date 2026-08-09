@@ -747,14 +747,24 @@ def build_specs(problems: list[dict], tests: dict) -> dict:
 
 
 def solution_path(problem: dict) -> Path:
-    return ROOT / problem["path"] / "solution.py"
+    return ROOT / problem["path"]
+
+
+def starter_with_io_comments(spec: dict) -> str:
+    format_text = spec.get("format", "").strip()
+    input_text, separator, output_text = format_text.partition(" Output: ")
+    if input_text.startswith("Input: "):
+        input_text = input_text.removeprefix("Input: ")
+    if not separator:
+        output_text = "see the problem specification"
+    return f"# Input: {input_text}\n# Output: {output_text}\n\n"
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Build ACM text specs for all problems")
     parser.add_argument("--check", action="store_true", help="Fail when generated specs differ from acm_tests.json")
-    parser.add_argument("--write-solutions", action="store_true", help="Create missing empty solution.py files")
-    parser.add_argument("--force", action="store_true", help="With --write-solutions, empty all solution files")
+    parser.add_argument("--write-solutions", action="store_true", help="Create missing question files")
+    parser.add_argument("--force", action="store_true", help="With --write-solutions, reset all question files")
     parser.add_argument("--debug-schemas", action="store_true", help="Print inferred input schemas per slug")
     args = parser.parse_args()
 
@@ -797,7 +807,7 @@ def main() -> None:
             if path.exists() and not args.force:
                 continue
             existed = path.exists()
-            path.write_text(specs[problem["slug"]]["starter"], encoding="utf-8")
+            path.write_text(starter_with_io_comments(specs[problem["slug"]]), encoding="utf-8")
             if existed:
                 overwritten += 1
             else:

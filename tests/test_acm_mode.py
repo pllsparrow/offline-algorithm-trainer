@@ -24,9 +24,11 @@ class AcmModeTests(unittest.TestCase):
         self.assertEqual(150, len(problems))
         self.assertEqual(set(problems), set(specs))
         self.assertTrue(all(spec["protocol"] == "text" for spec in specs.values()))
-        for slug in problems:
+        for slug, problem in problems.items():
             path = train.solution_path(slug)
-            self.assertEqual("solution.py", path.name, slug)
+            expected_name = f"q{problem['index']:03d}_{slug.replace('-', '_')}.py"
+            self.assertEqual(expected_name, path.name, slug)
+            self.assertEqual("questions", path.parent.name, slug)
             self.assertTrue(path.is_file(), slug)
             self.assertEqual("", specs[slug]["starter"], slug)
 

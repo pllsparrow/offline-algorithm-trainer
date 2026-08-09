@@ -5,14 +5,14 @@
 I built this because I wanted a simple way to practise algorithms without
 keeping a browser, an editor, and an online judge open at the same time.
 
-The repository contains 150 interview problems grouped by topic. Every problem
-is an ACM-style program: your `solution.py` reads from stdin, writes to
+The repository contains 150 interview problems in the `questions/` directory.
+Every question is an ACM-style program: its Python file reads from stdin, writes to
 stdout, and the judge compares the output exactly (whitespace-normalised). This
 mirrors a real online assessment environment, so the usual loop stays on your
 machine:
 
 ```text
-pick a problem -> write solution.py -> run it -> inspect the failing case
+pick a problem -> write its question file -> run it -> inspect the failing case
 ```
 
 It also keeps a small SQLite progress file locally. Your attempts and completed
@@ -21,6 +21,8 @@ solutions are ignored by Git and are not part of this public repository.
 If you are learning a pattern for the first time rather than reviewing it,
 start with the [learning protocol](docs/learning_protocol.md). It defines the
 function-to-ACM transfer, hint ladder, daily session, and mastery criteria.
+All NeetCode problem links are collected in the
+[central problem index](docs/neetcode_links.md).
 
 ## Getting started
 
@@ -37,10 +39,10 @@ python3 train.py run 003
 python3 train.py status
 ```
 
-Open the `solution.py` path printed by `show`. The file starts completely
-empty, so write the input parsing, algorithm, output, and program entry point
-yourself. Then run the same problem again. A failed case prints its stdin,
-expected stdout, and actual stdout.
+Open the `qNNN_problem_name.py` path printed by `show`. The file contains only
+short `Input` and `Output` comments, so write the input parsing, algorithm,
+output, and program entry point yourself. Then run the same problem again. A
+failed case prints its stdin, expected stdout, and actual stdout.
 
 For a stubborn failure, rerun only that case:
 
@@ -101,13 +103,13 @@ python3 train.py check
 | `python3 train.py run <slug> --all` | Runs the remaining cases after a failure |
 | `python3 train.py status` | Shows attempted and accepted totals |
 | `python3 train.py check` | Checks the repository data |
-| `python3 train.py scaffold --force` | Regenerates all READMEs and empties every `solution.py` |
+| `python3 train.py scaffold --force` | Resets all question files to their I/O comments |
 
-PyCharm users can select the shared `Judge Current Solution` run configuration once. After that, open any problem's `solution.py` and use the green Run button to judge the current file.
+PyCharm users can select the shared `Judge Current Solution` run configuration once. After that, open any file in `questions/` and use the green Run button to judge the current file.
 
-The problems are arranged under `problems/` in 18 chapters, from arrays and
-linked lists to graphs and dynamic programming. The judge is in `judge/`, while
-problem metadata, tests, and your local progress live under `data/`.
+All 150 Python files are stored directly under `questions/` and named like
+`q001_contains_duplicate.py`. The judge is in `judge/`, while problem metadata,
+tests, and your local progress live under `data/`.
 
 ## About the problem content
 

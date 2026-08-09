@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-PROBLEMS_DIR = ROOT / "problems"
+QUESTIONS_DIR = ROOT / "questions"
 DB = DATA / "progress.sqlite3"
 
 
@@ -99,8 +99,8 @@ def update_progress(slug, code, result):
 def solution_path(slug):
     problem = problems_by_slug().get(slug)
     if problem and problem.get("path"):
-        return ROOT / problem["path"] / "solution.py"
-    return PROBLEMS_DIR / slug / "solution.py"
+        return ROOT / problem["path"]
+    return QUESTIONS_DIR / f"{slug.replace('-', '_')}.py"
 
 
 def resolve_slug(reference=None, file_path=None):
@@ -123,70 +123,28 @@ def resolve_slug(reference=None, file_path=None):
     return None
 
 
-def render_readme(problem, spec):
-    examples = []
-    for idx, case in enumerate(spec.get("cases", [])[:3], start=1):
-        stdin = case["stdin"]
-        stdout = case.get("stdout", "")
-        examples.append(
-            f"### Case {idx}\n\n"
-            f"**Input**\n\n```\n{stdin}```\n\n"
-            f"**Output**\n\n```\n{stdout}```\n"
-        )
-    hints = "\n".join(f"- {hint}" for hint in problem.get("hints", []))
-    source_line = ""
-    if problem.get("source_url"):
-        source_line = f"- Source: {problem['source_url']}\n"
-    practice_line = ""
-    if problem.get("practice_url"):
-        practice_line = f"- Reference: {problem['practice_url']}\n"
-    return f"""# {problem['index']:03d}. {problem['title']}
-
-- Chapter: {problem['chapter']:02d}. {problem['category']}
-- Difficulty: {problem['difficulty']}
-{source_line}{practice_line}
-## Goal
-
-{problem['summary']}
-
-## Interview Focus
-
-{hints}
-
-## ACM Format
-
-{spec.get('format', '')}
-
-## Local Examples
-
-{chr(10).join(examples)}
-## Run
-
-```bash
-python3 train.py run {problem['slug']}
-```
-"""
+def starter_with_io_comments(spec):
+    format_text = spec.get("format", "").strip()
+    input_text, separator, output_text = format_text.partition(" Output: ")
+    if input_text.startswith("Input: "):
+        input_text = input_text.removeprefix("Input: ")
+    if not separator:
+        output_text = "see the problem specification"
+    return f"# Input: {input_text}\n# Output: {output_text}\n\n"
 
 
 def scaffold(args):
     problems = problems_by_slug()
     specs = specs_by_slug()
-    PROBLEMS_DIR.mkdir(exist_ok=True)
-    readme_created = 0
-    sol_created = 0
+    QUESTIONS_DIR.mkdir(exist_ok=True)
+    files_created = 0
     for slug, problem in problems.items():
-        problem_dir = ROOT / problem.get("path", str(PROBLEMS_DIR / slug))
-        problem_dir.mkdir(parents=True, exist_ok=True)
         spec = specs.get(slug, {"cases": []})
-        readme_path = problem_dir / "README.md"
-        if args.force or not readme_path.exists():
-            readme_path.write_text(render_readme(problem, spec), encoding="utf-8")
-            readme_created += 1
-        path = problem_dir / "solution.py"
+        path = solution_path(slug)
         if not path.exists() or args.force:
-            path.write_text(spec["starter"], encoding="utf-8")
-            sol_created += 1
-    print(f"Scaffold ready: {len(problems)} problems, {readme_created} READMEs, {sol_created} solution files.")
+            path.write_text(starter_with_io_comments(spec), encoding="utf-8")
+            files_created += 1
+    print(f"Scaffold ready: {len(problems)} problems, {files_created} question files.")
     print(f"Open this folder in PyCharm: {ROOT}")
 
 
@@ -197,13 +155,9 @@ def check_project(args):
     for slug, problem in problems.items():
         if slug not in specs:
             issues.append(f"{slug}: missing ACM spec in data/acm_tests.json")
-        problem_dir = ROOT / problem.get("path", str(PROBLEMS_DIR / slug))
-        if not problem_dir.exists():
-            issues.append(f"{slug}: missing problem directory {problem_dir}")
-            continue
-        for filename in ("README.md", "solution.py"):
-            if not (problem_dir / filename).exists():
-                issues.append(f"{slug}: missing {problem_dir / filename}")
+        path = solution_path(slug)
+        if not path.is_file():
+            issues.append(f"{slug}: missing question file {path}")
     if issues:
         print(f"Project check failed: {len(issues)} issue(s)")
         for issue in issues:

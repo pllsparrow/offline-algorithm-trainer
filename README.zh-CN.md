@@ -4,10 +4,10 @@
 
 我做这个项目，是因为平时刷算法题要在网页、编辑器和在线判题之间来回切换，写完以后还得复制代码提交，调试起来也不太顺手。
 
-所以我把 150 道常见面试题整理到了本地，按数组、链表、树、图、动态规划等专题分类。每道题都是一个 ACM 模式的程序：你的 `solution.py` 从标准输入读数据、向标准输出写结果，判题器直接比对输出。这和真实笔试环境一致，平时的刷题过程就是：
+所以我把 150 道常见面试题整理到了本地。所有题目 Python 文件都直接放在 `questions/` 中，每道题都是一个 ACM 模式的程序：从标准输入读数据、向标准输出写结果，判题器直接比对输出。这和真实笔试环境一致，平时的刷题过程就是：
 
 ```text
-选一道题 -> 写 solution.py -> 运行测试 -> 看失败用例 -> 修改
+选一道题 -> 写对应的 Python 文件 -> 运行测试 -> 看失败用例 -> 修改
 ```
 
 刷题进度会记录在本地 SQLite 文件里，自己写的答案和进度文件都不会被提交到 GitHub。
@@ -15,6 +15,10 @@
 如果你是在第一次学习题型，而不只是复习，请先阅读
 [`docs/learning_protocol.md`](docs/learning_protocol.md)。其中定义了函数模式到
 ACM 模式的迁移、提示阶梯、每日训练流程和掌握标准。
+
+所有题目的 NeetCode 题面链接集中在
+[`docs/neetcode_links.md`](docs/neetcode_links.md)。每道题的 Python 文件顶部只保留
+简短的 ACM 输入和输出格式英文注释。
 
 ## 怎么开始
 
@@ -31,7 +35,7 @@ python3 train.py run 003
 python3 train.py status
 ```
 
-`show` 会显示题目说明、ACM 输入输出格式和 `solution.py` 的位置。`solution.py` 默认完全空白，输入解析、算法、输出和程序入口都需要自己写。完成后用 `run` 执行本地用例；运行失败时会直接显示输入、预期输出和实际输出。
+`show` 会显示题目说明、ACM 输入输出格式和题目文件的位置。文件名采用 `qNNN_problem_name.py` 格式，默认只包含两行输入输出注释；输入解析、算法、输出和程序入口都需要自己写。完成后用 `run` 执行本地用例；运行失败时会直接显示输入、预期输出和实际输出。
 
 如果只想反复调试某一个失败用例：
 
@@ -90,11 +94,11 @@ python3 train.py check
 | `python3 train.py run <slug> --all` | 某个用例失败后继续往下运行 |
 | `python3 train.py status` | 查看已做和通过数量 |
 | `python3 train.py check` | 检查题库数据是否完整 |
-| `python3 train.py scaffold --force` | 重新生成全部 README，并清空所有 `solution.py` |
+| `python3 train.py scaffold --force` | 把全部题目文件重置为输入输出注释 |
 
-PyCharm 用户可以选择项目自带的 `Judge Current Solution` 运行配置。选择一次后，打开任意一道题的 `solution.py`，点击绿色 Run 按钮即可判题。
+PyCharm 用户可以选择项目自带的 `Judge Current Solution` 运行配置。选择一次后，打开 `questions/` 中任意题目文件，点击绿色 Run 按钮即可判题。
 
-题目都在 `problems/` 目录，一共分为 18 个章节。`judge/` 是本地判题代码，`data/` 保存题目元数据、测试用例和本地进度。
+150 道题全部直接放在 `questions/` 目录，文件名类似 `q001_contains_duplicate.py`。`judge/` 是本地判题代码，`data/` 保存题目元数据、测试用例和本地进度。
 
 ## 关于题目内容
 
