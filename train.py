@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "data"
-QUESTIONS_DIR = ROOT / "questions"
+QUESTIONS_DIR = ROOT / "hot_150"
 DB = DATA / "progress.sqlite3"
 
 
@@ -218,6 +218,7 @@ def run_acm_judge(slug, code, *, case=None, run_all=False):
                 "slug": slug,
                 "code": code,
                 "cases": specs[slug]["cases"],
+                "validator": specs[slug].get("validator"),
                 "case": case,
                 "run_all": run_all,
             },

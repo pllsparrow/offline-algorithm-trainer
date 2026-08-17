@@ -30,7 +30,7 @@ class AcmModeTests(unittest.TestCase):
             path = train.solution_path(slug)
             expected_name = f"q{problem['index']:03d}_{slug.replace('-', '_')}.py"
             self.assertEqual(expected_name, path.name, slug)
-            self.assertEqual("questions", path.parent.name, slug)
+            self.assertEqual("hot_150", path.parent.name, slug)
             self.assertTrue(path.is_file(), slug)
             self.assertEqual("", specs[slug]["starter"], slug)
 
@@ -89,6 +89,12 @@ if __name__ == "__main__":
 
         self.assertTrue(result["ok"], json.dumps(result, ensure_ascii=False))
         self.assertEqual(50, len(result["results"]))
+
+    def test_top_k_frequent_accepts_every_valid_boundary_tie(self) -> None:
+        for output in ("1 2 3", "1 3 4"):
+            code = f"print({output!r})"
+            result = train.run_acm_judge("top-k-frequent-elements", code, case=17)
+            self.assertTrue(result["ok"], json.dumps(result, ensure_ascii=False))
 
     def test_length_prefixed_strings_use_utf8_byte_lengths(self) -> None:
         code = """

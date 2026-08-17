@@ -7,6 +7,7 @@ whitespace into single spaces) so trailing newlines do not cause false
 failures, then compares the result text for exact equality.
 """
 import json
+from collections import Counter
 import subprocess
 import sys
 
@@ -16,10 +17,42 @@ def comparable_text(text: str) -> str:
     return " ".join(text.split())
 
 
+def valid_top_k_frequent(stdin: str, actual: str) -> bool:
+    """Accept every valid choice when frequencies tie at the k-th boundary."""
+    try:
+        tokens = list(map(int, stdin.split()))
+        count = tokens[0]
+        values = tokens[1 : count + 1]
+        k = tokens[count + 1]
+        answer = list(map(int, actual.split()))
+    except (IndexError, ValueError):
+        return False
+
+    frequencies = Counter(values)
+    if len(answer) != k or len(set(answer)) != k or answer != sorted(answer):
+        return False
+    if not 1 <= k <= len(frequencies):
+        return False
+
+    cutoff = sorted(frequencies.values(), reverse=True)[k - 1]
+    required = {value for value, frequency in frequencies.items() if frequency > cutoff}
+    allowed = {value for value, frequency in frequencies.items() if frequency >= cutoff}
+    selected = set(answer)
+    return required <= selected <= allowed
+
+
+def output_matches(validator: str | None, stdin: str, actual: str, expected: str) -> bool:
+    """Use semantic validation where multiple outputs are correct."""
+    if validator == "top_k_frequent":
+        return valid_top_k_frequent(stdin, actual)
+    return comparable_text(actual) == comparable_text(expected)
+
+
 def main() -> None:
     payload = json.load(sys.stdin)
     code = payload["code"]
     cases = payload["cases"]
+    validator = payload.get("validator")
     only_case = payload.get("case")
     run_all = payload.get("run_all", False)
     results = []
@@ -41,7 +74,7 @@ def main() -> None:
             if process.returncode != 0:
                 actual = f"[process exited {process.returncode}]\n{process.stderr}"
             else:
-                passed = comparable_text(actual) == comparable_text(expected)
+                passed = output_matches(validator, case["stdin"], actual, expected)
         except subprocess.TimeoutExpired:
             actual = "[time limit exceeded]"
         results.append(

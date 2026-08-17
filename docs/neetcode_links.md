@@ -1,7 +1,7 @@
 # NeetCode Problem Links
 
 Central index for the 150 ACM-style practice problems in this repository.
-Each file in `questions/` contains only the short stdin/stdout contract; use these links for the problem statement and explanations.
+Each file in `hot_150/` contains only the short stdin/stdout contract; use these links for the problem statement and explanations.
 
 | # | Problem | Chapter | Difficulty | NeetCode |
 |---:|---|---|---|---|

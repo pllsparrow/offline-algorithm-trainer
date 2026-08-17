@@ -18,7 +18,7 @@ the same problem in ACM mode. Do not abandon LeetCode: it is the shortest path
 to learning the pattern. ACM is the transfer step required by many online
 assessments.
 
-Each file in `questions/` starts with only short input/output comments. The learner
+Each file in `hot_150/` starts with only short input/output comments. The learner
 must write the imports, input parsing, algorithm, output, and program entry point.
 
 ## Beginner Session (90-120 Minutes)

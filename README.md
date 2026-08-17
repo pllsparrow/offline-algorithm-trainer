@@ -5,7 +5,7 @@
 I built this because I wanted a simple way to practise algorithms without
 keeping a browser, an editor, and an online judge open at the same time.
 
-The repository contains 150 interview problems in the `questions/` directory.
+The repository contains 150 interview problems in the `hot_150/` directory.
 Every question is an ACM-style program: its Python file reads from stdin, writes to
 stdout, and the judge compares the output exactly (whitespace-normalised). This
 mirrors a real online assessment environment, so the usual loop stays on your
@@ -110,11 +110,16 @@ python3 train.py check
 | `python3 train.py check` | Checks the repository data |
 | `python3 train.py scaffold --force` | Resets all question files to their I/O comments |
 
-PyCharm users can select the shared `Judge Current Solution` run configuration once. After that, open any file in `questions/` and use the green Run button to judge the current file.
+PyCharm users can select the shared `Judge Current Solution` run configuration once. After that, open any file in `hot_150/` and use the green Run button to judge the current file.
 
-All 150 Python files are stored directly under `questions/` and named like
+All 150 Python files are stored directly under `hot_150/` and named like
 `q001_contains_duplicate.py`. The judge is in `judge/`, while problem metadata,
 tests, and your local progress live under `data/`.
+
+Heap and bucket follow-up exercises live in
+[`muscle_memory/heapq&buckets/`](muscle_memory/heapq&buckets/README.md). This set
+contains fifteen interview-focused variants with 99 deterministic cases each and
+semantic validators for problems that allow tied answers.
 
 ## About the problem content
 

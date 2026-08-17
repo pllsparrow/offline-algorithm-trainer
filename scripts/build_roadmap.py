@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
-QUESTIONS = ROOT / "questions"
+QUESTIONS = ROOT / "hot_150"
 REFERENCE = Path("/tmp/leetcode-py/leetcode")
 ROADMAP_URL = "https://raw.githubusercontent.com/krmanik/Anki-NeetCode/main/neetcode-150-list.json"
 

@@ -78,6 +78,10 @@ FLAT_ORDERLESS = {
     "generate-parentheses",
 }
 
+SEMANTIC_VALIDATORS = {
+    "top-k-frequent-elements": "top_k_frequent",
+}
+
 # Operation-based design problems.
 OPS_SPEC = {
     "min-stack": {
@@ -730,12 +734,15 @@ def build_spec(problem: dict, test_spec: dict) -> dict:
     in_desc = "; ".join(f"{name}: {describe_input(schema)}" for name, schema in zip(names, schemas))
     out_desc = describe_output(slug, first_case["expected"])
     format_desc = f"Input: {in_desc}. Output: {out_desc}."
-    return {
+    spec = {
         "protocol": "text",
         "format": format_desc,
         "starter": "",
         "cases": cases,
     }
+    if slug in SEMANTIC_VALIDATORS:
+        spec["validator"] = SEMANTIC_VALIDATORS[slug]
+    return spec
 
 
 def build_specs(problems: list[dict], tests: dict) -> dict:

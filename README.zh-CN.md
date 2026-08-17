@@ -4,7 +4,7 @@
 
 我做这个项目，是因为平时刷算法题要在网页、编辑器和在线判题之间来回切换，写完以后还得复制代码提交，调试起来也不太顺手。
 
-所以我把 150 道常见面试题整理到了本地。所有题目 Python 文件都直接放在 `questions/` 中，每道题都是一个 ACM 模式的程序：从标准输入读数据、向标准输出写结果，判题器直接比对输出。这和真实笔试环境一致，平时的刷题过程就是：
+所以我把 150 道常见面试题整理到了本地。所有题目 Python 文件都直接放在 `hot_150/` 中，每道题都是一个 ACM 模式的程序：从标准输入读数据、向标准输出写结果，判题器直接比对输出。这和真实笔试环境一致，平时的刷题过程就是：
 
 ```text
 选一道题 -> 写对应的 Python 文件 -> 运行测试 -> 看失败用例 -> 修改
@@ -100,9 +100,13 @@ python3 train.py check
 | `python3 train.py check` | 检查题库数据是否完整 |
 | `python3 train.py scaffold --force` | 把全部题目文件重置为输入输出注释 |
 
-PyCharm 用户可以选择项目自带的 `Judge Current Solution` 运行配置。选择一次后，打开 `questions/` 中任意题目文件，点击绿色 Run 按钮即可判题。
+PyCharm 用户可以选择项目自带的 `Judge Current Solution` 运行配置。选择一次后，打开 `hot_150/` 中任意题目文件，点击绿色 Run 按钮即可判题。
 
-150 道题全部直接放在 `questions/` 目录，文件名类似 `q001_contains_duplicate.py`。`judge/` 是本地判题代码，`data/` 保存题目元数据、测试用例和本地进度。
+150 道题全部直接放在 `hot_150/` 目录，文件名类似 `q001_contains_duplicate.py`。`judge/` 是本地判题代码，`data/` 保存题目元数据、测试用例和本地进度。
+
+堆和桶的高频变体练习放在
+[`muscle_memory/heapq&buckets/`](muscle_memory/heapq&buckets/README.md)，共 15 道题，
+每题包含 99 个可复现用例；允许并列答案的题目使用语义校验器。
 
 ## 关于题目内容
 
