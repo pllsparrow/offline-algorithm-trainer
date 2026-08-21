@@ -39,6 +39,30 @@ python3 train.py run 003
 python3 train.py status
 ```
 
+## Browser training camp
+
+Install the web dependencies once, then start the local-only service:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-web.txt
+.venv/bin/python web_debug_server.py
+```
+
+Set `ALGORITHM_TRAINER_PYTHON` when the service should use a specific Python
+3.12 interpreter for submitted programs.
+
+The API uses FastAPI and exposes local documentation at `/api/docs`. The editor
+is a locally bundled CodeMirror 6 build with Python highlighting, four-space
+indentation, visible spaces, and breakpoint gutters. Run `npm install && npm run
+build:web` only when changing `web/editor.js`.
+
+Then open `http://127.0.0.1:8765`. The browser app provides problem navigation,
+SQLite drafts, curated examples, custom runs, full submissions, breakpoints,
+continue, step over, locals, and a compact call stack. A submission runs the
+problem's complete fixed case set and writes the source back to `hot_150/` after
+the run finishes.
+
 Open the `qNNN_problem_name.py` path printed by `show`. The file contains only
 short `Input` and `Output` comments, so write the input parsing, algorithm,
 output, and program entry point yourself. Then run the same problem again. A
@@ -120,6 +144,11 @@ Heap and bucket follow-up exercises live in
 [`muscle_memory/heapq&buckets/`](muscle_memory/heapq&buckets/README.md). This set
 contains fifteen interview-focused variants with 99 deterministic cases each and
 semantic validators for problems that allow tied answers.
+
+Recursion drills live in
+[`muscle_memory/recursion/`](muscle_memory/recursion/README.md). The twenty
+exercises cover recursion fundamentals, search, divide and conquer, and tree
+recursion. Ten are tree-focused, with 49 deterministic cases per exercise.
 
 ## About the problem content
 

@@ -207,7 +207,7 @@ def list_problems(args):
         print(f"{marker}  {problem['slug']:<48} {problem['difficulty']:<6} {attempts:>2}  {problem['category']}")
 
 
-def run_acm_judge(slug, code, *, case=None, run_all=False):
+def run_acm_judge(slug, code, *, case=None, run_all=False, debug=False):
     specs = specs_by_slug()
     if slug not in specs:
         return {"ok": False, "error": "No ACM test spec for this problem yet."}
@@ -221,6 +221,7 @@ def run_acm_judge(slug, code, *, case=None, run_all=False):
                 "validator": specs[slug].get("validator"),
                 "case": case,
                 "run_all": run_all,
+                "debug": debug,
             },
             ensure_ascii=False,
         ),
@@ -255,6 +256,41 @@ def print_case_detail(item):
             print(f"    {line}")
 
 
+def diagnostic_hint(item):
+    """Print a short learning-oriented hint for common Python failures."""
+    actual = item.get("actual", "")
+    if "not enough values to unpack" in actual:
+        print(
+            "  hint: A value was unpacked into too many variables. "
+            "Check whether split() is returning one token or a full row."
+        )
+    elif "too many values to unpack" in actual:
+        print(
+            "  hint: More values were returned than the variables can hold. "
+            "Inspect the input line after split()."
+        )
+    elif "IndexError: list index out of range" in actual:
+        print(
+            "  hint: A list index does not exist. Print the list and check "
+            "its length before accessing parts[i]."
+        )
+    elif "NameError:" in actual:
+        print(
+            "  hint: Python cannot find this variable or function. "
+            "Check spelling and whether it was defined before use."
+        )
+    elif "TypeError:" in actual and "missing" in actual:
+        print(
+            "  hint: A function was called with the wrong number of arguments. "
+            "Compare the call with the function definition."
+        )
+    elif "[time limit exceeded]" in actual:
+        print(
+            "  hint: The program did not finish in time. Check loop conditions "
+            "and whether the state changes on every iteration."
+        )
+
+
 def print_result(result, *, show_passed=False, show_all_failures=False):
     if result.get("ok"):
         total = result.get("total_cases", len(result.get("results", [])))
@@ -285,6 +321,11 @@ def print_result(result, *, show_passed=False, show_all_failures=False):
                 print(f"Case {item['case']}: pass")
             continue
         print_case_detail(item)
+        diagnostic_hint(item)
+        if item.get("stderr"):
+            print("  debug stderr:")
+            for line in item["stderr"].rstrip().splitlines():
+                print(f"    {line}")
         if result.get("selected_case") is None:
             print()
             print(
@@ -319,6 +360,7 @@ def run_problem(args):
         path.read_text(encoding="utf-8"),
         case=args.case,
         run_all=args.all,
+        debug=args.debug,
     )
     update_progress(slug, path.read_text(encoding="utf-8"), result)
     print_result(result, show_passed=args.all, show_all_failures=args.all)
@@ -380,6 +422,11 @@ def main():
     p.add_argument("--file", help="Use a custom solution file")
     p.add_argument("--case", type=int, help="Run only one 1-based test case")
     p.add_argument("--all", action="store_true", help="Keep running after failures")
+    p.add_argument(
+        "--debug",
+        action="store_true",
+        help="Show the selected case's stderr and traceback details",
+    )
     p.set_defaults(func=run_problem)
 
     p = sub.add_parser("show", help="Show a problem summary and ACM format")

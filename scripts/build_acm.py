@@ -67,7 +67,6 @@ NESTED_ORDERLESS = {
     "combination-sum",
     "combination-sum-ii",
     "palindrome-partitioning",
-    "k-closest-points-to-origin",
     "pacific-atlantic-water-flow",
 }
 FLAT_ORDERLESS = {
@@ -79,6 +78,7 @@ FLAT_ORDERLESS = {
 }
 
 SEMANTIC_VALIDATORS = {
+    "k-closest-points-to-origin": "k_closest",
     "top-k-frequent-elements": "top_k_frequent",
 }
 
@@ -300,6 +300,9 @@ def ser_output(slug: str, value) -> str:
     if isinstance(value, list):
         if not value:
             return ""
+        if slug == "k-closest-points-to-origin":
+            groups = sorted(value)
+            return "\n".join(" ".join(map(str, group)) for group in groups) + "\n"
         if slug in NESTED_ORDERLESS:
             groups = sorted([sorted(g) for g in value])
             return "\n".join(" ".join(map(str, g)) for g in groups) + "\n"
@@ -420,6 +423,8 @@ def describe_output(slug: str, expected) -> str:
     if isinstance(expected, list):
         if any(x is None for x in expected):
             return "level-order values space-separated (null for missing)"
+        if slug == "k-closest-points-to-origin":
+            return "k points, one x y pair per line (any order)"
         if slug in NESTED_ORDERLESS:
             return "each group on its own line (sorted; each group sorted)"
         if slug in FLAT_ORDERLESS:

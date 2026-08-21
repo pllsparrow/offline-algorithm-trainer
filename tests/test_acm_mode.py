@@ -96,6 +96,30 @@ if __name__ == "__main__":
             result = train.run_acm_judge("top-k-frequent-elements", code, case=17)
             self.assertTrue(result["ok"], json.dumps(result, ensure_ascii=False))
 
+    def test_k_closest_preserves_coordinates_and_accepts_any_output_order(self) -> None:
+        code = "print('1 0\\n0 1')"
+        result = train.run_acm_judge("k-closest-points-to-origin", code, case=3)
+
+        self.assertTrue(result["ok"], json.dumps(result, ensure_ascii=False))
+
+    def test_k_closest_rejects_sorted_coordinates_as_duplicate_points(self) -> None:
+        code = "print('0 1\\n0 1')"
+        result = train.run_acm_judge("k-closest-points-to-origin", code, case=3)
+
+        self.assertFalse(result["ok"], json.dumps(result, ensure_ascii=False))
+
+    def test_k_closest_accepts_any_valid_choice_at_distance_ties(self) -> None:
+        code = "print('1 -1\\n-1 -1\\n1 1')"
+        result = train.run_acm_judge("k-closest-points-to-origin", code, case=11)
+
+        self.assertTrue(result["ok"], json.dumps(result, ensure_ascii=False))
+
+    def test_k_closest_rejects_a_farther_point(self) -> None:
+        code = "print('2 0\\n3 0')"
+        result = train.run_acm_judge("k-closest-points-to-origin", code, case=6)
+
+        self.assertFalse(result["ok"], json.dumps(result, ensure_ascii=False))
+
     def test_length_prefixed_strings_use_utf8_byte_lengths(self) -> None:
         code = """
 import sys

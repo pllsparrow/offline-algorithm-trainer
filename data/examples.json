@@ -1,0 +1,3002 @@
+{
+  "contains-duplicate": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 2 3 1\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Contains Duplicate."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n1 2 3 4\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "10\n1 1 1 3 3 4 3 2 4 2\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "valid-anagram": [
+    {
+      "name": "Typical case",
+      "stdin": "anagram\nnagaram\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Valid Anagram."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "rat\ncar\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "listen\nsilent\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "two-sum": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n2 7 11 15\n9\n",
+      "stdout": "0 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Two Sum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n3 2 4\n6\n",
+      "stdout": "1 2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n3 3\n6\n",
+      "stdout": "0 1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "group-anagrams": [
+    {
+      "name": "Typical case",
+      "stdin": "6\neat\ntea\ntan\nate\nnat\nbat\n",
+      "stdout": "ate eat tea\nbat\nnat tan\n",
+      "reason": "Shows the standard input shape and a typical execution path for Group Anagrams."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n\n",
+      "stdout": "\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\na\n",
+      "stdout": "a\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "top-k-frequent-elements": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n1 1 1 2 2 3\n2\n",
+      "stdout": "1 2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Top K Frequent Elements."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "10\n1 2 1 2 1 2 3 1 3 2\n2\n",
+      "stdout": "1 2\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "encode-and-decode-strings": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n5\nHello\n5\nWorld\n",
+      "stdout": "2\n5\nHello\n5\nWorld\n",
+      "reason": "Shows the standard input shape and a typical execution path for Encode and Decode Strings."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n3\nabc\n3\ndef\n",
+      "stdout": "2\n3\nabc\n3\ndef\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n\n",
+      "stdout": "1\n0\n\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "product-of-array-except-self": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 2 3 4\n",
+      "stdout": "24 12 8 6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Product of Array Except Self."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n-1 1 0 -3 3\n",
+      "stdout": "0 0 9 0 0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "4\n2 3 4 5\n",
+      "stdout": "60 40 30 24\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "valid-sudoku": [
+    {
+      "name": "Typical case",
+      "stdin": "9 9\n5 3 . . 7 . . . .\n6 . . 1 9 5 . . .\n. 9 8 . . . . 6 .\n8 . . . 6 . . . 3\n4 . . 8 . 3 . . 1\n7 . . . 2 . . . 6\n. 6 . . . . 2 8 .\n. . . 4 1 9 . . 5\n. . . . 8 . . 7 9\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Valid Sudoku."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "9 9\n8 3 . . 7 . . . .\n6 . . 1 9 5 . . .\n. 9 8 . . . . 6 .\n8 . . . 6 . . . 3\n4 . . 8 . 3 . . 1\n7 . . . 2 . . . 6\n. 6 . . . . 2 8 .\n. . . 4 1 9 . . 5\n. . . . 8 . . 7 9\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "9 9\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n. . . . . . . . .\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "longest-consecutive-sequence": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n100 4 200 1 3 2\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Consecutive Sequence."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "10\n0 3 7 2 5 8 4 6 0 1\n",
+      "stdout": "9\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "4\n1 0 1 2\n",
+      "stdout": "3\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "valid-palindrome": [
+    {
+      "name": "Typical case",
+      "stdin": "A man, a plan, a canal: Panama\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Valid Palindrome."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "race a car\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": " \n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "two-sum-ii-input-array-is-sorted": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n2 7 11 15\n9\n",
+      "stdout": "1 2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Two Sum II Input Array Is Sorted."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n2 3 4\n6\n",
+      "stdout": "1 3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "2\n-1 0\n-1\n",
+      "stdout": "1 2\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "3sum": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n-1 0 1 2 -1 -4\n",
+      "stdout": "-1 -1 2\n-1 0 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for 3Sum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n0 1 1\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n0 0 0\n",
+      "stdout": "0 0 0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "container-with-most-water": [
+    {
+      "name": "Typical case",
+      "stdin": "9\n1 8 6 2 5 4 8 3 7\n",
+      "stdout": "49\n",
+      "reason": "Shows the standard input shape and a typical execution path for Container With Most Water."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n1 2 1\n",
+      "stdout": "2\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "trapping-rain-water": [
+    {
+      "name": "Typical case",
+      "stdin": "12\n0 1 0 2 1 0 1 3 2 1 2 1\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Trapping Rain Water."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "6\n4 2 0 3 2 5\n",
+      "stdout": "9\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\n3 0 2 0 4\n",
+      "stdout": "7\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "best-time-to-buy-and-sell-stock": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n7 1 5 3 6 4\n",
+      "stdout": "5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Best Time to Buy And Sell Stock."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n7 6 4 3 1\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\n1 2 3 4 5\n",
+      "stdout": "4\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "longest-substring-without-repeating-characters": [
+    {
+      "name": "Typical case",
+      "stdin": "abcabcbb\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Substring Without Repeating Characters."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "bbbbb\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "pwwkew\n",
+      "stdout": "3\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "longest-repeating-character-replacement": [
+    {
+      "name": "Typical case",
+      "stdin": "ABAB\n2\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Repeating Character Replacement."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "AABABBA\n1\n",
+      "stdout": "4\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "AAAA\n0\n",
+      "stdout": "4\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "permutation-in-string": [
+    {
+      "name": "Typical case",
+      "stdin": "ab\neidbaooo\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Permutation In String."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "ab\neidboaoo\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "a\na\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "minimum-window-substring": [
+    {
+      "name": "Typical case",
+      "stdin": "ADOBECODEBANC\nABC\n",
+      "stdout": "BANC\n",
+      "reason": "Shows the standard input shape and a typical execution path for Minimum Window Substring."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "a\na\n",
+      "stdout": "a\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "a\naa\n",
+      "stdout": "\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "sliding-window-maximum": [
+    {
+      "name": "Typical case",
+      "stdin": "8\n1 3 -1 -3 5 3 6 7\n3\n",
+      "stdout": "3 3 5 5 6 7\n",
+      "reason": "Shows the standard input shape and a typical execution path for Sliding Window Maximum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "2\n1 -1\n1\n",
+      "stdout": "1 -1\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "valid-parentheses": [
+    {
+      "name": "Typical case",
+      "stdin": "()\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Valid Parentheses."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "()[]{}\n",
+      "stdout": "1\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "(]\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "min-stack": [
+    {
+      "name": "Typical case",
+      "stdin": "8\nMinStack\npush -2\npush 0\npush -3\ngetMin\npop\ntop\ngetMin\n",
+      "stdout": "null\nnull\nnull\nnull\n-3\nnull\n0\n-2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Min Stack."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\nMinStack\npush 5\ntop\ngetMin\npop\n",
+      "stdout": "null\nnull\n5\n5\nnull\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "9\nMinStack\npush 1\npush 1\npush 2\ngetMin\npop\ngetMin\npop\ngetMin\n",
+      "stdout": "null\nnull\nnull\nnull\n1\nnull\n1\nnull\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "evaluate-reverse-polish-notation": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n2\n1\n+\n3\n*\n",
+      "stdout": "9\n",
+      "reason": "Shows the standard input shape and a typical execution path for Evaluate Reverse Polish Notation."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n4\n13\n5\n/\n+\n",
+      "stdout": "6\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "13\n10\n6\n9\n3\n+\n-11\n*\n/\n*\n17\n+\n5\n+\n",
+      "stdout": "22\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "daily-temperatures": [
+    {
+      "name": "Typical case",
+      "stdin": "8\n73 74 75 71 69 72 76 73\n",
+      "stdout": "1 1 4 2 1 1 0 0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Daily Temperatures."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n30 40 50 60\n",
+      "stdout": "1 1 1 0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "3\n30 60 90\n",
+      "stdout": "1 1 0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "car-fleet": [
+    {
+      "name": "Typical case",
+      "stdin": "12\n5\n10 8 0 5 3\n5\n2 4 1 1 3\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Car Fleet."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "10\n1\n3\n1\n3\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "100\n3\n0 2 4\n3\n4 2 1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "largest-rectangle-in-histogram": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n2 1 5 6 2 3\n",
+      "stdout": "10\n",
+      "reason": "Shows the standard input shape and a typical execution path for Largest Rectangle In Histogram."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n2 4\n",
+      "stdout": "4\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "binary-search": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n-1 0 3 5 9 12\n9\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Binary Search."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "6\n-1 0 3 5 9 12\n2\n",
+      "stdout": "-1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n5\n5\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "search-a-2d-matrix": [
+    {
+      "name": "Typical case",
+      "stdin": "3 4\n1 3 5 7\n10 11 16 20\n23 30 34 60\n3\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Search a 2D Matrix."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3 4\n1 3 5 7\n10 11 16 20\n23 30 34 60\n13\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3 4\n1 3 5 7\n10 11 16 20\n23 30 34 60\n60\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "koko-eating-bananas": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n3 6 7 11\n8\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Koko Eating Bananas."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n30 11 23 4 20\n5\n",
+      "stdout": "30\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Additional coverage",
+      "stdin": "5\n30 11 23 4 20\n6\n",
+      "stdout": "23\n",
+      "reason": "Uses a different data distribution for extra coverage after the typical case passes."
+    }
+  ],
+  "find-minimum-in-rotated-sorted-array": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n3 4 5 1 2\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Find Minimum In Rotated Sorted Array."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "7\n4 5 6 7 0 1 2\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Additional coverage",
+      "stdin": "4\n11 13 15 17\n",
+      "stdout": "11\n",
+      "reason": "Uses a different data distribution for extra coverage after the typical case passes."
+    }
+  ],
+  "search-in-rotated-sorted-array": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n4 5 6 7 0 1 2\n0\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Search In Rotated Sorted Array."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "7\n4 5 6 7 0 1 2\n3\n",
+      "stdout": "-1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n0\n",
+      "stdout": "-1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "time-based-key-value-store": [
+    {
+      "name": "Typical case",
+      "stdin": "7\nTimeMap\nset foo bar 1\nget foo 1\nget foo 3\nset foo bar2 4\nget foo 4\nget foo 5\n",
+      "stdout": "null\nnull\nbar\nbar\nnull\nbar2\nbar2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Time Based Key Value Store."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\nTimeMap\nget key 1\n",
+      "stdout": "null\n\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\nTimeMap\nset a val 1\nget a 1\n",
+      "stdout": "null\nnull\nval\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "median-of-two-sorted-arrays": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n1 3\n1\n2\n",
+      "stdout": "2.0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Median of Two Sorted Arrays."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 2\n2\n3 4\n",
+      "stdout": "2.5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n0\n\n",
+      "stdout": "1.0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "reverse-linked-list": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 2 3 4 5\n",
+      "stdout": "5 4 3 2 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Reverse Linked List."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 2\n",
+      "stdout": "2 1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "merge-two-sorted-lists": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 4\n3\n1 3 4\n",
+      "stdout": "1 1 2 3 4 4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Merge Two Sorted Lists."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "0\n\n0\n\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "0\n\n1\n0\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "linked-list-cycle": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n3 2 0 -4\n1\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Linked List Cycle."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "2\n1 2\n0\n",
+      "stdout": "1\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "1\n1\n-1\n",
+      "stdout": "0\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "reorder-list": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 2 3 4\n",
+      "stdout": "1 4 2 3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Reorder List."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n1 2 3 4 5\n",
+      "stdout": "1 5 2 4 3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "remove-nth-node-from-end-of-list": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 2 3 4 5\n2\n",
+      "stdout": "1 2 3 5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Remove Nth Node From End of List."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n1\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 2\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "copy-list-with-random-pointer": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n7 -1\n13 0\n11 4\n10 2\n1 0\n",
+      "stdout": "5\n7 -1\n13 0\n11 4\n10 2\n1 0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Copy List With Random Pointer."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 1\n2 1\n",
+      "stdout": "2\n1 1\n2 1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "3\n3 -1\n3 0\n3 -1\n",
+      "stdout": "3\n3 -1\n3 0\n3 -1\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "add-two-numbers": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n2 4 3\n3\n5 6 4\n",
+      "stdout": "7 0 8\n",
+      "reason": "Shows the standard input shape and a typical execution path for Add Two Numbers."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n0\n1\n0\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "7\n9 9 9 9 9 9 9\n4\n9 9 9 9\n",
+      "stdout": "8 9 9 9 0 0 0 1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "find-the-duplicate-number": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 3 4 2 2\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Find The Duplicate Number."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n3 1 3 4 2\n",
+      "stdout": "3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\n3 3 3 3 3\n",
+      "stdout": "3\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "lru-cache": [
+    {
+      "name": "Typical case",
+      "stdin": "10\nLRUCache 2\nput 1 1\nput 2 2\nget 1\nput 3 3\nget 2\nput 4 4\nget 1\nget 3\nget 4\n",
+      "stdout": "null\nnull\nnull\n1\nnull\n-1\nnull\n-1\n3\n4\n",
+      "reason": "Shows the standard input shape and a typical execution path for LRU Cache."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "8\nLRUCache 2\nget 2\nput 2 6\nget 1\nput 1 5\nput 1 2\nget 1\nget 2\n",
+      "stdout": "null\n-1\nnull\n-1\nnull\nnull\n2\n6\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "6\nLRUCache 1\nput 2 1\nget 2\nput 3 2\nget 2\nget 3\n",
+      "stdout": "null\nnull\n1\nnull\n-1\n2\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "merge-k-sorted-lists": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n3\n1 4 5\n3\n1 3 4\n2\n2 6\n",
+      "stdout": "1 1 2 3 4 4 5 6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Merge K Sorted Lists."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "0\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n\n",
+      "stdout": "",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "reverse-nodes-in-k-group": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 2 3 4 5\n2\n",
+      "stdout": "2 1 4 3 5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Reverse Nodes In K Group."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n1 2 3 4 5\n3\n",
+      "stdout": "3 2 1 4 5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\n1 2 3 4 5\n1\n",
+      "stdout": "1 2 3 4 5\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "invert-binary-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n4 2 7 1 3 6 9\n",
+      "stdout": "4 7 2 9 6 3 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Invert Binary Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n2 1 3\n",
+      "stdout": "2 3 1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n\n",
+      "stdout": "",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "maximum-depth-of-binary-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n3 9 20 null null 15 7\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Maximum Depth of Binary Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n1 null 2\n",
+      "stdout": "2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "diameter-of-binary-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 2 3 4 5\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Diameter of Binary Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 2\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "balanced-binary-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n3 9 20 null null 15 7\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Balanced Binary Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "9\n1 2 2 3 3 null null 4 4\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "same-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 3\n3\n1 2 3\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Same Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 2\n3\n1 null 2\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n1 2 1\n3\n1 1 2\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "subtree-of-another-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n3 4 5 1 2\n3\n4 1 2\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Subtree of Another Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "10\n3 4 5 1 2 null null null null 0\n3\n4 1 2\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "lowest-common-ancestor-of-a-binary-search-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "11\n6 2 8 0 4 7 9 null null 3 5\n2\n8\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Lowest Common Ancestor of a Binary Search Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "11\n6 2 8 0 4 7 9 null null 3 5\n2\n4\n",
+      "stdout": "2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n2 1\n2\n1\n",
+      "stdout": "2\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "binary-tree-level-order-traversal": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n3 9 20 null null 15 7\n",
+      "stdout": "3\n3\n9 20\n15 7\n",
+      "reason": "Shows the standard input shape and a typical execution path for Binary Tree Level Order Traversal."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n",
+      "stdout": "1\n1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n\n",
+      "stdout": "",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "binary-tree-right-side-view": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n1 2 3 null 5 null 4\n",
+      "stdout": "1 3 4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Binary Tree Right Side View."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "8\n1 2 3 4 null null null 5\n",
+      "stdout": "1 3 4 5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n1 null 3\n",
+      "stdout": "1 3\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "count-good-nodes-in-binary-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n3 1 4 3 null 1 5\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Count Good Nodes In Binary Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n3 3 null 4 2\n",
+      "stdout": "3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "validate-binary-search-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n2 1 3\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Validate Binary Search Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "7\n5 1 4 null null 3 6\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "kth-smallest-element-in-a-bst": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n3 1 4 null 2\n1\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Kth Smallest Element In a Bst."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "8\n5 3 6 2 4 null null 1\n3\n",
+      "stdout": "3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "construct-binary-tree-from-preorder-and-inorder-traversal": [
+    {
+      "name": "Typical case",
+      "stdin": "0\n\n0\n\n",
+      "stdout": "",
+      "reason": "Shows the standard input shape and a typical execution path for Construct Binary Tree From Preorder And Inorder Traversal."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\n3 9 20 15 7\n5\n9 3 15 20 7\n",
+      "stdout": "3 9 20 null null 15 7\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "binary-tree-maximum-path-sum": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 3\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Binary Tree Maximum Path Sum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "7\n-10 9 20 null null 15 7\n",
+      "stdout": "42\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "serialize-and-deserialize-binary-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n1 2 3 null null 4 5\n",
+      "stdout": "1 2 3 null null 4 5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Serialize And Deserialize Binary Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "0\n\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "kth-largest-element-in-a-stream": [
+    {
+      "name": "Typical case",
+      "stdin": "6\nKthLargest 3 4 4 5 8 2\nadd 3\nadd 5\nadd 10\nadd 9\nadd 4\n",
+      "stdout": "null\n4\n5\n5\n8\n8\n",
+      "reason": "Shows the standard input shape and a typical execution path for Kth Largest Element In a Stream."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\nKthLargest 4 6 7 7 7 7 8 3\nadd 2\nadd 10\nadd 9\nadd 9\n",
+      "stdout": "null\n7\n7\n7\n8\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "4\nKthLargest 1 1 5\nadd 2\nadd 3\nadd 1\n",
+      "stdout": "null\n5\n5\n5\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "last-stone-weight": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n2 7 4 1 8 1\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Last Stone Weight."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n2 2\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "k-closest-points-to-origin": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n1 3\n-2 2\n1\n",
+      "stdout": "-2 2\n",
+      "reason": "Shows the standard input shape and a typical execution path for K Closest Points to Origin."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n3 3\n5 -1\n-2 4\n2\n",
+      "stdout": "-2 4\n3 3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n0 1\n1 0\n2\n",
+      "stdout": "0 1\n1 0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "kth-largest-element-in-an-array": [
+    {
+      "name": "Typical case",
+      "stdin": "6\n3 2 1 5 6 4\n2\n",
+      "stdout": "5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Kth Largest Element In An Array."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "9\n3 2 3 1 2 4 5 5 6\n4\n",
+      "stdout": "4\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "task-scheduler": [
+    {
+      "name": "Typical case",
+      "stdin": "6\nA\nA\nA\nB\nB\nB\n2\n",
+      "stdout": "8\n",
+      "reason": "Shows the standard input shape and a typical execution path for Task Scheduler."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "6\nA\nC\nA\nB\nD\nB\n1\n",
+      "stdout": "6\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "6\nA\nA\nA\nB\nB\nB\n3\n",
+      "stdout": "10\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "design-twitter": [
+    {
+      "name": "Typical case",
+      "stdin": "8\nTwitter\npostTweet 1 5\ngetNewsFeed 1\nfollow 1 2\npostTweet 2 6\ngetNewsFeed 1\nunfollow 1 2\ngetNewsFeed 1\n",
+      "stdout": "null\nnull\n5\nnull\nnull\n6 5\nnull\n5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Design Twitter."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\nTwitter\npostTweet 1 1\npostTweet 1 2\npostTweet 1 3\ngetNewsFeed 1\n",
+      "stdout": "null\nnull\nnull\nnull\n3 2 1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\nTwitter\npostTweet 1 10\npostTweet 2 20\nfollow 1 2\ngetNewsFeed 1\n",
+      "stdout": "null\nnull\nnull\nnull\n20 10\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "find-median-from-data-stream": [
+    {
+      "name": "Typical case",
+      "stdin": "6\nMedianFinder\naddNum 1\naddNum 2\nfindMedian\naddNum 3\nfindMedian\n",
+      "stdout": "null\nnull\nnull\n1.5\nnull\n2.0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Find Median From Data Stream."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\nMedianFinder\naddNum 1\nfindMedian\n",
+      "stdout": "null\nnull\n1.0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\nMedianFinder\naddNum 1\naddNum 1\naddNum 1\nfindMedian\n",
+      "stdout": "null\nnull\nnull\nnull\n1.0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "subsets": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 3\n",
+      "stdout": "\n1\n1 2\n1 2 3\n1 3\n2\n2 3\n3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Subsets."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n0\n",
+      "stdout": "\n0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "combination-sum": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n2 3 6 7\n7\n",
+      "stdout": "2 2 3\n7\n",
+      "reason": "Shows the standard input shape and a typical execution path for Combination Sum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n2 3 5\n8\n",
+      "stdout": "2 2 2 2\n2 3 3\n3 5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n2\n1\n",
+      "stdout": "",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "combination-sum-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "7\n10 1 2 7 6 1 5\n8\n",
+      "stdout": "1 1 6\n1 2 5\n1 7\n2 6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Combination Sum II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n2 5 2 1 2\n5\n",
+      "stdout": "1 2 2\n5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "permutations": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 3\n",
+      "stdout": "1 2 3\n1 2 3\n1 2 3\n1 2 3\n1 2 3\n1 2 3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Permutations."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n0 1\n",
+      "stdout": "0 1\n0 1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "subsets-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 2\n",
+      "stdout": "\n1\n1 2\n1 2 2\n2\n2 2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Subsets II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n0\n",
+      "stdout": "\n0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "generate-parentheses": [
+    {
+      "name": "Typical case",
+      "stdin": "1\n",
+      "stdout": "()\n",
+      "reason": "Shows the standard input shape and a typical execution path for Generate Parentheses."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n",
+      "stdout": "(()) ()()\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "3\n",
+      "stdout": "((())) (()()) (())() ()(()) ()()()\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "word-search": [
+    {
+      "name": "Typical case",
+      "stdin": "3 4\nA B C E\nS F C S\nA D E E\nABCCED\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Word Search."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "3 4\nA B C E\nS F C S\nA D E E\nSEE\n",
+      "stdout": "1\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3 4\nA B C E\nS F C S\nA D E E\nABCB\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "palindrome-partitioning": [
+    {
+      "name": "Typical case",
+      "stdin": "aab\n",
+      "stdout": "a a b\naa b\n",
+      "reason": "Shows the standard input shape and a typical execution path for Palindrome Partitioning."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "a\n",
+      "stdout": "a\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "ab\n",
+      "stdout": "a b\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "letter-combinations-of-a-phone-number": [
+    {
+      "name": "Typical case",
+      "stdin": "23\n",
+      "stdout": "ad ae af bd be bf cd ce cf\n",
+      "reason": "Shows the standard input shape and a typical execution path for Letter Combinations of a Phone Number."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "2\n",
+      "stdout": "a b c\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "n-queens": [
+    {
+      "name": "Typical case",
+      "stdin": "1\n",
+      "stdout": "1\nQ\n",
+      "reason": "Shows the standard input shape and a typical execution path for N Queens."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "3\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "implement-trie-prefix-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "6\nTrie\ninsert app\ninsert apple\nsearch app\nsearch apple\nsearch appl\n",
+      "stdout": "null\nnull\nnull\n1\n1\n0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Implement Trie Prefix Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "7\nTrie\ninsert cat\ninsert car\ninsert card\nsearch cat\nsearch car\nsearch care\n",
+      "stdout": "null\nnull\nnull\nnull\n1\n1\n0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "6\nTrie\ninsert test\ninsert testing\nstarts_with test\nstarts_with testing\nstarts_with te\n",
+      "stdout": "null\nnull\nnull\n1\n1\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "design-add-and-search-words-data-structure": [
+    {
+      "name": "Typical case",
+      "stdin": "8\nWordDictionary\naddWord bad\naddWord dad\naddWord mad\nsearch pad\nsearch bad\nsearch .ad\nsearch b..\n",
+      "stdout": "null\nnull\nnull\nnull\n0\n1\n1\n1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Design Add And Search Words Data Structure."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\nWordDictionary\naddWord a\nsearch a\nsearch .\nsearch aa\n",
+      "stdout": "null\nnull\n1\n1\n0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "6\nWordDictionary\naddWord at\naddWord and\nsearch an\nsearch .at\nsearch an.\n",
+      "stdout": "null\nnull\nnull\n0\n0\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "word-search-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "4 4\no a a n\ne t a e\ni h k r\ni f l v\n4\noath\npea\neat\nrain\n",
+      "stdout": "eat oath\n",
+      "reason": "Shows the standard input shape and a typical execution path for Word Search II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2 2\na b\nc d\n1\nabcb\n",
+      "stdout": "",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\na\n1\na\n",
+      "stdout": "a\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "number-of-islands": [
+    {
+      "name": "Typical case",
+      "stdin": "4 5\n1 1 1 1 0\n1 1 0 1 0\n1 1 0 0 0\n0 0 0 0 0\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Number of Islands."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4 5\n1 1 0 0 0\n1 1 0 0 0\n0 0 1 0 0\n0 0 0 1 1\n",
+      "stdout": "3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3 5\n1 0 1 1 1\n1 0 1 0 1\n1 1 1 0 1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "max-area-of-island": [
+    {
+      "name": "Typical case",
+      "stdin": "8 13\n0 0 1 0 0 0 0 1 0 0 0 0 0\n0 0 0 0 0 0 0 1 1 1 0 0 0\n0 1 1 0 1 0 0 0 0 0 0 0 0\n0 1 0 0 1 1 0 0 1 0 1 0 0\n0 1 0 0 1 1 0 0 1 1 1 0 0\n0 0 0 0 0 0 0 0 0 0 1 0 0\n0 0 0 0 0 0 0 1 1 1 0 0 0\n0 0 0 0 0 0 0 1 1 0 0 0 0\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Max Area of Island."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1 8\n0 0 0 0 0 0 0 0\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "clone-graph": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n2 2 4\n2 1 3\n2 2 4\n2 1 3\n",
+      "stdout": "4\n2 2 4\n2 1 3\n2 2 4\n2 1 3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Clone Graph."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n0\n",
+      "stdout": "1\n0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n",
+      "stdout": "",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "walls-and-gates": [
+    {
+      "name": "Typical case",
+      "stdin": "4 4\n2147483647 -1 0 2147483647\n2147483647 2147483647 2147483647 -1\n2147483647 -1 2147483647 -1\n0 -1 2147483647 2147483647\n",
+      "stdout": "4 4\n3 -1 0 1\n2 2 1 -1\n1 -1 2 -1\n0 -1 3 4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Walls And Gates."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2 2\n0 -1\n2147483647 2147483647\n",
+      "stdout": "2 2\n0 -1\n1 2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n0\n",
+      "stdout": "1 1\n0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "rotting-oranges": [
+    {
+      "name": "Typical case",
+      "stdin": "3 3\n2 1 1\n1 1 0\n0 1 1\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Rotting Oranges."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3 3\n2 1 1\n0 1 1\n1 0 1\n",
+      "stdout": "-1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 2\n0 2\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "pacific-atlantic-water-flow": [
+    {
+      "name": "Typical case",
+      "stdin": "5 5\n1 2 2 3 5\n3 2 3 4 4\n2 4 5 3 1\n6 7 1 4 5\n5 1 1 2 4\n",
+      "stdout": "0 3\n0 4\n0 4\n1 3\n1 3\n1 4\n2 2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Pacific Atlantic Water Flow."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1 1\n1\n",
+      "stdout": "0 0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2 2\n2 1\n1 2\n",
+      "stdout": "0 0\n0 1\n0 1\n1 1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "surrounded-regions": [
+    {
+      "name": "Typical case",
+      "stdin": "4 4\nX X X X\nX O O X\nX X O X\nX O X X\n",
+      "stdout": "4 4\nX X X X\nX X X X\nX X X X\nX O X X\n",
+      "reason": "Shows the standard input shape and a typical execution path for Surrounded Regions."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1 1\nX\n",
+      "stdout": "1 1\nX\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\nO\n",
+      "stdout": "1 1\nO\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "course-schedule": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n1\n1 0\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Course Schedule."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n2\n1 0\n0 1\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "course-schedule-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n1\n1 0\n",
+      "stdout": "0 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Course Schedule II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n4\n1 0\n2 0\n3 1\n3 2\n",
+      "stdout": "0 2 1 3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "graph-valid-tree": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n4\n0 1\n0 2\n0 3\n1 4\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Graph Valid Tree."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n5\n0 1\n1 2\n2 3\n1 3\n1 4\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "number-of-connected-components-in-an-undirected-graph": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n3\n0 1\n1 2\n3 4\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Number of Connected Components In An Undirected Graph."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n4\n0 1\n1 2\n2 3\n3 4\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "redundant-connection": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2\n1 3\n2 3\n",
+      "stdout": "2 3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Redundant Connection."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n1 2\n2 3\n3 4\n1 4\n1 5\n",
+      "stdout": "1 4\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n1 2\n2 3\n1 3\n",
+      "stdout": "1 3\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "word-ladder": [
+    {
+      "name": "Typical case",
+      "stdin": "hit\ncog\n6\nhot\ndot\ndog\nlot\nlog\ncog\n",
+      "stdout": "5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Word Ladder."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "hit\ncog\n5\nhot\ndot\ndog\nlot\nlog\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "a\nc\n3\na\nb\nc\n",
+      "stdout": "2\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "network-delay-time": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n2 1 1\n2 3 1\n3 4 1\n4\n2\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Network Delay Time."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1 2 1\n2\n1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1 2 1\n2\n2\n",
+      "stdout": "-1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "reconstruct-itinerary": [
+    {
+      "name": "Typical case",
+      "stdin": "4\nMUC LHR\nJFK MUC\nSFO SJC\nLHR SFO\n",
+      "stdout": "JFK MUC LHR SFO SJC\n",
+      "reason": "Shows the standard input shape and a typical execution path for Reconstruct Itinerary."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\nJFK SFO\nJFK ATL\nSFO ATL\nATL JFK\nATL SFO\n",
+      "stdout": "JFK ATL JFK SFO ATL SFO\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "4\nJFK AAA\nAAA JFK\nJFK BBB\nBBB JFK\n",
+      "stdout": "JFK AAA JFK BBB JFK\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "min-cost-to-connect-all-points": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n0 0\n2 2\n3 10\n5 2\n7 0\n",
+      "stdout": "20\n",
+      "reason": "Shows the standard input shape and a typical execution path for Min Cost to Connect All Points."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n3 12\n-2 5\n-4 1\n",
+      "stdout": "18\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n0 0\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "swim-in-rising-water": [
+    {
+      "name": "Typical case",
+      "stdin": "2 2\n0 2\n1 3\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Swim In Rising Water."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5 5\n0 1 2 3 4\n24 23 22 21 5\n12 13 14 15 16\n11 17 18 19 20\n10 9 8 7 6\n",
+      "stdout": "16\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n0\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "alien-dictionary": [
+    {
+      "name": "Typical case",
+      "stdin": "5\nwrt\nwrf\ner\nett\nrftt\n",
+      "stdout": "wertf\n",
+      "reason": "Shows the standard input shape and a typical execution path for Alien Dictionary."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\nz\nx\n",
+      "stdout": "zx\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\nz\nx\nz\n",
+      "stdout": "\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "cheapest-flights-within-k-stops": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n5\n0 1 100\n1 2 100\n2 0 100\n1 3 600\n2 3 200\n0\n3\n1\n",
+      "stdout": "700\n",
+      "reason": "Shows the standard input shape and a typical execution path for Cheapest Flights Within K Stops."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n3\n0 1 100\n1 2 100\n0 2 500\n0\n2\n1\n",
+      "stdout": "200\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n3\n0 1 100\n1 2 100\n0 2 500\n0\n2\n0\n",
+      "stdout": "500\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "climbing-stairs": [
+    {
+      "name": "Typical case",
+      "stdin": "1\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Climbing Stairs."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n",
+      "stdout": "2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "3\n",
+      "stdout": "3\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "min-cost-climbing-stairs": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n10 15 20\n",
+      "stdout": "15\n",
+      "reason": "Shows the standard input shape and a typical execution path for Min Cost Climbing Stairs."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "10\n1 100 1 1 1 100 1 1 100 1\n",
+      "stdout": "6\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 2\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "house-robber": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 2 3 1\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for House Robber."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n2 7 9 3 1\n",
+      "stdout": "12\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "house-robber-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n2 3 2\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for House Robber II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n1 2 3 1\n",
+      "stdout": "4\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "3\n1 2 3\n",
+      "stdout": "3\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "longest-palindromic-substring": [
+    {
+      "name": "Typical case",
+      "stdin": "babad\n",
+      "stdout": "aba bab\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Palindromic Substring."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "cbbd\n",
+      "stdout": "bb\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "a\n",
+      "stdout": "a\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "palindromic-substrings": [
+    {
+      "name": "Typical case",
+      "stdin": "abc\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Palindromic Substrings."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "aaa\n",
+      "stdout": "6\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "a\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "decode-ways": [
+    {
+      "name": "Typical case",
+      "stdin": "12\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Decode Ways."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "226\n",
+      "stdout": "3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "06\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "coin-change": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 5\n11\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Coin Change."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n2\n3\n",
+      "stdout": "-1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n0\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "maximum-product-subarray": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n2 3 -2 4\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Maximum Product Subarray."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n-2 0 -1\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "word-break": [
+    {
+      "name": "Typical case",
+      "stdin": "leetcode\n2\nleet\ncode\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Word Break."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "applepenapple\n2\napple\npen\n",
+      "stdout": "1\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Additional coverage",
+      "stdin": "catsandog\n5\ncats\ndog\nsand\nand\ncat\n",
+      "stdout": "0\n",
+      "reason": "Uses a different data distribution for extra coverage after the typical case passes."
+    }
+  ],
+  "longest-increasing-subsequence": [
+    {
+      "name": "Typical case",
+      "stdin": "8\n10 9 2 5 3 7 101 18\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Increasing Subsequence."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "6\n0 1 0 3 2 3\n",
+      "stdout": "4\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "7\n7 7 7 7 7 7 7\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "partition-equal-subset-sum": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 5 11 5\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Partition Equal Subset Sum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n1 2 3 5\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "unique-paths": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n7\n",
+      "stdout": "28\n",
+      "reason": "Shows the standard input shape and a typical execution path for Unique Paths."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n2\n",
+      "stdout": "3\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "longest-common-subsequence": [
+    {
+      "name": "Typical case",
+      "stdin": "abcde\nace\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Common Subsequence."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "abc\nabc\n",
+      "stdout": "3\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "abc\ndef\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "best-time-to-buy-and-sell-stock-with-cooldown": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 2 3 0 2\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Best Time to Buy And Sell Stock With Cooldown."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 2\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "coin-change-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n3\n1 2 5\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Coin Change II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n1\n2\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "10\n1\n10\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "target-sum": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 1 1 1 1\n3\n",
+      "stdout": "5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Target Sum."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n2\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "interleaving-string": [
+    {
+      "name": "Typical case",
+      "stdin": "aabcc\ndbbca\naadbbcbcac\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Interleaving String."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "aabcc\ndbbca\naadbbbaccc\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "\n\n\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "longest-increasing-path-in-a-matrix": [
+    {
+      "name": "Typical case",
+      "stdin": "3 3\n9 9 4\n6 6 8\n2 1 1\n",
+      "stdout": "4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Longest Increasing Path In a Matrix."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "3 3\n3 4 5\n3 2 6\n2 2 1\n",
+      "stdout": "4\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "distinct-subsequences": [
+    {
+      "name": "Typical case",
+      "stdin": "rabbbit\nrabbit\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Distinct Subsequences."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "babgbag\nbag\n",
+      "stdout": "5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "a\na\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "edit-distance": [
+    {
+      "name": "Typical case",
+      "stdin": "horse\nros\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Edit Distance."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "intention\nexecution\n",
+      "stdout": "5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "\n\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "burst-balloons": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n3 1 5 8\n",
+      "stdout": "167\n",
+      "reason": "Shows the standard input shape and a typical execution path for Burst Balloons."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 5\n",
+      "stdout": "10\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n5\n",
+      "stdout": "5\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "regular-expression-matching": [
+    {
+      "name": "Typical case",
+      "stdin": "aa\na\n",
+      "stdout": "0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Regular Expression Matching."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "aa\na*\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "ab\n.*\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "maximum-subarray": [
+    {
+      "name": "Typical case",
+      "stdin": "9\n-2 1 -3 4 -1 2 1 -5 4\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Maximum Subarray."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "5\n5 4 -1 7 8\n",
+      "stdout": "23\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "jump-game": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n2 3 1 1 4\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Jump Game."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n3 2 1 0 4\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n0\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "jump-game-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n2 3 1 1 4\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Jump Game II."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "5\n2 3 0 1 4\n",
+      "stdout": "2\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 2\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "gas-station": [
+    {
+      "name": "Typical case",
+      "stdin": "5\n1 2 3 4 5\n5\n3 4 5 1 2\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Gas Station."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n2 3 4\n3\n3 4 3\n",
+      "stdout": "-1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 2\n2\n2 1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "hand-of-straights": [
+    {
+      "name": "Typical case",
+      "stdin": "9\n1 2 3 6 2 3 4 7 8\n3\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Hand of Straights."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n1 2 3 4 5\n4\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "merge-triplets-to-form-target-triplet": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n2 5 3\n1 8 4\n1 7 5\n3\n2 7 5\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Merge Triplets to Form Target Triplet."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n3 4 5\n4 5 6\n3\n3 2 5\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "4\n2 5 3\n2 3 4\n1 2 5\n5 2 3\n3\n5 5 5\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "partition-labels": [
+    {
+      "name": "Typical case",
+      "stdin": "ababcbacadefegdehijhklij\n",
+      "stdout": "7 8 9\n",
+      "reason": "Shows the standard input shape and a typical execution path for Partition Labels."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "eccbbbbdec\n",
+      "stdout": "10\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "a\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "valid-parenthesis-string": [
+    {
+      "name": "Typical case",
+      "stdin": "()\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Valid Parenthesis String."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "(*)\n",
+      "stdout": "1\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "(*))\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "insert-interval": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n1 3\n6 9\n2\n2 5\n",
+      "stdout": "2\n1 5\n6 9\n",
+      "reason": "Shows the standard input shape and a typical execution path for Insert Interval."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n1 2\n3 5\n6 7\n8 10\n12 16\n2\n4 8\n",
+      "stdout": "3\n1 2\n3 10\n12 16\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n2\n5 7\n",
+      "stdout": "1\n5 7\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "merge-intervals": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 3\n2 6\n8 10\n15 18\n",
+      "stdout": "3\n1 6\n8 10\n15 18\n",
+      "reason": "Shows the standard input shape and a typical execution path for Merge Intervals."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n1 4\n4 5\n",
+      "stdout": "1\n1 5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n4 7\n1 4\n",
+      "stdout": "1\n1 7\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "non-overlapping-intervals": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 2\n2 3\n3 4\n1 3\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Non Overlapping Intervals."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\n1 2\n1 2\n1 2\n",
+      "stdout": "2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "2\n1 2\n2 3\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "meeting-rooms": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n0 30\n5 10\n15 20\n",
+      "stdout": "0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Meeting Rooms."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n7 10\n2 4\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "meeting-rooms-ii": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n0 30\n5 10\n15 20\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Meeting Rooms II."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n7 10\n2 4\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1 5\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "minimum-interval-to-include-each-query": [
+    {
+      "name": "Typical case",
+      "stdin": "4\n1 4\n2 4\n3 6\n4 4\n4\n2 3 4 5\n",
+      "stdout": "3 3 1 4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Minimum Interval to Include Each Query."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n2 3\n2 5\n1 8\n20 25\n4\n2 19 5 22\n",
+      "stdout": "2 -1 4 6\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1 5\n1\n3\n",
+      "stdout": "5\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "rotate-image": [
+    {
+      "name": "Typical case",
+      "stdin": "3 3\n1 2 3\n4 5 6\n7 8 9\n",
+      "stdout": "3 3\n7 4 1\n8 5 2\n9 6 3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Rotate Image."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4 4\n5 1 9 11\n2 4 8 10\n13 3 6 7\n15 14 12 16\n",
+      "stdout": "4 4\n15 13 2 5\n14 3 4 1\n12 6 8 9\n16 7 10 11\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n1\n",
+      "stdout": "1 1\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "spiral-matrix": [
+    {
+      "name": "Typical case",
+      "stdin": "3 3\n1 2 3\n4 5 6\n7 8 9\n",
+      "stdout": "1 2 3 6 9 8 7 4 5\n",
+      "reason": "Shows the standard input shape and a typical execution path for Spiral Matrix."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3 4\n1 2 3 4\n5 6 7 8\n9 10 11 12\n",
+      "stdout": "1 2 3 4 8 12 11 10 9 5 6 7\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "set-matrix-zeroes": [
+    {
+      "name": "Typical case",
+      "stdin": "3 3\n1 1 1\n1 0 1\n1 1 1\n",
+      "stdout": "3 3\n1 0 1\n0 0 0\n1 0 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Set Matrix Zeroes."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3 4\n0 1 2 0\n3 4 5 2\n1 3 1 5\n",
+      "stdout": "3 4\n0 0 0 0\n0 4 5 0\n0 3 1 0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1 1\n1\n",
+      "stdout": "1 1\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "happy-number": [
+    {
+      "name": "Typical case",
+      "stdin": "19\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Happy Number."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n",
+      "stdout": "0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n",
+      "stdout": "1\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "plus-one": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n1 2 3\n",
+      "stdout": "1 2 4\n",
+      "reason": "Shows the standard input shape and a typical execution path for Plus One."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "4\n4 3 2 1\n",
+      "stdout": "4 3 2 2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "1\n9\n",
+      "stdout": "1 0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "powx-n": [
+    {
+      "name": "Typical case",
+      "stdin": "2.0\n10\n",
+      "stdout": "1024.0\n",
+      "reason": "Shows the standard input shape and a typical execution path for Pow(x, n)."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2.1\n3\n",
+      "stdout": "9.261\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "2.0\n-2\n",
+      "stdout": "0.25\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "multiply-strings": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n3\n",
+      "stdout": "6\n",
+      "reason": "Shows the standard input shape and a typical execution path for Multiply Strings."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "123\n456\n",
+      "stdout": "56088\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "0\n0\n",
+      "stdout": "0\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "detect-squares": [
+    {
+      "name": "Typical case",
+      "stdin": "8\nDetectSquares\nadd 2 3 10\nadd 2 11 2\nadd 2 3 2\ncount 2 11 10\ncount 2 14 8\nadd 2 11 2\ncount 2 11 10\n",
+      "stdout": "null\nnull\nnull\nnull\n1\n0\nnull\n2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Detect Squares."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "3\nDetectSquares\nadd 2 0 0\ncount 2 0 0\n",
+      "stdout": "null\nnull\n0\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "5\nDetectSquares\nadd 2 0 0\nadd 2 0 2\nadd 2 2 0\ncount 2 2 2\n",
+      "stdout": "null\nnull\nnull\nnull\n1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "single-number": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n2 2 1\n",
+      "stdout": "1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Single Number."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n4 1 2 1 2\n",
+      "stdout": "4\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "1\n1\n",
+      "stdout": "1\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "number-of-1-bits": [
+    {
+      "name": "Typical case",
+      "stdin": "11\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Number of 1 Bits."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "128\n",
+      "stdout": "1\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "2147483645\n",
+      "stdout": "30\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "counting-bits": [
+    {
+      "name": "Typical case",
+      "stdin": "2\n",
+      "stdout": "0 1 1\n",
+      "reason": "Shows the standard input shape and a typical execution path for Counting Bits."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "5\n",
+      "stdout": "0 1 1 2 1 2\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "reverse-bits": [
+    {
+      "name": "Typical case",
+      "stdin": "43261596\n",
+      "stdout": "964176192\n",
+      "reason": "Shows the standard input shape and a typical execution path for Reverse Bits."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2147483644\n",
+      "stdout": "1073741822\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "0\n",
+      "stdout": "0\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ],
+  "missing-number": [
+    {
+      "name": "Typical case",
+      "stdin": "3\n3 0 1\n",
+      "stdout": "2\n",
+      "reason": "Shows the standard input shape and a typical execution path for Missing Number."
+    },
+    {
+      "name": "Structural variation",
+      "stdin": "2\n0 1\n",
+      "stdout": "2\n",
+      "reason": "Changes the input while preserving the result type to expose order-dependent implementations."
+    },
+    {
+      "name": "Duplicate values",
+      "stdin": "9\n9 6 4 2 3 5 7 0 1\n",
+      "stdout": "8\n",
+      "reason": "Includes duplicates to test counting, deduplication, and tie handling."
+    }
+  ],
+  "sum-of-two-integers": [
+    {
+      "name": "Typical case",
+      "stdin": "1\n2\n",
+      "stdout": "3\n",
+      "reason": "Shows the standard input shape and a typical execution path for Sum of Two Integers."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "2\n3\n",
+      "stdout": "5\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Negative boundary",
+      "stdin": "-1\n1\n",
+      "stdout": "0\n",
+      "reason": "Includes negative values to test comparison, sorting, or indexing across sign changes."
+    }
+  ],
+  "reverse-integer": [
+    {
+      "name": "Typical case",
+      "stdin": "123\n",
+      "stdout": "321\n",
+      "reason": "Shows the standard input shape and a typical execution path for Reverse Integer."
+    },
+    {
+      "name": "Contrasting result",
+      "stdin": "-123\n",
+      "stdout": "-321\n",
+      "reason": "Uses a different expected result to exercise another branch or return path."
+    },
+    {
+      "name": "Small boundary",
+      "stdin": "120\n",
+      "stdout": "21\n",
+      "reason": "Uses a small input to verify initialization, termination, and the shortest execution path."
+    }
+  ]
+}

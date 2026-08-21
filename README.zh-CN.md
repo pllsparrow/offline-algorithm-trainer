@@ -35,6 +35,30 @@ python3 train.py run 003
 python3 train.py status
 ```
 
+## 浏览器训练营
+
+首次使用先安装 Web 依赖：
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-web.txt
+.venv/bin/python web_debug_server.py
+```
+
+如需固定使用某个 Python 3.12 解释器，可设置 `ALGORITHM_TRAINER_PYTHON`：
+
+```bash
+ALGORITHM_TRAINER_PYTHON=/path/to/python3.12 .venv/bin/python web_debug_server.py
+```
+
+Web API 使用 FastAPI，接口文档位于 `http://127.0.0.1:8765/api/docs`。代码编辑器使用
+本地打包的 CodeMirror 6，支持 Python 语法着色、四空格缩进、可视空格和断点行号。
+只有修改 `web/editor.js` 时才需要运行 `npm install && npm run build:web`。
+
+然后打开 `http://127.0.0.1:8765`。浏览器版本支持题号跳转、搜索过滤、SQLite
+草稿、精选示例、自定义输入、完整提交，以及断点、继续、单步跳过、局部变量和调用栈。
+提交会运行该题的全部固定用例，测试结束后把代码写回对应的 `hot_150/` 文件。
+
 `show` 会显示题目说明、ACM 输入输出格式和题目文件的位置。文件名采用 `qNNN_problem_name.py` 格式，默认只包含两行输入输出注释；输入解析、算法、输出和程序入口都需要自己写。完成后用 `run` 执行本地用例；运行失败时会直接显示输入、预期输出和实际输出。
 
 如果只想反复调试某一个失败用例：
@@ -107,6 +131,10 @@ PyCharm 用户可以选择项目自带的 `Judge Current Solution` 运行配置�
 堆和桶的高频变体练习放在
 [`muscle_memory/heapq&buckets/`](muscle_memory/heapq&buckets/README.md)，共 15 道题，
 每题包含 99 个可复现用例；允许并列答案的题目使用语义校验器。
+
+递归专项训练放在
+[`muscle_memory/recursion/`](muscle_memory/recursion/README.md)，共 20 道题，
+覆盖基础递归、递推、搜索、分治和树形递归，其中 10 道为树题，每题包含 49 个可复现用例。
 
 ## 关于题目内容
 

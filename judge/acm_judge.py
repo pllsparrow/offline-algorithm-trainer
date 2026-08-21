@@ -41,10 +41,57 @@ def valid_top_k_frequent(stdin: str, actual: str) -> bool:
     return required <= selected <= allowed
 
 
+def valid_k_closest(stdin: str, actual: str) -> bool:
+    """Accept any valid multiset of the k closest input points."""
+    try:
+        input_values = list(map(int, stdin.split()))
+        point_count = input_values[0]
+        coordinate_end = 1 + 2 * point_count
+        if len(input_values) != coordinate_end + 1:
+            return False
+
+        points = [
+            (input_values[index], input_values[index + 1])
+            for index in range(1, coordinate_end, 2)
+        ]
+        k = input_values[coordinate_end]
+        output_values = list(map(int, actual.split()))
+    except (IndexError, ValueError):
+        return False
+
+    if not 1 <= k <= point_count or len(output_values) != 2 * k:
+        return False
+
+    selected = [
+        (output_values[index], output_values[index + 1])
+        for index in range(0, len(output_values), 2)
+    ]
+    available_counts = Counter(points)
+    selected_counts = Counter(selected)
+    if any(count > available_counts[point] for point, count in selected_counts.items()):
+        return False
+
+    def squared_distance(point: tuple[int, int]) -> int:
+        return point[0] * point[0] + point[1] * point[1]
+
+    cutoff = sorted(squared_distance(point) for point in points)[k - 1]
+    if any(squared_distance(point) > cutoff for point in selected):
+        return False
+
+    required_counts = Counter(
+        point for point in points if squared_distance(point) < cutoff
+    )
+    return all(
+        selected_counts[point] >= count for point, count in required_counts.items()
+    )
+
+
 def output_matches(validator: str | None, stdin: str, actual: str, expected: str) -> bool:
     """Use semantic validation where multiple outputs are correct."""
     if validator == "top_k_frequent":
         return valid_top_k_frequent(stdin, actual)
+    if validator == "k_closest":
+        return valid_k_closest(stdin, actual)
     return comparable_text(actual) == comparable_text(expected)
 
 
@@ -55,6 +102,7 @@ def main() -> None:
     validator = payload.get("validator")
     only_case = payload.get("case")
     run_all = payload.get("run_all", False)
+    debug = payload.get("debug", False)
     results = []
     for index, case in enumerate(cases, start=1):
         if only_case is not None and index != only_case:
@@ -62,6 +110,8 @@ def main() -> None:
         expected = case["stdout"]
         passed = False
         actual = "[no output]"
+        stderr = ""
+        returncode = None
         try:
             process = subprocess.run(
                 [sys.executable, "-c", code],
@@ -71,6 +121,8 @@ def main() -> None:
                 timeout=3,
             )
             actual = process.stdout
+            stderr = process.stderr
+            returncode = process.returncode
             if process.returncode != 0:
                 actual = f"[process exited {process.returncode}]\n{process.stderr}"
             else:
@@ -84,6 +136,8 @@ def main() -> None:
                 "input": {"stdin": case["stdin"]},
                 "expected": expected,
                 "actual": actual,
+                "stderr": stderr if debug else "",
+                "returncode": returncode,
             }
         )
         if not passed and not run_all:

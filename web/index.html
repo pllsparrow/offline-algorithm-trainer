@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algorithm Training Camp</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #e9e5d8; --panel: #fffdf5; --panel-2: #f4f0df; --line: #d6d0bd;
+      --text: #2b302b; --muted: #73776e; --accent: #5f806d; --accent-2: #7b6841;
+      --danger: #c95561; --warning: #b9853f; --code: #faf8ef;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; }
+    button, input, select, textarea { font: inherit; }
+    button { border: 0; border-radius: 5px; padding: 8px 12px; cursor: pointer; font-weight: 700; background: var(--accent); color: #ffffff; }
+    button:hover { filter: brightness(1.08); }
+    button.secondary { background: #e8e8e8; color: var(--text); }
+    button.danger { background: #f5dfe2; color: #a62f3d; }
+    button:disabled { opacity: .45; cursor: not-allowed; }
+    input, select, textarea { color: var(--text); background: var(--code); border: 1px solid var(--line); border-radius: 5px; }
+    button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid #789884; outline-offset: 1px; }
+    #toggle-sidebar { position: absolute; z-index: 5; top: 18px; left: 18px; width: 32px; height: 32px; padding: 0; display: grid; place-items: center; border-radius: 7px; background: transparent; color: var(--muted); }
+    #toggle-sidebar:hover { background: #eee9d8; filter: none; color: var(--text); }
+    .sidebar-toggle-icon { position: relative; width: 18px; height: 16px; border: 1.5px solid currentColor; border-radius: 4px; }
+    .sidebar-toggle-icon::before { content: ''; position: absolute; inset: 2px auto 2px 5px; border-left: 1.5px solid currentColor; }
+    #save-state { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    main { position: relative; height: 100vh; display: grid; grid-template-columns: 260px minmax(460px, 1.25fr) minmax(360px, .9fr); gap: 10px; padding: 10px; transition: grid-template-columns .2s ease; }
+    main.sidebar-collapsed { grid-template-columns: 0 minmax(520px, 1.25fr) minmax(360px, .9fr); }
+    main.sidebar-collapsed #toggle-sidebar { left: 28px; }
+    main.sidebar-collapsed .editor-panel .panel-head { padding-left: 50px; }
+    #sidebar { min-width: 0; transition: opacity .15s ease; }
+    main.sidebar-collapsed #sidebar { opacity: 0; visibility: hidden; pointer-events: none; border-width: 0; }
+    .panel { min-height: 0; border: 1px solid var(--line); border-radius: 7px; background: var(--panel); overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 2px 8px #00000012; }
+    .panel-head { min-height: 48px; padding: 9px 11px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid var(--line); }
+    .filters { padding: 50px 10px 10px; display: grid; gap: 8px; border-bottom: 1px solid var(--line); }
+    .filters input, .filters select { width: 100%; padding: 8px; }
+    .filter-row { display: grid; grid-template-columns: 1fr; gap: 7px; }
+    #problem-list { overflow: auto; padding: 6px; }
+    .problem { width: 100%; text-align: left; display: grid; grid-template-columns: 38px 1fr auto; gap: 7px; align-items: center; padding: 9px 8px; margin-bottom: 3px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: var(--text); font-weight: 500; }
+    .problem:hover { background: #f4f1e5; border-color: #ddd5bd; filter: none; }
+    .problem.active { background: #e5eee6; border-color: #a8c2ad; filter: none; }
+    .problem .number { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .problem .title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #a7a7a7; }
+    .dot.accepted { background: #2d9a62; box-shadow: 0 0 6px #2d9a6244; }
+    .dot.failed, .dot.attempted { background: var(--warning); }
+    #problem-title { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 800; }
+    .problem-nav { display: flex; gap: 4px; }
+    .problem-nav button, #reset { width: 32px; height: 32px; padding: 0; display: grid; place-items: center; font-size: 18px; }
+    .badge { border: 1px solid var(--line); border-radius: 999px; padding: 2px 7px; color: var(--muted); font-size: 11px; white-space: nowrap; }
+    .editor-shell { flex: 1; min-height: 0; background: var(--code); }
+    #editor, .cm-editor { height: 100%; }
+    .cm-editor { background: var(--code); color: #202020; font: 15px/1.6 "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace; }
+    .cm-editor.cm-focused { outline: none; }
+    .cm-scroller { overflow: auto; }
+    .cm-content { padding: 12px 0; caret-color: #567863; }
+    .cm-line { padding: 0 14px 0 8px; }
+    .cm-gutters { border-right: 1px solid #ddd7c5 !important; background: #f2eedf !important; color: #7b7b71 !important; }
+    .cm-lineNumbers .cm-gutterElement { min-width: 32px; padding: 0 7px 0 4px; }
+    .cm-breakpoint-gutter { background: #f2eedf !important; cursor: pointer; }
+    .cm-breakpoint-gutter .cm-gutterElement { width: 20px; padding: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+    .cm-breakpoint-dot { display: block; width: 10px; height: 10px; margin: 0; flex: 0 0 10px; border-radius: 50%; background: #e64b5b; box-shadow: 0 0 0 1.5px #a42f3d; }
+    .cm-activeLine, .cm-activeLineGutter { background: #edf2e8 !important; }
+    .cm-diagnostic-line { background: #fdebed; }
+    .cm-visible-spaces { background-image: radial-gradient(circle, #a0a0a0 1px, transparent 1.2px); background-position: .48ch 55%; background-size: 1ch 100%; background-repeat: repeat-x; }
+    .cm-selectionBackground { background: #d8e7d9 !important; }
+    .cm-matchingBracket { color: #182019 !important; background: #dcebdc; outline: 1px solid #6f927b; border-radius: 2px; }
+    .cm-nonmatchingBracket { color: #a51f31 !important; background: #ffe0e4; outline: 1px solid #d94b5b; }
+    .cm-spelling-error { text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: #ff5c70; text-decoration-thickness: 1.3px; text-underline-offset: 3px; }
+    .editor-actions { padding: 9px 10px; display: flex; flex-wrap: wrap; gap: 7px; border-top: 1px solid var(--line); }
+    .editor-actions .spacer { flex: 1; }
+    #right-scroll { overflow: auto; }
+    .section { padding: 12px; border-bottom: 1px solid var(--line); }
+    .section h2 { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 8px; }
+    #summary { color: #4f4f4f; }
+    #format { margin: 0; padding: 9px; border-radius: 5px; background: var(--code); white-space: pre-wrap; color: #353535; font: 12px/1.55 ui-monospace, monospace; }
+    #examples { display: grid; gap: 9px; }
+    .example { background: #fbf9f0; color: var(--text); padding: 10px; border: 1px solid #ddd7c6; border-left: 3px solid #6f917c; border-radius: 5px; }
+    .example-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .example-actions { display: flex; gap: 6px; }
+    .example-head strong { font-size: 13px; }
+    .example-head button { padding: 5px 8px; font-size: 11px; }
+    .example p { margin: 6px 0 9px; color: var(--muted); font-size: 12px; }
+    .example-io { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .example-io b { display: block; margin-bottom: 3px; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .07em; }
+    .example-io textarea { width: 100%; min-height: 72px; max-height: 180px; padding: 7px; resize: vertical; background: var(--code); white-space: pre-wrap; word-break: break-word; font: 11px/1.45 ui-monospace, monospace; }
+    #stdin { width: 100%; min-height: 112px; padding: 9px; resize: vertical; font: 12px/1.5 ui-monospace, monospace; }
+    .debug-actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 8px; }
+    #result-status { padding: 8px 10px; border-radius: 5px; background: #eeeeee; color: var(--muted); }
+    #result-status.ok { background: #e2f2e9; color: #236f49; }
+    #result-status.error { background: #f9e4e7; color: #a33240; }
+    .result-block { margin-top: 9px; }
+    .result-block b { display: block; margin-bottom: 4px; color: var(--muted); font-size: 11px; text-transform: uppercase; }
+    .result-block pre { max-height: 220px; overflow: auto; margin: 0; padding: 9px; background: var(--code); border-radius: 5px; white-space: pre-wrap; word-break: break-word; font: 12px/1.5 ui-monospace, monospace; }
+    #stack { margin: 8px 0 0; padding-left: 22px; color: #5f625c; }
+    a { color: var(--accent-2); }
+    .empty { padding: 20px 10px; text-align: center; color: var(--muted); }
+    @media (max-width: 1100px) { main, main.sidebar-collapsed { grid-template-columns: 220px 1fr; } main.sidebar-collapsed { grid-template-columns: 0 1fr; } .details { grid-column: 1 / -1; min-height: 560px; } body { overflow: auto; } main { height: auto; } .editor-panel { min-height: 720px; } }
+    @media (max-width: 720px) { main { display: block; } .panel { margin-bottom: 8px; min-height: 520px; } }
+  </style>
+</head>
+<body>
+  <main id="layout">
+    <button id="toggle-sidebar" type="button" aria-label="Collapse problem library" title="Collapse problem library" aria-expanded="true" aria-controls="sidebar"><span class="sidebar-toggle-icon" aria-hidden="true"></span></button>
+    <span id="save-state" role="status" aria-live="polite">Loading problems…</span>
+    <aside id="sidebar" class="panel">
+      <div class="filters">
+        <input id="jump" inputmode="numeric" autocomplete="off" name="problem-number-jump" placeholder="Problem number + Enter">
+        <input id="search" autocomplete="off" name="problem-title-search" placeholder="Search problems">
+        <div class="filter-row">
+          <select id="category"><option value="">All categories</option></select>
+        </div>
+      </div>
+      <div id="problem-list"></div>
+    </aside>
+
+    <section class="panel editor-panel">
+      <div class="panel-head">
+        <span id="problem-title">Select a problem</span>
+        <span class="problem-nav"><button id="previous-problem" class="secondary" aria-label="Previous problem" title="Previous problem">‹</button><button id="next-problem" class="secondary" aria-label="Next problem" title="Next problem">›</button></span>
+        <span id="difficulty-badge" class="badge"></span><span id="progress-badge" class="badge"></span>
+      </div>
+      <div class="editor-shell">
+        <div id="editor" aria-label="Python source code"></div>
+      </div>
+      <div class="editor-actions">
+        <button id="run">Run</button>
+        <button id="debug" class="secondary">Debug</button>
+        <button id="reset" class="secondary" aria-label="Restore file version" title="Restore file version">♻</button>
+        <span class="spacer"></span>
+        <button id="submit">Submit</button>
+      </div>
+    </section>
+
+    <section class="panel details">
+      <div id="right-scroll">
+        <div class="section">
+          <h2>Problem</h2>
+          <p id="summary">Select a problem from the library.</p>
+          <a id="practice-link" href="#" target="_blank" rel="noreferrer">Open on NeetCode</a>
+        </div>
+        <div class="section"><h2>ACM Input / Output</h2><pre id="format"></pre></div>
+        <div class="section"><h2>Examples</h2><div id="examples"></div></div>
+        <div class="section">
+          <h2>Standard Input</h2>
+          <textarea id="stdin" spellcheck="false" aria-label="Standard input"></textarea>
+          <div class="debug-actions">
+            <button id="continue" class="secondary" disabled>Continue</button>
+            <button id="step" class="secondary" disabled>Step Over</button>
+            <button id="stop" class="danger" disabled>Stop</button>
+          </div>
+        </div>
+        <div class="section">
+          <h2>Run / Debug Output</h2>
+          <div id="result-status">Not run yet</div>
+          <div id="result"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="/assets/editor.bundle.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const LAST_PROBLEM_KEY = 'last-problem-index';
+    const state = { problems: [], problem: null, fileSource: '', editor: null, suppressEditorChange: false, sessionId: null, saveTimer: null, sidebarCollapsed: localStorage.getItem('sidebar-collapsed') === '1' };
+    const escapeHtml = (text) => String(text ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+    async function api(path, options = {}) {
+      const response = await fetch(path, options);
+      const text = await response.text();
+      let data;
+      try { data = text ? JSON.parse(text) : {}; }
+      catch { throw new Error(text === 'Not found' ? 'The local service is outdated. Restart it, then refresh this page.' : `The service returned an unreadable response: ${text.slice(0, 120)}`); }
+      if (!response.ok) throw new Error(data.error || `HTTP ${response.status}`);
+      return data;
+    }
+
+    function setSidebar(collapsed) {
+      state.sidebarCollapsed = collapsed;
+      $('layout').classList.toggle('sidebar-collapsed', collapsed);
+      const label = collapsed ? 'Expand problem library' : 'Collapse problem library';
+      $('toggle-sidebar').setAttribute('aria-label', label);
+      $('toggle-sidebar').setAttribute('title', label);
+      $('toggle-sidebar').setAttribute('aria-expanded', String(!collapsed));
+      localStorage.setItem('sidebar-collapsed', collapsed ? '1' : '0');
+    }
+
+    function setStatus(text, kind = '') {
+      $('result-status').textContent = text;
+      $('result-status').className = kind;
+    }
+
+    function sourceValue() { return state.editor.getValue(); }
+    function setSourceValue(value) {
+      state.suppressEditorChange = true;
+      state.editor.setValue(value);
+      state.suppressEditorChange = false;
+    }
+    function showSourceLine(lineNumber = null) { state.editor.setCurrentLine(lineNumber); }
+
+    function renderProblems() {
+      const query = $('search').value.trim().toLowerCase();
+      const category = $('category').value;
+      const filtered = state.problems.filter((problem) =>
+        (!query || `${problem.index} ${problem.title} ${problem.slug}`.toLowerCase().includes(query)) &&
+        (!category || problem.category === category)
+      );
+      $('problem-list').innerHTML = filtered.length ? filtered.map((problem) => `
+        <button class="problem ${state.problem?.index === problem.index ? 'active' : ''}" data-index="${problem.index}">
+          <span class="number">${String(problem.index).padStart(3, '0')}</span>
+          <span class="title">${escapeHtml(problem.title)}</span>
+          <span class="dot ${problem.progress}"></span>
+        </button>`).join('') : '<div class="empty">No matching problems</div>';
+    }
+
+    async function loadProblem(index) {
+      if (state.sessionId) await stopDebug();
+      const problem = await api(`/api/problems/${index}`);
+      state.problem = problem;
+      state.fileSource = problem.source;
+      state.editor.clearBreakpoints();
+      setSourceValue(problem.draft_source ?? problem.source);
+      $('problem-title').textContent = `${String(problem.index).padStart(3, '0')} · ${problem.title}`;
+      $('difficulty-badge').textContent = problem.difficulty;
+      $('progress-badge').textContent = problem.progress.status || 'todo';
+      $('summary').textContent = problem.summary;
+      $('format').textContent = problem.format;
+      $('practice-link').href = problem.practice_url;
+      $('examples').innerHTML = problem.examples.map((example, index) => `
+        <article class="example" data-example-card="${index}">
+          <div class="example-head">
+            <strong>${escapeHtml(example.name)}</strong>
+            <span class="example-actions"><button class="secondary" data-load-example="${index}">Load input</button><button data-run-example="${index}">Run case</button></span>
+          </div>
+          <p>${escapeHtml(example.reason)}</p>
+          <div class="example-io">
+            <label><b>stdin · editable</b><textarea data-example-stdin spellcheck="false">${escapeHtml(example.stdin)}</textarea></label>
+            <label><b>expected stdout · editable</b><textarea data-example-stdout spellcheck="false">${escapeHtml(example.stdout)}</textarea></label>
+          </div>
+        </article>`).join('');
+      if (problem.examples[0]) $('stdin').value = problem.examples[0].stdin;
+      $('save-state').textContent = problem.draft_source ? `Draft restored · ${problem.draft_updated_at}` : 'Using file version';
+      localStorage.setItem(LAST_PROBLEM_KEY, String(problem.index));
+      const position = state.problems.findIndex((item) => item.index === problem.index);
+      $('previous-problem').disabled = position <= 0;
+      $('next-problem').disabled = position < 0 || position >= state.problems.length - 1;
+      setStatus('Not run yet'); $('result').innerHTML = '';
+      showSourceLine(); renderProblems();
+    }
+
+    function scheduleDraftSave() {
+      if (!state.problem) return;
+      $('save-state').textContent = 'Draft pending…';
+      clearTimeout(state.saveTimer);
+      state.saveTimer = setTimeout(async () => {
+        try {
+          const result = await api(`/api/drafts/${state.problem.index}`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({source:sourceValue()})});
+          $('save-state').textContent = `Draft saved · ${result.updated_at}`;
+        } catch (error) { $('save-state').textContent = `Draft save failed: ${error.message}`; }
+      }, 600);
+    }
+
+    function breakpoints() { return state.editor.getBreakpoints(); }
+
+    function renderExecution(data) {
+      setStatus(data.ok ? 'Run complete' : data.timed_out ? 'Run timed out' : 'Run failed', data.ok ? 'ok' : 'error');
+      const blocks = [];
+      if (data.stdout) blocks.push(`<div class="result-block"><b>stdout</b><pre>${escapeHtml(data.stdout)}</pre></div>`);
+      if (data.error) {
+        blocks.push(`<div class="result-block"><b>${escapeHtml(data.error.type)} · line ${data.error.line ?? '?'}</b><pre>${escapeHtml(data.error.message)}${data.error.hint ? `\n\nHint: ${escapeHtml(data.error.hint)}` : ''}</pre></div>`);
+      }
+      $('result').innerHTML = blocks.join('') || '<div class="empty">The program produced no output</div>';
+      showSourceLine(data.error?.line ?? null);
+    }
+
+    function renderDebug(data) {
+      const paused = data.state === 'paused';
+      setStatus(paused ? `Paused at line ${data.line}` : data.state === 'finished' ? 'Debug complete' : 'Debugger error', paused || data.state === 'finished' ? 'ok' : 'error');
+      $('continue').disabled = !paused; $('step').disabled = !paused; $('stop').disabled = !paused;
+      if (!paused) state.sessionId = null;
+      const blocks = [];
+      if (data.stdout) blocks.push(`<div class="result-block"><b>stdout</b><pre>${escapeHtml(data.stdout)}</pre></div>`);
+      if (data.locals) blocks.push(`<div class="result-block"><b>Locals</b><pre>${escapeHtml(JSON.stringify(data.locals, null, 2))}</pre></div>`);
+      if (data.stack) blocks.push(`<div class="result-block"><b>Call stack</b><ol id="stack">${data.stack.map((frame) => `<li>${escapeHtml(frame.function)} · line ${frame.line}</li>`).join('')}</ol></div>`);
+      if (data.error) blocks.push(`<div class="result-block"><b>${escapeHtml(data.error.type)}</b><pre>${escapeHtml(data.error.message)}</pre></div>`);
+      $('result').innerHTML = blocks.join('') || '<div class="empty">No debug snapshot</div>';
+      showSourceLine(paused ? data.line : data.error?.line);
+    }
+
+    async function runCode() {
+      if (!state.problem) return;
+      setStatus('Running…');
+      try { renderExecution(await api('/api/run', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({index:state.problem.index, source:sourceValue(), stdin:$('stdin').value})})); }
+      catch (error) { setStatus(error.message, 'error'); }
+    }
+
+    async function runExample(index) {
+      if (!state.problem) return;
+      const card = document.querySelector(`[data-example-card="${index}"]`);
+      const stdin = card.querySelector('[data-example-stdin]').value;
+      const expected = card.querySelector('[data-example-stdout]').value.trimEnd();
+      $('stdin').value = stdin;
+      setStatus('Running custom case…');
+      try {
+        const data = await api('/api/run', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({index:state.problem.index, source:sourceValue(), stdin})});
+        renderExecution(data);
+        if (!data.ok) return;
+        const actual = data.stdout.trimEnd();
+        const matched = actual === expected;
+        setStatus(matched ? 'Custom case passed' : 'Output does not match expected', matched ? 'ok' : 'error');
+        if (!matched) $('result').innerHTML += `<div class="result-block"><b>expected stdout</b><pre>${escapeHtml(expected)}</pre></div>`;
+      } catch (error) { setStatus(error.message, 'error'); }
+    }
+
+    async function startDebug() {
+      if (!state.problem) return;
+      setStatus('Starting debugger…');
+      try {
+        const data = await api('/api/debug/start', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({index:state.problem.index, source:sourceValue(), stdin:$('stdin').value, breakpoints:breakpoints()})});
+        state.sessionId = data.session_id || null; renderDebug(data);
+      } catch (error) { setStatus(error.message, 'error'); }
+    }
+
+    async function debugCommand(command) {
+      if (!state.sessionId) return;
+      try { renderDebug(await api(`/api/debug/${command}`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({session_id:state.sessionId, breakpoints:breakpoints()})})); }
+      catch (error) { state.sessionId = null; setStatus(error.message, 'error'); }
+    }
+
+    async function stopDebug() {
+      if (state.sessionId) await api('/api/debug/stop', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({session_id:state.sessionId})}).catch(() => {});
+      state.sessionId = null; $('continue').disabled = true; $('step').disabled = true; $('stop').disabled = true;
+    }
+
+    async function submitCode() {
+      if (!state.problem) return;
+      setStatus('Saving source and running all fixed cases…'); $('submit').disabled = true;
+      try {
+        const data = await api('/api/submit', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({index:state.problem.index, source:sourceValue()})});
+        setStatus(data.ok ? `Saved · Accepted · ${data.passed}/${data.total}` : `Saved · Failed · ${data.passed}/${data.total}`, data.ok ? 'ok' : 'error');
+        $('result').innerHTML = data.first_failure ? `<div class="result-block"><b>First failing case #${data.first_failure.case}</b><pre>stdin:\n${escapeHtml(data.first_failure.stdin)}\nexpected:\n${escapeHtml(data.first_failure.expected)}\nactual:\n${escapeHtml(data.first_failure.actual)}</pre></div>` : `<div class="empty">All fixed cases passed. Source saved to ${escapeHtml(data.saved_path)}.</div>`;
+        state.fileSource = sourceValue();
+        const nav = state.problems.find((item) => item.index === state.problem.index); if (nav) nav.progress = data.ok ? 'accepted' : 'failed'; renderProblems();
+      } catch (error) { setStatus(error.message, 'error'); }
+      finally { $('submit').disabled = false; }
+    }
+
+    $('problem-list').onclick = (event) => { const button = event.target.closest('[data-index]'); if (button) loadProblem(Number(button.dataset.index)); };
+    $('examples').onclick = async (event) => {
+      const loadButton = event.target.closest('[data-load-example]');
+      const runButton = event.target.closest('[data-run-example]');
+      if (loadButton) {
+        const index = Number(loadButton.dataset.loadExample);
+        const card = document.querySelector(`[data-example-card="${index}"]`);
+        $('stdin').value = card.querySelector('[data-example-stdin]').value;
+        setStatus(`Loaded: ${state.problem.examples[index].name}`);
+      }
+      if (runButton) await runExample(Number(runButton.dataset.runExample));
+    };
+    $('search').oninput = renderProblems; $('category').onchange = renderProblems;
+    $('jump').onkeydown = (event) => { if (event.key === 'Enter') { const index = Number(event.target.value); if (index >= 1 && index <= 150) loadProblem(index); } };
+    function navigateProblem(offset) {
+      if (!state.problem) return;
+      const position = state.problems.findIndex((problem) => problem.index === state.problem.index);
+      const target = state.problems[position + offset];
+      if (target) loadProblem(target.index);
+    }
+
+    $('run').onclick = runCode; $('debug').onclick = startDebug; $('continue').onclick = () => debugCommand('continue'); $('step').onclick = () => debugCommand('step'); $('stop').onclick = async () => { await stopDebug(); setStatus('Debug stopped'); };
+    $('reset').onclick = () => { if (state.problem && confirm('Restore the file version? The restored source will become the current draft.')) { setSourceValue(state.fileSource); scheduleDraftSave(); } };
+    $('submit').onclick = submitCode;
+    $('previous-problem').onclick = () => navigateProblem(-1);
+    $('next-problem').onclick = () => navigateProblem(1);
+    $('toggle-sidebar').onclick = () => setSidebar(!state.sidebarCollapsed);
+    document.addEventListener('keydown', (event) => {
+      if (!event.altKey || event.metaKey || event.ctrlKey) return;
+      if (event.key === 'ArrowLeft') { event.preventDefault(); navigateProblem(-1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); navigateProblem(1); }
+    });
+
+    (async () => {
+      try {
+        state.editor = window.createPythonEditor($('editor'), {onChange: () => { if (!state.suppressEditorChange) scheduleDraftSave(); }});
+        setSidebar(state.sidebarCollapsed);
+        $('search').value = '';
+        state.problems = await api('/api/problems');
+        const categories = [...new Set(state.problems.map((problem) => problem.category))].sort();
+        $('category').innerHTML += categories.map((category) => `<option>${escapeHtml(category)}</option>`).join('');
+        const savedIndex = Number(localStorage.getItem(LAST_PROBLEM_KEY));
+        const initialIndex = state.problems.some((problem) => problem.index === savedIndex) ? savedIndex : state.problems[0]?.index;
+        if (!initialIndex) throw new Error('The problem library is empty.');
+        renderProblems(); await loadProblem(initialIndex);
+      } catch (error) { $('save-state').textContent = `Load failed: ${error.message}`; }
+    })();
+  </script>
+</body>
+</html>

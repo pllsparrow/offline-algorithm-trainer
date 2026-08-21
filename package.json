@@ -1,0 +1,21 @@
+{
+  "name": "offline-algorithm-trainer-web",
+  "private": true,
+  "scripts": {
+    "build:web": "cp node_modules/dictionary-en/index.aff web/assets/en.aff && cp node_modules/dictionary-en/index.dic web/assets/en.dic && esbuild web/editor.js --bundle --format=iife --global-name=AlgorithmEditor --outfile=web/assets/editor.bundle.js"
+  },
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.20.3",
+    "@codemirror/commands": "^6.8.1",
+    "@codemirror/lang-python": "^6.2.1",
+    "@codemirror/language": "^6.11.2",
+    "@codemirror/state": "^6.5.2",
+    "@codemirror/view": "^6.38.1",
+    "@lezer/highlight": "^1.2.1",
+    "dictionary-en": "^4.0.0",
+    "nspell": "^2.1.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.9"
+  }
+}
